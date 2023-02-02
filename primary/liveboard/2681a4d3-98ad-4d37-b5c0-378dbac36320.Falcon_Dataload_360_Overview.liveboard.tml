@@ -1,0 +1,1974 @@
+guid: 2681a4d3-98ad-4d37-b5c0-378dbac36320
+liveboard:
+  name: Falcon_Dataload_360_Overview
+  description: Provides info about Falcon dataloads based on traces
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Failed Dataloads
+      description: Failed loads with error messages. Drill down on a given failed load to see which region failed at which worker.
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[status] != 'ok' [cycle_id] [table_guid] [table_name] [schema_version] [data_version] [source] [status] [error_msg] [Num Region Failures] [load_start] [load_start].detailed [load_end] [load_end].detailed"
+      answer_columns:
+      - name: cycle_id
+      - name: table_guid
+      - name: table_name
+      - name: schema_version
+      - name: data_version
+      - name: source
+      - name: status
+      - name: error_msg
+      - name: Num Region Failures
+      - name: load_start
+      - name: load_end
+      table:
+        table_columns:
+        - column_id: cycle_id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_guid
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: schema_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: data_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: source
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: status
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: error_msg
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: load_start
+          headline_aggregation: MIN
+        - column_id: load_end
+          headline_aggregation: MIN
+        - column_id: Num Region Failures
+          show_headline: false
+        ordered_column_ids:
+        - cycle_id
+        - table_guid
+        - table_name
+        - schema_version
+        - data_version
+        - source
+        - status
+        - error_msg
+        - load_start
+        - load_end
+        - Num Region Failures
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{\"status\":99.0,\"source\":95.0},\"wrapTableHeader\":false,\"ordered_column_ids\":[\"cycle_id\",\"table_guid\",\"table_name\",\"schema_version\",\"data_version\",\"source\",\"error_msg\",\"status\",\"load_start\",\"load_end\",\"Num Region Failures\"],\"widgetState\":{\"columns\":[{\"visibleIndex\":0.0,\"dataField\":\"cycle_id\",\"dataType\":\"string\",\"width\":144.0,\"visible\":true,\"sortOrder\":\"undefined\"},{\"visibleIndex\":1.0,\"dataField\":\"table_guid\",\"dataType\":\"string\",\"width\":144.0,\"visible\":true,\"sortOrder\":\"undefined\"},{\"visibleIndex\":2.0,\"dataField\":\"table_name\",\"dataType\":\"string\",\"width\":138.66049194335938,\"visible\":true,\"sortOrder\":\"undefined\"},{\"visibleIndex\":3.0,\"dataField\":\"schema_version\",\"dataType\":\"number\",\"width\":144.0,\"visible\":true,\"sortOrder\":\"undefined\"},{\"visibleIndex\":4.0,\"dataField\":\"data_version\",\"dataType\":\"number\",\"width\":137.48240661621094,\"visible\":true,\"sortOrder\":\"undefined\"},{\"visibleIndex\":5.0,\"dataField\":\"source\",\"dataType\":\"string\",\"width\":95.0,\"visible\":true,\"sortOrder\":\"undefined\"},{\"visibleIndex\":7.0,\"dataField\":\"status\",\"dataType\":\"string\",\"width\":99.0,\"visible\":true,\"sortOrder\":\"undefined\"},{\"visibleIndex\":6.0,\"dataField\":\"error_msg\",\"dataType\":\"string\",\"width\":144.0,\"visible\":true,\"sortOrder\":\"undefined\"},{\"visibleIndex\":8.0,\"dataField\":\"load_start\",\"dataType\":\"number\",\"width\":144.0,\"visible\":true,\"sortOrder\":\"undefined\"},{\"visibleIndex\":9.0,\"dataField\":\"load_end\",\"dataType\":\"number\",\"width\":144.0,\"visible\":true,\"sortOrder\":\"undefined\"},{\"visibleIndex\":10.0,\"dataField\":\"Num Region Failures\",\"dataType\":\"number\",\"width\":144.0,\"visible\":true,\"sortOrder\":\"undefined\"},{\"visibleIndex\":11.0,\"width\":\"auto\",\"visible\":true}],\"searchText\":\"\",\"pageIndex\":0.0,\"pageSize\":20.0,\"allowedPageSizes\":[10.0,20.0,40.0]}}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: cycle_id
+        - column_id: table_guid
+        - column_id: table_name
+        - column_id: schema_version
+        - column_id: data_version
+        - column_id: source
+        - column_id: status
+        - column_id: error_msg
+        - column_id: load_start
+        - column_id: load_end
+        - column_id: Num Region Failures
+        axis_configs:
+        - x:
+          - source
+          "y":
+          - Num Region Failures
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"5fb2c935-b976-4fb9-80c3-9ff9a642d1ab\":{\"linkedColumns\":[\"Num Region Failures\"],\"axisType\":\"Y\",\"isOpposite\":false},\"fb1d2984-8ca7-47cb-a2f0-109a3226584f\":{\"linkedColumns\":[\"source\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Slice\":\"#FCC838\",\"Num Region Failures\":\"#8C62F5\"},\"version\":\"V2.1\",\"columnProperties\":{\"cycle_id\":{},\"table_guid\":{},\"source\":{},\"status\":{},\"error_msg\":{},\"load_start\":{},\"load_end\":{},\"Num Region Failures\":{}}}"
+      display_mode: TABLE_MODE
+    viz_guid: 8111e903-2073-4468-a1ff-d438fd955432
+  - id: Viz_2
+    answer:
+      name: Num Loads By Source
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[source] count [cycle_id]"
+      answer_columns:
+      - name: source
+      - name: Number of cycle_id
+      table:
+        table_columns:
+        - column_id: source
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of cycle_id
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - source
+        - Number of cycle_id
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: source
+        - column_id: Number of cycle_id
+        axis_configs:
+        - x:
+          - source
+          "y":
+          - Number of cycle_id
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"f185b2be-aa3c-494b-a3dd-08ff3c1600b5\":{\"linkedColumns\":[\"Number of cycle_id\"],\"axisType\":\"Y\",\"isOpposite\":false},\"beefdd16-33ad-4ffc-9367-188d27348521\":{\"linkedColumns\":[\"source\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Number of cycle_id\":\"#06BF7F\"},\"version\":\"V2.1\",\"columnProperties\":{\"source\":{},\"Number of cycle_id\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: f98599bd-7b8d-4dbd-beca-e9df8f80bb79
+  - id: Viz_3
+    answer:
+      name: Most Frequently Loaded Tables
+      description: |-
+        Includes any sort of load on the table - deletes, updates, inserts.
+        For further debugging into history of loads, memory usage, row count, skew for a given table, use the table_name/table_guid as pinboard filters.
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "top 5 [table_guid] [table_name] count [cycle_id]"
+      answer_columns:
+      - name: table_guid
+      - name: table_name
+      - name: Number of cycle_id
+      table:
+        table_columns:
+        - column_id: table_guid
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of cycle_id
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - table_guid
+        - table_name
+        - Number of cycle_id
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: table_guid
+        - column_id: table_name
+        - column_id: Number of cycle_id
+        axis_configs:
+        - x:
+          - table_name
+          - table_guid
+          "y":
+          - Number of cycle_id
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"3fa14066-a547-473f-beee-c3d9064460f9\":{\"linkedColumns\":[\"Number of cycle_id\"],\"axisType\":\"Y\",\"isOpposite\":false},\"cb4f6cb2-bd9f-4ef5-ab13-f2307d9025ed\":{\"linkedColumns\":[\"table_name\",\"table_guid\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Number of cycle_id\":\"#48D1E0\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#06BF7F\",\"c86ab1a1-5e8f-4625-9bac-29b8618b06ed\":\"#FCC838\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#48D1E0\",\"fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#2E75F0\"},\"version\":\"V2.1\",\"columnProperties\":{\"table_guid\":{},\"Number of cycle_id\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: e808f485-ca42-45bb-949c-3e545fb904dc
+  - id: Viz_4
+    answer:
+      name: Table Growth (# Rows) Over Time
+      description: "This puts line charts for all the tables. Can manually filter out for a given table. Useful to add table_name, table_guid as pinboard filter and view this viz along with growth by bytes and other viz to get a deeper picture of how a table changes over time."
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[table_guid] [table_name] [total_num_rows] [load_end] [load_end].detailed [status] = 'ok' [cycle_id]"
+      answer_columns:
+      - name: table_guid
+      - name: table_name
+      - name: Total total_num_rows
+      - name: load_end
+      - name: cycle_id
+      table:
+        table_columns:
+        - column_id: table_guid
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: load_end
+          headline_aggregation: MIN
+        - column_id: cycle_id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total total_num_rows
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - table_guid
+        - table_name
+        - load_end
+        - cycle_id
+        - Total total_num_rows
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: table_guid
+        - column_id: table_name
+        - column_id: load_end
+        - column_id: cycle_id
+        - column_id: Total total_num_rows
+        axis_configs:
+        - x:
+          - load_end
+          - cycle_id
+          "y":
+          - Total total_num_rows
+          color:
+          - table_name
+          - table_guid
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{\"markersEnabled\":true},\"responsiveLayoutPreference\":3.0,\"isZoomed\":false},\"axisProperties\":{\"6dd9a9d2-0229-4182-a6d6-1e5d3813d53c\":{\"linkedColumns\":[\"Total total_num_rows\"],\"axisType\":\"Y\",\"isOpposite\":false},\"c9f2776e-bfff-4c7e-8ece-68bd07e6518d\":{\"linkedColumns\":[\"load_end\",\"cycle_id\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#2E75F0\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#48D1E0\",\"fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#FCC838\",\"c86ab1a1-5e8f-4625-9bac-29b8618b06ed\":\"#8C62F5\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, test_repl\":\"#2E75F0\",\"c86ab1a1-5e8f-4625-9bac-29b8618b06ed, covid_test_date\":\"#48D1E0\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23, test_sharded\":\"#FCC838\",\"fcc8f891-5f74-47b8-908d-44d5c8f63af8, test\":\"#06BF7F\",\"covid_test_date\":\"#2E75F0\",\"test\":\"#48D1E0\",\"test_repl\":\"#FCC838\",\"test_sharded\":\"#06BF7F\",\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed\":\"#2E75F0\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#48D1E0\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#FCC838\",\"test_repl, my_test_guid\":\"#06BF7F\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#8C62F5\"},\"version\":\"V3\",\"columnProperties\":{\"table_guid\":{},\"table_name\":{},\"load_end\":{},\"cycle_id\":{},\"Total total_num_rows\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 61fdaa1f-dfd3-4b28-a967-778a3cc9806a
+  - id: Viz_5
+    answer:
+      name: Table Growth (# Bytes) Over Time
+      description: "For replicated tables, we pick the worker with the max number of bytes."
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[table_guid] [table_name] [load_end] [load_end].detailed [approx_byte_size] [status] = 'ok' [cycle_id]"
+      answer_columns:
+      - name: table_guid
+      - name: table_name
+      - name: load_end
+      - name: Total approx_byte_size
+      - name: cycle_id
+      table:
+        table_columns:
+        - column_id: table_guid
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: load_end
+          headline_aggregation: MIN
+        - column_id: cycle_id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total approx_byte_size
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - table_guid
+        - table_name
+        - load_end
+        - cycle_id
+        - Total approx_byte_size
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: table_guid
+        - column_id: table_name
+        - column_id: load_end
+        - column_id: cycle_id
+        - column_id: Total approx_byte_size
+        axis_configs:
+        - x:
+          - load_end
+          - cycle_id
+          "y":
+          - Total approx_byte_size
+          color:
+          - table_name
+          - table_guid
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{\"markersEnabled\":true},\"responsiveLayoutPreference\":3.0,\"isZoomed\":false},\"axisProperties\":{\"d981ff1c-2487-402e-97a8-ca2417c29a83\":{\"linkedColumns\":[\"Total approx_byte_size\"],\"axisType\":\"Y\",\"isOpposite\":false},\"6924077b-53d9-4aeb-8625-7424a32641fd\":{\"linkedColumns\":[\"load_end\",\"cycle_id\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#2E75F0\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#48D1E0\",\"fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#FCC838\",\"c86ab1a1-5e8f-4625-9bac-29b8618b06ed\":\"#8C62F5\",\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed\":\"#2E75F0\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#48D1E0\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#FCC838\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#06BF7F\",\"covid_test_date\":\"#2E75F0\",\"test\":\"#48D1E0\",\"test_repl\":\"#FCC838\",\"test_sharded\":\"#06BF7F\",\"test_repl, my_test_guid\":\"#FF8142\"},\"version\":\"V3\",\"columnProperties\":{\"table_guid\":{},\"table_name\":{},\"load_end\":{},\"cycle_id\":{},\"Total approx_byte_size\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 3f23170b-5e4e-40c4-999c-2602d6388689
+  - id: Viz_6
+    answer:
+      name: "Region Skew By # Rows"
+      description: Skew is defined as standard deviation.
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[cycle_id] [table_guid] [table_name] [Region Rows Std Dev] sort by [load_end] [load_end].detailed [status] = 'ok'"
+      answer_columns:
+      - name: cycle_id
+      - name: table_guid
+      - name: table_name
+      - name: Total Region Rows Std Dev
+      - name: load_end
+      table:
+        table_columns:
+        - column_id: cycle_id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_guid
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: load_end
+          headline_aggregation: MIN
+        - column_id: Total Region Rows Std Dev
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - cycle_id
+        - table_guid
+        - table_name
+        - load_end
+        - Total Region Rows Std Dev
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: cycle_id
+        - column_id: table_guid
+        - column_id: table_name
+        - column_id: load_end
+        - column_id: Total Region Rows Std Dev
+        axis_configs:
+        - x:
+          - load_end
+          - cycle_id
+          "y":
+          - Total Region Rows Std Dev
+          color:
+          - table_name
+          - table_guid
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{\"markersEnabled\":true},\"responsiveLayoutPreference\":3.0,\"isZoomed\":false},\"axisProperties\":{\"d11b59d8-013e-495e-9fe1-3dee6c2362cd\":{\"linkedColumns\":[\"Total Region Rows Std Dev\"],\"axisType\":\"Y\",\"isOpposite\":false},\"61e798fc-643f-4243-b367-190ee5b5eb08\":{\"linkedColumns\":[\"load_end\",\"cycle_id\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 0d20caa9-9dc7-4bbf-ba98-d6f1756cd89e\":\"#2E75F0\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 3508df7b-74fe-4f7b-aa24-8c86871a8eba\":\"#48D1E0\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 8725333d-c837-411f-9e5b-df3f738b5c07\":\"#FCC838\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 94b43bea-cbd0-4d98-a1c7-15133715d662\":\"#06BF7F\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, abab4373-97ae-4269-a7cc-1073e2ec6737\":\"#8C62F5\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, c9ac9390-0a6b-4ba4-bff3-e1ac446b179b\":\"#FF8142\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, d0bc9e08-f6be-44ff-b9e4-b4a19eff1300\":\"#ABC7F9\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, d92af14f-2f8a-4f06-a41e-8e45a94d5e5d\":\"#B5ECF2\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, f08c3fa7-5cc9-49e3-8115-f9375f38e84f\":\"#FDE9AF\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 7784e5f3-c5e5-49e0-9360-527f7bd3519d\":\"#9BE5CB\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 938b8206-6c46-4ce6-abb7-dd5bea813fae\":\"#D1C0FB\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23, c6385f98-3201-4df9-8187-8ac4eb21a064\":\"#FFCCB3\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23, de4b6f23-fc3c-46a0-aba4-9074a8b2c382\":\"#2359B6\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23, f993d408-c161-487b-81b1-56fe01a513b6\":\"#369FAA\",\"fcc8f891-5f74-47b8-908d-44d5c8f63af8, 8707e119-53e5-4538-93f3-29040356a2b1\":\"#BF982A\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#2E75F0\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#48D1E0\",\"fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#FCC838\",\"c86ab1a1-5e8f-4625-9bac-29b8618b06ed\":\"#8C62F5\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, test_repl\":\"#2E75F0\",\"c86ab1a1-5e8f-4625-9bac-29b8618b06ed, covid_test_date\":\"#48D1E0\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23, test_sharded\":\"#FCC838\",\"fcc8f891-5f74-47b8-908d-44d5c8f63af8, test\":\"#06BF7F\",\"covid_test_date\":\"#2E75F0\",\"test\":\"#48D1E0\",\"test_repl\":\"#FCC838\",\"test_sharded\":\"#06BF7F\",\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed\":\"#2E75F0\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#48D1E0\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#FCC838\",\"test_repl, my_test_guid\":\"#06BF7F\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#8C62F5\"},\"version\":\"V3\",\"columnProperties\":{\"cycle_id\":{},\"table_guid\":{},\"table_name\":{},\"load_end\":{},\"Total Region Rows Std Dev\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 1ee27028-c81d-44a2-abc9-f07d31b5d0c1
+  - id: Viz_7
+    answer:
+      name: "Region Skew By # Bytes"
+      description: Skew is defined as standard deviation.
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[cycle_id] [table_guid] [table_name] [Region Byte Size Std Dev] sort by [load_end] [load_end].detailed [status] = 'ok'"
+      answer_columns:
+      - name: cycle_id
+      - name: table_guid
+      - name: table_name
+      - name: Total Region Byte Size Std Dev
+      - name: load_end
+      table:
+        table_columns:
+        - column_id: cycle_id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_guid
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: load_end
+          headline_aggregation: MIN
+        - column_id: Total Region Byte Size Std Dev
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - cycle_id
+        - table_guid
+        - table_name
+        - load_end
+        - Total Region Byte Size Std Dev
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: cycle_id
+        - column_id: table_guid
+        - column_id: table_name
+        - column_id: load_end
+        - column_id: Total Region Byte Size Std Dev
+        axis_configs:
+        - x:
+          - load_end
+          - cycle_id
+          "y":
+          - Total Region Byte Size Std Dev
+          color:
+          - table_name
+          - table_guid
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{\"markersEnabled\":true},\"responsiveLayoutPreference\":3.0,\"isZoomed\":false},\"axisProperties\":{\"65c86901-2906-4889-8df8-0199f3620573\":{\"linkedColumns\":[\"Total Region Byte Size Std Dev\"],\"axisType\":\"Y\",\"isOpposite\":false},\"a8169144-839e-4a0d-a81b-70a5aaad67c3\":{\"linkedColumns\":[\"load_end\",\"cycle_id\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 0d20caa9-9dc7-4bbf-ba98-d6f1756cd89e\":\"#2E75F0\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 3508df7b-74fe-4f7b-aa24-8c86871a8eba\":\"#48D1E0\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 8725333d-c837-411f-9e5b-df3f738b5c07\":\"#FCC838\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 94b43bea-cbd0-4d98-a1c7-15133715d662\":\"#06BF7F\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, abab4373-97ae-4269-a7cc-1073e2ec6737\":\"#8C62F5\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, c9ac9390-0a6b-4ba4-bff3-e1ac446b179b\":\"#FF8142\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, d0bc9e08-f6be-44ff-b9e4-b4a19eff1300\":\"#ABC7F9\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, d92af14f-2f8a-4f06-a41e-8e45a94d5e5d\":\"#B5ECF2\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, f08c3fa7-5cc9-49e3-8115-f9375f38e84f\":\"#FDE9AF\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 7784e5f3-c5e5-49e0-9360-527f7bd3519d\":\"#9BE5CB\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 938b8206-6c46-4ce6-abb7-dd5bea813fae\":\"#D1C0FB\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23, c6385f98-3201-4df9-8187-8ac4eb21a064\":\"#FFCCB3\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23, de4b6f23-fc3c-46a0-aba4-9074a8b2c382\":\"#2359B6\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23, f993d408-c161-487b-81b1-56fe01a513b6\":\"#369FAA\",\"fcc8f891-5f74-47b8-908d-44d5c8f63af8, 8707e119-53e5-4538-93f3-29040356a2b1\":\"#BF982A\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#2E75F0\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#48D1E0\",\"fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#FCC838\",\"c86ab1a1-5e8f-4625-9bac-29b8618b06ed\":\"#8C62F5\",\"my_test_guid\":\"#8C62F5\",\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed\":\"#2E75F0\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#48D1E0\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#FCC838\",\"test_repl, my_test_guid\":\"#06BF7F\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#8C62F5\"},\"version\":\"V3\",\"columnProperties\":{\"cycle_id\":{},\"table_guid\":{},\"table_name\":{},\"load_end\":{},\"Total Region Byte Size Std Dev\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 3b04621f-5056-4911-9f38-654384434bb8
+  - id: Viz_8
+    answer:
+      name: '# Loads Per Hour'
+      description: Easy to visualize the times when we had high number of loads. And see if it correlates with load and query slowness.
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[load_start] [load_start].hourly count [cycle_id]"
+      answer_columns:
+      - name: Hour(load_start)
+      - name: Number of cycle_id
+      table:
+        table_columns:
+        - column_id: Hour(load_start)
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of cycle_id
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Hour(load_start)
+        - Number of cycle_id
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Hour(load_start)
+        - column_id: Number of cycle_id
+        axis_configs:
+        - x:
+          - Hour(load_start)
+          "y":
+          - Number of cycle_id
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{\"markersEnabled\":true}},\"axisProperties\":{\"3d9fb6f5-dc62-4349-ae60-c5236c88370a\":{\"linkedColumns\":[\"Number of cycle_id\"],\"axisType\":\"Y\",\"isOpposite\":false},\"b23718b7-39cd-418d-9fed-bf7dcb65a437\":{\"linkedColumns\":[\"Hour(load_start)\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Number of cycle_id\":\"#2E75F0\"},\"version\":\"V2.1\",\"columnProperties\":{\"Hour(load_start)\":{},\"Number of cycle_id\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: abfdb172-f140-401d-b136-bd5b159f91c4
+  - id: Viz_9
+    answer:
+      name: Load Frequency By Hour Of Day (Aggregated in a time window)
+      description: Get an idea on what time of the day we see most loads across a time range. Helps narrow down the cases with frequent loads during peak hours.
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[load_start] [load_start].'hour of day' count [cycle_id]"
+      answer_columns:
+      - name: HOUR_OF_DAY(load_start)
+      - name: Number of cycle_id
+      table:
+        table_columns:
+        - column_id: HOUR_OF_DAY(load_start)
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of cycle_id
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - HOUR_OF_DAY(load_start)
+        - Number of cycle_id
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: HOUR_OF_DAY(load_start)
+        - column_id: Number of cycle_id
+        axis_configs:
+        - x:
+          - HOUR_OF_DAY(load_start)
+          "y":
+          - Number of cycle_id
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{\"markersEnabled\":true}},\"axisProperties\":{\"f7281005-679b-497f-9ad1-8b3dd9dcef9f\":{\"linkedColumns\":[\"Number of cycle_id\"],\"axisType\":\"Y\",\"isOpposite\":false},\"a12654eb-980e-4671-95c0-f6b8c4b00880\":{\"linkedColumns\":[\"HOUR_OF_DAY(load_start)\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Number of cycle_id\":\"#48D1E0\"},\"version\":\"V2.1\",\"columnProperties\":{\"HOUR_OF_DAY(load_start)\":{},\"Number of cycle_id\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 67cab2b5-d17c-4711-8765-8689bc53f4dd
+  - id: Viz_10
+    answer:
+      name: Slowest Loads
+      description: This is based on absolute time taken during a load. It doesn't do any normalization based on the amount of data loaded.
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[cycle_id] [table_guid] [table_name] [schema_version] [data_version] [source] [status] [load_start] [load_start].monthly [load_end] [load_end].monthly [Total Load Time (s)] sort by [Total Load Time (s)] descending top 20"
+      answer_columns:
+      - name: cycle_id
+      - name: table_guid
+      - name: table_name
+      - name: schema_version
+      - name: data_version
+      - name: source
+      - name: status
+      - name: Month(load_start)
+      - name: Month(load_end)
+      - name: Total Total Load Time (s)
+      table:
+        table_columns:
+        - column_id: cycle_id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_guid
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: schema_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: data_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: source
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: status
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Month(load_start)
+          headline_aggregation: MIN
+        - column_id: Month(load_end)
+          headline_aggregation: MIN
+        - column_id: Total Total Load Time (s)
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - cycle_id
+        - table_guid
+        - table_name
+        - schema_version
+        - data_version
+        - source
+        - status
+        - Month(load_start)
+        - Month(load_end)
+        - Total Total Load Time (s)
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: cycle_id
+        - column_id: table_guid
+        - column_id: table_name
+        - column_id: schema_version
+        - column_id: data_version
+        - column_id: source
+        - column_id: status
+        - column_id: Month(load_start)
+        - column_id: Month(load_end)
+        - column_id: Total Total Load Time (s)
+        axis_configs:
+        - x:
+          - cycle_id
+          "y":
+          - Total Total Load Time (s)
+          color:
+          - table_name
+          - table_guid
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{},\"responsiveLayoutPreference\":3.0},\"axisProperties\":{\"8f8cf5db-6b6e-483b-a810-022211bca415\":{\"linkedColumns\":[\"Total Total Load Time (s)\"],\"axisType\":\"Y\",\"isOpposite\":false},\"fee9dbd9-4ec7-42e4-9c7c-a37397ae3214\":{\"linkedColumns\":[\"cycle_id\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"0, tql, load_failed, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#06BF7F\",\"0, tql, load_failed, e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#FCD977\",\"0, tql, ok, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#FCC838\",\"0, tql, ok, e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#82DFE9\",\"0, tql, ok, fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#48D1E0\",\"0, tsload, ok, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#71A1F4\",\"0, tsload, ok, e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#2E75F0\",\"tql, load_failed, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#06BF7F\",\"tql, load_failed, e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#FCD977\",\"tql, ok, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#FCC838\",\"tql, ok, e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#82DFE9\",\"tql, ok, fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#48D1E0\",\"tsload, ok, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#71A1F4\",\"tsload, ok, e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#2E75F0\",\"load_failed, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#06BF7F\",\"load_failed, e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#FCC838\",\"ok, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#48D1E0\",\"ok, e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#71A1F4\",\"ok, fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#2E75F0\",\"load_failed\":\"#48D1E0\",\"ok\":\"#2E75F0\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#FCC838\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#48D1E0\",\"fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#2E75F0\",\"c86ab1a1-5e8f-4625-9bac-29b8618b06ed\":\"#71A1F4\",\"my_test_guid\":\"#06BF7F\",\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed\":\"#06BF7F\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#FCC838\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#48D1E0\",\"test_repl, my_test_guid\":\"#71A1F4\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#2E75F0\",\"covid_test_date\":\"#06BF7F\",\"test\":\"#FCC838\",\"test_repl\":\"#48D1E0\",\"test_sharded\":\"#2E75F0\"},\"version\":\"V3\",\"columnProperties\":{\"cycle_id\":{},\"table_guid\":{},\"table_name\":{},\"schema_version\":{},\"data_version\":{},\"source\":{},\"status\":{},\"Month(load_start)\":{},\"Month(load_end)\":{},\"Total Total Load Time (s)\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 9675a752-82c5-4af7-8717-e77c2908d708
+  - id: Viz_11
+    answer:
+      name: Slowest Loads & Corresponding Region Load Time Skew
+      description: Put slow loads with their skew (by region load time) to visualize how often slow loads are driven by skew in the incoming data.
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[cycle_id] [table_guid] [schema_version] [data_version] [source] [status] [load_start] [load_start].detailed [load_end] [load_end].detailed [Total Load Time (s)] [Region Load Time Std Dev] sort by [Total Load Time (s)] descending top 15 [status] = 'ok'"
+      answer_columns:
+      - name: cycle_id
+      - name: table_guid
+      - name: schema_version
+      - name: data_version
+      - name: source
+      - name: status
+      - name: load_start
+      - name: load_end
+      - name: Total Total Load Time (s)
+      - name: Total Region Load Time Std Dev
+      table:
+        table_columns:
+        - column_id: cycle_id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_guid
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: schema_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: data_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: source
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: status
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: load_start
+          headline_aggregation: MIN
+        - column_id: load_end
+          headline_aggregation: MIN
+        - column_id: Total Total Load Time (s)
+          headline_aggregation: TABLE_AGGR
+        - column_id: Total Region Load Time Std Dev
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - cycle_id
+        - table_guid
+        - schema_version
+        - data_version
+        - source
+        - status
+        - load_start
+        - load_end
+        - Total Total Load Time (s)
+        - Total Region Load Time Std Dev
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: cycle_id
+        - column_id: table_guid
+        - column_id: schema_version
+        - column_id: data_version
+        - column_id: source
+        - column_id: status
+        - column_id: load_start
+        - column_id: load_end
+        - column_id: Total Total Load Time (s)
+        - column_id: Total Region Load Time Std Dev
+        axis_configs:
+        - x:
+          - cycle_id
+          "y":
+          - Total Total Load Time (s)
+          - Total Region Load Time Std Dev
+        client_state: "{\"chartProperties\":{\"gridLines\":{\"xGridlineEnabled\":false},\"showRoundedNumbers\":true,\"chartSpecific\":{\"markersEnabled\":true},\"allLabels\":true},\"axisProperties\":{\"101f7061-6212-4f96-b1f4-cb482a21dafb\":{\"linkedColumns\":[\"Total Total Load Time (s)\"],\"axisType\":\"Y\",\"isOpposite\":false},\"3273bd60-5aac-436d-afcd-a18366a6ad57\":{\"linkedColumns\":[\"Total Region Load Time Std Dev\"],\"axisType\":\"Y\",\"isOpposite\":true},\"8b985bab-5f93-41ab-8b5c-02c250b9d08a\":{\"linkedColumns\":[\"cycle_id\"],\"axisType\":\"X\",\"name\":\"load_start \\u0026 cycle_id\"}},\"systemSeriesColors\":{\"Total Total Load Time (s)\":\"#48D1E0\",\"Total Region Load Time Std Dev\":\"#2E75F0\"},\"version\":\"V2.1\",\"columnProperties\":{\"cycle_id\":{},\"table_guid\":{},\"schema_version\":{},\"Total Region Load Time Std Dev\":{\"dataLabels\":true},\"Total Total Load Time (s)\":{\"dataLabels\":true}}}"
+      display_mode: CHART_MODE
+    viz_guid: 0dccffd9-a0f6-456d-bedc-8994a7a0b5d2
+  - id: Viz_12
+    answer:
+      name: "Tables With Most # Compactions"
+      description: "For replicated tables, the worker where most number of compactions happened is taken into account here."
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[table_guid] [table_name] top 10 [Total Compactions] sort by [Total Compactions] descending"
+      answer_columns:
+      - name: table_guid
+      - name: table_name
+      - name: Total Total Compactions
+      table:
+        table_columns:
+        - column_id: table_guid
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Total Compactions
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - table_guid
+        - table_name
+        - Total Total Compactions
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: table_guid
+        - column_id: table_name
+        - column_id: Total Total Compactions
+        axis_configs:
+        - x:
+          - table_name
+          - table_guid
+          "y":
+          - Total Total Compactions
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"e8167c56-fd15-4d76-9afb-d07d50ddf42e\":{\"linkedColumns\":[\"Total Total Compactions\"],\"axisType\":\"Y\",\"isOpposite\":false},\"5c642229-08b4-41fa-b95f-3d145bf7c35b\":{\"linkedColumns\":[\"table_guid\",\"table_name\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"dc86342a-0f86-4f0f-b4e7-520a00dae4df\":\"#747E8C\",\"Total Total Compactions\":\"#48D1E0\"},\"version\":\"V2.1\",\"columnProperties\":{\"table_guid\":{},\"Total Total Compactions\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 063143e0-3a32-4822-8f69-5643af6368f9
+  - id: Viz_13
+    answer:
+      name: Loads With Highest Region Skew By Load Time
+      description: Skew is defined as the standard deviation of time taken to load individual regions on falcon worker. This helps point to the loads where the load slowness is caused because of only a few regions.
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[cycle_id] [table_guid] [table_name] [schema_version] [data_version] [load_start] [load_start].monthly [load_end] [load_end].monthly [Region Load Time Std Dev] sort by [Region Load Time Std Dev] descending top 20 [status] = 'ok'"
+      answer_columns:
+      - name: cycle_id
+      - name: table_guid
+      - name: table_name
+      - name: schema_version
+      - name: data_version
+      - name: Month(load_start)
+      - name: Month(load_end)
+      - name: Total Region Load Time Std Dev
+      table:
+        table_columns:
+        - column_id: cycle_id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_guid
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: schema_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: data_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Month(load_start)
+          headline_aggregation: MIN
+        - column_id: Month(load_end)
+          headline_aggregation: MIN
+        - column_id: Total Region Load Time Std Dev
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - cycle_id
+        - table_guid
+        - table_name
+        - schema_version
+        - data_version
+        - Month(load_start)
+        - Month(load_end)
+        - Total Region Load Time Std Dev
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: cycle_id
+        - column_id: table_guid
+        - column_id: table_name
+        - column_id: schema_version
+        - column_id: data_version
+        - column_id: Month(load_start)
+        - column_id: Month(load_end)
+        - column_id: Total Region Load Time Std Dev
+        axis_configs:
+        - x:
+          - cycle_id
+          "y":
+          - Total Region Load Time Std Dev
+          color:
+          - table_name
+          - table_guid
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{},\"responsiveLayoutPreference\":3.0},\"axisProperties\":{\"e84693c4-6bb3-492c-b441-e8b31aefce07\":{\"linkedColumns\":[\"Total Region Load Time Std Dev\"],\"axisType\":\"Y\",\"isOpposite\":false},\"3c24f08a-2696-4d2a-be7a-8bb399d8f69c\":{\"linkedColumns\":[\"cycle_id\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 6, 8725333d-c837-411f-9e5b-df3f738b5c07\":\"#6A4ABA\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 8, 0d20caa9-9dc7-4bbf-ba98-d6f1756cd89e\":\"#B094F8\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 9, d92af14f-2f8a-4f06-a41e-8e45a94d5e5d\":\"#8C62F5\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 10, 94b43bea-cbd0-4d98-a1c7-15133715d662\":\"#049160\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 11, abab4373-97ae-4269-a7cc-1073e2ec6737\":\"#56D3A8\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 12, d0bc9e08-f6be-44ff-b9e4-b4a19eff1300\":\"#06BF7F\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 13, 3508df7b-74fe-4f7b-aa24-8c86871a8eba\":\"#BF982A\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 14, c9ac9390-0a6b-4ba4-bff3-e1ac446b179b\":\"#FCD977\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 15, f08c3fa7-5cc9-49e3-8115-f9375f38e84f\":\"#FCC838\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 12, de4b6f23-fc3c-46a0-aba4-9074a8b2c382\":\"#369FAA\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 14, 938b8206-6c46-4ce6-abb7-dd5bea813fae\":\"#82DFE9\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 15, 7784e5f3-c5e5-49e0-9360-527f7bd3519d\":\"#48D1E0\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 16, f993d408-c161-487b-81b1-56fe01a513b6\":\"#2359B6\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 17, c6385f98-3201-4df9-8187-8ac4eb21a064\":\"#71A1F4\",\"0, fcc8f891-5f74-47b8-908d-44d5c8f63af8, 22, 8707e119-53e5-4538-93f3-29040356a2b1\":\"#2E75F0\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 6, 05/29/2020 10 pm\":\"#6A4ABA\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 8, 05/29/2020 11 pm\":\"#B094F8\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 9, 05/29/2020 11 pm\":\"#8C62F5\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 10, 05/29/2020 11 pm\":\"#049160\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 11, 05/29/2020 11 pm\":\"#56D3A8\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 12, 05/29/2020 11 pm\":\"#06BF7F\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 13, 05/30/2020 12 am\":\"#BF982A\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 14, 05/30/2020 12 am\":\"#FCD977\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 15, 05/30/2020 12 am\":\"#FCC838\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 12, 05/29/2020 11 pm\":\"#369FAA\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 14, 05/30/2020 12 am\":\"#82DFE9\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 15, 05/30/2020 12 am\":\"#48D1E0\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 16, 05/30/2020 12 am\":\"#2359B6\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 17, 05/30/2020 12 am\":\"#71A1F4\",\"0, fcc8f891-5f74-47b8-908d-44d5c8f63af8, 22, 05/29/2020 11 pm\":\"#2E75F0\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 6\":\"#6A4ABA\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 8\":\"#B094F8\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 9\":\"#8C62F5\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 10\":\"#049160\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 11\":\"#56D3A8\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 12\":\"#06BF7F\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 13\":\"#BF982A\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 14\":\"#FCD977\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 15\":\"#FCC838\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 12\":\"#369FAA\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 14\":\"#82DFE9\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 15\":\"#48D1E0\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 16\":\"#2359B6\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 17\":\"#71A1F4\",\"0, fcc8f891-5f74-47b8-908d-44d5c8f63af8, 22\":\"#2E75F0\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#FCC838\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#48D1E0\",\"0, fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#2E75F0\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#FCC838\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#48D1E0\",\"fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#2E75F0\",\"c86ab1a1-5e8f-4625-9bac-29b8618b06ed\":\"#71A1F4\",\"my_test_guid\":\"#06BF7F\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, test_repl\":\"#06BF7F\",\"c86ab1a1-5e8f-4625-9bac-29b8618b06ed, covid_test_date\":\"#FCC838\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23, test_sharded\":\"#48D1E0\",\"fcc8f891-5f74-47b8-908d-44d5c8f63af8, test\":\"#71A1F4\",\"my_test_guid, test_repl\":\"#2E75F0\",\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed\":\"#06BF7F\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#FCC838\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#48D1E0\",\"test_repl, my_test_guid\":\"#71A1F4\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#2E75F0\"},\"version\":\"V3\",\"columnProperties\":{\"cycle_id\":{},\"table_guid\":{},\"table_name\":{},\"schema_version\":{},\"data_version\":{},\"Month(load_start)\":{},\"Month(load_end)\":{},\"Total Region Load Time Std Dev\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: b6da0431-7778-4271-b6e9-1dc157fdb827
+  - id: Viz_14
+    answer:
+      name: Total Compactions By Hour
+      description: Useful to compare with the viz showing ingestiong/deletion speeds by hour to see if high number of compactions in a time window leads to general slowness.
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[load_start] [load_start].hourly [Total Compactions]"
+      answer_columns:
+      - name: Hour(load_start)
+      - name: Total Total Compactions
+      table:
+        table_columns:
+        - column_id: Hour(load_start)
+          headline_aggregation: MIN
+        - column_id: Total Total Compactions
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Hour(load_start)
+        - Total Total Compactions
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Hour(load_start)
+        - column_id: Total Total Compactions
+        axis_configs:
+        - x:
+          - Hour(load_start)
+          "y":
+          - Total Total Compactions
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{\"markersEnabled\":true}},\"axisProperties\":{\"adad3e2b-da50-4bfa-9967-1438ecb94f3b\":{\"linkedColumns\":[\"Total Total Compactions\"],\"axisType\":\"Y\",\"isOpposite\":false},\"0adac315-90f9-451b-b487-b3b716a8e608\":{\"linkedColumns\":[\"Hour(load_start)\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Total Total Compactions\":\"#FCC838\"},\"version\":\"V2.1\",\"columnProperties\":{\"Hour(load_start)\":{},\"Total Total Compactions\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: db4a3dbc-9330-46d8-bae5-4e0bbe1b6691
+  - id: Viz_15
+    answer:
+      name: Loads With Most Compactions
+      description: Can be used along with slowest loads viz to see how often compaction contributes to slowness.
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[cycle_id] [table_guid] [table_name] [status] = 'ok' [load_start] [load_start].detailed [load_end] [load_end].detailed [status] = 'ok' [Total Compactions] sort by [Total Compactions] descending top 20"
+      answer_columns:
+      - name: cycle_id
+      - name: table_guid
+      - name: table_name
+      - name: load_start
+      - name: load_end
+      - name: Total Total Compactions
+      table:
+        table_columns:
+        - column_id: cycle_id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_guid
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: load_start
+          headline_aggregation: MIN
+        - column_id: load_end
+          headline_aggregation: MIN
+        - column_id: Total Total Compactions
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - cycle_id
+        - table_guid
+        - table_name
+        - load_start
+        - load_end
+        - Total Total Compactions
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: cycle_id
+        - column_id: table_guid
+        - column_id: table_name
+        - column_id: load_start
+        - column_id: load_end
+        - column_id: Total Total Compactions
+        axis_configs:
+        - x:
+          - cycle_id
+          "y":
+          - Total Total Compactions
+          color:
+          - table_name
+          - table_guid
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{},\"allLabels\":true},\"axisProperties\":{\"7d0ad7fb-0ae8-46d6-9cfd-210cea2d5803\":{\"linkedColumns\":[\"Total Total Compactions\"],\"axisType\":\"Y\",\"isOpposite\":false},\"b1b4480a-5fcd-4c04-b523-b16cd0d61750\":{\"linkedColumns\":[\"cycle_id\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed, f097194a-55e5-4c9b-92ca-0a5bc0c5b50b\":\"#FFA97E\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8, 4e6d3137-36c4-4de4-ab42-3164b7cce2f0\":\"#FF8142\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8, 8707e119-53e5-4538-93f3-29040356a2b1\":\"#6A4ABA\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 0d20caa9-9dc7-4bbf-ba98-d6f1756cd89e\":\"#B094F8\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 3508df7b-74fe-4f7b-aa24-8c86871a8eba\":\"#8C62F5\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 8725333d-c837-411f-9e5b-df3f738b5c07\":\"#049160\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 94b43bea-cbd0-4d98-a1c7-15133715d662\":\"#56D3A8\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, abab4373-97ae-4269-a7cc-1073e2ec6737\":\"#06BF7F\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, c9ac9390-0a6b-4ba4-bff3-e1ac446b179b\":\"#BF982A\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, d0bc9e08-f6be-44ff-b9e4-b4a19eff1300\":\"#FCD977\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, d92af14f-2f8a-4f06-a41e-8e45a94d5e5d\":\"#FCC838\",\"test_repl, my_test_guid, 6f0b9622-d43d-483f-8e6b-656fd776c3e9\":\"#369FAA\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 3664a540-3b21-4c87-b17f-b08accfc2b18\":\"#82DFE9\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 626433e3-9b1b-4750-b765-9adf42975dad\":\"#48D1E0\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 7784e5f3-c5e5-49e0-9360-527f7bd3519d\":\"#2359B6\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 938b8206-6c46-4ce6-abb7-dd5bea813fae\":\"#71A1F4\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, de4b6f23-fc3c-46a0-aba4-9074a8b2c382\":\"#2E75F0\",\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed\":\"#06BF7F\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#FCC838\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#48D1E0\",\"test_repl, my_test_guid\":\"#71A1F4\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#2E75F0\"},\"version\":\"V2.1\",\"columnProperties\":{\"cycle_id\":{},\"table_guid\":{},\"table_name\":{},\"load_start\":{},\"load_end\":{},\"Total Total Compactions\":{\"dataLabels\":true}}}"
+      display_mode: CHART_MODE
+    viz_guid: 9237a10d-e2d5-426e-b2b1-b73df5dab104
+  - id: Viz_16
+    answer:
+      name: Table-Regions With Max Compaction / Load Time
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[cycle_id] [table_guid] [table_name] [schema_version] [data_version] [region] [worker_ip] sort by [Compaction Time / Load Time] descending top 50 [status] = 'ok'"
+      answer_columns:
+      - name: cycle_id
+      - name: table_guid
+      - name: table_name
+      - name: schema_version
+      - name: data_version
+      - name: region
+      - name: worker_ip
+      - name: Total Compaction Time / Load Time
+      table:
+        table_columns:
+        - column_id: cycle_id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_guid
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: schema_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: data_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: worker_ip
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Compaction Time / Load Time
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - cycle_id
+        - table_guid
+        - table_name
+        - schema_version
+        - data_version
+        - region
+        - worker_ip
+        - Total Compaction Time / Load Time
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: cycle_id
+        - column_id: table_guid
+        - column_id: table_name
+        - column_id: schema_version
+        - column_id: data_version
+        - column_id: region
+        - column_id: worker_ip
+        - column_id: Total Compaction Time / Load Time
+        axis_configs:
+        - x:
+          - cycle_id
+          "y":
+          - Total Compaction Time / Load Time
+          color:
+          - table_name
+          - table_guid
+          - worker_ip
+          - region
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"cddca193-1967-4df4-bd41-a6e2114ae5be\":{\"linkedColumns\":[\"Total Compaction Time / Load Time\"],\"axisType\":\"Y\",\"isOpposite\":false},\"4758b313-2fd5-4ff1-94e4-d04afd274c4e\":{\"linkedColumns\":[\"cycle_id\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"0, covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed, f097194a-55e5-4c9b-92ca-0a5bc0c5b50b, 0\":\"#F47E89\",\"0, test, fcc8f891-5f74-47b8-908d-44d5c8f63af8, 4e6d3137-36c4-4de4-ab42-3164b7cce2f0, 0\":\"#B6313E\",\"0, test, fcc8f891-5f74-47b8-908d-44d5c8f63af8, 8707e119-53e5-4538-93f3-29040356a2b1, 0\":\"#F9B3B9\",\"0, test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 0d20caa9-9dc7-4bbf-ba98-d6f1756cd89e, 0\":\"#F04152\",\"0, test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 3508df7b-74fe-4f7b-aa24-8c86871a8eba, 0\":\"#A2ACBA\",\"0, test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 8725333d-c837-411f-9e5b-df3f738b5c07, 0\":\"#47515F\",\"0, test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, abab4373-97ae-4269-a7cc-1073e2ec6737, 0\":\"#BEC6D0\",\"0, test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, c9ac9390-0a6b-4ba4-bff3-e1ac446b179b, 0\":\"#747E8C\",\"0, test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, d0bc9e08-f6be-44ff-b9e4-b4a19eff1300, 0\":\"#7A3D1F\",\"0, test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, d92af14f-2f8a-4f06-a41e-8e45a94d5e5d, 0\":\"#FFA97E\",\"0, test_repl, my_test_guid, 6f0b9622-d43d-483f-8e6b-656fd776c3e9, 0\":\"#C26232\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 3664a540-3b21-4c87-b17f-b08accfc2b18, 1\":\"#FFCCB3\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 3664a540-3b21-4c87-b17f-b08accfc2b18, 4\":\"#FF8142\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 3664a540-3b21-4c87-b17f-b08accfc2b18, 5\":\"#422E75\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 3664a540-3b21-4c87-b17f-b08accfc2b18, 6\":\"#B094F8\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 3664a540-3b21-4c87-b17f-b08accfc2b18, 7\":\"#6A4ABA\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 626433e3-9b1b-4750-b765-9adf42975dad, 0\":\"#D1C0FB\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 626433e3-9b1b-4750-b765-9adf42975dad, 1\":\"#8C62F5\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 626433e3-9b1b-4750-b765-9adf42975dad, 2\":\"#025B3C\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 626433e3-9b1b-4750-b765-9adf42975dad, 6\":\"#56D3A8\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 626433e3-9b1b-4750-b765-9adf42975dad, 7\":\"#049160\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 7784e5f3-c5e5-49e0-9360-527f7bd3519d, 0\":\"#9BE5CB\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 7784e5f3-c5e5-49e0-9360-527f7bd3519d, 2\":\"#06BF7F\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 7784e5f3-c5e5-49e0-9360-527f7bd3519d, 4\":\"#785F1A\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 7784e5f3-c5e5-49e0-9360-527f7bd3519d, 6\":\"#FCD977\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 7784e5f3-c5e5-49e0-9360-527f7bd3519d, 7\":\"#BF982A\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 938b8206-6c46-4ce6-abb7-dd5bea813fae, 0\":\"#FDE9AF\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 938b8206-6c46-4ce6-abb7-dd5bea813fae, 1\":\"#FCC838\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 938b8206-6c46-4ce6-abb7-dd5bea813fae, 2\":\"#22636B\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 938b8206-6c46-4ce6-abb7-dd5bea813fae, 3\":\"#82DFE9\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 938b8206-6c46-4ce6-abb7-dd5bea813fae, 4\":\"#369FAA\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 938b8206-6c46-4ce6-abb7-dd5bea813fae, 5\":\"#B5ECF2\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 938b8206-6c46-4ce6-abb7-dd5bea813fae, 6\":\"#48D1E0\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 938b8206-6c46-4ce6-abb7-dd5bea813fae, 7\":\"#163772\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, de4b6f23-fc3c-46a0-aba4-9074a8b2c382, 1\":\"#71A1F4\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, de4b6f23-fc3c-46a0-aba4-9074a8b2c382, 3\":\"#2359B6\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, de4b6f23-fc3c-46a0-aba4-9074a8b2c382, 4\":\"#ABC7F9\",\"0, test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, de4b6f23-fc3c-46a0-aba4-9074a8b2c382, 7\":\"#2E75F0\",\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed, f097194a-55e5-4c9b-92ca-0a5bc0c5b50b, 0\":\"#A2ACBA\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8, 4e6d3137-36c4-4de4-ab42-3164b7cce2f0, 0\":\"#47515F\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8, 8707e119-53e5-4538-93f3-29040356a2b1, 0\":\"#BEC6D0\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 0d20caa9-9dc7-4bbf-ba98-d6f1756cd89e, 0\":\"#747E8C\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 3508df7b-74fe-4f7b-aa24-8c86871a8eba, 0\":\"#7A3D1F\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 8725333d-c837-411f-9e5b-df3f738b5c07, 0\":\"#FFA97E\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 94b43bea-cbd0-4d98-a1c7-15133715d662, 0\":\"#C26232\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, abab4373-97ae-4269-a7cc-1073e2ec6737, 0\":\"#FFCCB3\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, c9ac9390-0a6b-4ba4-bff3-e1ac446b179b, 0\":\"#FF8142\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, d0bc9e08-f6be-44ff-b9e4-b4a19eff1300, 0\":\"#422E75\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, d92af14f-2f8a-4f06-a41e-8e45a94d5e5d, 0\":\"#B094F8\",\"test_repl, my_test_guid, 6f0b9622-d43d-483f-8e6b-656fd776c3e9, 0\":\"#6A4ABA\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 3664a540-3b21-4c87-b17f-b08accfc2b18, 2\":\"#D1C0FB\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 3664a540-3b21-4c87-b17f-b08accfc2b18, 4\":\"#8C62F5\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 3664a540-3b21-4c87-b17f-b08accfc2b18, 6\":\"#025B3C\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 3664a540-3b21-4c87-b17f-b08accfc2b18, 7\":\"#56D3A8\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 626433e3-9b1b-4750-b765-9adf42975dad, 0\":\"#049160\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 626433e3-9b1b-4750-b765-9adf42975dad, 3\":\"#9BE5CB\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 626433e3-9b1b-4750-b765-9adf42975dad, 4\":\"#06BF7F\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 626433e3-9b1b-4750-b765-9adf42975dad, 6\":\"#785F1A\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 626433e3-9b1b-4750-b765-9adf42975dad, 7\":\"#FCD977\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 7784e5f3-c5e5-49e0-9360-527f7bd3519d, 4\":\"#BF982A\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 7784e5f3-c5e5-49e0-9360-527f7bd3519d, 5\":\"#FDE9AF\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 7784e5f3-c5e5-49e0-9360-527f7bd3519d, 7\":\"#FCC838\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 938b8206-6c46-4ce6-abb7-dd5bea813fae, 0\":\"#22636B\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 938b8206-6c46-4ce6-abb7-dd5bea813fae, 1\":\"#82DFE9\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 938b8206-6c46-4ce6-abb7-dd5bea813fae, 2\":\"#369FAA\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 938b8206-6c46-4ce6-abb7-dd5bea813fae, 4\":\"#B5ECF2\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 938b8206-6c46-4ce6-abb7-dd5bea813fae, 5\":\"#48D1E0\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 938b8206-6c46-4ce6-abb7-dd5bea813fae, 6\":\"#163772\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, de4b6f23-fc3c-46a0-aba4-9074a8b2c382, 1\":\"#71A1F4\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, de4b6f23-fc3c-46a0-aba4-9074a8b2c382, 3\":\"#2359B6\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, de4b6f23-fc3c-46a0-aba4-9074a8b2c382, 4\":\"#ABC7F9\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, de4b6f23-fc3c-46a0-aba4-9074a8b2c382, 6\":\"#2E75F0\",\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed, 10.79.129.78, 0\":\"#C26232\",\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed, 10.79.134.80, 0\":\"#FFCCB3\",\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed, 10.79.134.98, 0\":\"#FF8142\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8, 10.79.129.78, 0\":\"#6A4ABA\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8, 10.79.134.80, 0\":\"#D1C0FB\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 10.79.129.78, 0\":\"#8C62F5\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 10.79.134.80, 0\":\"#049160\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 10.79.134.98, 0\":\"#9BE5CB\",\"test_repl, my_test_guid, 10.79.129.78, 0\":\"#06BF7F\",\"test_repl, my_test_guid, 10.79.134.80, 0\":\"#BF982A\",\"test_repl, my_test_guid, 10.79.134.98, 0\":\"#FDE9AF\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 10.79.129.78, 3\":\"#FCC838\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 10.79.129.78, 6\":\"#369FAA\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 10.79.134.80, 1\":\"#B5ECF2\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 10.79.134.80, 4\":\"#48D1E0\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 10.79.134.80, 7\":\"#71A1F4\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 10.79.134.98, 0\":\"#2359B6\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 10.79.134.98, 2\":\"#ABC7F9\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 10.79.134.98, 5\":\"#2E75F0\"},\"version\":\"V2.1\",\"columnProperties\":{\"cycle_id\":{},\"table_guid\":{},\"Total Compaction Time / Load Time\":{}}}"
+      display_mode: TABLE_MODE
+    viz_guid: 6a8bf026-1c8a-4ed6-a0d8-838b03be7962
+  - id: Viz_17
+    answer:
+      name: Table-Regions With Highest Soft Deletes Fraction
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[cycle_id] [table_guid] [table_name] [schema_version] [data_version] [region] [worker_ip] sort by [Region Soft Deletes Fraction] top 20 [status] = 'ok'"
+      answer_columns:
+      - name: cycle_id
+      - name: table_guid
+      - name: table_name
+      - name: schema_version
+      - name: data_version
+      - name: region
+      - name: worker_ip
+      - name: Total Region Soft Deletes Fraction
+      table:
+        table_columns:
+        - column_id: cycle_id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_guid
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: schema_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: data_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: worker_ip
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Region Soft Deletes Fraction
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - cycle_id
+        - table_guid
+        - table_name
+        - schema_version
+        - data_version
+        - region
+        - worker_ip
+        - Total Region Soft Deletes Fraction
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: cycle_id
+        - column_id: table_guid
+        - column_id: table_name
+        - column_id: schema_version
+        - column_id: data_version
+        - column_id: region
+        - column_id: worker_ip
+        - column_id: Total Region Soft Deletes Fraction
+        axis_configs:
+        - x:
+          - cycle_id
+          "y":
+          - Total Region Soft Deletes Fraction
+          color:
+          - table_name
+          - table_guid
+          - region
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"ceea1f6c-a2e5-482b-9b35-8456b1bc24b1\":{\"linkedColumns\":[\"Total Region Soft Deletes Fraction\"],\"axisType\":\"Y\",\"isOpposite\":false},\"4b64bd21-3231-45b6-9a88-1f0d9042d2b9\":{\"linkedColumns\":[\"cycle_id\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"0\":\"#06BF7F\",\"1\":\"#FCC838\",\"2\":\"#48D1E0\",\"6\":\"#B094F8\",\"7\":\"#2E75F0\",\"8\":\"#8C62F5\",\"9\":\"#56D3A8\",\"10\":\"#06BF7F\",\"11\":\"#FCD977\",\"12\":\"#FCC838\",\"13\":\"#82DFE9\",\"14\":\"#48D1E0\",\"15\":\"#2359B6\",\"16\":\"#71A1F4\",\"17\":\"#2E75F0\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 6, 8725333d-c837-411f-9e5b-df3f738b5c07\":\"#B094F8\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 8, 0d20caa9-9dc7-4bbf-ba98-d6f1756cd89e\":\"#8C62F5\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 9, d92af14f-2f8a-4f06-a41e-8e45a94d5e5d\":\"#049160\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 10, 94b43bea-cbd0-4d98-a1c7-15133715d662\":\"#56D3A8\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 11, abab4373-97ae-4269-a7cc-1073e2ec6737\":\"#06BF7F\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 13, 3508df7b-74fe-4f7b-aa24-8c86871a8eba\":\"#BF982A\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 14, c9ac9390-0a6b-4ba4-bff3-e1ac446b179b\":\"#FCD977\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 15, f08c3fa7-5cc9-49e3-8115-f9375f38e84f\":\"#FCC838\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 12, de4b6f23-fc3c-46a0-aba4-9074a8b2c382\":\"#369FAA\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 14, 938b8206-6c46-4ce6-abb7-dd5bea813fae\":\"#82DFE9\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 15, 7784e5f3-c5e5-49e0-9360-527f7bd3519d\":\"#48D1E0\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 16, f993d408-c161-487b-81b1-56fe01a513b6\":\"#2359B6\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 17, c6385f98-3201-4df9-8187-8ac4eb21a064\":\"#71A1F4\",\"0, fcc8f891-5f74-47b8-908d-44d5c8f63af8, 22, 8707e119-53e5-4538-93f3-29040356a2b1\":\"#2E75F0\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 6\":\"#B094F8\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 8\":\"#8C62F5\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 9\":\"#049160\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 10\":\"#56D3A8\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 11\":\"#06BF7F\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 13\":\"#BF982A\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 14\":\"#FCD977\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 15\":\"#FCC838\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 12\":\"#369FAA\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 14\":\"#82DFE9\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 15\":\"#48D1E0\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 16\":\"#2359B6\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 17\":\"#71A1F4\",\"0, fcc8f891-5f74-47b8-908d-44d5c8f63af8, 22\":\"#2E75F0\",\"0, 9\":\"#B094F8\",\"0, 10\":\"#8C62F5\",\"0, 11\":\"#56D3A8\",\"0, 12\":\"#06BF7F\",\"0, 13\":\"#FCD977\",\"0, 14\":\"#FCC838\",\"0, 15\":\"#82DFE9\",\"0, 16\":\"#48D1E0\",\"0, 17\":\"#71A1F4\",\"0, 22\":\"#2E75F0\",\"Total Region Soft Deletes Fraction\":\"#FF8142\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 0\":\"#56D3A8\",\"c86ab1a1-5e8f-4625-9bac-29b8618b06ed, 0\":\"#06BF7F\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 1\":\"#FCD977\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 2\":\"#FCC838\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 6\":\"#82DFE9\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 7\":\"#48D1E0\",\"fcc8f891-5f74-47b8-908d-44d5c8f63af8, 0\":\"#71A1F4\",\"my_test_guid, 0\":\"#2E75F0\",\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed, 0\":\"#56D3A8\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8, 0\":\"#06BF7F\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 0\":\"#FCD977\",\"test_repl, my_test_guid, 0\":\"#FCC838\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 1\":\"#82DFE9\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 2\":\"#48D1E0\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 6\":\"#71A1F4\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 7\":\"#2E75F0\",\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed\":\"#06BF7F\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#FCC838\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#48D1E0\",\"test_repl, my_test_guid\":\"#2E75F0\"},\"version\":\"V2.1\",\"columnProperties\":{\"cycle_id\":{},\"table_guid\":{},\"schema_version\":{}}}"
+      display_mode: TABLE_MODE
+    viz_guid: 145ef245-005e-4422-966f-404bc33a4c48
+  - id: Viz_18
+    answer:
+      name: "Rows Inserted, Updated, Deleted By Hour"
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[load_start] [load_start].hourly [Total Inserts] [Total Updates] [Total Deletes] [status] = 'ok'"
+      answer_columns:
+      - name: Hour(load_start)
+      - name: Total Total Inserts
+      - name: Total Total Updates
+      - name: Total Total Deletes
+      table:
+        table_columns:
+        - column_id: Hour(load_start)
+          headline_aggregation: MIN
+        - column_id: Total Total Inserts
+          headline_aggregation: SUM
+        - column_id: Total Total Updates
+          headline_aggregation: SUM
+        - column_id: Total Total Deletes
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Hour(load_start)
+        - Total Total Inserts
+        - Total Total Updates
+        - Total Total Deletes
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Hour(load_start)
+        - column_id: Total Total Inserts
+        - column_id: Total Total Updates
+        - column_id: Total Total Deletes
+        axis_configs:
+        - x:
+          - Hour(load_start)
+          "y":
+          - Total Total Inserts
+          - Total Total Updates
+          - Total Total Deletes
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{\"markersEnabled\":true}},\"axisProperties\":{\"70ded67a-f130-439e-b519-2d7e287da4a1\":{\"linkedColumns\":[\"Total Total Inserts\"],\"axisType\":\"Y\",\"isOpposite\":false},\"9d8e2fcf-a388-4e3f-a85c-ee5e9a456a39\":{\"linkedColumns\":[\"Total Total Updates\"],\"axisType\":\"Y\",\"isOpposite\":true},\"0a31e6e6-1370-4e73-af35-701abbea10e6\":{\"linkedColumns\":[\"Total Total Deletes\"],\"axisType\":\"Y\",\"isOpposite\":true},\"9e2d12d0-ff5e-4468-ab52-690e2c03ee78\":{\"linkedColumns\":[\"Hour(load_start)\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Total Total Inserts\":\"#2E75F0\",\"Total Total Updates\":\"#48D1E0\",\"Total Total Deletes\":\"#FCC838\"},\"version\":\"V2.1\",\"columnProperties\":{\"Hour(load_start)\":{},\"Total Total Inserts\":{},\"Total Total Updates\":{},\"Total Total Deletes\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 89d8e164-a78b-45d2-a6f2-7185f9fc7c8e
+  - id: Viz_19
+    answer:
+      name: Rows Ingested By Hour
+      description: Includes inserts/upserts + updates
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[load_start] [load_start].hourly [Total Data Ingested] [status] = 'ok'"
+      answer_columns:
+      - name: Hour(load_start)
+      - name: Total Total Data Ingested
+      table:
+        table_columns:
+        - column_id: Hour(load_start)
+          headline_aggregation: MIN
+        - column_id: Total Total Data Ingested
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Hour(load_start)
+        - Total Total Data Ingested
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Hour(load_start)
+        - column_id: Total Total Data Ingested
+        axis_configs:
+        - x:
+          - Hour(load_start)
+          "y":
+          - Total Total Data Ingested
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{\"markersEnabled\":true}},\"axisProperties\":{\"30128e86-ee59-4ee6-9f09-92f86b532be0\":{\"linkedColumns\":[\"Total Total Data Ingested\"],\"axisType\":\"Y\",\"isOpposite\":false},\"aa3dcf05-0e14-4597-8204-e94a0ce7bbbb\":{\"linkedColumns\":[\"Hour(load_start)\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Total Total Data Ingested\":\"#8C62F5\"},\"version\":\"V2.1\",\"columnProperties\":{\"Hour(load_start)\":{},\"Total Total Data Ingested\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 28084578-3c88-4eda-93db-6768b40b267b
+  - id: Viz_20
+    answer:
+      name: Rows Deleted By Hour
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[load_start] [load_start].hourly [status] = 'ok' [Total Deletes]"
+      answer_columns:
+      - name: Hour(load_start)
+      - name: Total Total Deletes
+      table:
+        table_columns:
+        - column_id: Hour(load_start)
+          headline_aggregation: MIN
+        - column_id: Total Total Deletes
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Hour(load_start)
+        - Total Total Deletes
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Hour(load_start)
+        - column_id: Total Total Deletes
+        axis_configs:
+        - x:
+          - Hour(load_start)
+          "y":
+          - Total Total Deletes
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{\"markersEnabled\":true}},\"axisProperties\":{\"75e9485c-baf6-40fd-87d8-2bf1b0a93135\":{\"linkedColumns\":[\"Total Total Deletes\"],\"axisType\":\"Y\",\"isOpposite\":false},\"1cf962c2-713a-4bf7-aad7-f8ff8c9ee7e9\":{\"linkedColumns\":[\"Hour(load_start)\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Total Total Deletes\":\"#8C62F5\"},\"version\":\"V2.1\",\"columnProperties\":{\"Hour(load_start)\":{},\"Total Total Deletes\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 217a8c5a-05bf-4779-bbfa-c20e002e816f
+  - id: Viz_21
+    answer:
+      name: Ingestion Speeds (Rows Ingested / Load Time)
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[cycle_id] [# Rows Ingested / Load Time (s)] [Total Data Ingested] > 0 [load_start] [load_start].detailed [load_end] [load_end].detailed [status] = 'ok'"
+      answer_columns:
+      - name: cycle_id
+      - name: "Total # Rows Ingested / Load Time (s)"
+      - name: load_start
+      - name: load_end
+      table:
+        table_columns:
+        - column_id: cycle_id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: load_start
+          headline_aggregation: MIN
+        - column_id: load_end
+          headline_aggregation: MIN
+        - column_id: "Total # Rows Ingested / Load Time (s)"
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - cycle_id
+        - load_start
+        - load_end
+        - "Total # Rows Ingested / Load Time (s)"
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: cycle_id
+        - column_id: load_start
+        - column_id: load_end
+        - column_id: "Total # Rows Ingested / Load Time (s)"
+        axis_configs:
+        - x:
+          - load_start
+          - cycle_id
+          "y":
+          - "Total # Rows Ingested / Load Time (s)"
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{\"markersEnabled\":true}},\"axisProperties\":{\"7672906e-5429-470c-9e48-2e8516e9f73f\":{\"linkedColumns\":[\"Total # Rows Ingested / Load Time (s)\"],\"axisType\":\"Y\",\"isOpposite\":false},\"2ae80835-dba1-4a54-a7c3-85e2673643f2\":{\"linkedColumns\":[\"load_start\",\"cycle_id\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Total # Rows Ingested / Load Time (s)\":\"#2E75F0\",\"Total Data Ingested\":\"#48D1E0\",\"0d20caa9-9dc7-4bbf-ba98-d6f1756cd89e\":\"#2E75F0\",\"3508df7b-74fe-4f7b-aa24-8c86871a8eba\":\"#48D1E0\",\"7784e5f3-c5e5-49e0-9360-527f7bd3519d\":\"#FCC838\",\"8707e119-53e5-4538-93f3-29040356a2b1\":\"#06BF7F\",\"8725333d-c837-411f-9e5b-df3f738b5c07\":\"#8C62F5\",\"938b8206-6c46-4ce6-abb7-dd5bea813fae\":\"#FF8142\",\"94b43bea-cbd0-4d98-a1c7-15133715d662\":\"#ABC7F9\",\"abab4373-97ae-4269-a7cc-1073e2ec6737\":\"#B5ECF2\",\"c9ac9390-0a6b-4ba4-bff3-e1ac446b179b\":\"#FDE9AF\",\"d0bc9e08-f6be-44ff-b9e4-b4a19eff1300\":\"#9BE5CB\",\"d92af14f-2f8a-4f06-a41e-8e45a94d5e5d\":\"#D1C0FB\",\"de4b6f23-fc3c-46a0-aba4-9074a8b2c382\":\"#FFCCB3\"},\"version\":\"V2.1\",\"columnProperties\":{\"cycle_id\":{},\"load_start\":{},\"Total # Rows Ingested / Load Time (s)\":{},\"Total Data Ingested\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: ff00295e-70b2-412a-be50-e2a5865f1c2c
+  - id: Viz_22
+    answer:
+      name: Deletion Speeds (Rows Deleted / Load Time)
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[cycle_id] [# Rows Deleted / Load Time (s)] [Total Deletes] > 0 [load_start] [load_start].detailed [load_end] [load_end].detailed [status] = 'ok'"
+      answer_columns:
+      - name: cycle_id
+      - name: "Total # Rows Deleted / Load Time (s)"
+      - name: load_start
+      - name: load_end
+      table:
+        table_columns:
+        - column_id: cycle_id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: load_start
+          headline_aggregation: MIN
+        - column_id: load_end
+          headline_aggregation: MIN
+        - column_id: "Total # Rows Deleted / Load Time (s)"
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - cycle_id
+        - load_start
+        - load_end
+        - "Total # Rows Deleted / Load Time (s)"
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: cycle_id
+        - column_id: load_start
+        - column_id: load_end
+        - column_id: "Total # Rows Deleted / Load Time (s)"
+        axis_configs:
+        - x:
+          - load_start
+          - cycle_id
+          "y":
+          - "Total # Rows Deleted / Load Time (s)"
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{\"markersEnabled\":true}},\"axisProperties\":{\"69bc1a3b-9cb8-461f-a924-9822071c3c9d\":{\"linkedColumns\":[\"Total # Rows Deleted / Load Time (s)\"],\"axisType\":\"Y\",\"isOpposite\":false},\"54dd712c-64c0-428d-9c15-5da3aac2693b\":{\"linkedColumns\":[\"load_start\",\"cycle_id\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Total # Rows Deleted / Load Time (s)\":\"#FCC838\"},\"version\":\"V2.1\",\"columnProperties\":{\"cycle_id\":{},\"Total # Rows Deleted / Load Time (s)\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 4abd69a5-e06a-429d-86bd-435213ec2f47
+  - id: Viz_23
+    answer:
+      name: Avg Ingestion Speed (# Rows Ingested / Load Time) Per Hour
+      description: "Useful to compare with viz around frequencies of loads, around amount of data ingested, and compaction across time to see if there are time windows with slow load speed and how much those are caused by above."
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[load_start] [load_start].hourly average [# Rows Ingested / Load Time (s)] [Total Data Ingested] > 0"
+      answer_columns:
+      - name: Hour(load_start)
+      - name: "Average # Rows Ingested / Load Time (s)"
+      table:
+        table_columns:
+        - column_id: Hour(load_start)
+          headline_aggregation: MIN
+        - column_id: "Average # Rows Ingested / Load Time (s)"
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Hour(load_start)
+        - "Average # Rows Ingested / Load Time (s)"
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Hour(load_start)
+        - column_id: "Average # Rows Ingested / Load Time (s)"
+        axis_configs:
+        - x:
+          - Hour(load_start)
+          "y":
+          - "Average # Rows Ingested / Load Time (s)"
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{\"markersEnabled\":true}},\"axisProperties\":{\"fc645e77-717d-4ae0-9f04-15e4438a1ef5\":{\"linkedColumns\":[\"Average # Rows Ingested / Load Time (s)\"],\"axisType\":\"Y\",\"isOpposite\":false},\"f9f53cf1-4d49-4d98-8a8d-85e4e2f0046c\":{\"linkedColumns\":[\"Hour(load_start)\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Average # Rows Ingested / Load Time (s)\":\"#06BF7F\"},\"version\":\"V2.1\",\"columnProperties\":{\"Hour(load_start)\":{},\"Average # Rows Ingested / Load Time (s)\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: b2319762-8f1b-4582-b6a7-49bf066a566e
+  - id: Viz_24
+    answer:
+      name: Average Deletion Speed (# Rows Deleted / Load Time) Per Hour
+      description: "Useful to compare with viz around frequencies of loads, around amount of data ingested, and compaction across time to see if there are time windows with slow load speed and how much those are caused by above."
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[load_start] [load_start].hourly average [# Rows Deleted / Load Time (s)] [Total Deletes] > 0"
+      answer_columns:
+      - name: Hour(load_start)
+      - name: "Average # Rows Deleted / Load Time (s)"
+      table:
+        table_columns:
+        - column_id: Hour(load_start)
+          headline_aggregation: MIN
+        - column_id: "Average # Rows Deleted / Load Time (s)"
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Hour(load_start)
+        - "Average # Rows Deleted / Load Time (s)"
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Hour(load_start)
+        - column_id: "Average # Rows Deleted / Load Time (s)"
+        axis_configs:
+        - x:
+          - Hour(load_start)
+          "y":
+          - "Average # Rows Deleted / Load Time (s)"
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{\"markersEnabled\":true}},\"axisProperties\":{\"7f0f5d12-0514-4300-b8c8-6f3aa9758d58\":{\"linkedColumns\":[\"Average # Rows Deleted / Load Time (s)\"],\"axisType\":\"Y\",\"isOpposite\":false},\"76caae90-5d41-4559-b185-585fe095ba41\":{\"linkedColumns\":[\"Hour(load_start)\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Average # Rows Deleted / Load Time (s)\":\"#2E75F0\",\"Total Deletes\":\"#48D1E0\"},\"version\":\"V2.1\",\"columnProperties\":{\"Hour(load_start)\":{},\"Average # Rows Deleted / Load Time (s)\":{},\"Total Deletes\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: bea7fffc-31cd-4ccc-b24a-611b86ab1b99
+  - id: Viz_25
+    answer:
+      name: "Slowest Loads By # Rows Ingested Per Second"
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "top 20 [cycle_id] [table_guid] [table_name] [schema_version] [data_version] sort by [# Rows Ingested / Load Time (s)] descending [Total Data Ingested] > 0 [load_start] [load_start].detailed [load_end] [load_end].detailed [status] = 'ok'"
+      answer_columns:
+      - name: cycle_id
+      - name: table_guid
+      - name: table_name
+      - name: schema_version
+      - name: data_version
+      - name: "Total # Rows Ingested / Load Time (s)"
+      - name: load_start
+      - name: load_end
+      table:
+        table_columns:
+        - column_id: cycle_id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_guid
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: schema_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: data_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: load_start
+          headline_aggregation: MIN
+        - column_id: load_end
+          headline_aggregation: MIN
+        - column_id: "Total # Rows Ingested / Load Time (s)"
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - cycle_id
+        - table_guid
+        - table_name
+        - schema_version
+        - data_version
+        - load_start
+        - load_end
+        - "Total # Rows Ingested / Load Time (s)"
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: cycle_id
+        - column_id: table_guid
+        - column_id: table_name
+        - column_id: schema_version
+        - column_id: data_version
+        - column_id: load_start
+        - column_id: load_end
+        - column_id: "Total # Rows Ingested / Load Time (s)"
+        axis_configs:
+        - x:
+          - cycle_id
+          "y":
+          - "Total # Rows Ingested / Load Time (s)"
+          color:
+          - table_name
+          - table_guid
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{},\"allLabels\":true},\"axisProperties\":{\"4e203f99-4e65-4763-88e0-6f5d881ab4f3\":{\"linkedColumns\":[\"Total # Rows Ingested / Load Time (s)\"],\"axisType\":\"Y\",\"isOpposite\":false},\"b234d1ba-dcf8-4af1-ad2e-5b4e9880b3c8\":{\"linkedColumns\":[\"cycle_id\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Total # Rows Ingested / Load Time (s)\":\"#48D1E0\",\"Total Data Ingested\":\"#2E75F0\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#FCC838\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#48D1E0\",\"fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#2E75F0\",\"c86ab1a1-5e8f-4625-9bac-29b8618b06ed\":\"#06BF7F\",\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed\":\"#06BF7F\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#FCC838\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#48D1E0\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#2E75F0\"},\"version\":\"V2.1\",\"columnProperties\":{\"cycle_id\":{},\"Total # Rows Ingested / Load Time (s)\":{\"dataLabels\":true},\"Total Data Ingested\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: a39a5295-362e-4e3b-9d97-c5a24e50e6e0
+  - id: Viz_26
+    answer:
+      name: "Slowest Loads By # Rows Deleted Per Second"
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "top 20 [cycle_id] [table_guid] [table_name] [schema_version] [data_version] sort by [# Rows Deleted / Load Time (s)] descending [Total Deletes] > 0 [load_start] [load_start].detailed [load_end] [load_end].detailed [status] = 'ok'"
+      answer_columns:
+      - name: cycle_id
+      - name: table_guid
+      - name: table_name
+      - name: schema_version
+      - name: data_version
+      - name: "Total # Rows Deleted / Load Time (s)"
+      - name: load_start
+      - name: load_end
+      table:
+        table_columns:
+        - column_id: cycle_id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_guid
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: schema_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: data_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: load_start
+          headline_aggregation: MIN
+        - column_id: load_end
+          headline_aggregation: MIN
+        - column_id: "Total # Rows Deleted / Load Time (s)"
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - cycle_id
+        - table_guid
+        - table_name
+        - schema_version
+        - data_version
+        - load_start
+        - load_end
+        - "Total # Rows Deleted / Load Time (s)"
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: cycle_id
+        - column_id: table_guid
+        - column_id: table_name
+        - column_id: schema_version
+        - column_id: data_version
+        - column_id: load_start
+        - column_id: load_end
+        - column_id: "Total # Rows Deleted / Load Time (s)"
+        axis_configs:
+        - x:
+          - cycle_id
+          "y":
+          - "Total # Rows Deleted / Load Time (s)"
+          color:
+          - table_name
+          - table_guid
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{},\"allLabels\":true},\"axisProperties\":{\"8245a150-c395-410a-adb0-cc62830da622\":{\"linkedColumns\":[\"Total # Rows Deleted / Load Time (s)\"],\"axisType\":\"Y\",\"isOpposite\":false},\"a87e51cb-ec3f-42f2-a71f-6a7a16861974\":{\"linkedColumns\":[\"cycle_id\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#FCC838\",\"fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#48D1E0\",\"my_test_guid\":\"#2E75F0\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#FCC838\",\"test_repl, my_test_guid\":\"#48D1E0\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#2E75F0\"},\"version\":\"V2.1\",\"columnProperties\":{\"cycle_id\":{},\"44e7b4ca-5453-48a8-91cc-bee82ee2accf\":{},\"91882681-1191-4a33-93e2-04ec76d8c17a\":{},\"Total # Rows Deleted / Load Time (s)\":{\"dataLabels\":true}}}"
+      display_mode: CHART_MODE
+    viz_guid: a844bb9e-06f2-4d64-94ed-748821cdbd88
+  - id: Viz_27
+    answer:
+      name: Loads With Slowest HDFS Writes (# Rows / second)
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "top 20 [cycle_id] [table_guid] [table_name] [schema_version] [data_version] sort by [HDFS Speed (# Rows / sec)] [Total Data Ingested] > 0 [load_start] [load_start].detailed [load_end] [load_end].detailed [hdfs_start] [hdfs_start].detailed [hdfs_end] [hdfs_end].detailed [HDFS Write Time (s)] > 0"
+      answer_columns:
+      - name: cycle_id
+      - name: table_guid
+      - name: table_name
+      - name: schema_version
+      - name: data_version
+      - name: Total HDFS Speed (# Rows / sec)
+      - name: load_start
+      - name: load_end
+      - name: hdfs_start
+      - name: hdfs_end
+      table:
+        table_columns:
+        - column_id: cycle_id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_guid
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: schema_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: data_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: load_start
+          headline_aggregation: MIN
+        - column_id: load_end
+          headline_aggregation: MIN
+        - column_id: hdfs_start
+          headline_aggregation: MIN
+        - column_id: hdfs_end
+          headline_aggregation: MIN
+        - column_id: Total HDFS Speed (# Rows / sec)
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - cycle_id
+        - table_guid
+        - table_name
+        - schema_version
+        - data_version
+        - load_start
+        - load_end
+        - hdfs_start
+        - hdfs_end
+        - Total HDFS Speed (# Rows / sec)
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: cycle_id
+        - column_id: table_guid
+        - column_id: table_name
+        - column_id: schema_version
+        - column_id: data_version
+        - column_id: load_start
+        - column_id: load_end
+        - column_id: hdfs_start
+        - column_id: hdfs_end
+        - column_id: Total HDFS Speed (# Rows / sec)
+        axis_configs:
+        - x:
+          - cycle_id
+          "y":
+          - Total HDFS Speed (# Rows / sec)
+          color:
+          - table_name
+          - table_guid
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{},\"allLabels\":true},\"axisProperties\":{\"90262ec8-fd38-4303-a4f3-bfaeeb7a6dee\":{\"linkedColumns\":[\"Total HDFS Speed (# Rows / sec)\"],\"axisType\":\"Y\",\"isOpposite\":false},\"589fac80-f10a-4f8b-a78e-a43776eb57a7\":{\"linkedColumns\":[\"cycle_id\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Total HDFS Speed (# Rows / sec)\":\"#48D1E0\",\"Total Data Ingested\":\"#2E75F0\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#FCC838\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#48D1E0\",\"fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#2E75F0\"},\"version\":\"V2.1\",\"columnProperties\":{\"cycle_id\":{},\"44e7b4ca-5453-48a8-91cc-bee82ee2accf\":{},\"Total Data Ingested\":{},\"Total HDFS Speed (# Rows / sec)\":{\"dataLabels\":true}}}"
+      display_mode: CHART_MODE
+    viz_guid: e1a01e2d-f3ed-4da6-81a4-003c30ccc6ad
+  - id: Viz_28
+    answer:
+      name: Loads With Highest HDFS Write Time Fraction
+      description: Find the loads where majority of slowness comes from HDFS writes since this is not a common scenario.
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[cycle_id] [table_guid] [table_name] [schema_version] [data_version] sort by [HDFS Time Fraction] descending top 20 [status] = 'ok' [load_start] [load_start].monthly [load_end] [load_end].monthly [hdfs_start] [hdfs_start].monthly [hdfs_end] [hdfs_end].monthly"
+      answer_columns:
+      - name: cycle_id
+      - name: table_guid
+      - name: table_name
+      - name: schema_version
+      - name: data_version
+      - name: Total HDFS Time Fraction
+      - name: Month(load_start)
+      - name: Month(load_end)
+      - name: Month(hdfs_start)
+      - name: Month(hdfs_end)
+      table:
+        table_columns:
+        - column_id: cycle_id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_guid
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: schema_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: data_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Month(load_start)
+          headline_aggregation: MIN
+        - column_id: Month(load_end)
+          headline_aggregation: MIN
+        - column_id: Month(hdfs_start)
+          headline_aggregation: MIN
+        - column_id: Month(hdfs_end)
+          headline_aggregation: MIN
+        - column_id: Total HDFS Time Fraction
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - cycle_id
+        - table_guid
+        - table_name
+        - schema_version
+        - data_version
+        - Month(load_start)
+        - Month(load_end)
+        - Month(hdfs_start)
+        - Month(hdfs_end)
+        - Total HDFS Time Fraction
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: cycle_id
+        - column_id: table_guid
+        - column_id: table_name
+        - column_id: schema_version
+        - column_id: data_version
+        - column_id: Month(load_start)
+        - column_id: Month(load_end)
+        - column_id: Month(hdfs_start)
+        - column_id: Month(hdfs_end)
+        - column_id: Total HDFS Time Fraction
+        axis_configs:
+        - x:
+          - cycle_id
+          "y":
+          - Total HDFS Time Fraction
+          color:
+          - table_name
+          - table_guid
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{},\"responsiveLayoutPreference\":3.0},\"axisProperties\":{\"511f9c51-a9a3-4afa-bf2e-6b875f701c90\":{\"linkedColumns\":[\"Total HDFS Time Fraction\"],\"axisType\":\"Y\",\"isOpposite\":false},\"9030b837-b622-42bb-ae32-bf46e5fd1528\":{\"linkedColumns\":[\"cycle_id\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 6\":\"#B094F8\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 8\":\"#8C62F5\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 9\":\"#56D3A8\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 10\":\"#06BF7F\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 11\":\"#FCD977\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 12\":\"#FCC838\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 13\":\"#369FAA\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 14\":\"#82DFE9\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 12\":\"#48D1E0\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 14\":\"#2359B6\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 15\":\"#71A1F4\",\"0, fcc8f891-5f74-47b8-908d-44d5c8f63af8, 22\":\"#2E75F0\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 6\":\"#B094F8\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 8\":\"#8C62F5\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 9\":\"#56D3A8\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 10\":\"#06BF7F\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 11\":\"#FCD977\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 12\":\"#FCC838\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 13\":\"#369FAA\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 14\":\"#82DFE9\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 12\":\"#48D1E0\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 14\":\"#2359B6\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 15\":\"#71A1F4\",\"fcc8f891-5f74-47b8-908d-44d5c8f63af8, 22\":\"#2E75F0\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#FCC838\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#48D1E0\",\"fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#2E75F0\",\"c86ab1a1-5e8f-4625-9bac-29b8618b06ed\":\"#71A1F4\",\"my_test_guid\":\"#06BF7F\",\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed\":\"#06BF7F\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#FCC838\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#48D1E0\",\"test_repl, my_test_guid\":\"#71A1F4\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#2E75F0\"},\"version\":\"V3\",\"columnProperties\":{\"cycle_id\":{},\"table_guid\":{},\"table_name\":{},\"schema_version\":{},\"data_version\":{},\"Month(load_start)\":{},\"Month(load_end)\":{},\"Month(hdfs_start)\":{},\"Month(hdfs_end)\":{},\"Total HDFS Time Fraction\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 893a9bca-aab6-4a0d-84c2-3fc41bf5b868
+  - id: Viz_29
+    answer:
+      name: Load Status Distribution
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[status] count [status]"
+      answer_columns:
+      - name: status
+      - name: Number of status
+      table:
+        table_columns:
+        - column_id: status
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of status
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - status
+        - Number of status
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: PIE
+        chart_columns:
+        - column_id: status
+        - column_id: Number of status
+        axis_configs:
+        - x:
+          - status
+          "y":
+          - Number of status
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"559d08ec-be82-41de-adf5-8bbd2a07cbcd\":{\"linkedColumns\":[\"Number of status\"],\"axisType\":\"Y\",\"isOpposite\":false},\"a4921949-135b-4a8b-9d5d-e4015a6fd802\":{\"linkedColumns\":[\"status\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Number of status\":\"#FCC838\",\"load_failed\":\"#48D1E0\",\"ok\":\"#2E75F0\"},\"version\":\"V2.1\",\"columnProperties\":{\"status\":{},\"Number of status\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: fc373a9d-540f-4745-bd60-ea9913a67037
+  - id: Viz_30
+    answer:
+      name: Region Load Status Distribution
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[region_status] count [region_status]"
+      answer_columns:
+      - name: region_status
+      - name: Number of region_status
+      table:
+        table_columns:
+        - column_id: region_status
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of region_status
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - region_status
+        - Number of region_status
+        client_state: "{\"wrapTableHeader\":true}"
+      chart:
+        type: PIE
+        chart_columns:
+        - column_id: region_status
+        - column_id: Number of region_status
+        axis_configs:
+        - x:
+          - region_status
+          "y":
+          - Number of region_status
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"41868d6a-c3a8-489c-8c52-855e32cd88aa\":{\"linkedColumns\":[\"Number of region_status\"],\"axisType\":\"Y\",\"isOpposite\":false},\"de6dfe4b-24f8-4e45-bae5-ec148e0b4f63\":{\"linkedColumns\":[\"region_status\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Number of region_status\":\"#48D1E0\",\"failure\":\"#48D1E0\",\"success\":\"#2E75F0\"},\"version\":\"V2.1\",\"columnProperties\":{\"region_status\":{},\"Number of region_status\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 38237e04-aaff-47d0-8c36-64e5fe02bcd5
+  - id: Viz_31
+    answer:
+      name: "Loads With Highest # Rows Ingested"
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "top 20 [cycle_id] [table_guid] [table_name] [schema_version] [data_version] sort by [Total Data Ingested] descending [Total Data Ingested] > 0 [load_start] [load_start].detailed [load_end] [load_end].detailed [status] = 'ok'"
+      answer_columns:
+      - name: cycle_id
+      - name: table_guid
+      - name: table_name
+      - name: schema_version
+      - name: data_version
+      - name: Total Total Data Ingested
+      - name: load_start
+      - name: load_end
+      table:
+        table_columns:
+        - column_id: cycle_id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_guid
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: schema_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: data_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: load_start
+          headline_aggregation: MIN
+        - column_id: load_end
+          headline_aggregation: MIN
+        - column_id: Total Total Data Ingested
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - cycle_id
+        - table_guid
+        - table_name
+        - schema_version
+        - data_version
+        - load_start
+        - load_end
+        - Total Total Data Ingested
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: cycle_id
+        - column_id: table_guid
+        - column_id: table_name
+        - column_id: schema_version
+        - column_id: data_version
+        - column_id: load_start
+        - column_id: load_end
+        - column_id: Total Total Data Ingested
+        axis_configs:
+        - x:
+          - cycle_id
+          "y":
+          - Total Total Data Ingested
+          color:
+          - table_name
+          - table_guid
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{},\"allLabels\":true},\"axisProperties\":{\"fac875e7-55ff-4337-a8f5-14b936a42790\":{\"linkedColumns\":[\"Total Total Data Ingested\"],\"axisType\":\"Y\",\"isOpposite\":false},\"e9ecd4c2-e675-4f26-9ddc-224b3080cc04\":{\"linkedColumns\":[\"cycle_id\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, test_repl, 0d20caa9-9dc7-4bbf-ba98-d6f1756cd89e\":\"#B094F8\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, test_repl, 3508df7b-74fe-4f7b-aa24-8c86871a8eba\":\"#8C62F5\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, test_repl, 8725333d-c837-411f-9e5b-df3f738b5c07\":\"#56D3A8\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, test_repl, 94b43bea-cbd0-4d98-a1c7-15133715d662\":\"#06BF7F\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, test_repl, abab4373-97ae-4269-a7cc-1073e2ec6737\":\"#BF982A\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, test_repl, c9ac9390-0a6b-4ba4-bff3-e1ac446b179b\":\"#FCD977\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, test_repl, d0bc9e08-f6be-44ff-b9e4-b4a19eff1300\":\"#FCC838\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, test_repl, d92af14f-2f8a-4f06-a41e-8e45a94d5e5d\":\"#369FAA\",\"0, c86ab1a1-5e8f-4625-9bac-29b8618b06ed, covid_test_date, f097194a-55e5-4c9b-92ca-0a5bc0c5b50b\":\"#82DFE9\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, test_sharded, 7784e5f3-c5e5-49e0-9360-527f7bd3519d\":\"#48D1E0\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, test_sharded, 938b8206-6c46-4ce6-abb7-dd5bea813fae\":\"#2359B6\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, test_sharded, de4b6f23-fc3c-46a0-aba4-9074a8b2c382\":\"#71A1F4\",\"0, fcc8f891-5f74-47b8-908d-44d5c8f63af8, test, 8707e119-53e5-4538-93f3-29040356a2b1\":\"#2E75F0\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, test_repl\":\"#06BF7F\",\"0, c86ab1a1-5e8f-4625-9bac-29b8618b06ed, covid_test_date\":\"#FCC838\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, test_sharded\":\"#48D1E0\",\"0, fcc8f891-5f74-47b8-908d-44d5c8f63af8, test\":\"#2E75F0\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, test_repl\":\"#06BF7F\",\"c86ab1a1-5e8f-4625-9bac-29b8618b06ed, covid_test_date\":\"#FCC838\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23, test_sharded\":\"#48D1E0\",\"fcc8f891-5f74-47b8-908d-44d5c8f63af8, test\":\"#2E75F0\",\"covid_test_date\":\"#06BF7F\",\"test\":\"#FCC838\",\"test_repl\":\"#48D1E0\",\"test_sharded\":\"#2E75F0\",\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed\":\"#06BF7F\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#FCC838\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#48D1E0\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#2E75F0\"},\"version\":\"V2.1\",\"columnProperties\":{\"cycle_id\":{},\"44e7b4ca-5453-48a8-91cc-bee82ee2accf\":{},\"Total Data Ingested\":{},\"Total Total Data Ingested\":{\"dataLabels\":true}}}"
+      display_mode: CHART_MODE
+    viz_guid: 75ae4c6c-d741-469d-97bb-c5c701231ce7
+  - id: Viz_32
+    answer:
+      name: "Loads With Highest # Rows Deleted"
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "top 20 [cycle_id] [table_guid] [table_name] [schema_version] [data_version] sort by [Total Deletes] descending [Total Deletes] > 0 [load_start] [load_start].detailed [load_end] [load_end].detailed [status] = 'ok'"
+      answer_columns:
+      - name: cycle_id
+      - name: table_guid
+      - name: table_name
+      - name: schema_version
+      - name: data_version
+      - name: Total Total Deletes
+      - name: load_start
+      - name: load_end
+      table:
+        table_columns:
+        - column_id: cycle_id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_guid
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: schema_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: data_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: load_start
+          headline_aggregation: MIN
+        - column_id: load_end
+          headline_aggregation: MIN
+        - column_id: Total Total Deletes
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - cycle_id
+        - table_guid
+        - table_name
+        - schema_version
+        - data_version
+        - load_start
+        - load_end
+        - Total Total Deletes
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: cycle_id
+        - column_id: table_guid
+        - column_id: table_name
+        - column_id: schema_version
+        - column_id: data_version
+        - column_id: load_start
+        - column_id: load_end
+        - column_id: Total Total Deletes
+        axis_configs:
+        - x:
+          - cycle_id
+          "y":
+          - Total Total Deletes
+          color:
+          - table_name
+          - table_guid
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"ff8edd99-693c-41ad-ba73-e070744c5dda\":{\"linkedColumns\":[\"Total Total Deletes\"],\"axisType\":\"Y\",\"isOpposite\":false},\"4ea8f2d9-43e9-4186-997f-4f521b9b4506\":{\"linkedColumns\":[\"cycle_id\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, test_repl, 0d20caa9-9dc7-4bbf-ba98-d6f1756cd89e\":\"#B094F8\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, test_repl, 3508df7b-74fe-4f7b-aa24-8c86871a8eba\":\"#8C62F5\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, test_repl, 8725333d-c837-411f-9e5b-df3f738b5c07\":\"#56D3A8\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, test_repl, 94b43bea-cbd0-4d98-a1c7-15133715d662\":\"#06BF7F\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, test_repl, abab4373-97ae-4269-a7cc-1073e2ec6737\":\"#BF982A\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, test_repl, c9ac9390-0a6b-4ba4-bff3-e1ac446b179b\":\"#FCD977\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, test_repl, d0bc9e08-f6be-44ff-b9e4-b4a19eff1300\":\"#FCC838\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, test_repl, d92af14f-2f8a-4f06-a41e-8e45a94d5e5d\":\"#369FAA\",\"0, c86ab1a1-5e8f-4625-9bac-29b8618b06ed, covid_test_date, f097194a-55e5-4c9b-92ca-0a5bc0c5b50b\":\"#82DFE9\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, test_sharded, 7784e5f3-c5e5-49e0-9360-527f7bd3519d\":\"#48D1E0\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, test_sharded, 938b8206-6c46-4ce6-abb7-dd5bea813fae\":\"#2359B6\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, test_sharded, de4b6f23-fc3c-46a0-aba4-9074a8b2c382\":\"#71A1F4\",\"0, fcc8f891-5f74-47b8-908d-44d5c8f63af8, test, 8707e119-53e5-4538-93f3-29040356a2b1\":\"#2E75F0\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, test_repl\":\"#06BF7F\",\"0, c86ab1a1-5e8f-4625-9bac-29b8618b06ed, covid_test_date\":\"#FCC838\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, test_sharded\":\"#48D1E0\",\"0, fcc8f891-5f74-47b8-908d-44d5c8f63af8, test\":\"#2E75F0\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, test_repl\":\"#06BF7F\",\"c86ab1a1-5e8f-4625-9bac-29b8618b06ed, covid_test_date\":\"#FCC838\",\"e0e66e57-9a02-4686-9ad3-cb41bbca0a23, test_sharded\":\"#48D1E0\",\"fcc8f891-5f74-47b8-908d-44d5c8f63af8, test\":\"#2E75F0\",\"covid_test_date\":\"#06BF7F\",\"test\":\"#FCC838\",\"test_repl\":\"#48D1E0\",\"test_sharded\":\"#2E75F0\",\"0, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, test_repl, 6f0b9622-d43d-483f-8e6b-656fd776c3e9\":\"#06BF7F\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, test_sharded, 3664a540-3b21-4c87-b17f-b08accfc2b18\":\"#FCC838\",\"0, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, test_sharded, 626433e3-9b1b-4750-b765-9adf42975dad\":\"#48D1E0\",\"0, fcc8f891-5f74-47b8-908d-44d5c8f63af8, test, 4e6d3137-36c4-4de4-ab42-3164b7cce2f0\":\"#2E75F0\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#FCC838\",\"test_repl, my_test_guid\":\"#48D1E0\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#2E75F0\"},\"version\":\"V2.1\",\"columnProperties\":{\"cycle_id\":{},\"44e7b4ca-5453-48a8-91cc-bee82ee2accf\":{},\"91882681-1191-4a33-93e2-04ec76d8c17a\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 417920e2-de13-4e08-bc5b-12db1f35cc7f
+  - id: Viz_33
+    answer:
+      name: Table-Region Soft Deletes Fraction Over Time
+      description: "This viz creates a line chart for every table-region. Would be more useful to pick the tables which are compacted frequently and add their name/guid to pinboard filter. We can visualize their insertion, deletion patterns to see how the fraction of soft-deletes changes over time leading to in-memory compactions."
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[cycle_id] [table_guid] [table_name] [schema_version] [data_version] [region] [worker_ip] [Region Soft Deletes Fraction] [status] = 'ok' [load_start] [load_start].detailed"
+      answer_columns:
+      - name: cycle_id
+      - name: table_guid
+      - name: table_name
+      - name: schema_version
+      - name: data_version
+      - name: region
+      - name: worker_ip
+      - name: Total Region Soft Deletes Fraction
+      - name: load_start
+      table:
+        table_columns:
+        - column_id: cycle_id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_guid
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: schema_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: data_version
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: worker_ip
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: load_start
+          headline_aggregation: MIN
+        - column_id: Total Region Soft Deletes Fraction
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - cycle_id
+        - table_guid
+        - table_name
+        - schema_version
+        - data_version
+        - region
+        - worker_ip
+        - load_start
+        - Total Region Soft Deletes Fraction
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: cycle_id
+        - column_id: table_guid
+        - column_id: table_name
+        - column_id: schema_version
+        - column_id: data_version
+        - column_id: region
+        - column_id: worker_ip
+        - column_id: load_start
+        - column_id: Total Region Soft Deletes Fraction
+        axis_configs:
+        - x:
+          - load_start
+          - cycle_id
+          "y":
+          - Total Region Soft Deletes Fraction
+          color:
+          - table_name
+          - table_guid
+          - region
+          - worker_ip
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{\"markersEnabled\":true},\"visibleSeriesNames\":[\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed, 0, 10.79.129.78\",\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed, 0, 10.79.134.80\",\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed, 0, 10.79.134.98\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8, 0, 10.79.129.78\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8, 0, 10.79.134.80\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8, 0, 10.79.134.98\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 0, 10.79.129.78\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 0, 10.79.134.80\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 0, 10.79.134.98\",\"test_repl, my_test_guid, 0, 10.79.129.78\",\"test_repl, my_test_guid, 0, 10.79.134.80\",\"test_repl, my_test_guid, 0, 10.79.134.98\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 1, 10.79.134.80\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 2, 10.79.134.98\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 6, 10.79.129.78\"]},\"axisProperties\":{\"ceea1f6c-a2e5-482b-9b35-8456b1bc24b1\":{\"linkedColumns\":[\"Total Region Soft Deletes Fraction\"],\"axisType\":\"Y\",\"isOpposite\":false},\"4d8dac52-ae71-41cd-9e24-05b2e8bc1790\":{\"linkedColumns\":[\"load_start\",\"cycle_id\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Total Region Soft Deletes Fraction\":\"#06BF7F\",\"a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#2E75F0\",\"c86ab1a1-5e8f-4625-9bac-29b8618b06ed\":\"#48D1E0\",\"fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#FCC838\",\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed\":\"#2E75F0\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#48D1E0\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#FCC838\",\"covid_test_date\":\"#2E75F0\",\"test\":\"#48D1E0\",\"test_repl\":\"#FCC838\",\"covid_test_date, 0\":\"#2E75F0\",\"test, 0\":\"#48D1E0\",\"test_repl, 0\":\"#FCC838\",\"test_sharded, 1\":\"#06BF7F\",\"test_sharded, 2\":\"#8C62F5\",\"test_sharded, 6\":\"#FF8142\",\"test_sharded, 7\":\"#ABC7F9\",\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed, 0\":\"#2E75F0\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8, 0\":\"#48D1E0\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 0\":\"#FCC838\",\"test_repl, my_test_guid, 0\":\"#06BF7F\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 1\":\"#8C62F5\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 2\":\"#FF8142\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 6\":\"#ABC7F9\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 7\":\"#B5ECF2\",\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed, 0, 10.79.129.78\":\"#2E75F0\",\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed, 0, 10.79.134.80\":\"#48D1E0\",\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed, 0, 10.79.134.98\":\"#FCC838\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8, 0, 10.79.129.78\":\"#06BF7F\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8, 0, 10.79.134.80\":\"#8C62F5\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8, 0, 10.79.134.98\":\"#FF8142\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 0, 10.79.129.78\":\"#ABC7F9\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 0, 10.79.134.80\":\"#B5ECF2\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9, 0, 10.79.134.98\":\"#FDE9AF\",\"test_repl, my_test_guid, 0, 10.79.129.78\":\"#9BE5CB\",\"test_repl, my_test_guid, 0, 10.79.134.80\":\"#D1C0FB\",\"test_repl, my_test_guid, 0, 10.79.134.98\":\"#FFCCB3\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 1, 10.79.134.80\":\"#2359B6\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 2, 10.79.134.98\":\"#369FAA\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 6, 10.79.129.78\":\"#BF982A\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23, 7, 10.79.134.80\":\"#049160\"},\"version\":\"V2.1\",\"columnProperties\":{\"cycle_id\":{},\"table_guid\":{},\"schema_version\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 95c5b26e-9962-478b-9c0b-442e0641b84b
+  - id: Viz_34
+    answer:
+      name: Tables With Most Frequent Inserts/Upserts
+      description: Only include loads which have new data being ingested.
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "top 5 [table_guid] [table_name] count [cycle_id] [status] = 'ok' [Total Data Ingested] > 0"
+      answer_columns:
+      - name: table_guid
+      - name: table_name
+      - name: Number of cycle_id
+      table:
+        table_columns:
+        - column_id: table_guid
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of cycle_id
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - table_guid
+        - table_name
+        - Number of cycle_id
+        client_state: "{\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: table_guid
+        - column_id: table_name
+        - column_id: Number of cycle_id
+        axis_configs:
+        - x:
+          - table_name
+          - table_guid
+          "y":
+          - Number of cycle_id
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"3fa14066-a547-473f-beee-c3d9064460f9\":{\"linkedColumns\":[\"Number of cycle_id\"],\"axisType\":\"Y\",\"isOpposite\":false},\"739869f5-2f16-4aa1-a197-57a3b2e698ee\":{\"linkedColumns\":[\"table_name\",\"table_guid\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Number of cycle_id\":\"#48D1E0\"},\"version\":\"V2.1\",\"columnProperties\":{\"table_guid\":{},\"Number of cycle_id\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 598dbeda-3235-408a-be17-f9c1ca139dec
+  - id: Viz_35
+    answer:
+      name: Tables With Most Frequent Deletes
+      description: Find the tables where the old data is deleted most often.
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "top 5 [table_guid] [table_name] count [cycle_id] [status] = 'ok' [Total Deletes] > 0"
+      answer_columns:
+      - name: table_guid
+      - name: table_name
+      - name: Number of cycle_id
+      table:
+        table_columns:
+        - column_id: table_guid
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of cycle_id
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - table_guid
+        - table_name
+        - Number of cycle_id
+        client_state: "{\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: table_guid
+        - column_id: table_name
+        - column_id: Number of cycle_id
+        axis_configs:
+        - x:
+          - table_name
+          - table_guid
+          "y":
+          - Number of cycle_id
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"3fa14066-a547-473f-beee-c3d9064460f9\":{\"linkedColumns\":[\"Number of cycle_id\"],\"axisType\":\"Y\",\"isOpposite\":false},\"cb4f6cb2-bd9f-4ef5-ab13-f2307d9025ed\":{\"linkedColumns\":[\"table_name\",\"table_guid\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Number of cycle_id\":\"#48D1E0\"},\"version\":\"V2.1\",\"columnProperties\":{\"table_guid\":{},\"Number of cycle_id\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: f47f7895-a146-40a5-aacb-2d7df7698cd0
+  - id: Viz_36
+    answer:
+      name: Loads With Highest Compaction Overhead (# Rows)
+      description: This viz should help get an idea of how much transient memory bloat can be caused by an in-memory compaction. Currently it uses the extra number of transient rows during a compaction as proxy for memory bloat.
+      tables:
+      - id: Falcon_Monitor_Data_Load_360
+        name: Falcon_Monitor_Data_Load_360
+      search_query: "[cycle_id] [table_guid] [table_name] [status] = 'ok' [load_start] [load_start].detailed [load_end] [load_end].detailed [Total Compaction Overhead (# Rows)] sort by [Total Compaction Overhead (# Rows)] descending top 20"
+      answer_columns:
+      - name: cycle_id
+      - name: table_guid
+      - name: table_name
+      - name: load_start
+      - name: load_end
+      - name: Total Total Compaction Overhead (# Rows)
+      table:
+        table_columns:
+        - column_id: cycle_id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_guid
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: table_name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: load_start
+          headline_aggregation: MIN
+        - column_id: load_end
+          headline_aggregation: MIN
+        - column_id: Total Total Compaction Overhead (# Rows)
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - cycle_id
+        - table_guid
+        - table_name
+        - load_start
+        - load_end
+        - Total Total Compaction Overhead (# Rows)
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: cycle_id
+        - column_id: table_guid
+        - column_id: table_name
+        - column_id: load_start
+        - column_id: load_end
+        - column_id: Total Total Compaction Overhead (# Rows)
+        axis_configs:
+        - x:
+          - cycle_id
+          "y":
+          - Total Total Compaction Overhead (# Rows)
+          color:
+          - table_name
+          - table_guid
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{},\"allLabels\":true,\"responsiveLayoutPreference\":3.0},\"axisProperties\":{\"14553e19-8aa1-4803-8e45-bc8568e980e3\":{\"linkedColumns\":[\"Total Total Compaction Overhead (# Rows)\"],\"axisType\":\"Y\",\"isOpposite\":false},\"ef119238-5a1f-43bf-bc67-3bd3915e1995\":{\"linkedColumns\":[\"cycle_id\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"covid_test_date, c86ab1a1-5e8f-4625-9bac-29b8618b06ed\":\"#06BF7F\",\"test, fcc8f891-5f74-47b8-908d-44d5c8f63af8\":\"#FCC838\",\"test_repl, a9e3ccb7-0675-4e44-9d4d-0339b0082ab9\":\"#48D1E0\",\"test_repl, my_test_guid\":\"#71A1F4\",\"test_sharded, e0e66e57-9a02-4686-9ad3-cb41bbca0a23\":\"#2E75F0\"},\"version\":\"V3\",\"columnProperties\":{\"cycle_id\":{},\"table_guid\":{},\"table_name\":{},\"load_start\":{},\"load_end\":{},\"Total Total Compaction Overhead (# Rows)\":{\"dataLabels\":true},\"7b89ef2d-a7e9-411c-b4cb-36e778435d8b\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 53e7908d-3147-44ed-8d85-251ef98cabad
+  filters:
+  - column:
+    - table_name
+    is_mandatory: false
+  - column:
+    - table_guid
+    is_mandatory: false
+  - column:
+    - Days Since Load
+    oper: <=
+    values:
+    - "14"
+    is_mandatory: false
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_2
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_3
+      size: MEDIUM
+    - visualization_id: Viz_34
+      size: MEDIUM
+    - visualization_id: Viz_35
+      size: MEDIUM
+    - visualization_id: Viz_4
+      size: MEDIUM
+    - visualization_id: Viz_5
+      size: MEDIUM
+    - visualization_id: Viz_6
+      size: MEDIUM
+    - visualization_id: Viz_7
+      size: MEDIUM
+    - visualization_id: Viz_8
+      size: MEDIUM
+    - visualization_id: Viz_9
+      size: MEDIUM
+    - visualization_id: Viz_10
+      size: MEDIUM
+    - visualization_id: Viz_13
+      size: MEDIUM
+    - visualization_id: Viz_11
+      size: MEDIUM
+    - visualization_id: Viz_31
+      size: MEDIUM
+    - visualization_id: Viz_32
+      size: MEDIUM
+    - visualization_id: Viz_12
+      size: MEDIUM
+    - visualization_id: Viz_14
+      size: MEDIUM
+    - visualization_id: Viz_15
+      size: MEDIUM
+    - visualization_id: Viz_36
+      size: MEDIUM
+    - visualization_id: Viz_16
+      size: MEDIUM
+    - visualization_id: Viz_17
+      size: MEDIUM
+    - visualization_id: Viz_33
+      size: MEDIUM
+    - visualization_id: Viz_18
+      size: MEDIUM
+    - visualization_id: Viz_19
+      size: MEDIUM
+    - visualization_id: Viz_20
+      size: MEDIUM
+    - visualization_id: Viz_21
+      size: MEDIUM
+    - visualization_id: Viz_22
+      size: MEDIUM
+    - visualization_id: Viz_23
+      size: MEDIUM
+    - visualization_id: Viz_24
+      size: MEDIUM
+    - visualization_id: Viz_25
+      size: MEDIUM
+    - visualization_id: Viz_26
+      size: MEDIUM
+    - visualization_id: Viz_27
+      size: MEDIUM
+    - visualization_id: Viz_28
+      size: MEDIUM
+    - visualization_id: Viz_29
+      size: MEDIUM
+    - visualization_id: Viz_30
+      size: MEDIUM
