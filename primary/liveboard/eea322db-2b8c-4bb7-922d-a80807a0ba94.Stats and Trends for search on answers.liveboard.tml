@@ -1,0 +1,523 @@
+guid: eea322db-2b8c-4bb7-922d-a80807a0ba94
+liveboard:
+  name: Stats and Trends for search on answers
+  description: "This pinboard describes how users are searching for existing answers. It provides what users are searching for, where users are successful and where they are not."
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Number of Searches
+      description: Total number of searches users have done on existing answers in the last 7 days
+      tables:
+      - id: Discover Monitoring Data
+        name: Discover Monitoring Data
+      search_query: "unique count [Query id] [Event date].'last 7 days'"
+      answer_columns:
+      - name: Unique Number of Query id
+      table:
+        table_columns:
+        - column_id: Unique Number of Query id
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Unique Number of Query id
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Unique Number of Query id
+        axis_configs:
+        - "y":
+          - Unique Number of Query id
+        client_state: ""
+      display_mode: TABLE_MODE
+    display_headline_column: Unique Number of Query id
+    viz_guid: ee1dc0fb-e5ab-49e3-8308-cea493b37fba
+  - id: Viz_2
+    answer:
+      name: Number of Users
+      description: Total number of users who searched on existing answers in the last 7 days
+      tables:
+      - id: Discover Monitoring Data
+        name: Discover Monitoring Data
+      search_query: "unique count [User id] [Event date].'last 7 days'"
+      answer_columns:
+      - name: Unique Number of User id
+      table:
+        table_columns:
+        - column_id: Unique Number of User id
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Unique Number of User id
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Unique Number of User id
+        axis_configs:
+        - "y":
+          - Unique Number of User id
+        client_state: ""
+      display_mode: TABLE_MODE
+    display_headline_column: Unique Number of User id
+    viz_guid: c440801e-3a3f-467f-b5c1-fb161d7f2e02
+  - id: Viz_3
+    answer:
+      name: '% of queries for which no result exist'
+      description: '% of searches on existing answers for which no result exists in the system. The lower the percentage the better it is for users. This number can be reduced by creating answers against these queries'
+      tables:
+      - id: Discover Monitoring Data
+        name: Discover Monitoring Data
+      formulas:
+      - id: '% of queries where no results exists'
+        name: '% of queries where no results exists'
+        expr: "unique_count_if ( ( [Number of results] = 0 ) , [Query id] ) / unique count ( [Query id] ) * 100"
+        was_auto_generated: false
+      - id: Number of queries for which no answers exist
+        name: Number of queries for which no answers exist
+        expr: "unique_count_if ( ( [Number of results] = 0 ) , [Query id] )"
+        was_auto_generated: false
+      search_query: "[Event date].'last 7 days' [% of queries where no results exists]"
+      answer_columns:
+      - name: '% of queries where no results exists'
+      table:
+        table_columns:
+        - column_id: '% of queries where no results exists'
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - '% of queries where no results exists'
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: '% of queries where no results exists'
+        axis_configs:
+        - "y":
+          - '% of queries where no results exists'
+        client_state: ""
+      display_mode: TABLE_MODE
+    display_headline_column: '% of queries where no results exists'
+    viz_guid: 64cef810-e3ac-4f1e-9820-8f28f0abbbd0
+  - id: Viz_4
+    answer:
+      name: Top Search Queries on existing answers
+      description: Describes the top search queries users are using while searching for answers in the last 30 days
+      tables:
+      - id: Discover Monitoring Data
+        name: Discover Monitoring Data
+      formulas:
+      - id: '% of queries where no results exists'
+        name: '% of queries where no results exists'
+        expr: "unique_count_if ( ( [Number of results] = 0 ) , [Query id] ) / unique count ( [Query id] ) * 100"
+        was_auto_generated: false
+      - id: Number of queries for which no answers exist
+        name: Number of queries for which no answers exist
+        expr: "unique_count_if ( ( [Number of results] = 0 ) , [Query id] )"
+        was_auto_generated: false
+      search_query: "[Event date].'last 30 days' [Query text] top 30 unique count [Query id]"
+      answer_columns:
+      - name: Query text
+      - name: Unique Number of Query id
+      table:
+        table_columns:
+        - column_id: Query text
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Unique Number of Query id
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Query text
+        - Unique Number of Query id
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Query text
+        - column_id: Unique Number of Query id
+        axis_configs:
+        - x:
+          - Query text
+          "y":
+          - Unique Number of Query id
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{},\"responsiveLayoutPreference\":3.0},\"axisProperties\":{\"742d60ff-62ae-4303-885b-68dd6c594986\":{\"linkedColumns\":[\"Unique Number of Query id\"],\"axisType\":\"Y\",\"isOpposite\":false},\"1ed81fb3-0ce2-4047-a450-d2ae3cc52402\":{\"linkedColumns\":[\"Query text\"],\"axisType\":\"X\"}},\"version\":\"V3\",\"columnProperties\":{\"Query text\":{},\"Unique Number of Query id\":{}}}"
+      display_mode: TABLE_MODE
+    viz_guid: 3ff822a6-89a1-4da0-ad9a-f1419a38983e
+  - id: Viz_5
+    answer:
+      name: Top Search Queries on existing answers for which no results exists
+      description: Describes the top search queries against which no answers exist in the system. To assist the users please create answers against these queries
+      tables:
+      - id: Discover Monitoring Data
+        name: Discover Monitoring Data
+      formulas:
+      - id: '% of queries where no results exists'
+        name: '% of queries where no results exists'
+        expr: "unique_count_if ( ( [Number of results] = 0 ) , [Query id] ) / unique count ( [Query id] ) * 100"
+        was_auto_generated: false
+      - id: Number of queries for which no answers exist
+        name: Number of queries for which no answers exist
+        expr: "unique_count_if ( ( [Number of results] = 0 ) , [Query id] )"
+        was_auto_generated: false
+      search_query: "[Event date].'last 30 days' [Number of results] = 0 [Query text] unique count [Query id] sort by unique count [Query id] descending"
+      answer_columns:
+      - name: Query text
+      - name: Unique Number of Query id
+      table:
+        table_columns:
+        - column_id: Query text
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Unique Number of Query id
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Query text
+        - Unique Number of Query id
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Query text
+        - column_id: Unique Number of Query id
+        axis_configs:
+        - x:
+          - Query text
+          "y":
+          - Unique Number of Query id
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"responsiveLayoutPreference\":3.0,\"chartSpecific\":{}},\"axisProperties\":{\"3f265c5a-8a49-464e-aedb-43237836a270\":{\"linkedColumns\":[\"Unique Number of Query id\"],\"axisType\":\"Y\",\"isOpposite\":false},\"77dbcdab-6a0b-4fa8-94e9-80a837ffcd23\":{\"linkedColumns\":[\"Number of results\"],\"axisType\":\"Y\",\"isOpposite\":true},\"adfcb7e4-67db-4645-be14-35009cda1898\":{\"linkedColumns\":[\"Query text\"],\"axisType\":\"X\"}},\"version\":\"V3\",\"columnProperties\":{\"Query text\":{},\"Unique Number of Query id\":{},\"Number of results\":{}}}"
+      display_mode: TABLE_MODE
+    viz_guid: 42a660d5-64c0-477b-affa-3e638b6be301
+  - id: Viz_6
+    answer:
+      name: Top Search Queries on existing answers where user did not find anything useful
+      description: Describes the top search queries against which users did not find any useful answer.  These are search queries where users did not click on any search results
+      tables:
+      - id: Discover Monitoring Data
+        name: Discover Monitoring Data
+      formulas:
+      - id: '% of queries where no results exists'
+        name: '% of queries where no results exists'
+        expr: "unique_count_if ( ( [Number of results] = 0 ) , [Query id] ) / unique count ( [Query id] ) * 100"
+        was_auto_generated: false
+      - id: Number of queries for which no answers exist
+        name: Number of queries for which no answers exist
+        expr: "unique_count_if ( ( [Number of results] = 0 ) , [Query id] )"
+        was_auto_generated: false
+      search_query: "[Event date].'last 30 days' [Query text] unique count [Query id] [Click count] = 0 sort by unique count [Query id] descending"
+      answer_columns:
+      - name: Query text
+      - name: Unique Number of Query id
+      table:
+        table_columns:
+        - column_id: Query text
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Unique Number of Query id
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Query text
+        - Unique Number of Query id
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Query text
+        - column_id: Unique Number of Query id
+        axis_configs:
+        - x:
+          - Query text
+          "y":
+          - Unique Number of Query id
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{},\"responsiveLayoutPreference\":3.0},\"axisProperties\":{\"61065237-3d9d-4620-a9dc-7c438a1291f7\":{\"linkedColumns\":[\"Unique Number of Query id\"],\"axisType\":\"Y\",\"isOpposite\":false},\"317d68df-ca73-4dc6-9d82-f53de6b75d82\":{\"linkedColumns\":[\"Click count\"],\"axisType\":\"Y\",\"isOpposite\":true},\"1ce57004-2f8f-4a56-ae56-a340489bdcb7\":{\"linkedColumns\":[\"Query text\"],\"axisType\":\"X\"}},\"version\":\"V3\",\"columnProperties\":{\"Query text\":{},\"Unique Number of Query id\":{},\"Click count\":{}}}"
+      display_mode: TABLE_MODE
+    viz_guid: 1798321c-44b4-4bfd-9bc4-3ce700e9d0e0
+  - id: Viz_7
+    answer:
+      name: Top Users who searched for answers
+      description: Describes the top 10 users by the usage who searched for answers in the last 30 days
+      tables:
+      - id: Discover Monitoring Data
+        name: Discover Monitoring Data
+      formulas:
+      - id: '% of queries where no results exists'
+        name: '% of queries where no results exists'
+        expr: "unique_count_if ( ( [Number of results] = 0 ) , [Query id] ) / unique count ( [Query id] ) * 100"
+        was_auto_generated: false
+      - id: Number of queries for which no answers exist
+        name: Number of queries for which no answers exist
+        expr: "unique_count_if ( ( [Number of results] = 0 ) , [Query id] )"
+        was_auto_generated: false
+      search_query: "[Event date].'last 30 days' unique count [Query id] [User id] [User name] sort by unique count [Query id] descending"
+      answer_columns:
+      - name: Unique Number of Query id
+      - name: User id
+      - name: User name
+      table:
+        table_columns:
+        - column_id: User id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: User name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Unique Number of Query id
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - User id
+        - User name
+        - Unique Number of Query id
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: User id
+        - column_id: User name
+        - column_id: Unique Number of Query id
+        axis_configs:
+        - x:
+          - User name
+          "y":
+          - Unique Number of Query id
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{},\"responsiveLayoutPreference\":3.0},\"axisProperties\":{\"befb450f-c41a-41cf-b0cc-39ae7ba32d09\":{\"linkedColumns\":[\"Unique Number of Query id\"],\"axisType\":\"Y\",\"isOpposite\":false},\"d179c650-ba90-4c95-b2ad-025e68b68d7f\":{\"linkedColumns\":[\"User name\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"u1\":\"#FCC838\",\"u2\":\"#48D1E0\",\"u3\":\"#2E75F0\",\"Unique Number of Query id\":\"#2E75F0\"},\"version\":\"V3\",\"columnProperties\":{\"User id\":{},\"User name\":{},\"Unique Number of Query id\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 9df52178-f2c3-4bb9-a794-86bd505427d1
+  - id: Viz_8
+    answer:
+      name: Weekly Searches on answers
+      description: Number of searches on answers on a weekly basis
+      tables:
+      - id: Discover Monitoring Data
+        name: Discover Monitoring Data
+      formulas:
+      - id: '% of queries where no results exists'
+        name: '% of queries where no results exists'
+        expr: "unique_count_if ( ( [Number of results] = 0 ) , [Query id] ) / unique count ( [Query id] ) * 100"
+        was_auto_generated: false
+      - id: Number of queries for which no answers exist
+        name: Number of queries for which no answers exist
+        expr: "unique_count_if ( ( [Number of results] = 0 ) , [Query id] )"
+        was_auto_generated: false
+      search_query: "unique count [Query id] [Event date].weekly"
+      answer_columns:
+      - name: Unique Number of Query id
+      - name: Week(Event date)
+      table:
+        table_columns:
+        - column_id: Week(Event date)
+          headline_aggregation: MIN-MAX
+        - column_id: Unique Number of Query id
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Week(Event date)
+        - Unique Number of Query id
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Week(Event date)
+        - column_id: Unique Number of Query id
+        axis_configs:
+        - x:
+          - Week(Event date)
+          "y":
+          - Unique Number of Query id
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"responsiveLayoutPreference\":3.0,\"chartSpecific\":{}},\"axisProperties\":{\"11449fe0-a13e-4d24-903f-db3f90262dba\":{\"linkedColumns\":[\"Unique Number of Query id\"],\"axisType\":\"Y\",\"isOpposite\":false},\"65261dd0-5ebd-4fb9-8e7b-6d653698c820\":{\"linkedColumns\":[\"Week(Event date)\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"u1\":\"#FCC838\",\"u2\":\"#48D1E0\",\"u3\":\"#2E75F0\",\"Unique Number of Query id\":\"#2E75F0\"},\"version\":\"V3\",\"columnProperties\":{\"Week(Event date)\":{},\"Unique Number of Query id\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 7a900193-ed29-44aa-8100-0e53417611a8
+  - id: Viz_9
+    answer:
+      name: Top Answers
+      description: Top answers found useful by the users who searched for answers in the last 30 days.
+      tables:
+      - id: Discover Monitoring Data
+        name: Discover Monitoring Data
+      formulas:
+      - id: '% of queries where no results exists'
+        name: '% of queries where no results exists'
+        expr: "unique_count_if ( ( [Number of results] = 0 ) , [Query id] ) / unique count ( [Query id] ) * 100"
+        was_auto_generated: false
+      - id: Number of queries for which no answers exist
+        name: Number of queries for which no answers exist
+        expr: "unique_count_if ( ( [Number of results] = 0 ) , [Query id] )"
+        was_auto_generated: false
+      search_query: "[Result title] unique count [Result id] [Event date].'last 30 days' top 10 [Object type] [Object type] != '{null}'"
+      answer_columns:
+      - name: Result title
+      - name: Unique Number of Result id
+      - name: Object type
+      table:
+        table_columns:
+        - column_id: Result title
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Object type
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Unique Number of Result id
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Result title
+        - Object type
+        - Unique Number of Result id
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Result title
+        - column_id: Object type
+        - column_id: Unique Number of Result id
+        axis_configs:
+        - x:
+          - Result title
+          "y":
+          - Unique Number of Result id
+          color:
+          - Object type
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"responsiveLayoutPreference\":3.0,\"chartSpecific\":{}},\"axisProperties\":{\"67ba1cd9-d4a9-4300-97aa-09fadf07ed5b\":{\"linkedColumns\":[\"Unique Number of Result id\"],\"axisType\":\"Y\",\"isOpposite\":false},\"8399f65d-581e-49e0-a538-9820c8fbd34b\":{\"linkedColumns\":[\"Result title\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"answer\":\"#48D1E0\",\"pinboard_viz\":\"#2E75F0\"},\"version\":\"V3\",\"columnProperties\":{\"Result title\":{},\"Object type\":{},\"Unique Number of Result id\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: c585db25-a4c7-46b7-aeb1-b6a59d6ce34f
+  - id: Viz_10
+    answer:
+      name: Weekly % of search queries on answers for which no answers exist
+      description: '% of search queries for which no answer exist in the system. The lower the percentage the better it is for users. This number can be reduced by creating answers against these queries'
+      tables:
+      - id: Discover Monitoring Data
+        name: Discover Monitoring Data
+      formulas:
+      - id: '% of queries where no results exists'
+        name: '% of queries where no results exists'
+        expr: "unique_count_if ( ( [Number of results] = 0 ) , [Query id] ) / unique count ( [Query id] ) * 100"
+        was_auto_generated: false
+      - id: Number of queries for which no answers exist
+        name: Number of queries for which no answers exist
+        expr: "unique_count_if ( ( [Number of results] = 0 ) , [Query id] )"
+        was_auto_generated: false
+      search_query: "[% of queries where no results exists] [Event date].weekly"
+      answer_columns:
+      - name: '% of queries where no results exists'
+      - name: Week(Event date)
+      table:
+        table_columns:
+        - column_id: Week(Event date)
+          headline_aggregation: MIN-MAX
+        - column_id: '% of queries where no results exists'
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Week(Event date)
+        - '% of queries where no results exists'
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Week(Event date)
+        - column_id: '% of queries where no results exists'
+        axis_configs:
+        - x:
+          - Week(Event date)
+          "y":
+          - '% of queries where no results exists'
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{},\"responsiveLayoutPreference\":3.0},\"axisProperties\":{\"561dc665-9702-4dd3-b2bc-76fe77aa1856\":{\"linkedColumns\":[\"% of queries where no results exists\"],\"axisType\":\"Y\",\"isOpposite\":false},\"9cb66f57-5779-4de3-b4b3-945b7e69280c\":{\"linkedColumns\":[\"Week(Event date)\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"% of queries where no results exists\":\"#2E75F0\"},\"version\":\"V3\",\"columnProperties\":{\"Week(Event date)\":{},\"% of queries where no results exists\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 1f684141-aecc-4c26-ad78-4c226fd3e030
+  - id: Viz_11
+    answer:
+      name: Weekly Active Users
+      description: Total number of unique users who are searching for answers in a week
+      tables:
+      - id: Discover Monitoring Data
+        name: Discover Monitoring Data
+      formulas:
+      - id: '% of queries where no results exists'
+        name: '% of queries where no results exists'
+        expr: "unique_count_if ( ( [Number of results] = 0 ) , [Query id] ) / unique count ( [Query id] ) * 100"
+        was_auto_generated: false
+      - id: Number of queries for which no answers exist
+        name: Number of queries for which no answers exist
+        expr: "unique_count_if ( ( [Number of results] = 0 ) , [Query id] )"
+        was_auto_generated: false
+      search_query: "unique count [User id] [Event date].weekly"
+      answer_columns:
+      - name: Unique Number of User id
+      - name: Week(Event date)
+      table:
+        table_columns:
+        - column_id: Week(Event date)
+          headline_aggregation: MIN-MAX
+        - column_id: Unique Number of User id
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Week(Event date)
+        - Unique Number of User id
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Week(Event date)
+        - column_id: Unique Number of User id
+        axis_configs:
+        - x:
+          - Week(Event date)
+          "y":
+          - Unique Number of User id
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"responsiveLayoutPreference\":3.0,\"chartSpecific\":{}},\"axisProperties\":{\"348665b1-a2cc-466c-833b-656f6240c81a\":{\"linkedColumns\":[\"Unique Number of User id\"],\"axisType\":\"Y\",\"isOpposite\":false},\"1dc57f93-c413-43f1-b1f1-07d4a9d31dbc\":{\"linkedColumns\":[\"Week(Event date)\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Unique Number of User id\":\"#FCC838\"},\"version\":\"V3\",\"columnProperties\":{\"Week(Event date)\":{},\"Unique Number of User id\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 2ba14f91-4df0-4b96-874b-65b4f80a1b3b
+  - id: Viz_12
+    answer:
+      name: Poorly performing search queries for answers
+      description: Queries where users have to browse a lot of answers before finding the right one. This is the data from the last 30 days
+      tables:
+      - id: Discover Monitoring Data
+        name: Discover Monitoring Data
+      formulas:
+      - id: Poorest click position for a query
+        name: Poorest click position for a query
+        expr: "group_max ( [Highest click position] , [Query text] )"
+        was_auto_generated: false
+      - id: '% of queries where no results exists'
+        name: '% of queries where no results exists'
+        expr: "unique_count_if ( ( [Number of results] = 0 ) , [Query id] ) / unique count ( [Query id] ) * 100"
+        was_auto_generated: false
+      - id: Number of queries for which no answers exist
+        name: Number of queries for which no answers exist
+        expr: "unique_count_if ( ( [Number of results] = 0 ) , [Query id] )"
+        was_auto_generated: false
+      search_query: "[Query text] unique count [Query id] [Poorest click position for a query] sort by [Poorest click position for a query] descending [User click position] != {null}"
+      answer_columns:
+      - name: Query text
+      - name: Unique Number of Query id
+      - name: Total Poorest click position for a query
+      table:
+        table_columns:
+        - column_id: Query text
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Unique Number of Query id
+          headline_aggregation: TABLE_AGGR
+        - column_id: Total Poorest click position for a query
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Query text
+        - Unique Number of Query id
+        - Total Poorest click position for a query
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Query text
+        - column_id: Unique Number of Query id
+        - column_id: Total Poorest click position for a query
+        axis_configs:
+        - x:
+          - Query text
+          "y":
+          - Unique Number of Query id
+          - Total Poorest click position for a query
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"responsiveLayoutPreference\":3.0,\"chartSpecific\":{}},\"axisProperties\":{\"fa9a5723-706d-4eea-970a-dc89a58e0b88\":{\"linkedColumns\":[\"Unique Number of Query id\"],\"axisType\":\"Y\",\"isOpposite\":false},\"632b8689-c44d-46e8-a37b-66e4e2473502\":{\"linkedColumns\":[\"Total Poorest click position for a query\"],\"axisType\":\"Y\",\"isOpposite\":true},\"67f34073-6ac1-42f9-88e9-7e1c9197090a\":{\"linkedColumns\":[\"User click position\"],\"axisType\":\"Y\",\"isOpposite\":true},\"2f5f4854-9383-4f1f-b14c-a4f17db667ec\":{\"linkedColumns\":[\"Query text\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Unique Number of Query id\":\"#FCC838\",\"Total Poorest click position for a query\":\"#48D1E0\",\"User click position\":\"#2E75F0\"},\"version\":\"V3\",\"columnProperties\":{\"Query text\":{},\"Unique Number of Query id\":{},\"Total Poorest click position for a query\":{},\"User click position\":{}}}"
+      display_mode: TABLE_MODE
+    viz_guid: 09d21ec7-dcc0-4fa1-8a0a-d2a2cd039527
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: EXTRA_SMALL
+    - visualization_id: Viz_2
+      size: EXTRA_SMALL
+    - visualization_id: Viz_3
+      size: EXTRA_SMALL
+    - visualization_id: Viz_4
+      size: MEDIUM
+    - visualization_id: Viz_5
+      size: MEDIUM
+    - visualization_id: Viz_6
+      size: MEDIUM
+    - visualization_id: Viz_7
+      size: MEDIUM
