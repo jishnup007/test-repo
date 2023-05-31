@@ -1,0 +1,46 @@
+guid: 7466f3c5-95a5-44b9-a17d-9cc5fad495ee
+table:
+  name: agency
+  db: complex_schema
+  schema: falcon_default_schema
+  db_table: agency
+  columns:
+  - name: Agency_ID
+    db_column_name: Agency_ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Agency_Commission
+    db_column_name: Agency_Commission
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Agency_Service Years
+    db_column_name: Agency_Service Years
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Agency_City
+    db_column_name: Agency_City
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Agency_State
+    db_column_name: Agency_State
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Agency_Name
+    db_column_name: Agency_Name
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
