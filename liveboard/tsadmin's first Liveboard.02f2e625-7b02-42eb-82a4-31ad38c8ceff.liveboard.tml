@@ -1,0 +1,45 @@
+guid: 02f2e625-7b02-42eb-82a4-31ad38c8ceff
+liveboard:
+  name: tsadmin's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "User, Day of week Timestamp, Day of year Timestamp"
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      search_query: "[User] [Timestamp].'day of week' [Timestamp].'day of year'"
+      answer_columns:
+      - name: User
+      - name: Day of Week(Timestamp)
+      - name: DAY_OF_YEAR(Timestamp)
+      table:
+        table_columns:
+        - column_id: User
+          show_headline: false
+        - column_id: Day of Week(Timestamp)
+          show_headline: false
+        - column_id: DAY_OF_YEAR(Timestamp)
+          show_headline: false
+        ordered_column_ids:
+        - User
+        - Day of Week(Timestamp)
+        - DAY_OF_YEAR(Timestamp)
+        client_state: ""
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: User
+        - column_id: Day of Week(Timestamp)
+        - column_id: DAY_OF_YEAR(Timestamp)
+        axis_configs:
+        - x:
+          - DAY_OF_YEAR(Timestamp)
+          "y":
+          - User
+          category:
+          - Day of Week(Timestamp)
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: b101f273-3666-44b5-92df-1e8a4a4a8f01
