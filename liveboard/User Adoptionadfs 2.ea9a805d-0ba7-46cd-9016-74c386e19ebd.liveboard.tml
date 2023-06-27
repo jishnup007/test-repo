@@ -1184,50 +1184,122 @@ liveboard:
     is_single_value: false
     display_name: ""
   layout:
-    tiles:
-    - visualization_id: Viz_23
-      size: EXTRA_SMALL
-    - visualization_id: Viz_8
-      size: EXTRA_SMALL
-    - visualization_id: Viz_1
-      size: EXTRA_SMALL
-    - visualization_id: Viz_10
-      size: EXTRA_SMALL
-    - visualization_id: Viz_5
-      size: EXTRA_SMALL
-    - visualization_id: Viz_4
-      size: EXTRA_SMALL
-    - visualization_id: Viz_9
-      size: EXTRA_SMALL
-    - visualization_id: Viz_2
-      size: MEDIUM_SMALL
-    - visualization_id: Viz_7
-      size: MEDIUM_SMALL
-    - visualization_id: Viz_6
-      size: MEDIUM_SMALL
-    - visualization_id: Viz_12
-      size: LARGE_SMALL
-    - visualization_id: Viz_11
-      size: LARGE_SMALL
-    - visualization_id: Viz_13
-      size: LARGE_SMALL
-    - visualization_id: Viz_3
-      size: MEDIUM
-    - visualization_id: Viz_17
-      size: MEDIUM
-    - visualization_id: Viz_14
-      size: MEDIUM
-    - visualization_id: Viz_15
-      size: MEDIUM
-    - visualization_id: Viz_16
-      size: LARGE_SMALL
-    - visualization_id: Viz_18
-      size: MEDIUM
-    - visualization_id: Viz_19
-      size: MEDIUM
-    - visualization_id: Viz_21
-      size: MEDIUM
-    - visualization_id: Viz_20
-      size: MEDIUM
-    - visualization_id: Viz_22
-      size: MEDIUM
+    tabs:
+    - name: sampleTab 1
+      description: ""
+      tiles:
+      - visualization_id: Viz_1
+        x: 6
+        "y": 0
+        height: 2
+        width: 3
+      - visualization_id: Viz_2
+        x: 0
+        "y": 4
+        height: 4
+        width: 6
+      - visualization_id: Viz_3
+        x: 0
+        "y": 24
+        height: 8
+        width: 6
+      - visualization_id: Viz_4
+        x: 3
+        "y": 2
+        height: 2
+        width: 3
+      - visualization_id: Viz_5
+        x: 0
+        "y": 2
+        height: 2
+        width: 3
+      - visualization_id: Viz_6
+        x: 0
+        "y": 8
+        height: 4
+        width: 6
+      - visualization_id: Viz_7
+        x: 6
+        "y": 4
+        height: 4
+        width: 6
+      - visualization_id: Viz_8
+        x: 3
+        "y": 0
+        height: 2
+        width: 3
+      - visualization_id: Viz_9
+        x: 6
+        "y": 2
+        height: 2
+        width: 3
+      - visualization_id: Viz_10
+        x: 9
+        "y": 0
+        height: 2
+        width: 3
+      - visualization_id: Viz_11
+        x: 0
+        "y": 16
+        height: 4
+        width: 12
+      - visualization_id: Viz_12
+        x: 0
+        "y": 12
+        height: 4
+        width: 12
+      - visualization_id: Viz_13
+        x: 0
+        "y": 20
+        height: 4
+        width: 12
+      - visualization_id: Viz_14
+        x: 0
+        "y": 32
+        height: 8
+        width: 6
+      - visualization_id: Viz_15
+        x: 6
+        "y": 32
+        height: 8
+        width: 6
+      - visualization_id: Viz_16
+        x: 0
+        "y": 40
+        height: 4
+        width: 12
+      - visualization_id: Viz_17
+        x: 6
+        "y": 24
+        height: 8
+        width: 6
+      - visualization_id: Viz_18
+        x: 0
+        "y": 44
+        height: 8
+        width: 6
+      - visualization_id: Viz_19
+        x: 6
+        "y": 44
+        height: 8
+        width: 6
+      - visualization_id: Viz_20
+        x: 6
+        "y": 52
+        height: 8
+        width: 6
+      - visualization_id: Viz_21
+        x: 0
+        "y": 52
+        height: 8
+        width: 6
+      - visualization_id: Viz_22
+        x: 0
+        "y": 60
+        height: 8
+        width: 6
+      - visualization_id: Viz_23
+        x: 0
+        "y": 0
+        height: 2
+        width: 3
