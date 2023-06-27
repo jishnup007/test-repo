@@ -321,7 +321,7 @@ liveboard:
       - id: "TS: BI Server"
         name: "TS: BI Server"
         fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
-      search_query: "[Timestamp] [Timestamp].weekly unique count [User] [Timestamp].'last 2 weeks'"
+      search_query: "[Timestamp] [Timestamp].weekly unique count [User] [Timestamp].'last 3 weeks'"
       answer_columns:
       - name: Week(Timestamp)
       - name: Unique Number of User
