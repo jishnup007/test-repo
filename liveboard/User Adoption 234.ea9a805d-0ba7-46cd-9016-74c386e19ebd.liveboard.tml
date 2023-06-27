@@ -315,13 +315,13 @@ liveboard:
     viz_guid: 22e9b324-b23e-4203-9985-cb212bd67f87
   - id: Viz_8
     answer:
-      name: WAU Last Weeks
+      name: WAU 2 Last Weeks
       description: Average weekly active users
       tables:
       - id: "TS: BI Server"
         name: "TS: BI Server"
         fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
-      search_query: "[Timestamp] [Timestamp].weekly unique count [User] [Timestamp].'last week'"
+      search_query: "[Timestamp] [Timestamp].weekly unique count [User] [Timestamp].'last 2 weeks'"
       answer_columns:
       - name: Week(Timestamp)
       - name: Unique Number of User
