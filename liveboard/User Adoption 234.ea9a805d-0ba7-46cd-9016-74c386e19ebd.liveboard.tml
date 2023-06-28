@@ -1143,7 +1143,7 @@ liveboard:
     viz_guid: 807dedad-4814-41d0-8694-c0fcd95cc6f4
   - id: Viz_23
     answer:
-      name: DAU Last 4 Weeks
+      name: DAU Last 3 Weeks
       description: Average daily active users
       tables:
       - id: "TS: BI Server"
