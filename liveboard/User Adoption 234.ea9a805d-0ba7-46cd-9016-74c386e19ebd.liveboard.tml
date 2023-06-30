@@ -4,7 +4,7 @@ liveboard:
   visualizations:
   - id: Viz_1
     answer:
-      name: MAU Last 30 Days
+      name: MAU Last 60 Days
       description: Count of Users who logged in - last 30 days.
       tables:
       - id: "TS: BI Server"
@@ -23,7 +23,7 @@ liveboard:
         name: pinboard views
         expr: "count ( [User Action] )"
         was_auto_generated: false
-      search_query: "[User] [User] != [User].{null} [User].sre-tv@thoughtspot.int [Timestamp] = 'last 30 days' [.Int domain Users] [.Int domain Users] != true"
+      search_query: "[User] [User] != [User].{null} [User].sre-tv@thoughtspot.int [Timestamp] = 'last 30 days' [.Int domain Users]"
       answer_columns:
       - name: User
       - name: .Int domain Users
@@ -37,6 +37,7 @@ liveboard:
         - User
         - .Int domain Users
         client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"User\",\"columnProperty\": {}},{\"columnId\": \".Int domain Users\",\"columnProperty\": {}}]}"
       chart:
         type: SCATTER
         chart_columns:
@@ -48,6 +49,7 @@ liveboard:
           "y":
           - .Int domain Users
         client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"User\",\"columnProperty\": {}},{\"columnId\": \".Int domain Users\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b0b3d6ab-8248-4fde-a333-263a3bcb8bf9\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\".Int domain Users\"],\"isOpposite\": false}},{\"id\": \"cc26411f-773c-4f53-b8e8-1bb1560bda49\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"User\"]}}]}"
       display_mode: TABLE_MODE
     display_headline_column: User
     viz_guid: 660236aa-148b-41fa-9a06-e569c68a890a
