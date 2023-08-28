@@ -9,21 +9,15 @@ liveboard:
       - id: Parameters WS
         name: Parameters WS
         fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-      search_query: "[Tax] [Size] [Extended Price] [Discount] [Quantity] [Order Total Price]"
+      search_query: "[Tax] [Discount] [Quantity] [Order Total Price]"
       answer_columns:
       - name: Total Tax
-      - name: Size
-      - name: Total Extended Price
       - name: Total Discount
       - name: Total Quantity
       - name: Total Order Total Price
       table:
         table_columns:
-        - column_id: Size
-          headline_aggregation: COUNT_DISTINCT
         - column_id: Total Tax
-          headline_aggregation: SUM
-        - column_id: Total Extended Price
           headline_aggregation: SUM
         - column_id: Total Discount
           headline_aggregation: SUM
@@ -32,34 +26,25 @@ liveboard:
         - column_id: Total Order Total Price
           headline_aggregation: SUM
         ordered_column_ids:
-        - Size
         - Total Tax
-        - Total Extended Price
         - Total Discount
         - Total Quantity
         - Total Order Total Price
         client_state: ""
         client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
       chart:
-        type: COLUMN
+        type: KPI
         chart_columns:
-        - column_id: Size
         - column_id: Total Tax
-        - column_id: Total Extended Price
         - column_id: Total Discount
         - column_id: Total Quantity
         - column_id: Total Order Total Price
         axis_configs:
-        - x:
-          - Size
-          "y":
+        - "y":
           - Total Tax
-          - Total Extended Price
-          - Total Discount
-          - Total Quantity
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Size\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}},{\"columnId\": \"Total Order Total Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8724bd93-5f7d-404d-b954-76649e25f661\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"03054453-b2ff-4497-9348-90200c6f33cb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": true}},{\"id\": \"fa4893ed-8cc2-4ff9-9d2a-06e0cec51a4a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": true}},{\"id\": \"685329d8-ef6b-4871-be90-e943bd207404\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": true}},{\"id\": \"90b60ceb-ef3d-48cf-9fdc-eb18a3e546eb\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Size\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#06BF7F\"},{\"serieName\": \"Total Extended Price\",\"color\": \"#FCC838\"},{\"serieName\": \"Total Discount\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Quantity\",\"color\": \"#2E75F0\"}]}"
-      display_mode: CHART_MODE
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Tax\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}},{\"columnId\": \"Total Order Total Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"4147d8fd-3d96-4b44-b00a-933d35780535\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"827007f8-857a-49af-836a-bdfccb7d66b4\",\"properties\": {\"axisType\": \"X\"}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#06BF7F\"},{\"serieName\": \"bee3bb77-f395-44fd-8965-61d7fba705b7\",\"color\": \"#FCC838\"},{\"serieName\": \"Total Discount\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Quantity\",\"color\": \"#2E75F0\"}]}"
+      display_mode: TABLE_MODE
     viz_guid: 04fb34ce-8517-420d-a918-4c300bac69d2
   layout:
     tiles:
