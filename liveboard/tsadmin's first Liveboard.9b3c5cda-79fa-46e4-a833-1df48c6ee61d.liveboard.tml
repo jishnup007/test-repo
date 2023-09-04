@@ -1,0 +1,40 @@
+guid: 9b3c5cda-79fa-46e4-a833-1df48c6ee61d
+liveboard:
+  name: tsadmin's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Tax by Category
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Tax] [Category]"
+      answer_columns:
+      - name: Total Tax
+      - name: Category
+      table:
+        table_columns:
+        - column_id: Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Tax
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Category
+        - Total Tax
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Category
+        - column_id: Total Tax
+        axis_configs:
+        - x:
+          - Category
+          "y":
+          - Total Tax
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7b18dfbb-f932-4efe-b255-dfe20ab6a32c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"5172d0ee-0bba-4a70-9a4c-6f097f67fcf3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#FF8142\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 05e4fd1f-0bf4-4f39-94f4-3819980484ed
