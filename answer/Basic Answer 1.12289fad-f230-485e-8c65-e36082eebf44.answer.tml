@@ -1,0 +1,54 @@
+guid: 12289fad-f230-485e-8c65-e36082eebf44
+answer:
+  name: Basic Answer 1
+  description: This is basic answer with table and headline visualizations.
+  tables:
+  - id: LINEORDER
+    name: LINEORDER
+    fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+  - id: PART
+    name: PART
+    fqn: a7fc012e-bdb3-4e75-9ce4-b3f731d90136
+  joins:
+  - id: Lineorder PartKey - Part PartKey
+    name: Lineorder PartKey - Part PartKey
+    source: LINEORDER
+    destination: PART
+  table_paths:
+  - id: LINEORDER_1
+    table: LINEORDER
+    join_path:
+    - {}
+  - id: PART_1
+    table: PART
+    join_path:
+    - join:
+      - Lineorder PartKey - Part PartKey
+  search_query: "[LINEORDER_1::Revenue] [PART_1::Color]"
+  answer_columns:
+  - name: Total Revenue
+  - name: Color
+  table:
+    table_columns:
+    - column_id: Color
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Revenue
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Color
+    - Total Revenue
+    client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}]}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Color
+    - column_id: Total Revenue
+    axis_configs:
+    - x:
+      - Color
+      "y":
+      - Total Revenue
+    client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"32286644-696b-417a-ada7-11a9a350df17\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"d3525ac6-c098-479a-a086-dfbde7919d6d\":{\"linkedColumns\":[\"Color\"],\"axisType\":\"X\"}},\"version\":\"V2.1\",\"columnProperties\":{\"Color\":{},\"Total Revenue\":{}}}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"32286644-696b-417a-ada7-11a9a350df17\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"d3525ac6-c098-479a-a086-dfbde7919d6d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#8C62F5\"}]}"
+  display_mode: CHART_MODE
