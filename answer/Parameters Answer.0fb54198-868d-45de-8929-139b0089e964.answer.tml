@@ -1,0 +1,53 @@
+guid: 0fb54198-868d-45de-8929-139b0089e964
+answer:
+  name: Parameters Answer
+  tables:
+  - id: Parameters WS
+    name: Parameters WS
+    fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+  formulas:
+  - id: Adjusted Tax
+    name: Adjusted Tax
+    expr: "[Tax] - [Discount] * [Double List Param]"
+    was_auto_generated: false
+  - id: Parameterized Commit Date Filter
+    name: Parameterized Commit Date Filter
+    expr: "[Commit Date] = [Date Param]"
+    was_auto_generated: false
+  search_query: "[Tax] [Ship Mode] [Adjusted Tax] [Parameterized Commit Date Filter] = true"
+  answer_columns:
+  - name: Total Tax
+  - name: Ship Mode
+  - name: Total Adjusted Tax
+  table:
+    table_columns:
+    - column_id: Ship Mode
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Tax
+      headline_aggregation: SUM
+    - column_id: Total Adjusted Tax
+      headline_aggregation: TABLE_AGGR
+    ordered_column_ids:
+    - Ship Mode
+    - Total Tax
+    - Total Adjusted Tax
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Ship Mode
+    - column_id: Total Tax
+    - column_id: Total Adjusted Tax
+    axis_configs:
+    - x:
+      - Ship Mode
+      "y":
+      - Total Tax
+      - Total Adjusted Tax
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"e44c68e2-8a83-494e-b833-6818607dbbba\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"eadebb50-9412-4e16-91ad-c02a7b415d49\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Adjusted Tax\"],\"isOpposite\": true}},{\"id\": \"22fcac66-95d3-47c1-bd32-321adec41a49\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Ship Mode\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Adjusted Tax\",\"color\": \"#2E75F0\"}]}"
+  display_mode: CHART_MODE
+  parameter_values:
+  - key: Date Param
+    value: 10/16/1994
