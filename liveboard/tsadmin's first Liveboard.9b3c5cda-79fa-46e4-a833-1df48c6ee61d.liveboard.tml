@@ -4,7 +4,7 @@ liveboard:
   visualizations:
   - id: Viz_1
     answer:
-      name: Total Tax by Category
+      name: Total Tax by Category-monthly
       tables:
       - id: Parameters WS
         name: Parameters WS
