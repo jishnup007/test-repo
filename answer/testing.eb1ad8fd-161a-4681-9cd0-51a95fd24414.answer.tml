@@ -29,7 +29,7 @@ answer:
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
-    type: LINE
+    type: PIVOT_TABLE
     chart_columns:
     - column_id: Category
     - column_id: Quarter(Commit Date)
@@ -38,10 +38,27 @@ answer:
     axis_configs:
     - x:
       - Quarter(Commit Date)
+      - Category
+      "y":
+      - Total Tax
+      color:
+      - Ship Mode
+    - "y":
+      - Total Tax
+    - x:
+      - Quarter(Commit Date)
+      "y":
+      - Total Tax
+    - "y":
+      - Total Tax
+      color:
+      - Ship Mode
+    - x:
+      - Quarter(Commit Date)
       "y":
       - Total Tax
       color:
       - Ship Mode
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Ship Mode\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"5a772f61-8535-4bb3-9e5e-276b41149244\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"e4044141-da47-4401-ab7c-b065a8b194a9\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"{null}\",\"color\": \"#2E75F0\"},{\"serieName\": \"air\",\"color\": \"#48D1E0\"},{\"serieName\": \"fob\",\"color\": \"#FCC838\"},{\"serieName\": \"mail\",\"color\": \"#06BF7F\"},{\"serieName\": \"rail\",\"color\": \"#8C62F5\"},{\"serieName\": \"reg air\",\"color\": \"#FF8142\"},{\"serieName\": \"ship\",\"color\": \"#ABC7F9\"},{\"serieName\": \"truck\",\"color\": \"#B5ECF2\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotState\": {\"fields\": [{\"dataField\": \"Quarter(Commit Date)\",\"sortBy\": \"value\",\"sortBySummaryField\": \"Quarter(Commit Date)\",\"sortOrder\": \"asc\",\"expanded\": false,\"area\": \"row\"}]},\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Ship Mode\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"de850b99-2484-4717-861f-3a12f056b1c8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"d72afb62-8df0-4273-a1a6-3cf51fa0d758\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\",\"Category\"]}}]}"
   display_mode: CHART_MODE
