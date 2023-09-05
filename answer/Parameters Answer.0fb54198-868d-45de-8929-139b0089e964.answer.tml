@@ -34,7 +34,7 @@ answer:
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
-    type: WATERFALL
+    type: STACKED_COLUMN
     chart_columns:
     - column_id: Ship Mode
     - column_id: Total Tax
@@ -45,7 +45,7 @@ answer:
       "y":
       - Total Tax
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"abcac29f-18ab-41e5-a5bb-56196189020e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"2ae62d31-66f6-4974-920c-e2e04fc4f768\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Ship Mode\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#48D1E0\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"200129dd-e09a-41f2-931b-c9b1757037b6\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"832de80e-a864-4343-8d0c-66b392b2f871\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Ship Mode\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#06BF7F\"}]}"
   display_mode: CHART_MODE
   parameter_values:
   - key: Date Param
