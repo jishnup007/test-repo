@@ -1,0 +1,35 @@
+guid: a1778e69-f41b-4f8f-ae38-5771251fe929
+answer:
+  name: test
+  tables:
+  - id: Parameters WS
+    name: Parameters WS
+    fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+  search_query: "[Tax] [Color]"
+  answer_columns:
+  - name: Total Tax
+  - name: Color
+  table:
+    table_columns:
+    - column_id: Color
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Tax
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Color
+    - Total Tax
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Color
+    - column_id: Total Tax
+    axis_configs:
+    - x:
+      - Color
+      "y":
+      - Total Tax
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8f9eb109-8590-4caf-8670-f59d02cbe712\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"d5f2f1ed-c0e3-4f5c-9319-e5552c525937\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#747E8C\"}]}"
+  display_mode: CHART_MODE
