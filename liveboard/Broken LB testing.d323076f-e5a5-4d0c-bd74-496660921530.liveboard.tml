@@ -38,3 +38,46 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"sales Product Id\",\"columnProperty\": {}},{\"columnId\": \"Total Purchase Id\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b4b107c0-3e0d-40cf-99f3-8480a02c1635\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Purchase Id\"],\"isOpposite\": false}},{\"id\": \"14e67ec9-b0af-414d-82c2-7ccb765085ab\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"sales Product Id\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Purchase Id\",\"color\": \"#FCC838\"}]}"
       display_mode: CHART_MODE
     viz_guid: 605a32fa-18a6-42a7-a419-013510cb4392
+  - id: Viz_2
+    answer:
+      name: Total Extended Price by Supplier Nation and Supplier Region
+      tables:
+      - id: Container Worksheet
+        name: Container Worksheet
+        fqn: 286933b5-fc30-46b8-9216-31f669f46a15
+      search_query: "[Supplier Nation] [Supplier Region] [Extended Price]"
+      answer_columns:
+      - name: Supplier Nation
+      - name: Supplier Region
+      - name: Total Extended Price
+      table:
+        table_columns:
+        - column_id: Supplier Nation
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Supplier Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Extended Price
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Supplier Nation
+        - Supplier Region
+        - Total Extended Price
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Supplier Nation
+        - column_id: Supplier Region
+        - column_id: Total Extended Price
+        axis_configs:
+        - x:
+          - Supplier Nation
+          "y":
+          - Total Extended Price
+          color:
+          - Supplier Region
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Supplier Nation\",\"columnProperty\": {}},{\"columnId\": \"Supplier Region\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"c8f0d1c0-0451-4c03-9e9b-a44d9c8784b9\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"72adaff3-16c7-4103-96cb-acdee3bd0370\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Supplier Nation\"]}}],\"systemSeriesColors\": [{\"serieName\": \"africa\",\"color\": \"#06BF7F\"},{\"serieName\": \"america\",\"color\": \"#FCC838\"},{\"serieName\": \"asia\",\"color\": \"#48D1E0\"},{\"serieName\": \"europe\",\"color\": \"#71A1F4\"},{\"serieName\": \"middle east\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 7431c493-41f8-481e-a006-d5e2e27657b5
