@@ -1,3 +1,40 @@
 guid: d323076f-e5a5-4d0c-bd74-496660921530
 liveboard:
   name: Broken LB testing
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Purchase Id by sales Product Id
+      tables:
+      - id: Chasmtrap
+        name: Chasmtrap
+        fqn: 07a8af30-cd9d-4ab0-a58a-544a818ddac7
+      search_query: "[sales Product Id] [Purchase Id]"
+      answer_columns:
+      - name: sales Product Id
+      - name: Total Purchase Id
+      table:
+        table_columns:
+        - column_id: sales Product Id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Purchase Id
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - sales Product Id
+        - Total Purchase Id
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: sales Product Id
+        - column_id: Total Purchase Id
+        axis_configs:
+        - x:
+          - sales Product Id
+          "y":
+          - Total Purchase Id
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"sales Product Id\",\"columnProperty\": {}},{\"columnId\": \"Total Purchase Id\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b4b107c0-3e0d-40cf-99f3-8480a02c1635\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Purchase Id\"],\"isOpposite\": false}},{\"id\": \"14e67ec9-b0af-414d-82c2-7ccb765085ab\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"sales Product Id\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Purchase Id\",\"color\": \"#FCC838\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 605a32fa-18a6-42a7-a419-013510cb4392
