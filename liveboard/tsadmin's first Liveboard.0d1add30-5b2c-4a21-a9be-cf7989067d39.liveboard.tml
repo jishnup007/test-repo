@@ -4,15 +4,6 @@ liveboard:
   visualizations:
   - id: Viz_1
     answer:
-      name: "Total Tax, Total Quantity by Manufacturer"
-      tables:
-      - id: Parameters WS
-        name: Parameters WS
-        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-      search_query: "[Tax] [Manufacturer] [Quantity]"
-      answer_columns:
-      - name: Total Tax
-      - name: Total Quantity
       table:
         table_columns:
         - column_id: Manufacturer
