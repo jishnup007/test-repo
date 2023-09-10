@@ -43,7 +43,7 @@ liveboard:
         client_state: ""
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Tax\",\"columnProperty\": {}},{\"columnId\": \"Manufacturer\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"4dddd4ad-1aa8-49d1-ae69-1ded437e87d2\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"496599f2-5c01-408b-ad06-7cf13371fbaf\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": true}},{\"id\": \"b53ed47f-66b8-427f-9b2b-a02cceb6568b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Manufacturer\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Quantity\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
-  
+    viz_guid: f72ebaba-2fbf-4995-b40c-3a60c5077cf4
   - id: Viz_2
     answer:
       name: "Total Tax, Total Quantity by Manufacturer"
