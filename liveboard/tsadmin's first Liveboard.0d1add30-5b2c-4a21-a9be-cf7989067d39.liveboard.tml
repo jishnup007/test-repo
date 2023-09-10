@@ -11,7 +11,7 @@ liveboard:
         fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
       search_query: "[Tax] [Manufacturer] [Quantity]"
       answer_columns:
-      - name: Total Tax
+      - name: Total sum
       - name: Manufacturer
       - name: Total Quantity
       table:
