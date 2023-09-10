@@ -1,4 +1,4 @@
-guid: 0d1add30-5b2c-4a21-a9be-cf7989067d3
+guid: 0d1add30-5b2c-4a21-a9be-cf7989067d39
 liveboard:
   name: tsadmin's first Liveboard
   visualizations:
@@ -12,7 +12,6 @@ liveboard:
       search_query: "[Tax] [Manufacturer] [Quantity]"
       answer_columns:
       - name: Total Tax
-      - name: Manufacturer
       - name: Total Quantity
       table:
         table_columns:
