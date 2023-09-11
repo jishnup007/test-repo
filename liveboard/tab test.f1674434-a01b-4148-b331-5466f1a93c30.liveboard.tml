@@ -1,3 +1,46 @@
 guid: f1674434-a01b-4148-b331-5466f1a93c30
 liveboard:
   name: tab test
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Monthly Lo Orderdate
+      tables:
+      - id: UNIQUE-manesh.brahmam-UI-WS
+        name: UNIQUE-manesh.brahmam-UI-WS
+        fqn: e1a74421-119d-4daf-8dee-047a61a5f5a2
+      search_query: "[Lo Orderdate] [Lo Orderdate].monthly [Lo Orderkey] [Lo Linenumber]"
+      answer_columns:
+      - name: Month(Lo Orderdate)
+      - name: Total Lo Orderkey
+      - name: Total Lo Linenumber
+      table:
+        table_columns:
+        - column_id: Month(Lo Orderdate)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Lo Orderkey
+          headline_aggregation: SUM
+        - column_id: Total Lo Linenumber
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Month(Lo Orderdate)
+        - Total Lo Orderkey
+        - Total Lo Linenumber
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Month(Lo Orderdate)
+        - column_id: Total Lo Orderkey
+        - column_id: Total Lo Linenumber
+        axis_configs:
+        - x:
+          - Month(Lo Orderdate)
+          "y":
+          - Total Lo Orderkey
+          - Total Lo Linenumber
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Month(Lo Orderdate)\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Orderkey\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Linenumber\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"c47a3096-3d9a-4bb3-8668-16de870ed19f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Orderkey\"],\"isOpposite\": false}},{\"id\": \"582957a7-bafb-4085-9057-a1a81fc07e14\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Linenumber\"],\"isOpposite\": true}},{\"id\": \"fbac90c4-b2c0-4381-a3ea-c3c9205c9a86\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Lo Orderdate)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Lo Orderkey\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Lo Linenumber\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: dac5b764-610b-43d0-b2f6-46228769914c
