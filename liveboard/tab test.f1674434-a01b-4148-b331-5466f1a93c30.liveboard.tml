@@ -128,6 +128,48 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Lo Orderpriority\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Supplycost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"318f76f0-971d-48c0-9d48-6856877dc7bd\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Revenue\"],\"isOpposite\": false}},{\"id\": \"2e746e0b-dc61-405c-ac11-69064593a51f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Supplycost\"],\"isOpposite\": true}},{\"id\": \"353a05d4-fd46-43a9-8110-00e2a7c9882b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Lo Orderpriority\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Lo Revenue\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Lo Supplycost\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 8432f781-fcb1-448d-bfd7-484f44cf599f
+  - id: Viz_4
+    answer:
+      name: "Total Sale Cost, Total Product Cost by Product Id"
+      tables:
+      - id: Chasmtrap
+        name: Chasmtrap
+        fqn: 07a8af30-cd9d-4ab0-a58a-544a818ddac7
+      search_query: "[Sale Cost] [Product Id] [Product Cost]"
+      answer_columns:
+      - name: Total Sale Cost
+      - name: Product Id
+      - name: Total Product Cost
+      table:
+        table_columns:
+        - column_id: Product Id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sale Cost
+          headline_aggregation: SUM
+        - column_id: Total Product Cost
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Product Id
+        - Total Sale Cost
+        - Total Product Cost
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Product Id
+        - column_id: Total Sale Cost
+        - column_id: Total Product Cost
+        axis_configs:
+        - x:
+          - Product Id
+          "y":
+          - Total Sale Cost
+          - Total Product Cost
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Id\",\"columnProperty\": {}},{\"columnId\": \"Total Sale Cost\",\"columnProperty\": {}},{\"columnId\": \"Total Product Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b71f3005-c1f4-45a7-a6dc-7d58a0268112\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sale Cost\"],\"isOpposite\": false}},{\"id\": \"0da9c709-dd38-4a8c-9b5c-244432cfecb8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Product Cost\"],\"isOpposite\": true}},{\"id\": \"72ef247e-00fc-48d8-ad11-c21217b2a8e4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Id\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Sale Cost\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Product Cost\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 6d74abad-1f51-4240-a38b-fd3b0574a225
   layout:
     tabs:
     - name: Tab 1
@@ -148,6 +190,7 @@ liveboard:
         "y": 8
         height: 8
         width: 6
+      - visualization_id: Viz_4
     - name: Test Tab 2
       description: ""
     - name: New Tab 3
