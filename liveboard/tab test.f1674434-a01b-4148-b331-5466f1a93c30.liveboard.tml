@@ -86,3 +86,45 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Month(Lo Orderdate)\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Orderkey\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Linenumber\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"c47a3096-3d9a-4bb3-8668-16de870ed19f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Orderkey\"],\"isOpposite\": false}},{\"id\": \"582957a7-bafb-4085-9057-a1a81fc07e14\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Linenumber\"],\"isOpposite\": true}},{\"id\": \"fbac90c4-b2c0-4381-a3ea-c3c9205c9a86\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Lo Orderdate)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Lo Orderkey\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Lo Linenumber\",\"color\": \"#48D1E0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 80f46e2e-aeae-4fb6-94f7-6fed000c3f40
+  - id: Viz_3
+    answer:
+      name: "Total Lo Revenue, Total Lo Supplycost by Lo Orderpriority"
+      tables:
+      - id: UNIQUE-manesh.brahmam-UI-WS
+        name: UNIQUE-manesh.brahmam-UI-WS
+        fqn: e1a74421-119d-4daf-8dee-047a61a5f5a2
+      search_query: "[Lo Revenue] [Lo Supplycost] [Lo Orderpriority]"
+      answer_columns:
+      - name: Total Lo Revenue
+      - name: Total Lo Supplycost
+      - name: Lo Orderpriority
+      table:
+        table_columns:
+        - column_id: Lo Orderpriority
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Lo Revenue
+          headline_aggregation: SUM
+        - column_id: Total Lo Supplycost
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Lo Orderpriority
+        - Total Lo Revenue
+        - Total Lo Supplycost
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Lo Orderpriority
+        - column_id: Total Lo Revenue
+        - column_id: Total Lo Supplycost
+        axis_configs:
+        - x:
+          - Lo Orderpriority
+          "y":
+          - Total Lo Revenue
+          - Total Lo Supplycost
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Lo Orderpriority\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Supplycost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"318f76f0-971d-48c0-9d48-6856877dc7bd\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Revenue\"],\"isOpposite\": false}},{\"id\": \"2e746e0b-dc61-405c-ac11-69064593a51f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Supplycost\"],\"isOpposite\": true}},{\"id\": \"353a05d4-fd46-43a9-8110-00e2a7c9882b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Lo Orderpriority\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Lo Revenue\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Lo Supplycost\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 8432f781-fcb1-448d-bfd7-484f44cf599f
