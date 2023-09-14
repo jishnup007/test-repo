@@ -86,3 +86,101 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Quantity\",\"columnProperty\": {}},{\"columnId\": \"Order Priority\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2a389a5d-fc74-4ce1-9271-5afca97b7c1b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": false}},{\"id\": \"7c2d876c-24df-41e5-a093-1f021757973e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": true}},{\"id\": \"78e036b8-c1fa-407c-9c93-07ee2d99ab68\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Order Priority\"]}}],\"systemSeriesColors\": [{\"serieName\": \"6c776b01-a861-4545-b04f-2ec4aa4e204c\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Quantity\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Extended Price\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 1329a35c-f1e4-4666-93f4-e0978193e8a0
+  - id: Viz_3
+    answer:
+      name: "Total Quantity, Total Extended Price by Order Priority"
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Quantity] [Order Priority] [Extended Price]"
+      answer_columns:
+      - name: Total Quantity
+      - name: Order Priority
+      - name: Total Extended Price
+      table:
+        table_columns:
+        - column_id: Order Priority
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Quantity
+          headline_aggregation: SUM
+        - column_id: Total Extended Price
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Order Priority
+        - Total Quantity
+        - Total Extended Price
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Order Priority
+        - column_id: Total Quantity
+        - column_id: Total Extended Price
+        axis_configs:
+        - x:
+          - Order Priority
+          "y":
+          - Total Quantity
+          - Total Extended Price
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Quantity\",\"columnProperty\": {}},{\"columnId\": \"Order Priority\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2a389a5d-fc74-4ce1-9271-5afca97b7c1b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": false}},{\"id\": \"7c2d876c-24df-41e5-a093-1f021757973e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": true}},{\"id\": \"78e036b8-c1fa-407c-9c93-07ee2d99ab68\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Order Priority\"]}}],\"systemSeriesColors\": [{\"serieName\": \"6c776b01-a861-4545-b04f-2ec4aa4e204c\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Quantity\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Extended Price\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: bc49e1c0-0677-4401-acf9-54aa530a61d5
+  - id: Viz_4
+    answer:
+      name: Total Order Total Price by Manufacturer
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Manufacturer] [Order Total Price]"
+      answer_columns:
+      - name: Manufacturer
+      - name: Total Order Total Price
+      table:
+        table_columns:
+        - column_id: Manufacturer
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Order Total Price
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Manufacturer
+        - Total Order Total Price
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Manufacturer
+        - column_id: Total Order Total Price
+        axis_configs:
+        - x:
+          - Manufacturer
+          "y":
+          - Total Order Total Price
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Manufacturer\",\"columnProperty\": {}},{\"columnId\": \"Total Order Total Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7d1bacb0-1d0a-40ba-b8cf-184fa6c5deba\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Order Total Price\"],\"isOpposite\": false}},{\"id\": \"79a920b4-fd9e-485e-a163-1444a9f35932\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Manufacturer\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Order Total Price\",\"color\": \"#747E8C\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 2dfd5c30-dc6e-4924-b01c-1b780ba8c294
+  layout:
+    tabs:
+    - name: New Tab 1
+      description: ""
+      tiles:
+      - visualization_id: Viz_1
+        x: 0
+        "y": 0
+        height: 8
+        width: 6
+      - visualization_id: Viz_2
+        x: 6
+        "y": 0
+        height: 8
+        width: 6
+    - name: New Tab 2
+      description: ""
+      tiles:
+      - visualization_id: Viz_3
+      - visualization_id: Viz_4
