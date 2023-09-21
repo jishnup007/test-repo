@@ -1,3 +1,53 @@
 guid: fa248278-8e9c-488c-bef3-2d7339b26868
 liveboard:
   name: Test Version history LB2
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Order Total Price and Total Extended Price by Total Supply Cost and Container
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Container] [Supply Cost] [Order Total Price] [Extended Price]"
+      answer_columns:
+      - name: Container
+      - name: Total Supply Cost
+      - name: Total Order Total Price
+      - name: Total Extended Price
+      table:
+        table_columns:
+        - column_id: Container
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Supply Cost
+          headline_aggregation: SUM
+        - column_id: Total Order Total Price
+          headline_aggregation: SUM
+        - column_id: Total Extended Price
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Container
+        - Total Supply Cost
+        - Total Order Total Price
+        - Total Extended Price
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BUBBLE
+        chart_columns:
+        - column_id: Container
+        - column_id: Total Supply Cost
+        - column_id: Total Order Total Price
+        - column_id: Total Extended Price
+        axis_configs:
+        - x:
+          - Total Supply Cost
+          "y":
+          - Total Order Total Price
+          color:
+          - Container
+          size: Total Extended Price
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Container\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}},{\"columnId\": \"Total Order Total Price\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"219a3321-c514-4cda-9219-dcaea3826aa1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Order Total Price\"],\"isOpposite\": false}},{\"id\": \"dd65f529-1427-4c8a-bfcb-d6cf807024c9\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total Supply Cost\"]}}],\"systemSeriesColors\": [{\"serieName\": \"jumbo bag\",\"color\": \"rgba(46,117,240,0.5)\"},{\"serieName\": \"jumbo box\",\"color\": \"rgba(72,209,224,0.5)\"},{\"serieName\": \"jumbo can\",\"color\": \"rgba(252,200,56,0.5)\"},{\"serieName\": \"jumbo case\",\"color\": \"rgba(6,191,127,0.5)\"},{\"serieName\": \"jumbo drum\",\"color\": \"rgba(140,98,245,0.5)\"},{\"serieName\": \"jumbo jar\",\"color\": \"rgba(255,129,66,0.5)\"},{\"serieName\": \"jumbo pack\",\"color\": \"rgba(171,199,249,0.5)\"},{\"serieName\": \"jumbo pkg\",\"color\": \"rgba(181,236,242,0.5)\"},{\"serieName\": \"lg bag\",\"color\": \"rgba(253,233,175,0.5)\"},{\"serieName\": \"lg box\",\"color\": \"rgba(155,229,203,0.5)\"},{\"serieName\": \"lg can\",\"color\": \"rgba(209,192,251,0.5)\"},{\"serieName\": \"lg case\",\"color\": \"rgba(255,204,179,0.5)\"},{\"serieName\": \"lg drum\",\"color\": \"rgba(35,89,182,0.5)\"},{\"serieName\": \"lg jar\",\"color\": \"rgba(54,159,170,0.5)\"},{\"serieName\": \"lg pack\",\"color\": \"rgba(191,152,42,0.5)\"},{\"serieName\": \"lg pkg\",\"color\": \"rgba(4,145,96,0.5)\"},{\"serieName\": \"med bag\",\"color\": \"rgba(106,74,186,0.5)\"},{\"serieName\": \"med box\",\"color\": \"rgba(194,98,50,0.5)\"},{\"serieName\": \"med can\",\"color\": \"rgba(113,161,244,0.5)\"},{\"serieName\": \"med case\",\"color\": \"rgba(130,223,233,0.5)\"},{\"serieName\": \"med drum\",\"color\": \"rgba(252,217,119,0.5)\"},{\"serieName\": \"med jar\",\"color\": \"rgba(86,211,168,0.5)\"},{\"serieName\": \"med pack\",\"color\": \"rgba(176,148,248,0.5)\"},{\"serieName\": \"med pkg\",\"color\": \"rgba(255,169,126,0.5)\"},{\"serieName\": \"sm bag\",\"color\": \"rgba(22,55,114,0.5)\"},{\"serieName\": \"sm box\",\"color\": \"rgba(34,99,107,0.5)\"},{\"serieName\": \"sm can\",\"color\": \"rgba(120,95,26,0.5)\"},{\"serieName\": \"sm case\",\"color\": \"rgba(2,91,60,0.5)\"},{\"serieName\": \"sm drum\",\"color\": \"rgba(66,46,117,0.5)\"},{\"serieName\": \"sm jar\",\"color\": \"rgba(122,61,31,0.5)\"},{\"serieName\": \"sm pack\",\"color\": \"rgba(46,117,240,0.5)\"},{\"serieName\": \"sm pkg\",\"color\": \"rgba(72,209,224,0.5)\"},{\"serieName\": \"wrap bag\",\"color\": \"rgba(252,200,56,0.5)\"},{\"serieName\": \"wrap box\",\"color\": \"rgba(6,191,127,0.5)\"},{\"serieName\": \"wrap can\",\"color\": \"rgba(140,98,245,0.5)\"},{\"serieName\": \"wrap case\",\"color\": \"rgba(255,129,66,0.5)\"},{\"serieName\": \"wrap drum\",\"color\": \"rgba(171,199,249,0.5)\"},{\"serieName\": \"wrap jar\",\"color\": \"rgba(181,236,242,0.5)\"},{\"serieName\": \"wrap pack\",\"color\": \"rgba(253,233,175,0.5)\"},{\"serieName\": \"wrap pkg\",\"color\": \"rgba(155,229,203,0.5)\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 190fe596-7c74-467f-85e6-131609f52136
