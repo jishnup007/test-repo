@@ -51,3 +51,45 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Container\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}},{\"columnId\": \"Total Order Total Price\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"219a3321-c514-4cda-9219-dcaea3826aa1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Order Total Price\"],\"isOpposite\": false}},{\"id\": \"dd65f529-1427-4c8a-bfcb-d6cf807024c9\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total Supply Cost\"]}}],\"systemSeriesColors\": [{\"serieName\": \"jumbo bag\",\"color\": \"rgba(46,117,240,0.5)\"},{\"serieName\": \"jumbo box\",\"color\": \"rgba(72,209,224,0.5)\"},{\"serieName\": \"jumbo can\",\"color\": \"rgba(252,200,56,0.5)\"},{\"serieName\": \"jumbo case\",\"color\": \"rgba(6,191,127,0.5)\"},{\"serieName\": \"jumbo drum\",\"color\": \"rgba(140,98,245,0.5)\"},{\"serieName\": \"jumbo jar\",\"color\": \"rgba(255,129,66,0.5)\"},{\"serieName\": \"jumbo pack\",\"color\": \"rgba(171,199,249,0.5)\"},{\"serieName\": \"jumbo pkg\",\"color\": \"rgba(181,236,242,0.5)\"},{\"serieName\": \"lg bag\",\"color\": \"rgba(253,233,175,0.5)\"},{\"serieName\": \"lg box\",\"color\": \"rgba(155,229,203,0.5)\"},{\"serieName\": \"lg can\",\"color\": \"rgba(209,192,251,0.5)\"},{\"serieName\": \"lg case\",\"color\": \"rgba(255,204,179,0.5)\"},{\"serieName\": \"lg drum\",\"color\": \"rgba(35,89,182,0.5)\"},{\"serieName\": \"lg jar\",\"color\": \"rgba(54,159,170,0.5)\"},{\"serieName\": \"lg pack\",\"color\": \"rgba(191,152,42,0.5)\"},{\"serieName\": \"lg pkg\",\"color\": \"rgba(4,145,96,0.5)\"},{\"serieName\": \"med bag\",\"color\": \"rgba(106,74,186,0.5)\"},{\"serieName\": \"med box\",\"color\": \"rgba(194,98,50,0.5)\"},{\"serieName\": \"med can\",\"color\": \"rgba(113,161,244,0.5)\"},{\"serieName\": \"med case\",\"color\": \"rgba(130,223,233,0.5)\"},{\"serieName\": \"med drum\",\"color\": \"rgba(252,217,119,0.5)\"},{\"serieName\": \"med jar\",\"color\": \"rgba(86,211,168,0.5)\"},{\"serieName\": \"med pack\",\"color\": \"rgba(176,148,248,0.5)\"},{\"serieName\": \"med pkg\",\"color\": \"rgba(255,169,126,0.5)\"},{\"serieName\": \"sm bag\",\"color\": \"rgba(22,55,114,0.5)\"},{\"serieName\": \"sm box\",\"color\": \"rgba(34,99,107,0.5)\"},{\"serieName\": \"sm can\",\"color\": \"rgba(120,95,26,0.5)\"},{\"serieName\": \"sm case\",\"color\": \"rgba(2,91,60,0.5)\"},{\"serieName\": \"sm drum\",\"color\": \"rgba(66,46,117,0.5)\"},{\"serieName\": \"sm jar\",\"color\": \"rgba(122,61,31,0.5)\"},{\"serieName\": \"sm pack\",\"color\": \"rgba(46,117,240,0.5)\"},{\"serieName\": \"sm pkg\",\"color\": \"rgba(72,209,224,0.5)\"},{\"serieName\": \"wrap bag\",\"color\": \"rgba(252,200,56,0.5)\"},{\"serieName\": \"wrap box\",\"color\": \"rgba(6,191,127,0.5)\"},{\"serieName\": \"wrap can\",\"color\": \"rgba(140,98,245,0.5)\"},{\"serieName\": \"wrap case\",\"color\": \"rgba(255,129,66,0.5)\"},{\"serieName\": \"wrap drum\",\"color\": \"rgba(171,199,249,0.5)\"},{\"serieName\": \"wrap jar\",\"color\": \"rgba(181,236,242,0.5)\"},{\"serieName\": \"wrap pack\",\"color\": \"rgba(253,233,175,0.5)\"},{\"serieName\": \"wrap pkg\",\"color\": \"rgba(155,229,203,0.5)\"}]}"
       display_mode: CHART_MODE
     viz_guid: 190fe596-7c74-467f-85e6-131609f52136
+  - id: Viz_2
+    answer:
+      name: "Total Sale Cost, Total Product Cost by sales Product Id"
+      tables:
+      - id: Chasmtrap
+        name: Chasmtrap
+        fqn: 07a8af30-cd9d-4ab0-a58a-544a818ddac7
+      search_query: "[sales Product Id] [Sale Cost] [Product Cost]"
+      answer_columns:
+      - name: sales Product Id
+      - name: Total Sale Cost
+      - name: Total Product Cost
+      table:
+        table_columns:
+        - column_id: sales Product Id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sale Cost
+          headline_aggregation: SUM
+        - column_id: Total Product Cost
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - sales Product Id
+        - Total Sale Cost
+        - Total Product Cost
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: sales Product Id
+        - column_id: Total Sale Cost
+        - column_id: Total Product Cost
+        axis_configs:
+        - x:
+          - sales Product Id
+          "y":
+          - Total Sale Cost
+          - Total Product Cost
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"sales Product Id\",\"columnProperty\": {}},{\"columnId\": \"Total Sale Cost\",\"columnProperty\": {}},{\"columnId\": \"Total Product Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"4715ee6f-ae76-4e3e-9b32-c86e14bc8109\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sale Cost\"],\"isOpposite\": false}},{\"id\": \"d49b651a-de95-4651-800c-7073fcc0e8c7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Product Cost\"],\"isOpposite\": true}},{\"id\": \"a7550be3-8eb8-4258-8079-574fc0ad22e0\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"sales Product Id\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Sale Cost\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Product Cost\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 1000629c-0baf-4034-aeb4-8aaa3f150bb8
