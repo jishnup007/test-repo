@@ -1,3 +1,45 @@
 guid: 0a246862-11cd-4449-969f-9681c012b99b
 liveboard:
   name: Error testing lb
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "CITY_NAME, COUNTRY_NAME, POSTALCODE_NAME"
+      tables:
+      - id: SUPPLY
+        name: SUPPLY
+        fqn: 4b8896eb-4c83-40f9-be54-c8164326958e
+      search_query: "[CITY_NAME] [COUNTRY_NAME] [POSTALCODE_NAME]"
+      answer_columns:
+      - name: CITY_NAME
+      - name: COUNTRY_NAME
+      - name: POSTALCODE_NAME
+      table:
+        table_columns:
+        - column_id: CITY_NAME
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: COUNTRY_NAME
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: POSTALCODE_NAME
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - CITY_NAME
+        - COUNTRY_NAME
+        - POSTALCODE_NAME
+        client_state: ""
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: CITY_NAME
+        - column_id: COUNTRY_NAME
+        - column_id: POSTALCODE_NAME
+        axis_configs:
+        - x:
+          - COUNTRY_NAME
+          "y":
+          - POSTALCODE_NAME
+          category:
+          - CITY_NAME
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: 4cd1aabb-2597-4cbe-80a3-7f6de9ea0282
