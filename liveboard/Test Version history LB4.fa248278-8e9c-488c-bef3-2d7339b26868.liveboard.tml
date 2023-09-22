@@ -1,6 +1,6 @@
 guid: fa248278-8e9c-488c-bef3-2d7339b26868
 liveboard:
-  name: Test Version history LB2
+  name: Test Version history LB4
   visualizations:
   - id: Viz_1
     answer:
@@ -105,6 +105,34 @@ liveboard:
   layout:
     tiles:
     - visualization_id: Viz_1
-      size: MEDIUM
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
     - visualization_id: Viz_2
-      size: MEDIUM
+      x: 6
+      "y": 0
+      height: 8
+      width: 6
+  views:
+  - view_guid: 89eb3171-e5f9-4fee-838c-bfbf599d5e4a
+    name: testingPV2
+    view_filters:
+    - column:
+      - Parameters WS::Category
+      oper: in
+      values:
+      - mfgr#12
+      - mfgr#13
+      - mfgr#11
+    is_public: false
+  - view_guid: 1800aa1d-5879-4ea1-ae72-c63bb6306c73
+    name: testingPV
+    view_filters:
+    - column:
+      - Parameters WS::Category
+      oper: in
+      values:
+      - mfgr#12
+      - mfgr#13
+    is_public: false
