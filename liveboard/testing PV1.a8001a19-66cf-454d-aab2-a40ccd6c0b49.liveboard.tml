@@ -55,12 +55,15 @@ liveboard:
     is_single_value: false
     display_name: ""
   layout:
-    tiles:
-    - visualization_id: Viz_1
-      x: 0
-      "y": 0
-      height: 8
-      width: 6
+    tabs:
+    - name: test Tab 1
+      description: ""
+      tiles:
+      - visualization_id: Viz_1
+        x: 0
+        "y": 0
+        height: 8
+        width: 6
   views:
   - view_guid: 55aa7a62-52b2-43cb-85c0-1b8a2595e168
     name: testing 1
