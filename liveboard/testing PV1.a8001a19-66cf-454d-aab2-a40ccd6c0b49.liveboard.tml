@@ -45,3 +45,16 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Username\",\"columnProperty\": {}},{\"columnId\": \"Manufacturer\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"78aa3f27-cc54-47bd-a26e-533eb6a59705\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"cec7dfb1-3c39-45ed-8a65-729ad424bef5\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Username\"]}}],\"systemSeriesColors\": [{\"serieName\": \"mfgr#1\",\"color\": \"#06BF7F\"},{\"serieName\": \"mfgr#2\",\"color\": \"#FCC838\"},{\"serieName\": \"mfgr#3\",\"color\": \"#48D1E0\"},{\"serieName\": \"mfgr#4\",\"color\": \"#71A1F4\"},{\"serieName\": \"mfgr#5\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 0b5a8d6c-2f00-4228-ba05-4362df96adda
+  filters:
+  - column:
+    - Manufacturer
+    oper: in
+    values:
+    - mfgr#1
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
