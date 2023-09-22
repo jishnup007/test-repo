@@ -1,3 +1,47 @@
 guid: a8001a19-66cf-454d-aab2-a40ccd6c0b49
 liveboard:
   name: testing PV1
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Extended Price by Username and Manufacturer
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Username] [Manufacturer] [Extended Price]"
+      answer_columns:
+      - name: Username
+      - name: Manufacturer
+      - name: Total Extended Price
+      table:
+        table_columns:
+        - column_id: Username
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Manufacturer
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Extended Price
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Username
+        - Manufacturer
+        - Total Extended Price
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Username
+        - column_id: Manufacturer
+        - column_id: Total Extended Price
+        axis_configs:
+        - x:
+          - Username
+          "y":
+          - Total Extended Price
+          color:
+          - Manufacturer
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Username\",\"columnProperty\": {}},{\"columnId\": \"Manufacturer\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"78aa3f27-cc54-47bd-a26e-533eb6a59705\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"cec7dfb1-3c39-45ed-8a65-729ad424bef5\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Username\"]}}],\"systemSeriesColors\": [{\"serieName\": \"mfgr#1\",\"color\": \"#06BF7F\"},{\"serieName\": \"mfgr#2\",\"color\": \"#FCC838\"},{\"serieName\": \"mfgr#3\",\"color\": \"#48D1E0\"},{\"serieName\": \"mfgr#4\",\"color\": \"#71A1F4\"},{\"serieName\": \"mfgr#5\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 0b5a8d6c-2f00-4228-ba05-4362df96adda
