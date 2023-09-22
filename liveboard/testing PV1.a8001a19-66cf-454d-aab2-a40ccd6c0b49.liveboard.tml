@@ -64,6 +64,8 @@ liveboard:
         "y": 0
         height: 8
         width: 6
+    - name: test Tab 2
+      description: ""
   views:
   - view_guid: 55aa7a62-52b2-43cb-85c0-1b8a2595e168
     name: testing 1
