@@ -1,0 +1,28 @@
+guid: 2d1813ac-91fb-45a1-925d-a31e7e3141d3
+answer:
+  name: Total Quantity
+  tables:
+  - id: Parameters WS
+    name: Parameters WS
+    fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+  search_query: "[Quantity]"
+  answer_columns:
+  - name: Total Quantity
+  table:
+    table_columns:
+    - column_id: Total Quantity
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Total Quantity
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: KPI
+    chart_columns:
+    - column_id: Total Quantity
+    axis_configs:
+    - "y":
+      - Total Quantity
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7fe2552c-c634-4555-84bd-a0b7435e4fab\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": false}},{\"id\": \"ed94344f-b479-4893-93c1-341cc3b98d4f\",\"properties\": {\"axisType\": \"X\"}}]}"
+  display_mode: CHART_MODE
