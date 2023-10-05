@@ -42,7 +42,7 @@ liveboard:
           color:
           - Category
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8a1018f4-0d5e-44e2-9d49-c6f4062e1b5a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"28f335df-4a76-4e7b-844a-5d6444072695\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"mfgr#11\",\"color\": \"#2E75F0\"},{\"serieName\": \"mfgr#12\",\"color\": \"#48D1E0\"},{\"serieName\": \"mfgr#13\",\"color\": \"#FCC838\"},{\"serieName\": \"mfgr#14\",\"color\": \"#06BF7F\"},{\"serieName\": \"mfgr#15\",\"color\": \"#8C62F5\"},{\"serieName\": \"mfgr#21\",\"color\": \"#FF8142\"},{\"serieName\": \"mfgr#22\",\"color\": \"#ABC7F9\"},{\"serieName\": \"mfgr#23\",\"color\": \"#B5ECF2\"},{\"serieName\": \"mfgr#24\",\"color\": \"#FDE9AF\"},{\"serieName\": \"mfgr#25\",\"color\": \"#9BE5CB\"},{\"serieName\": \"mfgr#31\",\"color\": \"#D1C0FB\"},{\"serieName\": \"mfgr#32\",\"color\": \"#FFCCB3\"},{\"serieName\": \"mfgr#33\",\"color\": \"#2359B6\"},{\"serieName\": \"mfgr#34\",\"color\": \"#369FAA\"},{\"serieName\": \"mfgr#35\",\"color\": \"#BF982A\"},{\"serieName\": \"mfgr#41\",\"color\": \"#049160\"},{\"serieName\": \"mfgr#42\",\"color\": \"#6A4ABA\"},{\"serieName\": \"mfgr#43\",\"color\": \"#C26232\"},{\"serieName\": \"mfgr#44\",\"color\": \"#71A1F4\"},{\"serieName\": \"mfgr#45\",\"color\": \"#82DFE9\"},{\"serieName\": \"mfgr#51\",\"color\": \"#FCD977\"},{\"serieName\": \"mfgr#52\",\"color\": \"#56D3A8\"},{\"serieName\": \"mfgr#53\",\"color\": \"#B094F8\"},{\"serieName\": \"mfgr#54\",\"color\": \"#FFA97E\"},{\"serieName\": \"mfgr#55\",\"color\": \"#163772\"}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8a1018f4-0d5e-44e2-9d49-c6f4062e1b5a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"28f335df-4a76-4e7b-844a-5d6444072695\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"mfgr#11\",\"color\": \"#2E75F0\"},{\"serieName\": \"mfgr#12\",\"color\": \"#48D1E0\"},{\"serieName\": \"mfgr#13\",\"color\": \"#FCC838\"},{\"serieName\": \"mfgr#14\",\"color\": \"#06BF7F\"},{\"serieName\": \"mfgr#15\",\"color\": \"#8C62F5\"},{\"serieName\": \"mfgr#21\",\"color\": \"#FF8142\"},{\"serieName\": \"mfgr#22\",\"color\": \"#ABC7F9\"},{\"serieName\": \"mfgr#23\",\"color\": \"#B5ECF2\"},{\"serieName\": \"mfgr#24\",\"color\": \"#FDE9AF\"},{\"serieName\": \"mfgr#25\",\"color\": \"#9BE5CB\"},{\"serieName\": \"mfgr#31\",\"color\": \"#D1C0FB\"},{\"serieName\": \"mfgr#32\",\"color\": \"#FFCCB3\"},{\"serieName\": \"mfgr#33\",\"color\": \"#2359B6\"},{\"serieName\": \"mfgr#34\",\"color\": \"#369FAA\"},{\"serieName\": \"mfgr#35\",\"color\": \"#BF982A\"},{\"serieName\": \"mfgr#41\",\"color\": \"#049160\"},{\"serieName\": \"mfgr#42\",\"color\": \"#6A4ABA\"},{\"serieName\": \"mfgr#43\",\"color\": \"#C26232\"},{\"serieName\": \"mfgr#44\",\"color\": \"#71A1F4\"},{\"serieName\": \"mfgr#45\",\"color\": \"#82DFE9\"},{\"serieName\": \"mfgr#51\",\"color\": \"#FCD977\"},{\"serieName\": \"mfgr#52\",\"color\": \"#56D3A8\"},{\"serieName\": \"mfgr#53\",\"color\": \"#B094F8\"},{\"serieName\": \"mfgr#54\",\"color\": \"#FFA97E\"},{\"serieName\": \"mfgr#55\",\"color\": \"#163772\"}],\"tooltipConfig\": {}}"
       display_mode: CHART_MODE
     viz_guid: 461ca852-ac48-48fb-8ff2-a6286d65141b
   - id: Viz_2
@@ -85,7 +85,7 @@ liveboard:
           color:
           - Manufacturer
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Manufacturer\",\"columnProperty\": {}},{\"columnId\": \"Order Priority\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"96ff52db-e356-447e-b2fc-a8720780cd77\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": false}},{\"id\": \"636a0666-6e4f-4c5f-886f-035981cfda58\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Order Priority\"]}}],\"systemSeriesColors\": [{\"serieName\": \"mfgr#1\",\"color\": \"#06BF7F\"},{\"serieName\": \"mfgr#2\",\"color\": \"#FCC838\"},{\"serieName\": \"mfgr#3\",\"color\": \"#48D1E0\"},{\"serieName\": \"mfgr#4\",\"color\": \"#71A1F4\"},{\"serieName\": \"mfgr#5\",\"color\": \"#2E75F0\"}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Manufacturer\",\"columnProperty\": {}},{\"columnId\": \"Order Priority\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"96ff52db-e356-447e-b2fc-a8720780cd77\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": false}},{\"id\": \"636a0666-6e4f-4c5f-886f-035981cfda58\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Order Priority\"]}}],\"systemSeriesColors\": [{\"serieName\": \"mfgr#1\",\"color\": \"#06BF7F\"},{\"serieName\": \"mfgr#2\",\"color\": \"#FCC838\"},{\"serieName\": \"mfgr#3\",\"color\": \"#48D1E0\"},{\"serieName\": \"mfgr#4\",\"color\": \"#71A1F4\"},{\"serieName\": \"mfgr#5\",\"color\": \"#2E75F0\"}],\"tooltipConfig\": {}}"
       display_mode: CHART_MODE
     viz_guid: aa778f3d-e856-42a1-9330-4cbe8490e861
   - id: Viz_3
@@ -128,7 +128,7 @@ liveboard:
           color:
           - Manufacturer
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Manufacturer\",\"columnProperty\": {}},{\"columnId\": \"Order Priority\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"96ff52db-e356-447e-b2fc-a8720780cd77\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": false}},{\"id\": \"636a0666-6e4f-4c5f-886f-035981cfda58\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Order Priority\"]}}],\"systemSeriesColors\": [{\"serieName\": \"mfgr#1\",\"color\": \"#06BF7F\"},{\"serieName\": \"mfgr#2\",\"color\": \"#FCC838\"},{\"serieName\": \"mfgr#3\",\"color\": \"#48D1E0\"},{\"serieName\": \"mfgr#4\",\"color\": \"#71A1F4\"},{\"serieName\": \"mfgr#5\",\"color\": \"#2E75F0\"}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Manufacturer\",\"columnProperty\": {}},{\"columnId\": \"Order Priority\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"96ff52db-e356-447e-b2fc-a8720780cd77\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": false}},{\"id\": \"636a0666-6e4f-4c5f-886f-035981cfda58\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Order Priority\"]}}],\"systemSeriesColors\": [{\"serieName\": \"mfgr#1\",\"color\": \"#06BF7F\"},{\"serieName\": \"mfgr#2\",\"color\": \"#FCC838\"},{\"serieName\": \"mfgr#3\",\"color\": \"#48D1E0\"},{\"serieName\": \"mfgr#4\",\"color\": \"#71A1F4\"},{\"serieName\": \"mfgr#5\",\"color\": \"#2E75F0\"}],\"tooltipConfig\": {}}"
       display_mode: CHART_MODE
     viz_guid: f5549c17-1b7d-44da-928f-cd46133b6471
   - id: Viz_4
@@ -171,43 +171,9 @@ liveboard:
           color:
           - Product Id
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Id\",\"columnProperty\": {}},{\"columnId\": \"Product Name\",\"columnProperty\": {}},{\"columnId\": \"Total Sale Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"c9d86d88-4959-4696-b4c7-24d532ce0cb3\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sale Cost\"],\"isOpposite\": false}},{\"id\": \"c64d02b9-c04e-4105-8938-54299bc1fa01\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Name\"]}}],\"systemSeriesColors\": [{\"serieName\": \"1\",\"color\": \"#FCC838\"},{\"serieName\": \"2\",\"color\": \"#48D1E0\"},{\"serieName\": \"3\",\"color\": \"#2E75F0\"}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Id\",\"columnProperty\": {}},{\"columnId\": \"Product Name\",\"columnProperty\": {}},{\"columnId\": \"Total Sale Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"c9d86d88-4959-4696-b4c7-24d532ce0cb3\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sale Cost\"],\"isOpposite\": false}},{\"id\": \"c64d02b9-c04e-4105-8938-54299bc1fa01\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Name\"]}}],\"systemSeriesColors\": [{\"serieName\": \"1\",\"color\": \"#FCC838\"},{\"serieName\": \"2\",\"color\": \"#48D1E0\"},{\"serieName\": \"3\",\"color\": \"#2E75F0\"}],\"tooltipConfig\": {}}"
       display_mode: CHART_MODE
     viz_guid: 5010206e-272d-4734-ad9c-abd78d139199
-  - id: Viz_5
-    answer:
-      name: "Lineorder Suppkey, Manufacturer"
-      tables:
-      - id: Parameters WS
-        name: Parameters WS
-        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-      search_query: "[Lineorder Suppkey] [Manufacturer]"
-      answer_columns:
-      - name: Lineorder Suppkey
-      - name: Manufacturer
-      table:
-        table_columns:
-        - column_id: Lineorder Suppkey
-          headline_aggregation: COUNT_DISTINCT
-        - column_id: Manufacturer
-          headline_aggregation: COUNT_DISTINCT
-        ordered_column_ids:
-        - Lineorder Suppkey
-        - Manufacturer
-        client_state: ""
-      chart:
-        type: SCATTER
-        chart_columns:
-        - column_id: Lineorder Suppkey
-        - column_id: Manufacturer
-        axis_configs:
-        - x:
-          - Manufacturer
-          "y":
-          - Lineorder Suppkey
-        client_state: ""
-      display_mode: TABLE_MODE
-    viz_guid: b357b28c-d2ad-4e16-a21f-05048ee69227
   layout:
     tiles:
     - visualization_id: Viz_1
@@ -215,4 +181,6 @@ liveboard:
     - visualization_id: Viz_2
       size: MEDIUM
     - visualization_id: Viz_3
+      size: MEDIUM
+    - visualization_id: Viz_4
       size: MEDIUM
