@@ -4,7 +4,7 @@ liveboard:
   visualizations:
   - id: Viz_1
     answer:
-      name: Total Tax by Quarterly Order Date and Category
+      name: Total Tax by Quarterly Order Date and Category 2
       tables:
       - id: Parameters WS
         name: Parameters WS
