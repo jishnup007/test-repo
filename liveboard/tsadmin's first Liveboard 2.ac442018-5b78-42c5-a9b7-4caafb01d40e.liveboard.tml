@@ -131,6 +131,40 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Manufacturer\",\"columnProperty\": {}},{\"columnId\": \"Order Priority\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"96ff52db-e356-447e-b2fc-a8720780cd77\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": false}},{\"id\": \"636a0666-6e4f-4c5f-886f-035981cfda58\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Order Priority\"]}}],\"systemSeriesColors\": [{\"serieName\": \"mfgr#1\",\"color\": \"#06BF7F\"},{\"serieName\": \"mfgr#2\",\"color\": \"#FCC838\"},{\"serieName\": \"mfgr#3\",\"color\": \"#48D1E0\"},{\"serieName\": \"mfgr#4\",\"color\": \"#71A1F4\"},{\"serieName\": \"mfgr#5\",\"color\": \"#2E75F0\"}],\"tooltipConfig\": {}}"
       display_mode: CHART_MODE
     viz_guid: f5549c17-1b7d-44da-928f-cd46133b6471
+  - id: Viz_4
+    answer:
+      name: "Manufacturer, Email Domain"
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Manufacturer] [Email Domain]"
+      answer_columns:
+      - name: Manufacturer
+      - name: Email Domain
+      table:
+        table_columns:
+        - column_id: Manufacturer
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Email Domain
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Manufacturer
+        - Email Domain
+        client_state: ""
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Manufacturer
+        - column_id: Email Domain
+        axis_configs:
+        - x:
+          - Manufacturer
+          "y":
+          - Email Domain
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: bb2ea0cf-6998-4bbd-ac3b-5cb8a0928d7c
   layout:
     tiles:
     - visualization_id: Viz_1
