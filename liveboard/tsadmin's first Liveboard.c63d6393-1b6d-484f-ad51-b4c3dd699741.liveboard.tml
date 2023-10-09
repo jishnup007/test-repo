@@ -162,3 +162,39 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e6edd9ff-dcca-434e-8c3d-017e4ee1082b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"9feb1748-fd26-4d66-a6c1-ac5a7d27180e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": true}},{\"id\": \"35dbc3ce-e4cb-461f-9661-860669fb259f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#FCC838\"},{\"serieName\": \"Total Discount\",\"color\": \"#48D1E0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 1f5d9e60-9808-4e01-a24a-86abe8e0c42a
+  - id: Viz_5
+    answer:
+      name: Total Quantity by Quarterly Order Date
+      tables:
+      - id: TPCH WS
+        name: TPCH WS
+        fqn: eed411a1-2cdc-4c3e-8f2e-c1a54f636a64
+      search_query: "[Quantity] [Order Date] [Order Date].quarterly"
+      answer_columns:
+      - name: Total Quantity
+      - name: Quarter(Order Date)
+      table:
+        table_columns:
+        - column_id: Quarter(Order Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Quantity
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Quarter(Order Date)
+        - Total Quantity
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Quarter(Order Date)
+        - column_id: Total Quantity
+        axis_configs:
+        - x:
+          - Quarter(Order Date)
+          "y":
+          - Total Quantity
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"763c88fd-a09e-47fd-9cf7-6091f5403295\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": false}},{\"id\": \"57a310dd-ba22-410c-b849-85da5b4bea47\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Quantity\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 69f710d3-8e64-4d15-b1f3-638842dcdf87
