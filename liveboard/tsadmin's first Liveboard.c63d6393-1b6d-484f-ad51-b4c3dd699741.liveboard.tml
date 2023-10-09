@@ -1,0 +1,81 @@
+guid: c63d6393-1b6d-484f-ad51-b4c3dd699741
+liveboard:
+  name: tsadmin's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Revenue by Category
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Revenue] [Category]"
+      answer_columns:
+      - name: Total Revenue
+      - name: Category
+      table:
+        table_columns:
+        - column_id: Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Category
+        - Total Revenue
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Category
+        - column_id: Total Revenue
+        axis_configs:
+        - x:
+          - Category
+          "y":
+          - Total Revenue
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"03f08dc6-1399-48b2-8a71-2e4ceb2cd2f1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"49fc73c4-60d3-4dda-867d-38f76d101f71\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#747E8C\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: b1d05368-a7cf-4491-a00c-f0308196ae7c
+  - id: Viz_2
+    answer:
+      name: Total Revenue by Quarterly Commit Date
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Revenue] [Commit Date] [Commit Date].quarterly [Color]"
+      answer_columns:
+      - name: Total Revenue
+      - name: Quarter(Commit Date)
+      - name: Color
+      table:
+        table_columns:
+        - column_id: Quarter(Commit Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Color
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Quarter(Commit Date)
+        - Color
+        - Total Revenue
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Quarter(Commit Date)
+        - column_id: Color
+        - column_id: Total Revenue
+        axis_configs:
+        - x:
+          - Quarter(Commit Date)
+          "y":
+          - Total Revenue
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"70c3b04a-e27c-4901-9d49-a556c64fadd9\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"8aa5df2e-d55e-4173-8677-586c0ac4b343\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: b67c054c-5da1-462a-8663-29dd601ed36e
