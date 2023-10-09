@@ -79,3 +79,44 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"70c3b04a-e27c-4901-9d49-a556c64fadd9\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"8aa5df2e-d55e-4173-8677-586c0ac4b343\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#2770ef\"}]}"
       display_mode: CHART_MODE
     viz_guid: b67c054c-5da1-462a-8663-29dd601ed36e
+  - id: Viz_3
+    answer:
+      name: Total Revenue by Quarterly Commit Date
+      tables:
+      - id: LINEORDER
+        name: LINEORDER
+        fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+      search_query: "[Commit Date] [Commit Date].quarterly [OrderKey] [Revenue]"
+      answer_columns:
+      - name: Quarter(Commit Date)
+      - name: OrderKey
+      - name: Total Revenue
+      table:
+        table_columns:
+        - column_id: Quarter(Commit Date)
+          headline_aggregation: MIN-MAX
+        - column_id: OrderKey
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Quarter(Commit Date)
+        - OrderKey
+        - Total Revenue
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Quarter(Commit Date)
+        - column_id: OrderKey
+        - column_id: Total Revenue
+        axis_configs:
+        - x:
+          - Quarter(Commit Date)
+          "y":
+          - Total Revenue
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"OrderKey\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b6397a24-2281-47bf-99af-b564c1ab9c6c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"676c2f30-512e-4632-82e0-9864a0312876\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#FCC838\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: d6d6b129-84bd-479e-bd02-a4f18e880b8d
