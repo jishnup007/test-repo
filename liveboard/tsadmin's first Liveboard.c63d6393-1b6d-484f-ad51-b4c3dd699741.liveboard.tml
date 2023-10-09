@@ -120,3 +120,45 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"OrderKey\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b6397a24-2281-47bf-99af-b564c1ab9c6c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"676c2f30-512e-4632-82e0-9864a0312876\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#FCC838\"}]}"
       display_mode: CHART_MODE
     viz_guid: d6d6b129-84bd-479e-bd02-a4f18e880b8d
+  - id: Viz_4
+    answer:
+      name: "Total Revenue, Total Discount by Quarterly Commit Date"
+      tables:
+      - id: LINEORDER
+        name: LINEORDER
+        fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+      search_query: "[Commit Date] [Commit Date].quarterly [Revenue] [Discount]"
+      answer_columns:
+      - name: Quarter(Commit Date)
+      - name: Total Revenue
+      - name: Total Discount
+      table:
+        table_columns:
+        - column_id: Quarter(Commit Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        - column_id: Total Discount
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Quarter(Commit Date)
+        - Total Revenue
+        - Total Discount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Quarter(Commit Date)
+        - column_id: Total Revenue
+        - column_id: Total Discount
+        axis_configs:
+        - x:
+          - Quarter(Commit Date)
+          "y":
+          - Total Revenue
+          - Total Discount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e6edd9ff-dcca-434e-8c3d-017e4ee1082b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"9feb1748-fd26-4d66-a6c1-ac5a7d27180e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": true}},{\"id\": \"35dbc3ce-e4cb-461f-9661-860669fb259f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#FCC838\"},{\"serieName\": \"Total Discount\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 1f5d9e60-9808-4e01-a24a-86abe8e0c42a
