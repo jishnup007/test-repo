@@ -56,4 +56,18 @@ liveboard:
   layout:
     tiles:
     - visualization_id: Viz_1
-      size: MEDIUM
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+  views:
+  - view_guid: 9c5216f7-628b-46e2-915f-22a50c517fed
+    name: test 1
+    view_filters:
+    - column:
+      - Container
+      oper: in
+      values:
+      - jumbo bag
+      - jumbo drum
+    is_public: false
