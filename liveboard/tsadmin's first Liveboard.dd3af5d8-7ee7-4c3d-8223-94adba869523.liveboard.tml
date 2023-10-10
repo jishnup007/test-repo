@@ -44,3 +44,46 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Email Domain\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f1577d35-c738-40ec-b14a-f27399ca94d6\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"61a899c4-0a3b-4800-b59e-4e333c9014c2\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": true}},{\"id\": \"aed97985-abef-4384-b3bc-4a210c5180f1\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Email Domain\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Extended Price\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Revenue\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 613562c1-5ef8-4dd2-a64e-306af0d6f4f5
+  - id: Viz_2
+    answer:
+      name: Total Order Total Price by Org Name and Manufacturer
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Manufacturer] [Org Name] [Order Total Price]"
+      answer_columns:
+      - name: Manufacturer
+      - name: Org Name
+      - name: Total Order Total Price
+      table:
+        table_columns:
+        - column_id: Manufacturer
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Org Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Order Total Price
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Manufacturer
+        - Org Name
+        - Total Order Total Price
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Manufacturer
+        - column_id: Org Name
+        - column_id: Total Order Total Price
+        axis_configs:
+        - x:
+          - Org Name
+          "y":
+          - Total Order Total Price
+          color:
+          - Manufacturer
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Manufacturer\",\"columnProperty\": {}},{\"columnId\": \"Org Name\",\"columnProperty\": {}},{\"columnId\": \"Total Order Total Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"ec90c480-8e7e-44ce-b8da-4c9c26cb97d2\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Order Total Price\"],\"isOpposite\": false}},{\"id\": \"53423d26-a127-443b-a49c-3b453d81d4dc\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Org Name\"]}}],\"systemSeriesColors\": [{\"serieName\": \"mfgr#1\",\"color\": \"#06BF7F\"},{\"serieName\": \"mfgr#2\",\"color\": \"#FCC838\"},{\"serieName\": \"mfgr#3\",\"color\": \"#48D1E0\"},{\"serieName\": \"mfgr#4\",\"color\": \"#71A1F4\"},{\"serieName\": \"mfgr#5\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: f49aee24-497b-4860-bf00-c2ce4fb8b418
