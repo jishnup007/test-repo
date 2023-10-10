@@ -79,9 +79,134 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"70c3b04a-e27c-4901-9d49-a556c64fadd9\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"8aa5df2e-d55e-4173-8677-586c0ac4b343\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#2770ef\"}],\"tooltipConfig\": {}}"
       display_mode: CHART_MODE
     viz_guid: b67c054c-5da1-462a-8663-29dd601ed36e
+  - id: Viz_3
+    answer:
+      name: Total Revenue by Quarterly Commit Date
+      tables:
+      - id: LINEORDER
+        name: LINEORDER
+        fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+      search_query: "[Commit Date] [Commit Date].quarterly [OrderKey] [Revenue]"
+      answer_columns:
+      - name: Quarter(Commit Date)
+      - name: OrderKey
+      - name: Total Revenue
+      table:
+        table_columns:
+        - column_id: Quarter(Commit Date)
+          headline_aggregation: MIN-MAX
+        - column_id: OrderKey
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Quarter(Commit Date)
+        - OrderKey
+        - Total Revenue
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Quarter(Commit Date)
+        - column_id: OrderKey
+        - column_id: Total Revenue
+        axis_configs:
+        - x:
+          - Quarter(Commit Date)
+          "y":
+          - Total Revenue
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"OrderKey\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b6397a24-2281-47bf-99af-b564c1ab9c6c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"676c2f30-512e-4632-82e0-9864a0312876\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#FCC838\"}],\"tooltipConfig\": {}}"
+      display_mode: CHART_MODE
+    viz_guid: d6d6b129-84bd-479e-bd02-a4f18e880b8d
+  - id: Viz_4
+    answer:
+      name: "Total Revenue, Total Discount by Quarterly Commit Date"
+      tables:
+      - id: LINEORDER
+        name: LINEORDER
+        fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+      search_query: "[Commit Date] [Commit Date].quarterly [Revenue] [Discount]"
+      answer_columns:
+      - name: Quarter(Commit Date)
+      - name: Total Revenue
+      - name: Total Discount
+      table:
+        table_columns:
+        - column_id: Quarter(Commit Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        - column_id: Total Discount
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Quarter(Commit Date)
+        - Total Revenue
+        - Total Discount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Quarter(Commit Date)
+        - column_id: Total Revenue
+        - column_id: Total Discount
+        axis_configs:
+        - x:
+          - Quarter(Commit Date)
+          "y":
+          - Total Revenue
+          - Total Discount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e6edd9ff-dcca-434e-8c3d-017e4ee1082b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"9feb1748-fd26-4d66-a6c1-ac5a7d27180e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": true}},{\"id\": \"35dbc3ce-e4cb-461f-9661-860669fb259f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#FCC838\"},{\"serieName\": \"Total Discount\",\"color\": \"#48D1E0\"}],\"tooltipConfig\": {}}"
+      display_mode: CHART_MODE
+    viz_guid: 1f5d9e60-9808-4e01-a24a-86abe8e0c42a
+  - id: Viz_5
+    answer:
+      name: Total Quantity by Quarterly Order Date
+      tables:
+      - id: TPCH WS
+        name: TPCH WS
+        fqn: eed411a1-2cdc-4c3e-8f2e-c1a54f636a64
+      search_query: "[Quantity] [Order Date] [Order Date].quarterly"
+      answer_columns:
+      - name: Total Quantity
+      - name: Quarter(Order Date)
+      table:
+        table_columns:
+        - column_id: Quarter(Order Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Quantity
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Quarter(Order Date)
+        - Total Quantity
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Quarter(Order Date)
+        - column_id: Total Quantity
+        axis_configs:
+        - x:
+          - Quarter(Order Date)
+          "y":
+          - Total Quantity
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"763c88fd-a09e-47fd-9cf7-6091f5403295\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": false}},{\"id\": \"57a310dd-ba22-410c-b849-85da5b4bea47\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Quantity\",\"color\": \"#2770ef\"}],\"tooltipConfig\": {}}"
+      display_mode: CHART_MODE
+    viz_guid: 69f710d3-8e64-4d15-b1f3-638842dcdf87
   layout:
     tiles:
     - visualization_id: Viz_1
       size: MEDIUM
     - visualization_id: Viz_2
       size: SMALL
+    - visualization_id: Viz_5
+      size: SMALL
+    - visualization_id: Viz_3
+      size: MEDIUM
+    - visualization_id: Viz_4
+      size: MEDIUM
