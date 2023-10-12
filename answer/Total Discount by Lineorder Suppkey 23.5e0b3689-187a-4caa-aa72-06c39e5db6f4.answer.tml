@@ -1,6 +1,6 @@
 guid: 5e0b3689-187a-4caa-aa72-06c39e5db6f4
 answer:
-  name: Total Discount by Lineorder Suppkey
+  name: Total Discount by Lineorder Suppkey 23
   tables:
   - id: Parameters WS
     name: Parameters WS
