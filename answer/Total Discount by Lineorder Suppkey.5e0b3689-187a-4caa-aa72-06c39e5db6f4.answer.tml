@@ -1,0 +1,35 @@
+guid: 5e0b3689-187a-4caa-aa72-06c39e5db6f4
+answer:
+  name: Total Discount by Lineorder Suppkey
+  tables:
+  - id: Parameters WS
+    name: Parameters WS
+    fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+  search_query: "[Lineorder Suppkey] [Discount]"
+  answer_columns:
+  - name: Lineorder Suppkey
+  - name: Total Discount
+  table:
+    table_columns:
+    - column_id: Lineorder Suppkey
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Discount
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Lineorder Suppkey
+    - Total Discount
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Lineorder Suppkey
+    - column_id: Total Discount
+    axis_configs:
+    - x:
+      - Lineorder Suppkey
+      "y":
+      - Total Discount
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Lineorder Suppkey\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d0f1315e-28d1-489c-8eb2-c8b8c02c2021\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"3f18d316-d43b-47be-b6bc-e635f14be80c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Lineorder Suppkey\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Discount\",\"color\": \"#FCC838\"}]}"
+  display_mode: CHART_MODE
