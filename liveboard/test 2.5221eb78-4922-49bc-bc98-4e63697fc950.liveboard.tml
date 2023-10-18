@@ -153,6 +153,43 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Employee_Rating\",\"columnProperty\": {}},{\"columnId\": \"Employee_Gender\",\"columnProperty\": {}},{\"columnId\": \"Total Agency Review_Rating\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"bc44bf7a-e60f-4eeb-9b46-be3c7880e930\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Agency Review_Rating\"],\"isOpposite\": false}},{\"id\": \"dc412439-7f49-4ca6-b32c-b2a050326360\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Employee_Rating\"]}}],\"systemSeriesColors\": [{\"serieName\": \"{null}\",\"color\": \"#FCC838\"},{\"serieName\": \"f\",\"color\": \"#48D1E0\"},{\"serieName\": \"m\",\"color\": \"#2E75F0\"}],\"tooltipConfig\": {}}"
       display_mode: CHART_MODE
     viz_guid: e876d6ca-6393-4ad7-b486-d5e31f1f888a
+  - id: Viz_5
+    answer:
+      name: Basic Answer 1
+      description: This is basic answer with table and headline visualizations.
+      tables:
+      - id: Chasmtrap
+        name: Chasmtrap
+        fqn: 07a8af30-cd9d-4ab0-a58a-544a818ddac7
+      search_query: "[Product Cost] [Product Name]"
+      answer_columns:
+      - name: Total Product Cost
+      - name: Product Name
+      table:
+        table_columns:
+        - column_id: Product Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Product Cost
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Product Name
+        - Total Product Cost
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Product Name
+        - column_id: Total Product Cost
+        axis_configs:
+        - x:
+          - Product Name
+          "y":
+          - Total Product Cost
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Name\",\"columnProperty\": {}},{\"columnId\": \"Total Product Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"597f667c-4d13-4cac-bb48-0f6b4678639f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Product Cost\"],\"isOpposite\": false}},{\"id\": \"a4af53d1-1b58-4bb7-8117-736843328313\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Name\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Product Cost\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 883ffdb6-3f5b-4af1-a77c-82405da02bae
   layout:
     tiles:
     - visualization_id: Viz_1
