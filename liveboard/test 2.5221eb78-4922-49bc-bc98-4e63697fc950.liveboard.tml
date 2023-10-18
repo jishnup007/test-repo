@@ -153,6 +153,49 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Employee_Rating\",\"columnProperty\": {}},{\"columnId\": \"Employee_Gender\",\"columnProperty\": {}},{\"columnId\": \"Total Agency Review_Rating\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"bc44bf7a-e60f-4eeb-9b46-be3c7880e930\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Agency Review_Rating\"],\"isOpposite\": false}},{\"id\": \"dc412439-7f49-4ca6-b32c-b2a050326360\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Employee_Rating\"]}}],\"systemSeriesColors\": [{\"serieName\": \"{null}\",\"color\": \"#FCC838\"},{\"serieName\": \"f\",\"color\": \"#48D1E0\"},{\"serieName\": \"m\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: e876d6ca-6393-4ad7-b486-d5e31f1f888a
+  - id: Viz_5
+    answer:
+      name: Total PURCHASE_PRICE by PURCHASE_PRODUCT_NAME and GROUP_NAME
+      tables:
+      - id: disabled-rls-non-chasm-ws
+        name: disabled-rls-non-chasm-ws
+        fqn: 6e884096-20f3-4298-9463-19b7d39c1224
+      search_query: "[PURCHASE_PRICE] [GROUP_NAME] [PURCHASE_PRODUCT_NAME]"
+      answer_columns:
+      - name: Total PURCHASE_PRICE
+      - name: GROUP_NAME
+      - name: PURCHASE_PRODUCT_NAME
+      table:
+        table_columns:
+        - column_id: GROUP_NAME
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: PURCHASE_PRODUCT_NAME
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total PURCHASE_PRICE
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - GROUP_NAME
+        - PURCHASE_PRODUCT_NAME
+        - Total PURCHASE_PRICE
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: GROUP_NAME
+        - column_id: PURCHASE_PRODUCT_NAME
+        - column_id: Total PURCHASE_PRICE
+        axis_configs:
+        - x:
+          - PURCHASE_PRODUCT_NAME
+          "y":
+          - Total PURCHASE_PRICE
+          color:
+          - GROUP_NAME
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"GROUP_NAME\",\"columnProperty\": {}},{\"columnId\": \"PURCHASE_PRODUCT_NAME\",\"columnProperty\": {}},{\"columnId\": \"Total PURCHASE_PRICE\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"cd6ee206-a962-43fc-9b17-07a6d7a7cbff\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total PURCHASE_PRICE\"],\"isOpposite\": false}},{\"id\": \"f3089c79-6980-4cfc-b250-7ed902d964d1\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"PURCHASE_PRODUCT_NAME\"]}}],\"systemSeriesColors\": [{\"serieName\": \"rls-group-1\",\"color\": \"#06BF7F\"},{\"serieName\": \"rls-group-2\",\"color\": \"#FCC838\"},{\"serieName\": \"rls-group-3\",\"color\": \"#48D1E0\"},{\"serieName\": \"rls-group-4\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 29e75948-8879-4175-9761-3a1939a7b0fd
   layout:
     tiles:
     - visualization_id: Viz_1
@@ -162,4 +205,6 @@ liveboard:
     - visualization_id: Viz_3
       size: MEDIUM
     - visualization_id: Viz_4
+      size: MEDIUM
+    - visualization_id: Viz_5
       size: MEDIUM
