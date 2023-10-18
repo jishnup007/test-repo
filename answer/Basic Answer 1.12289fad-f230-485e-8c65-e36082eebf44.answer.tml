@@ -1,0 +1,36 @@
+guid: 12289fad-f230-485e-8c65-e36082eebf44
+answer:
+  name: Basic Answer 1
+  description: This is basic answer with table and headline visualizations.
+  tables:
+  - id: Chasmtrap
+    name: Chasmtrap
+    fqn: 07a8af30-cd9d-4ab0-a58a-544a818ddac7
+  search_query: "[Product Cost] [Product Name]"
+  answer_columns:
+  - name: Total Product Cost
+  - name: Product Name
+  table:
+    table_columns:
+    - column_id: Product Name
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Product Cost
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Product Name
+    - Total Product Cost
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Product Name
+    - column_id: Total Product Cost
+    axis_configs:
+    - x:
+      - Product Name
+      "y":
+      - Total Product Cost
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Name\",\"columnProperty\": {}},{\"columnId\": \"Total Product Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"597f667c-4d13-4cac-bb48-0f6b4678639f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Product Cost\"],\"isOpposite\": false}},{\"id\": \"a4af53d1-1b58-4bb7-8117-736843328313\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Name\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Product Cost\",\"color\": \"#48D1E0\"}]}"
+  display_mode: CHART_MODE
