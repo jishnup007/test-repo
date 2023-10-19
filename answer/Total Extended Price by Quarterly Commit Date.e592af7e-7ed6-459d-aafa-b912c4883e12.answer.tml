@@ -1,0 +1,35 @@
+guid: e592af7e-7ed6-459d-aafa-b912c4883e12
+answer:
+  name: Total Extended Price by Quarterly Commit Date
+  tables:
+  - id: Parameters WS
+    name: Parameters WS
+    fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+  search_query: "[Commit Date] [Commit Date].quarterly [Extended Price]"
+  answer_columns:
+  - name: Quarter(Commit Date)
+  - name: Total Extended Price
+  table:
+    table_columns:
+    - column_id: Quarter(Commit Date)
+      headline_aggregation: MIN-MAX
+    - column_id: Total Extended Price
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Quarter(Commit Date)
+    - Total Extended Price
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: KPI
+    chart_columns:
+    - column_id: Quarter(Commit Date)
+    - column_id: Total Extended Price
+    axis_configs:
+    - x:
+      - Quarter(Commit Date)
+      "y":
+      - Total Extended Price
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"db2b0ac0-34ad-45ec-8412-a63c299c883a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"0095939b-b901-46bb-b9f4-0c4e855e0d5d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Extended Price\",\"color\": \"#2770ef\"}]}"
+  display_mode: CHART_MODE
