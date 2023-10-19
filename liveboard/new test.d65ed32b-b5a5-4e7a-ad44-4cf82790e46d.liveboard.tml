@@ -1,3 +1,45 @@
 guid: d65ed32b-b5a5-4e7a-ad44-4cf82790e46d
 liveboard:
   name: new test
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Extended Price by Quarterly Order Date
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Order Date] [Order Date].quarterly [Lineorder Partkey] [Extended Price]"
+      answer_columns:
+      - name: Quarter(Order Date)
+      - name: Lineorder Partkey
+      - name: Total Extended Price
+      table:
+        table_columns:
+        - column_id: Quarter(Order Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Lineorder Partkey
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Extended Price
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Quarter(Order Date)
+        - Lineorder Partkey
+        - Total Extended Price
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Quarter(Order Date)
+        - column_id: Lineorder Partkey
+        - column_id: Total Extended Price
+        axis_configs:
+        - x:
+          - Quarter(Order Date)
+          "y":
+          - Total Extended Price
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Lineorder Partkey\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"824f4801-5fcf-4cf8-8bb9-b3a73fa83a1a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"a72ede8e-a60b-4948-b7c6-f8e08da0e814\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Extended Price\",\"color\": \"#8C62F5\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: d5e1e761-6675-45d4-b309-fdc2538ff075
