@@ -4,7 +4,7 @@ liveboard:
   visualizations:
   - id: Viz_1
     answer:
-      name: Total Extended Price by Quarterly Order Date
+      name: Total Extended Price by Quarterly Order Date 2
       tables:
       - id: Parameters WS
         name: Parameters WS
@@ -43,3 +43,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Lineorder Partkey\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"824f4801-5fcf-4cf8-8bb9-b3a73fa83a1a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"a72ede8e-a60b-4948-b7c6-f8e08da0e814\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Extended Price\",\"color\": \"#8C62F5\"}]}"
       display_mode: CHART_MODE
     viz_guid: d5e1e761-6675-45d4-b309-fdc2538ff075
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
