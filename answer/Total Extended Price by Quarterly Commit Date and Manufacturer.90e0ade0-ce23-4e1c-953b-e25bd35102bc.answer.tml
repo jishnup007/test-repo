@@ -1,0 +1,47 @@
+guid: 90e0ade0-ce23-4e1c-953b-e25bd35102bc
+answer:
+  name: Total Extended Price by Quarterly Commit Date and Manufacturer
+  tables:
+  - id: Parameters WS
+    name: Parameters WS
+    fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+  search_query: "[Commit Date] [Commit Date].quarterly [Manufacturer] [Lineorder Suppkey] [Extended Price]"
+  answer_columns:
+  - name: Quarter(Commit Date)
+  - name: Manufacturer
+  - name: Lineorder Suppkey
+  - name: Total Extended Price
+  table:
+    table_columns:
+    - column_id: Quarter(Commit Date)
+      headline_aggregation: MIN-MAX
+    - column_id: Manufacturer
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Lineorder Suppkey
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Extended Price
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Quarter(Commit Date)
+    - Manufacturer
+    - Lineorder Suppkey
+    - Total Extended Price
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: LINE
+    chart_columns:
+    - column_id: Quarter(Commit Date)
+    - column_id: Manufacturer
+    - column_id: Lineorder Suppkey
+    - column_id: Total Extended Price
+    axis_configs:
+    - x:
+      - Quarter(Commit Date)
+      "y":
+      - Total Extended Price
+      color:
+      - Manufacturer
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Manufacturer\",\"columnProperty\": {}},{\"columnId\": \"Lineorder Suppkey\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f2e752a6-e9d6-42ed-857b-d131542d4cb6\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"2ebd1392-10aa-4bd5-b4ab-c7e919c1d1af\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"mfgr#1\",\"color\": \"#2E75F0\"},{\"serieName\": \"mfgr#2\",\"color\": \"#48D1E0\"},{\"serieName\": \"mfgr#3\",\"color\": \"#FCC838\"},{\"serieName\": \"mfgr#4\",\"color\": \"#06BF7F\"},{\"serieName\": \"mfgr#5\",\"color\": \"#8C62F5\"}]}"
+  display_mode: CHART_MODE
