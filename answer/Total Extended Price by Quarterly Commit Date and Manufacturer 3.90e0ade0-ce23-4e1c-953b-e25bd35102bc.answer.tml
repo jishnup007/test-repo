@@ -1,6 +1,6 @@
 guid: 90e0ade0-ce23-4e1c-953b-e25bd35102bc
 answer:
-  name: Total Extended Price by Quarterly Commit Date and Manufacturer 2
+  name: Total Extended Price by Quarterly Commit Date and Manufacturer 3
   tables:
   - id: Parameters WS
     name: Parameters WS
