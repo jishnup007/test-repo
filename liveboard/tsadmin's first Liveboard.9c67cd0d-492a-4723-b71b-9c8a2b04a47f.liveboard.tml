@@ -1,6 +1,6 @@
 guid: 9c67cd0d-492a-4723-b71b-9c8a2b04a47f
 liveboard:
-  name: tsadmin's first Liveboard 2
+  name: tsadmin's first Liveboard
   visualizations:
   - id: Viz_1
     answer:
@@ -40,7 +40,7 @@ liveboard:
           "y":
           - Total Latency (us)
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Client Type\",\"columnProperty\": {}},{\"columnId\": \"Uses Worksheet\",\"columnProperty\": {}},{\"columnId\": \"Total Latency (us)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"06a023b6-519c-49ba-ab2f-a86439f36294\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Latency (us)\"],\"isOpposite\": false}},{\"id\": \"f2fc6ce5-07db-4109-8e18-94a16e96764d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Uses Worksheet\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Latency (us)\",\"color\": \"#48D1E0\"}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Client Type\",\"columnProperty\": {}},{\"columnId\": \"Uses Worksheet\",\"columnProperty\": {}},{\"columnId\": \"Total Latency (us)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"06a023b6-519c-49ba-ab2f-a86439f36294\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Latency (us)\"],\"isOpposite\": false}},{\"id\": \"f2fc6ce5-07db-4109-8e18-94a16e96764d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Uses Worksheet\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Latency (us)\",\"color\": \"#48D1E0\"}],\"tooltipConfig\": {}}"
       display_mode: CHART_MODE
     viz_guid: 8fa9f43b-5014-4df9-a86a-80bdbd056e46
   layout:
