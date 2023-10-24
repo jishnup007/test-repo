@@ -1,0 +1,45 @@
+guid: 9c67cd0d-492a-4723-b71b-9c8a2b04a47f
+liveboard:
+  name: tsadmin's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Latency (us) by Uses Worksheet
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      search_query: "[Client Type] [Uses Worksheet] [Latency (us)]"
+      answer_columns:
+      - name: Client Type
+      - name: Uses Worksheet
+      - name: Total Latency (us)
+      table:
+        table_columns:
+        - column_id: Client Type
+          show_headline: false
+        - column_id: Uses Worksheet
+          show_headline: false
+        - column_id: Total Latency (us)
+          show_headline: false
+        ordered_column_ids:
+        - Client Type
+        - Uses Worksheet
+        - Total Latency (us)
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Client Type
+        - column_id: Uses Worksheet
+        - column_id: Total Latency (us)
+        axis_configs:
+        - x:
+          - Uses Worksheet
+          "y":
+          - Total Latency (us)
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Client Type\",\"columnProperty\": {}},{\"columnId\": \"Uses Worksheet\",\"columnProperty\": {}},{\"columnId\": \"Total Latency (us)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"06a023b6-519c-49ba-ab2f-a86439f36294\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Latency (us)\"],\"isOpposite\": false}},{\"id\": \"f2fc6ce5-07db-4109-8e18-94a16e96764d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Uses Worksheet\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Latency (us)\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 8fa9f43b-5014-4df9-a86a-80bdbd056e46
