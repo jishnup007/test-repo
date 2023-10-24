@@ -1,0 +1,41 @@
+guid: 39c13cff-a59c-4128-a3f5-4d5924aa9828
+answer:
+  name: "Total Response Size, Total Latency (us) by Load Answer - Deprecated"
+  tables:
+  - id: "TS: BI Server"
+    name: "TS: BI Server"
+    fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+  search_query: "[Load Answer - Deprecated] [Response Size] [Latency (us)]"
+  answer_columns:
+  - name: Load Answer - Deprecated
+  - name: Total Response Size
+  - name: Total Latency (us)
+  table:
+    table_columns:
+    - column_id: Load Answer - Deprecated
+      show_headline: false
+    - column_id: Total Response Size
+      show_headline: false
+    - column_id: Total Latency (us)
+      show_headline: false
+    ordered_column_ids:
+    - Load Answer - Deprecated
+    - Total Response Size
+    - Total Latency (us)
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Load Answer - Deprecated
+    - column_id: Total Response Size
+    - column_id: Total Latency (us)
+    axis_configs:
+    - x:
+      - Load Answer - Deprecated
+      "y":
+      - Total Response Size
+      - Total Latency (us)
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Load Answer - Deprecated\",\"columnProperty\": {}},{\"columnId\": \"Total Response Size\",\"columnProperty\": {}},{\"columnId\": \"Total Latency (us)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2eb0ffe3-7368-48f6-8e20-f23e08efea97\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Response Size\"],\"isOpposite\": false}},{\"id\": \"493cb4bc-06b9-495a-b687-ea6379e3c350\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Latency (us)\"],\"isOpposite\": true}},{\"id\": \"60ecc425-4f5b-4e8d-9efb-fb565070633f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Load Answer - Deprecated\"]}}]}"
+  display_mode: CHART_MODE
