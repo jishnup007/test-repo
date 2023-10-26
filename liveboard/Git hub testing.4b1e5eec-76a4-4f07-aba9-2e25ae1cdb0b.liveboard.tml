@@ -1,0 +1,1363 @@
+guid: 4b1e5eec-76a4-4f07-aba9-2e25ae1cdb0b
+liveboard:
+  name: Git hub testing
+  description: Git hub testingGit hub testingGit hub testingGit hub testing
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: MAU Last 30 Days
+      description: Count of Users who logged in - last 30 days.
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      formulas:
+      - id: .Int domain Users
+        name: .Int domain Users
+        expr: "contains ( [User] , \".int\" )"
+        was_auto_generated: false
+      - id: pinboard
+        name: pinboard
+        expr: "[Answer Book Name]"
+        was_auto_generated: false
+      - id: pinboard views
+        name: pinboard views
+        expr: "count ( [User Action] )"
+        was_auto_generated: false
+      search_query: "[User] [User] != [User].{null} [User].sre-tv@thoughtspot.int [Timestamp] = 'last 30 days' [.Int domain Users] [.Int domain Users] != true"
+      answer_columns:
+      - name: User
+      - name: .Int domain Users
+      table:
+        table_columns:
+        - column_id: User
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: .Int domain Users
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - User
+        - .Int domain Users
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"User\",\"columnProperty\": {}},{\"columnId\": \".Int domain Users\",\"columnProperty\": {}}]}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: User
+        - column_id: .Int domain Users
+        axis_configs:
+        - x:
+          - User
+          "y":
+          - .Int domain Users
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"User\",\"columnProperty\": {}},{\"columnId\": \".Int domain Users\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"eb557e92-da2d-485a-9232-8db57f9fdb33\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\".Int domain Users\"],\"isOpposite\": false}},{\"id\": \"de37bf2c-9b6c-470e-9dd9-a7e2c8cf46ca\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"User\"]}}]}"
+      display_mode: TABLE_MODE
+    display_headline_column: User
+    viz_guid: bf5bcf1c-466c-4ad2-a4d2-37a5c00c4191
+  - id: Viz_2
+    answer:
+      name: ThoughtSpot Champions Last 30 Days
+      description: Top 10 users who were most active and interacted with ThoughtSpot in Last 30 days.
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      formulas:
+      - id: User Actions
+        name: User Actions
+        expr: "count ( [User Action] )"
+        was_auto_generated: false
+      search_query: "top 10 ranked by [User Actions] [User Action] != 'invalid' [User] != [User].{null} [User].sre-tv@thoughtspot.int [User].codemonkey@thoughtspot.int [User].svc.champagne@thoughtspot.int [User] [Timestamp].'last 30 days' [Timestamp].today"
+      answer_columns:
+      - name: User Actions
+      - name: User
+      table:
+        table_columns:
+        - column_id: User
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: User Actions
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - User
+        - User Actions
+        client_state: "{\"dataOffset\":0.0,\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"User\",\"columnProperty\": {}},{\"columnId\": \"User Actions\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: User
+        - column_id: User Actions
+        axis_configs:
+        - x:
+          - User
+          "y":
+          - User Actions
+        client_state: "{\"dataLabels\":true,\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{},\"responsiveLayoutPreference\":1.0},\"axisProperties\":{\"caa8b90e-f326-45d9-b151-2cd97a8287bc\":{\"linkedColumns\":[\"User Actions\"],\"axisType\":\"Y\",\"isOpposite\":false},\"2a348bc3-98b7-488e-a166-72414ea337a6\":{\"linkedColumns\":[\"User\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"User Actions\":\"#48D1E0\"},\"version\":\"V2.2\",\"columnProperties\":{\"User\":{\"dataLabels\":true},\"User Actions\":{\"dataLabels\":false}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"User\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"User Actions\",\"columnProperty\": {\"dataLabels\": false}}],\"axisProperties\": [{\"id\": \"caa8b90e-f326-45d9-b151-2cd97a8287bc\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"User Actions\"],\"isOpposite\": false}},{\"id\": \"2a348bc3-98b7-488e-a166-72414ea337a6\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"User\"]}}],\"systemSeriesColors\": [{\"serieName\": \"User Actions\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 65752451-7fa3-474e-808f-8470a5ab03a6
+  - id: Viz_3
+    answer:
+      name: Popular Pinboards Last 30 Days
+      description: Top 10 pinboards most viewed across the users in last 30 day. Size indicates the number of views while spectrum of color shows number of users viewing the pinboard.
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      formulas:
+      - id: Pinboard
+        name: Pinboard
+        expr: "[Answer Book Name]"
+        was_auto_generated: false
+      - id: Pinboard Views
+        name: Pinboard Views
+        expr: "count ( [User Action] )"
+        was_auto_generated: false
+      search_query: "top 10 ranked by [Pinboard Views] [User Action] = [User Action].pinboard_embed_view [User Action].pinboard_tspublic_no_runtime_filter [User Action].pinboard_tspublic_runtime_filter [User Action].pinboard_view [Pinboard] != [Pinboard].{null} [Pinboard].'mlm - availability pinboard' [Pinboard] [Timestamp].'last 30 days' [Timestamp].today [Pinboard Views] unique count [User]"
+      answer_columns:
+      - name: Pinboard Views
+      - name: Pinboard
+      - name: Unique Number of User
+      table:
+        table_columns:
+        - column_id: Pinboard
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Pinboard Views
+          headline_aggregation: SUM
+        - column_id: Unique Number of User
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Pinboard
+        - Pinboard Views
+        - Unique Number of User
+        client_state: "{\"dataOffset\":0.0,\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Pinboard\",\"columnProperty\": {}},{\"columnId\": \"Pinboard Views\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of User\",\"columnProperty\": {}}]}"
+      chart:
+        type: TREEMAP
+        chart_columns:
+        - column_id: Pinboard
+        - column_id: Pinboard Views
+        - column_id: Unique Number of User
+        axis_configs:
+        - x:
+          - Pinboard
+          "y":
+          - Unique Number of User
+          size: Pinboard Views
+        client_state: "{\"dataLabels\":true,\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{},\"responsiveLayoutPreference\":1.0},\"axisProperties\":{\"640c511a-4bfd-4016-aba1-6e44be232260\":{\"linkedColumns\":[\"Pinboard\"],\"axisType\":\"X\"},\"787f30b8-ad5a-4cf7-998d-75c87e2a0944\":{\"linkedColumns\":[\"Unique Number of User\"],\"axisType\":\"Y\",\"isOpposite\":false}},\"systemSeriesColors\":{\"Pinboard Views\":\"#35b06e\",\"Unique Number of User\":\"#8C62F5\"},\"version\":\"V2.2\",\"columnProperties\":{\"Pinboard\":{\"dataLabels\":true},\"Pinboard Views\":{\"dataLabels\":true}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Pinboard\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Pinboard Views\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of User\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"640c511a-4bfd-4016-aba1-6e44be232260\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Pinboard\"]}},{\"id\": \"787f30b8-ad5a-4cf7-998d-75c87e2a0944\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Unique Number of User\"],\"isOpposite\": false}}]}"
+      display_mode: CHART_MODE
+    viz_guid: c82363b3-62e2-4097-88f9-48ab6ca61a3f
+  - id: Viz_4
+    answer:
+      name: Count of Current Answers
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      formulas:
+      - id: answer
+        name: answer
+        expr: "[Answer Book Name]"
+        was_auto_generated: false
+      - id: answer views
+        name: answer views
+        expr: "count ( [User Action] )"
+        was_auto_generated: false
+      search_query: "[answer] [User Action].answer_saved [User Action].answer_view"
+      answer_columns:
+      - name: answer
+      table:
+        table_columns:
+        - column_id: answer
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - answer
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{\"answer\":145.0,\"3a35b5db-13a8-5b0b-8ae3-7f7ff30edb52\":204.0,\"89247d9e-1182-5751-8d22-9adabcd1f9db\":204.0,\"df675544-43cc-5b36-b722-8a6181a675a1\":220.0,\"f3cb9b55-53f6-5e97-ab95-08ddd83e6169\":228.0},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"answer\",\"width\": 145.0},{\"columnId\": \"3a35b5db-13a8-5b0b-8ae3-7f7ff30edb52\",\"width\": 204.0},{\"columnId\": \"89247d9e-1182-5751-8d22-9adabcd1f9db\",\"width\": 204.0},{\"columnId\": \"df675544-43cc-5b36-b722-8a6181a675a1\",\"width\": 220.0},{\"columnId\": \"f3cb9b55-53f6-5e97-ab95-08ddd83e6169\",\"width\": 228.0}],\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"answer\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: answer
+        axis_configs:
+        - "y":
+          - answer
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"answer\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"5ad4a30d-3ec9-4337-9d66-aa8cfa319a40\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"answer\"],\"isOpposite\": false}},{\"id\": \"47eed9a4-7bd3-4d39-869f-c3856fa2b85b\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: TABLE_MODE
+    display_headline_column: answer
+    viz_guid: dbdf4b7a-f635-452e-abb7-f55be481f86b
+  - id: Viz_5
+    answer:
+      name: Count of Current Pinboards
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      formulas:
+      - id: answer
+        name: answer
+        expr: "[Answer Book Name]"
+        was_auto_generated: false
+      - id: answer views
+        name: answer views
+        expr: "count ( [User Action] )"
+        was_auto_generated: false
+      search_query: "[answer] [User Action] contains 'pinboard'"
+      answer_columns:
+      - name: answer
+      table:
+        table_columns:
+        - column_id: answer
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - answer
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{\"answer\":145.0,\"3a35b5db-13a8-5b0b-8ae3-7f7ff30edb52\":204.0,\"89247d9e-1182-5751-8d22-9adabcd1f9db\":204.0,\"df675544-43cc-5b36-b722-8a6181a675a1\":220.0,\"f3cb9b55-53f6-5e97-ab95-08ddd83e6169\":228.0},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"answer\",\"width\": 145.0},{\"columnId\": \"3a35b5db-13a8-5b0b-8ae3-7f7ff30edb52\",\"width\": 204.0},{\"columnId\": \"89247d9e-1182-5751-8d22-9adabcd1f9db\",\"width\": 204.0},{\"columnId\": \"df675544-43cc-5b36-b722-8a6181a675a1\",\"width\": 220.0},{\"columnId\": \"f3cb9b55-53f6-5e97-ab95-08ddd83e6169\",\"width\": 228.0}],\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"answer\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: answer
+        axis_configs:
+        - "y":
+          - answer
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"answer\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"dbe28e58-a00a-4eb1-96a5-5329482431a3\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"answer\"],\"isOpposite\": false}},{\"id\": \"929b6ddd-80cf-452b-91c0-7b450f2bacad\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: TABLE_MODE
+    display_headline_column: answer
+    viz_guid: 20fc339f-0b31-4bdf-90f7-04ed10637742
+  - id: Viz_6
+    answer:
+      name: Top 10 Adhoc Searchers
+      description: Top 10 Users who most leveraged Search in ThoughtSpot for deriving insights.
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      formulas:
+      - id: Pinboard
+        name: Pinboard
+        expr: "[Answer Book Name]"
+        was_auto_generated: false
+      - id: Pinboard Views
+        name: Pinboard Views
+        expr: "count ( [User Action] )"
+        was_auto_generated: false
+      search_query: "top 10 [Timestamp].'last 30 days' [Timestamp].today [Timestamp] [Timestamp].monthly [User Action] = 'answer_unsaved' [User] count [User Action] sort by count [User Action] descending"
+      answer_columns:
+      - name: Month(Timestamp)
+      - name: User
+      - name: Number of User Action
+      table:
+        table_columns:
+        - column_id: Month(Timestamp)
+          headline_aggregation: MIN-MAX
+        - column_id: User
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of User Action
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Month(Timestamp)
+        - User
+        - Number of User Action
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Month(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"User\",\"columnProperty\": {}},{\"columnId\": \"Number of User Action\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Month(Timestamp)
+        - column_id: User
+        - column_id: Number of User Action
+        axis_configs:
+        - x:
+          - User
+          "y":
+          - Number of User Action
+        client_state: "{\"seriesColors\":{\"aaron.schweitzer@thoughtspot.com\":\"#B094F8\",\"abhinav.gupta@thoughtspot.com\":\"#8C62F5\",\"alex.fang@thoughtspot.com\":\"#56D3A8\",\"chinyuan.yang@thoughtspot.com\":\"#06BF7F\",\"damien.brophy@thoughtspot.com\":\"#FCD977\",\"hema.magesh@thoughtspot.com\":\"#FCC838\",\"jatin.garg@thoughtspot.com\":\"#82DFE9\",\"mohamed.abdulla@thoughtspot.com\":\"#48D1E0\",\"naresh.kumar@thoughtspot.com\":\"#71A1F4\",\"yulong.chen@thoughtspot.com\":\"#2E75F0\",\"aaron.hunter@thoughtspot.com\":\"#B094F8\",\"blair.pierson@thoughtspot.com\":\"#8C62F5\",\"brian.hausmann@thoughtspot.com\":\"#56D3A8\",\"kendrick.heath@thoughtspot.com\":\"#06BF7F\",\"margie.roginski@thoughtspot.com\":\"#FCD977\",\"pawan.bhandari@thoughtspot.com\":\"#FCC838\",\"samridh.choubey@thoughtspot.com\":\"#82DFE9\",\"shaily.saigal@thoughtspot.com\":\"#48D1E0\",\"snigdha.jha@thoughtspot.com\":\"#71A1F4\",\"tomoko.takeda@thoughtspot.com\":\"#2E75F0\",\"Number of User Action\":\"#2e75f0\"},\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{},\"responsiveLayoutPreference\":1.0,\"isZoomed\":false},\"axisProperties\":{\"22f51ff1-d829-40a0-b490-fd2071042c38\":{\"linkedColumns\":[\"Number of User Action\"],\"axisType\":\"Y\",\"isOpposite\":false},\"8adef066-b34e-43ea-b3d2-1a6656d68df9\":{\"linkedColumns\":[\"User\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"aaron.schweitzer@thoughtspot.com\":\"#B094F8\",\"abhinav.gupta@thoughtspot.com\":\"#8C62F5\",\"alex.fang@thoughtspot.com\":\"#56D3A8\",\"chinyuan.yang@thoughtspot.com\":\"#06BF7F\",\"damien.brophy@thoughtspot.com\":\"#FCD977\",\"hema.magesh@thoughtspot.com\":\"#FCC838\",\"jatin.garg@thoughtspot.com\":\"#82DFE9\",\"mohamed.abdulla@thoughtspot.com\":\"#48D1E0\",\"naresh.kumar@thoughtspot.com\":\"#71A1F4\",\"yulong.chen@thoughtspot.com\":\"#2E75F0\",\"aaron.hunter@thoughtspot.com\":\"#B094F8\",\"blair.pierson@thoughtspot.com\":\"#8C62F5\",\"brian.hausmann@thoughtspot.com\":\"#56D3A8\",\"kendrick.heath@thoughtspot.com\":\"#06BF7F\",\"margie.roginski@thoughtspot.com\":\"#FCD977\",\"pawan.bhandari@thoughtspot.com\":\"#FCC838\",\"samridh.choubey@thoughtspot.com\":\"#82DFE9\",\"shaily.saigal@thoughtspot.com\":\"#48D1E0\",\"snigdha.jha@thoughtspot.com\":\"#71A1F4\",\"tomoko.takeda@thoughtspot.com\":\"#2E75F0\",\"Number of User Action\":\"#06BF7F\"},\"version\":\"V2.2\",\"columnProperties\":{\"Month(Timestamp)\":{},\"User\":{},\"Number of User Action\":{\"dataLabels\":false}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"isZoomed\": false,\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Month(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"User\",\"columnProperty\": {}},{\"columnId\": \"Number of User Action\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"22f51ff1-d829-40a0-b490-fd2071042c38\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of User Action\"],\"isOpposite\": false}},{\"id\": \"8adef066-b34e-43ea-b3d2-1a6656d68df9\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"User\"]}}],\"seriesColors\": [{\"serieName\": \"aaron.schweitzer@thoughtspot.com\",\"color\": \"#B094F8\"},{\"serieName\": \"abhinav.gupta@thoughtspot.com\",\"color\": \"#8C62F5\"},{\"serieName\": \"alex.fang@thoughtspot.com\",\"color\": \"#56D3A8\"},{\"serieName\": \"chinyuan.yang@thoughtspot.com\",\"color\": \"#06BF7F\"},{\"serieName\": \"damien.brophy@thoughtspot.com\",\"color\": \"#FCD977\"},{\"serieName\": \"hema.magesh@thoughtspot.com\",\"color\": \"#FCC838\"},{\"serieName\": \"jatin.garg@thoughtspot.com\",\"color\": \"#82DFE9\"},{\"serieName\": \"mohamed.abdulla@thoughtspot.com\",\"color\": \"#48D1E0\"},{\"serieName\": \"naresh.kumar@thoughtspot.com\",\"color\": \"#71A1F4\"},{\"serieName\": \"yulong.chen@thoughtspot.com\",\"color\": \"#2E75F0\"},{\"serieName\": \"aaron.hunter@thoughtspot.com\",\"color\": \"#B094F8\"},{\"serieName\": \"blair.pierson@thoughtspot.com\",\"color\": \"#8C62F5\"},{\"serieName\": \"brian.hausmann@thoughtspot.com\",\"color\": \"#56D3A8\"},{\"serieName\": \"kendrick.heath@thoughtspot.com\",\"color\": \"#06BF7F\"},{\"serieName\": \"margie.roginski@thoughtspot.com\",\"color\": \"#FCD977\"},{\"serieName\": \"pawan.bhandari@thoughtspot.com\",\"color\": \"#FCC838\"},{\"serieName\": \"samridh.choubey@thoughtspot.com\",\"color\": \"#82DFE9\"},{\"serieName\": \"shaily.saigal@thoughtspot.com\",\"color\": \"#48D1E0\"},{\"serieName\": \"snigdha.jha@thoughtspot.com\",\"color\": \"#71A1F4\"},{\"serieName\": \"tomoko.takeda@thoughtspot.com\",\"color\": \"#2E75F0\"},{\"serieName\": \"number of User action\",\"color\": \"#2e75f0\"}],\"systemSeriesColors\": [{\"serieName\": \"aaron.schweitzer@thoughtspot.com\",\"color\": \"#B094F8\"},{\"serieName\": \"abhinav.gupta@thoughtspot.com\",\"color\": \"#8C62F5\"},{\"serieName\": \"alex.fang@thoughtspot.com\",\"color\": \"#56D3A8\"},{\"serieName\": \"chinyuan.yang@thoughtspot.com\",\"color\": \"#06BF7F\"},{\"serieName\": \"damien.brophy@thoughtspot.com\",\"color\": \"#FCD977\"},{\"serieName\": \"hema.magesh@thoughtspot.com\",\"color\": \"#FCC838\"},{\"serieName\": \"jatin.garg@thoughtspot.com\",\"color\": \"#82DFE9\"},{\"serieName\": \"mohamed.abdulla@thoughtspot.com\",\"color\": \"#48D1E0\"},{\"serieName\": \"naresh.kumar@thoughtspot.com\",\"color\": \"#71A1F4\"},{\"serieName\": \"yulong.chen@thoughtspot.com\",\"color\": \"#2E75F0\"},{\"serieName\": \"aaron.hunter@thoughtspot.com\",\"color\": \"#B094F8\"},{\"serieName\": \"blair.pierson@thoughtspot.com\",\"color\": \"#8C62F5\"},{\"serieName\": \"brian.hausmann@thoughtspot.com\",\"color\": \"#56D3A8\"},{\"serieName\": \"kendrick.heath@thoughtspot.com\",\"color\": \"#06BF7F\"},{\"serieName\": \"margie.roginski@thoughtspot.com\",\"color\": \"#FCD977\"},{\"serieName\": \"pawan.bhandari@thoughtspot.com\",\"color\": \"#FCC838\"},{\"serieName\": \"samridh.choubey@thoughtspot.com\",\"color\": \"#82DFE9\"},{\"serieName\": \"shaily.saigal@thoughtspot.com\",\"color\": \"#48D1E0\"},{\"serieName\": \"snigdha.jha@thoughtspot.com\",\"color\": \"#71A1F4\"},{\"serieName\": \"tomoko.takeda@thoughtspot.com\",\"color\": \"#2E75F0\"},{\"serieName\": \"number of User action\",\"color\": \"#06BF7F\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 03c566ce-7fc5-494d-8e55-98af230388c4
+  - id: Viz_7
+    answer:
+      name: Top 10 Pinboard Consumers Last 30 days
+      description: Top 10 Users who most leveraged pinboards in ThoughtSpot for deriving insights.
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      formulas:
+      - id: Pinboard
+        name: Pinboard
+        expr: "[Answer Book Name]"
+        was_auto_generated: false
+      - id: Pinboard Views
+        name: Pinboard Views
+        expr: "count ( [User Action] )"
+        was_auto_generated: false
+      search_query: "top 10 [Timestamp] [Timestamp].monthly [User] [Timestamp].'last 30 days' [User Action] != 'invalid' [User Action] = [User Action].answer_pinboard_context [User Action].pinboard_ad_hoc [User Action].pinboard_embed_view [User Action].pinboard_filter [User Action].pinboard_admin_view [User Action].pinboard_print_view [User Action].pinboard_view [User] != [User].tsadmin [User].{null} count [User Action]"
+      answer_columns:
+      - name: Month(Timestamp)
+      - name: User
+      - name: Number of User Action
+      table:
+        table_columns:
+        - column_id: Month(Timestamp)
+          headline_aggregation: MIN-MAX
+        - column_id: User
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of User Action
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Month(Timestamp)
+        - User
+        - Number of User Action
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Month(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"User\",\"columnProperty\": {}},{\"columnId\": \"Number of User Action\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Month(Timestamp)
+        - column_id: User
+        - column_id: Number of User Action
+        axis_configs:
+        - x:
+          - User
+          "y":
+          - Number of User Action
+        client_state: "{\"seriesColors\":{\"Number of User Action\":\"#8c62f5\"},\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{},\"responsiveLayoutPreference\":1.0,\"isZoomed\":false},\"axisProperties\":{\"88f1aea7-3938-40f9-a79d-d9504040ffee\":{\"linkedColumns\":[\"Number of User Action\"],\"axisType\":\"Y\",\"isOpposite\":false},\"f2c0d6fb-b325-4dee-a008-d60cf85096a1\":{\"linkedColumns\":[\"User\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Number of User Action\":\"#747E8C\"},\"version\":\"V2.2\",\"columnProperties\":{\"User\":{},\"0853bf6f-6c6d-5916-a62d-1f2f9ca2f3d1\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"isZoomed\": false,\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Month(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"User\",\"columnProperty\": {}},{\"columnId\": \"Number of User Action\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"88f1aea7-3938-40f9-a79d-d9504040ffee\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of User Action\"],\"isOpposite\": false}},{\"id\": \"f2c0d6fb-b325-4dee-a008-d60cf85096a1\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"User\"]}}],\"seriesColors\": [{\"serieName\": \"number of User action\",\"color\": \"#8c62f5\"}],\"systemSeriesColors\": [{\"serieName\": \"number of User action\",\"color\": \"#747E8C\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: aef7eb49-8490-4f81-8d09-5df01a1600d6
+  - id: Viz_8
+    answer:
+      name: WAU Last 4 Weeks
+      description: Average weekly active users
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      search_query: "[Timestamp] [Timestamp].weekly unique count [User] [Timestamp].'last 4 weeks'"
+      answer_columns:
+      - name: Week(Timestamp)
+      - name: Unique Number of User
+      table:
+        table_columns:
+        - column_id: Week(Timestamp)
+          headline_aggregation: MIN-MAX
+        - column_id: Unique Number of User
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Week(Timestamp)
+        - Unique Number of User
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Week(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of User\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Week(Timestamp)
+        - column_id: Unique Number of User
+        axis_configs:
+        - x:
+          - Week(Timestamp)
+          "y":
+          - Unique Number of User
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{},\"responsiveLayoutPreference\":3.0},\"axisProperties\":{\"f75128a8-d499-47bf-a504-b425aa33934b\":{\"linkedColumns\":[\"Unique Number of User\"],\"axisType\":\"Y\",\"isOpposite\":false},\"5000fad1-23df-47ec-b634-254ae4a61375\":{\"linkedColumns\":[\"Week(Timestamp)\"],\"axisType\":\"X\"}},\"version\":\"V3\",\"columnProperties\":{\"Week(Timestamp)\":{},\"Unique Number of User\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Week(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of User\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f75128a8-d499-47bf-a504-b425aa33934b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Unique Number of User\"],\"isOpposite\": false}},{\"id\": \"5000fad1-23df-47ec-b634-254ae4a61375\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(Timestamp)\"]}}]}"
+      display_mode: TABLE_MODE
+    display_headline_column: Unique Number of User
+    viz_guid: c50623ed-9a56-4c16-804a-9eebb2e51758
+  - id: Viz_9
+    answer:
+      name: Unique Count User
+      description: Total unique users
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      search_query: "unique count [User]"
+      answer_columns:
+      - name: Unique Number of User
+      table:
+        table_columns:
+        - column_id: Unique Number of User
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Unique Number of User
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Unique Number of User\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Unique Number of User
+        axis_configs:
+        - "y":
+          - Unique Number of User
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Unique Number of User\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f04a8a83-e67a-4941-8bde-80b100461b70\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Unique Number of User\"],\"isOpposite\": false}},{\"id\": \"e02c47ec-acad-45b9-a55f-b8de30bfe26c\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: TABLE_MODE
+    display_headline_column: Unique Number of User
+    viz_guid: 478e9a91-e4c6-4e24-a14e-421d5533fbda
+  - id: Viz_10
+    answer:
+      name: Daily Active Users
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      search_query: "[Timestamp] [Timestamp].daily unique count [User]"
+      answer_columns:
+      - name: Day(Timestamp)
+      - name: Unique Number of User
+      table:
+        table_columns:
+        - column_id: Day(Timestamp)
+          headline_aggregation: MIN-MAX
+        - column_id: Unique Number of User
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Day(Timestamp)
+        - Unique Number of User
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Day(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of User\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Day(Timestamp)
+        - column_id: Unique Number of User
+        axis_configs:
+        - x:
+          - Day(Timestamp)
+          "y":
+          - Unique Number of User
+        client_state: "{\"seriesColors\":{\"Unique Number of User\":\"#abc7f9\",\"highcharts-regression\":\"#06BF7F\"},\"chartProperties\":{\"gridLines\":{\"yGridlineEnabled\":true},\"showRoundedNumbers\":true,\"chartSpecific\":{},\"responsiveLayoutPreference\":1.0,\"showLinearRegressionLine\":true},\"axisProperties\":{\"e63d9862-d324-4364-ba99-1b774c2c624a\":{\"linkedColumns\":[\"Unique Number of User\"],\"axisType\":\"Y\",\"isOpposite\":false},\"94e43f8f-5fcc-4eac-b6c4-5f05468cf7f5\":{\"linkedColumns\":[\"Day(Timestamp)\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Unique Number of User\":\"#06BF7F\",\"highcharts-regression\":\"#06BF7F\"},\"version\":\"V3\",\"columnProperties\":{\"Day(Timestamp)\":{},\"Unique Number of User\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {\"yGridlineEnabled\": true},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"showLinearRegressionLine\": true,\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Day(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of User\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e63d9862-d324-4364-ba99-1b774c2c624a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Unique Number of User\"],\"isOpposite\": false}},{\"id\": \"94e43f8f-5fcc-4eac-b6c4-5f05468cf7f5\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Timestamp)\"]}}],\"seriesColors\": [{\"serieName\": \"Unique Number of User\",\"color\": \"#abc7f9\"},{\"serieName\": \"highcharts-regression\",\"color\": \"#06BF7F\"}],\"systemSeriesColors\": [{\"serieName\": \"Unique Number of User\",\"color\": \"#06BF7F\"},{\"serieName\": \"highcharts-regression\",\"color\": \"#06BF7F\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: d404f263-759d-40e1-a5bc-a32ad578917a
+  - id: Viz_11
+    answer:
+      name: Weekly Active Users
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      search_query: "[Timestamp] [Timestamp].weekly unique count [User]"
+      answer_columns:
+      - name: Week(Timestamp)
+      - name: Unique Number of User
+      table:
+        table_columns:
+        - column_id: Week(Timestamp)
+          headline_aggregation: MIN-MAX
+        - column_id: Unique Number of User
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Week(Timestamp)
+        - Unique Number of User
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Week(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of User\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Week(Timestamp)
+        - column_id: Unique Number of User
+        axis_configs:
+        - x:
+          - Week(Timestamp)
+          "y":
+          - Unique Number of User
+        client_state: "{\"seriesColors\":{\"Unique Number of User\":\"#abc7f9\",\"highcharts-regression\":\"#06BF7F\"},\"chartProperties\":{\"gridLines\":{\"yGridlineEnabled\":true},\"showRoundedNumbers\":true,\"chartSpecific\":{},\"responsiveLayoutPreference\":1.0,\"showLinearRegressionLine\":true},\"axisProperties\":{\"e63d9862-d324-4364-ba99-1b774c2c624a\":{\"linkedColumns\":[\"Unique Number of User\"],\"axisType\":\"Y\",\"isOpposite\":false},\"94e43f8f-5fcc-4eac-b6c4-5f05468cf7f5\":{\"linkedColumns\":[\"Week(Timestamp)\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Unique Number of User\":\"#06BF7F\",\"highcharts-regression\":\"#06BF7F\"},\"version\":\"V3\",\"columnProperties\":{\"Week(Timestamp)\":{},\"Unique Number of User\":{\"dataLabels\":true}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {\"yGridlineEnabled\": true},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"showLinearRegressionLine\": true,\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Week(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of User\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"e63d9862-d324-4364-ba99-1b774c2c624a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Unique Number of User\"],\"isOpposite\": false}},{\"id\": \"94e43f8f-5fcc-4eac-b6c4-5f05468cf7f5\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(Timestamp)\"]}}],\"seriesColors\": [{\"serieName\": \"Unique Number of User\",\"color\": \"#abc7f9\"},{\"serieName\": \"highcharts-regression\",\"color\": \"#06BF7F\"}],\"systemSeriesColors\": [{\"serieName\": \"Unique Number of User\",\"color\": \"#06BF7F\"},{\"serieName\": \"highcharts-regression\",\"color\": \"#06BF7F\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 5ad3864f-b674-46a6-a55f-dd004c90bc00
+  - id: Viz_12
+    answer:
+      name: Hourly Active Users
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      search_query: "unique count [User] [Timestamp].'hour of day'"
+      answer_columns:
+      - name: Unique Number of User
+      - name: HOUR_OF_DAY(Timestamp)
+      table:
+        table_columns:
+        - column_id: HOUR_OF_DAY(Timestamp)
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Unique Number of User
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - HOUR_OF_DAY(Timestamp)
+        - Unique Number of User
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"HOUR_OF_DAY(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of User\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: HOUR_OF_DAY(Timestamp)
+        - column_id: Unique Number of User
+        axis_configs:
+        - x:
+          - HOUR_OF_DAY(Timestamp)
+          "y":
+          - Unique Number of User
+        client_state: "{\"seriesColors\":{\"Unique Number of User\":\"#abc7f9\"},\"chartProperties\":{\"gridLines\":{\"yGridlineEnabled\":true},\"showRoundedNumbers\":true,\"chartSpecific\":{},\"responsiveLayoutPreference\":3.0},\"axisProperties\":{\"63bc8ddd-cb14-4fac-9e7e-b4f09e859589\":{\"linkedColumns\":[\"Unique Number of User\"],\"axisType\":\"Y\",\"isOpposite\":false},\"69a4391f-e3d5-4897-955a-02e1bb01d021\":{\"linkedColumns\":[\"HOUR_OF_DAY(Timestamp)\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Unique Number of User\":\"#8C62F5\"},\"version\":\"V3\",\"columnProperties\":{\"HOUR_OF_DAY(Timestamp)\":{},\"Unique Number of User\":{\"dataLabels\":true}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {\"yGridlineEnabled\": true},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"HOUR_OF_DAY(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of User\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"63bc8ddd-cb14-4fac-9e7e-b4f09e859589\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Unique Number of User\"],\"isOpposite\": false}},{\"id\": \"69a4391f-e3d5-4897-955a-02e1bb01d021\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"HOUR_OF_DAY(Timestamp)\"]}}],\"seriesColors\": [{\"serieName\": \"Unique Number of User\",\"color\": \"#abc7f9\"}],\"systemSeriesColors\": [{\"serieName\": \"Unique Number of User\",\"color\": \"#8C62F5\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: f4af372e-06ab-4ab8-8fe9-caaefb6d1460
+  - id: Viz_13
+    answer:
+      name: Weekly User Action Group Ratio
+      description: '* Note data export is limited to Print PDF'
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      formulas:
+      - id: User Action Group
+        name: User Action Group
+        expr: "if ( [Is Search] ) then 'search' else if ( [Is Pinboard View] ) then 'pinboard view' else if ( [Is Pinboard Interaction] ) then 'pinboard interaction' else if ( [Is SpotIQ View] ) then 'spotiq view' else if ( [Is Show Data] ) then 'show data' else if ( [Is Data Export] ) then 'data export' else if ( [Is Answer View] ) then 'answer view' else if ( [User Action] = 'invalid' ) then 'invalid' else 'other'"
+        was_auto_generated: false
+      - id: Is Answer View
+        name: Is Answer View
+        expr: "if ( [User Action] = 'answer_view' ) then true else false"
+        was_auto_generated: false
+      - id: Is Data Export
+        name: Is Data Export
+        expr: "if ( [User Action] = 'data_export' ) then true else false"
+        was_auto_generated: false
+      - id: Is Pinboard Interaction
+        name: Is Pinboard Interaction
+        expr: "if ( [User Action] = 'pinboard_filter' or [User Action] = 'pinboard_ad_hoc' ) then true else false"
+        was_auto_generated: false
+      - id: Is Pinboard View
+        name: Is Pinboard View
+        expr: "if ( [User Action] = 'pinboard_embed_view' or [User Action] = 'pinboard_tspublic_no_runtime_filter' or [User Action] = 'pinboard_tspublic_runtime_filter' or [User Action] = 'pinboard_view' ) then true else false"
+        was_auto_generated: false
+      - id: Is Search
+        name: Is Search
+        expr: "if ( [User Action] = 'answer_pinboard_context' or [User Action] = 'answer_saved' or [User Action] = 'answer_unsaved' ) then true else false"
+        was_auto_generated: false
+      - id: Is Show Data
+        name: Is Show Data
+        expr: "if ( [User Action] = 'data_show_underlying_row' or [User Action] = 'data_show_underlying_viz' ) then true else false"
+        was_auto_generated: false
+      - id: Is SpotIQ View
+        name: Is SpotIQ View
+        expr: "if ( [User Action] = 'pinboard_insight_view' ) then true else false"
+        was_auto_generated: false
+      search_query: "[Timestamp].weekly count [User Action] [User Action] != [User Action].{null} [User Action].invalid [User Action Group] [Is Answer View]"
+      answer_columns:
+      - name: Week(Timestamp)
+      - name: Number of User Action
+      - name: User Action Group
+      - name: Is Answer View
+      table:
+        table_columns:
+        - column_id: Week(Timestamp)
+          headline_aggregation: MIN-MAX
+        - column_id: User Action Group
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Is Answer View
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of User Action
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Week(Timestamp)
+        - User Action Group
+        - Is Answer View
+        - Number of User Action
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Week(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"User Action Group\",\"columnProperty\": {}},{\"columnId\": \"Is Answer View\",\"columnProperty\": {}},{\"columnId\": \"Number of User Action\",\"columnProperty\": {}}]}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Week(Timestamp)
+        - column_id: User Action Group
+        - column_id: Is Answer View
+        - column_id: Number of User Action
+        axis_configs:
+        - x:
+          - Week(Timestamp)
+          "y":
+          - Number of User Action
+          color:
+          - User Action Group
+        client_state: "{\"seriesColors\":{\"Number of User Action\":\"#48D1E0\",\"data export\":\"#f9b3b9\",\"other\":\"#bec6d0\",\"pinboard interaction\":\"#9be5cb\",\"pinboard view\":\"#56d3a8\",\"search\":\"#71a1f4\",\"show data\":\"#ffccb3\",\"spotiq view\":\"#fde9af\",\"answer view\":\"#049160\",\"04f796c1-f851-4b26-ae59-5a43048df22f\":\"#bec6d0\",\"35f5572a-671f-42d3-9d0d-ac2178cb3fb3\":\"#abc7f9\",\"e668a563-a39c-46a5-bfb2-46fe3ddee58a\":\"#abc7f9\"},\"chartProperties\":{\"gridLines\":{\"yGridlineEnabled\":true},\"showRoundedNumbers\":true,\"responsiveLayoutPreference\":3.0,\"chartSpecific\":{\"isStackedAsPercent\":true,\"stackedAsPercentFormat\":{\"category\":\"PERCENTAGE\",\"percentageFormatConfig\":{\"decimals\":2.0},\"isCategoryEditable\":false}}},\"axisProperties\":{\"8c80ba7c-3767-401b-baea-e253a8905229\":{\"linkedColumns\":[\"Number of User Action\"],\"axisType\":\"Y\",\"isOpposite\":false},\"2d01f5dc-8320-401a-9f6b-77bc45245aa6\":{\"linkedColumns\":[\"Week(Timestamp)\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Number of User Action\":\"#48D1E0\",\"data export\":\"#06BF7F\",\"other\":\"#FCD977\",\"pinboard interaction\":\"#FCC838\",\"pinboard view\":\"#82DFE9\",\"search\":\"#48D1E0\",\"show data\":\"#71A1F4\",\"spotiq view\":\"#2E75F0\",\"answer view\":\"#56D3A8\"},\"version\":\"V3\",\"columnProperties\":{\"Week(Timestamp)\":{},\"User Action Group\":{},\"Is Answer View\":{},\"Number of User Action\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {\"yGridlineEnabled\": true},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"isStackedAsPercent\": true,\"stackedAsPercentFormat\": {\"category\": \"PERCENTAGE\",\"percentageFormatConfig\": {\"decimals\": 2.0},\"isCategoryEditable\": false},\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Week(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"User Action Group\",\"columnProperty\": {}},{\"columnId\": \"Is Answer View\",\"columnProperty\": {}},{\"columnId\": \"Number of User Action\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8c80ba7c-3767-401b-baea-e253a8905229\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of User Action\"],\"isOpposite\": false}},{\"id\": \"2d01f5dc-8320-401a-9f6b-77bc45245aa6\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(Timestamp)\"]}}],\"seriesColors\": [{\"serieName\": \"number of User Action\",\"color\": \"#48D1E0\"},{\"serieName\": \"data export\",\"color\": \"#f9b3b9\"},{\"serieName\": \"other\",\"color\": \"#bec6d0\"},{\"serieName\": \"pinboard interaction\",\"color\": \"#9be5cb\"},{\"serieName\": \"pinboard view\",\"color\": \"#56d3a8\"},{\"serieName\": \"search\",\"color\": \"#71a1f4\"},{\"serieName\": \"show data\",\"color\": \"#ffccb3\"},{\"serieName\": \"spotiq view\",\"color\": \"#fde9af\"},{\"serieName\": \"answer view\",\"color\": \"#049160\"},{\"serieName\": \"04f796c1-f851-4b26-ae59-5a43048df22f\",\"color\": \"#bec6d0\"},{\"serieName\": \"35f5572a-671f-42d3-9d0d-ac2178cb3fb3\",\"color\": \"#abc7f9\"},{\"serieName\": \"e668a563-a39c-46a5-bfb2-46fe3ddee58a\",\"color\": \"#abc7f9\"}],\"systemSeriesColors\": [{\"serieName\": \"number of User Action\",\"color\": \"#48D1E0\"},{\"serieName\": \"data export\",\"color\": \"#06BF7F\"},{\"serieName\": \"other\",\"color\": \"#FCD977\"},{\"serieName\": \"pinboard interaction\",\"color\": \"#FCC838\"},{\"serieName\": \"pinboard view\",\"color\": \"#82DFE9\"},{\"serieName\": \"search\",\"color\": \"#48D1E0\"},{\"serieName\": \"show data\",\"color\": \"#71A1F4\"},{\"serieName\": \"spotiq view\",\"color\": \"#2E75F0\"},{\"serieName\": \"answer view\",\"color\": \"#56D3A8\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 376f91eb-b8c6-4b9f-b281-d75d10e89aec
+  - id: Viz_14
+    answer:
+      name: Weekly User Action Group
+      description: '* Note data export is limited to Print PDF'
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      formulas:
+      - id: User Action Group
+        name: User Action Group
+        expr: "if ( [Is Search] ) then 'search' else if ( [Is Pinboard View] ) then 'pinboard view' else if ( [Is Pinboard Interaction] ) then 'pinboard interaction' else if ( [Is SpotIQ View] ) then 'spotiq view' else if ( [Is Show Data] ) then 'show data' else if ( [Is Data Export] ) then 'data export' else if ( [Is Answer View] ) then 'answer view' else if ( [User Action] = 'invalid' ) then 'invalid' else 'other'"
+        was_auto_generated: false
+      - id: Is Answer View
+        name: Is Answer View
+        expr: "if ( [User Action] = 'answer_view' ) then true else false"
+        was_auto_generated: false
+      - id: Is Data Export
+        name: Is Data Export
+        expr: "if ( [User Action] = 'data_export' ) then true else false"
+        was_auto_generated: false
+      - id: Is Pinboard Interaction
+        name: Is Pinboard Interaction
+        expr: "if ( [User Action] = 'pinboard_filter' or [User Action] = 'pinboard_ad_hoc' ) then true else false"
+        was_auto_generated: false
+      - id: Is Pinboard View
+        name: Is Pinboard View
+        expr: "if ( [User Action] = 'pinboard_embed_view' or [User Action] = 'pinboard_tspublic_no_runtime_filter' or [User Action] = 'pinboard_tspublic_runtime_filter' or [User Action] = 'pinboard_view' ) then true else false"
+        was_auto_generated: false
+      - id: Is Search
+        name: Is Search
+        expr: "if ( [User Action] = 'answer_pinboard_context' or [User Action] = 'answer_saved' or [User Action] = 'answer_unsaved' ) then true else false"
+        was_auto_generated: false
+      - id: Is Show Data
+        name: Is Show Data
+        expr: "if ( [User Action] = 'data_show_underlying_row' or [User Action] = 'data_show_underlying_viz' ) then true else false"
+        was_auto_generated: false
+      - id: Is SpotIQ View
+        name: Is SpotIQ View
+        expr: "if ( [User Action] = 'pinboard_insight_view' ) then true else false"
+        was_auto_generated: false
+      search_query: "[Timestamp].weekly count [User Action] [User Action] != [User Action].{null} [User Action].invalid [User Action Group] [Is Answer View]"
+      answer_columns:
+      - name: Week(Timestamp)
+      - name: Number of User Action
+      - name: User Action Group
+      - name: Is Answer View
+      table:
+        table_columns:
+        - column_id: Week(Timestamp)
+          headline_aggregation: MIN-MAX
+        - column_id: User Action Group
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Is Answer View
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of User Action
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Week(Timestamp)
+        - User Action Group
+        - Is Answer View
+        - Number of User Action
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Week(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"User Action Group\",\"columnProperty\": {}},{\"columnId\": \"Is Answer View\",\"columnProperty\": {}},{\"columnId\": \"Number of User Action\",\"columnProperty\": {}}]}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Week(Timestamp)
+        - column_id: User Action Group
+        - column_id: Is Answer View
+        - column_id: Number of User Action
+        axis_configs:
+        - x:
+          - Week(Timestamp)
+          "y":
+          - Number of User Action
+          color:
+          - User Action Group
+        client_state: "{\"seriesColors\":{\"Number of User Action\":\"#48D1E0\",\"data export\":\"#f9b3b9\",\"other\":\"#bec6d0\",\"pinboard interaction\":\"#9be5cb\",\"pinboard view\":\"#56d3a8\",\"search\":\"#71a1f4\",\"show data\":\"#ffccb3\",\"spotiq view\":\"#fde9af\",\"answer view\":\"#049160\",\"04f796c1-f851-4b26-ae59-5a43048df22f\":\"#bec6d0\",\"35f5572a-671f-42d3-9d0d-ac2178cb3fb3\":\"#abc7f9\",\"e668a563-a39c-46a5-bfb2-46fe3ddee58a\":\"#abc7f9\"},\"chartProperties\":{\"gridLines\":{\"yGridlineEnabled\":true},\"showRoundedNumbers\":true,\"responsiveLayoutPreference\":3.0,\"chartSpecific\":{\"stackedAsPercentFormat\":{\"category\":\"PERCENTAGE\",\"percentageFormatConfig\":{\"decimals\":2.0},\"isCategoryEditable\":false}}},\"axisProperties\":{\"8c80ba7c-3767-401b-baea-e253a8905229\":{\"linkedColumns\":[\"Number of User Action\"],\"axisType\":\"Y\",\"isOpposite\":false},\"2d01f5dc-8320-401a-9f6b-77bc45245aa6\":{\"linkedColumns\":[\"Week(Timestamp)\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Number of User Action\":\"#48D1E0\",\"data export\":\"#06BF7F\",\"other\":\"#FCD977\",\"pinboard interaction\":\"#FCC838\",\"pinboard view\":\"#82DFE9\",\"search\":\"#48D1E0\",\"show data\":\"#71A1F4\",\"spotiq view\":\"#2E75F0\",\"answer view\":\"#56D3A8\"},\"version\":\"V3\",\"columnProperties\":{\"Week(Timestamp)\":{},\"User Action Group\":{},\"Is Answer View\":{},\"Number of User Action\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {\"yGridlineEnabled\": true},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"stackedAsPercentFormat\": {\"category\": \"PERCENTAGE\",\"percentageFormatConfig\": {\"decimals\": 2.0},\"isCategoryEditable\": false},\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Week(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"User Action Group\",\"columnProperty\": {}},{\"columnId\": \"Is Answer View\",\"columnProperty\": {}},{\"columnId\": \"Number of User Action\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8c80ba7c-3767-401b-baea-e253a8905229\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of User Action\"],\"isOpposite\": false}},{\"id\": \"2d01f5dc-8320-401a-9f6b-77bc45245aa6\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(Timestamp)\"]}}],\"seriesColors\": [{\"serieName\": \"number of User Action\",\"color\": \"#48D1E0\"},{\"serieName\": \"data export\",\"color\": \"#f9b3b9\"},{\"serieName\": \"other\",\"color\": \"#bec6d0\"},{\"serieName\": \"pinboard interaction\",\"color\": \"#9be5cb\"},{\"serieName\": \"pinboard view\",\"color\": \"#56d3a8\"},{\"serieName\": \"search\",\"color\": \"#71a1f4\"},{\"serieName\": \"show data\",\"color\": \"#ffccb3\"},{\"serieName\": \"spotiq view\",\"color\": \"#fde9af\"},{\"serieName\": \"answer view\",\"color\": \"#049160\"},{\"serieName\": \"04f796c1-f851-4b26-ae59-5a43048df22f\",\"color\": \"#bec6d0\"},{\"serieName\": \"35f5572a-671f-42d3-9d0d-ac2178cb3fb3\",\"color\": \"#abc7f9\"},{\"serieName\": \"e668a563-a39c-46a5-bfb2-46fe3ddee58a\",\"color\": \"#abc7f9\"}],\"systemSeriesColors\": [{\"serieName\": \"number of User Action\",\"color\": \"#48D1E0\"},{\"serieName\": \"data export\",\"color\": \"#06BF7F\"},{\"serieName\": \"other\",\"color\": \"#FCD977\"},{\"serieName\": \"pinboard interaction\",\"color\": \"#FCC838\"},{\"serieName\": \"pinboard view\",\"color\": \"#82DFE9\"},{\"serieName\": \"search\",\"color\": \"#48D1E0\"},{\"serieName\": \"show data\",\"color\": \"#71A1F4\"},{\"serieName\": \"spotiq view\",\"color\": \"#2E75F0\"},{\"serieName\": \"answer view\",\"color\": \"#56D3A8\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 94291a65-fc6a-4609-8c06-29cbdade605d
+  - id: Viz_15
+    answer:
+      name: Top 50 Power Use Engagment
+      description: Total user actions by usage days per month
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      formulas:
+      - id: Day Touches
+        name: Day Touches
+        expr: "unique count ( day ( [Timestamp] ) )"
+        was_auto_generated: false
+      - id: User Actions
+        name: User Actions
+        expr: "count_if ( [User Action] != 'invalid' , [User Action] )"
+        was_auto_generated: false
+      search_query: "[Day Touches] [User] [User] != [User].null [User].system [User].tsadmin [User].{null} [User Actions] top 50 ranked by [User Actions]"
+      answer_columns:
+      - name: Day Touches
+      - name: User
+      - name: User Actions
+      table:
+        table_columns:
+        - column_id: User
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Day Touches
+          headline_aggregation: TABLE_AGGR
+        - column_id: User Actions
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - User
+        - Day Touches
+        - User Actions
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"User\",\"columnProperty\": {}},{\"columnId\": \"Day Touches\",\"columnProperty\": {}},{\"columnId\": \"User Actions\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: User
+        - column_id: Day Touches
+        - column_id: User Actions
+        axis_configs:
+        - x:
+          - User
+          "y":
+          - Day Touches
+          - User Actions
+        client_state: "{\"seriesColors\":{\"Day Touches\":\"#bec6d0\",\"User Actions\":\"#abc7f9\",\"e668a563-a39c-46a5-bfb2-46fe3ddee58a\":\"#abc7f9\"},\"chartProperties\":{\"gridLines\":{\"yGridlineEnabled\":true},\"showRoundedNumbers\":true,\"responsiveLayoutPreference\":1.0,\"chartSpecific\":{}},\"axisProperties\":{\"4f0a7923-0191-4235-8c86-259c0e6aebf2\":{\"linkedColumns\":[\"Day Touches\"],\"axisType\":\"Y\",\"isOpposite\":false},\"20f4b1d9-5be6-4506-a0dd-ea3e768d000e\":{\"linkedColumns\":[\"User Actions\"],\"axisType\":\"Y\",\"isOpposite\":true},\"987af154-0514-4115-b812-360d95abe6a7\":{\"linkedColumns\":[\"User\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Day Touches\":\"#48D1E0\",\"User Actions\":\"#2E75F0\"},\"version\":\"V3\",\"columnProperties\":{\"User\":{},\"Day Touches\":{},\"User Actions\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {\"yGridlineEnabled\": true},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"User\",\"columnProperty\": {}},{\"columnId\": \"Day Touches\",\"columnProperty\": {}},{\"columnId\": \"User Actions\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"4f0a7923-0191-4235-8c86-259c0e6aebf2\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Day Touches\"],\"isOpposite\": false}},{\"id\": \"20f4b1d9-5be6-4506-a0dd-ea3e768d000e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"User Actions\"],\"isOpposite\": true}},{\"id\": \"987af154-0514-4115-b812-360d95abe6a7\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"User\"]}}],\"seriesColors\": [{\"serieName\": \"Day Touches\",\"color\": \"#bec6d0\"},{\"serieName\": \"User Actions\",\"color\": \"#abc7f9\"},{\"serieName\": \"e668a563-a39c-46a5-bfb2-46fe3ddee58a\",\"color\": \"#abc7f9\"}],\"systemSeriesColors\": [{\"serieName\": \"Day Touches\",\"color\": \"#48D1E0\"},{\"serieName\": \"User Actions\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 2b3ef269-0f92-40b1-adc1-96dc510bc3ef
+  - id: Viz_16
+    answer:
+      name: User Actions Last 4 Weeks
+      description: '* Note data export is limited to Print PDF * Answer Book can refer to either a Pinboard or Answer'
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      formulas:
+      - id: User Action Group
+        name: User Action Group
+        expr: "if ( [Is Search] ) then 'search' else if ( [Is Pinboard View] ) then 'pinboard view' else if ( [Is Pinboard Interaction] ) then 'pinboard interaction' else if ( [Is SpotIQ View] ) then 'spotiq view' else if ( [Is Show Data] ) then 'show data' else if ( [Is Data Export] ) then 'data export' else if ( [Is Answer View] ) then 'answer view' else if ( [User Action] = 'invalid' ) then 'invalid' else 'other'"
+        was_auto_generated: false
+      - id: Is Answer View
+        name: Is Answer View
+        expr: "if ( [User Action] = 'answer_view' ) then true else false"
+        was_auto_generated: false
+      - id: Is Data Export
+        name: Is Data Export
+        expr: "if ( [User Action] = 'data_export' ) then true else false"
+        was_auto_generated: false
+      - id: Is Pinboard Interaction
+        name: Is Pinboard Interaction
+        expr: "if ( [User Action] = 'pinboard_filter' or [User Action] = 'pinboard_ad_hoc' ) then true else false"
+        was_auto_generated: false
+      - id: Is Pinboard View
+        name: Is Pinboard View
+        expr: "if ( [User Action] = 'pinboard_embed_view' or [User Action] = 'pinboard_tspublic_no_runtime_filter' or [User Action] = 'pinboard_tspublic_runtime_filter' or [User Action] = 'pinboard_view' ) then true else false"
+        was_auto_generated: false
+      - id: Is Search
+        name: Is Search
+        expr: "if ( [User Action] = 'answer_pinboard_context' or [User Action] = 'answer_saved' or [User Action] = 'answer_unsaved' ) then true else false"
+        was_auto_generated: false
+      - id: Is Show Data
+        name: Is Show Data
+        expr: "if ( [User Action] = 'data_show_underlying_row' or [User Action] = 'data_show_underlying_viz' ) then true else false"
+        was_auto_generated: false
+      - id: Is SpotIQ View
+        name: Is SpotIQ View
+        expr: "if ( [User Action] = 'pinboard_insight_view' ) then true else false"
+        was_auto_generated: false
+      search_query: "[User Action] != [User Action].{null} [User Action].invalid [User] [Timestamp].'last 4 weeks' [User Action Group] count [User Action] sort by count [User Action] descending [Answer Book Name] [Is Answer View]"
+      answer_columns:
+      - name: User
+      - name: User Action Group
+      - name: Number of User Action
+      - name: Answer Book Name
+      - name: Is Answer View
+      table:
+        table_columns:
+        - column_id: User
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: User Action Group
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Answer Book Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Is Answer View
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of User Action
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - User
+        - User Action Group
+        - Answer Book Name
+        - Is Answer View
+        - Number of User Action
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"User\",\"columnProperty\": {}},{\"columnId\": \"User Action Group\",\"columnProperty\": {}},{\"columnId\": \"Answer Book Name\",\"columnProperty\": {}},{\"columnId\": \"Is Answer View\",\"columnProperty\": {}},{\"columnId\": \"Number of User Action\",\"columnProperty\": {}}]}"
+      chart:
+        type: PIVOT_TABLE
+        chart_columns:
+        - column_id: User
+        - column_id: User Action Group
+        - column_id: Answer Book Name
+        - column_id: Is Answer View
+        - column_id: Number of User Action
+        axis_configs:
+        - x:
+          - User
+          - Answer Book Name
+          "y":
+          - Number of User Action
+          color:
+          - User Action Group
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"responsiveLayoutPreference\":3.0,\"chartSpecific\":{\"pivotState\":{\"columnExpandedPaths\":[],\"rowExpandedPaths\":[]},\"isHeatmapOverlayed\":true}},\"axisProperties\":{\"524c6de4-8b35-4e85-bcd4-9038b6518e2f\":{\"linkedColumns\":[\"Number of User Action\"],\"axisType\":\"Y\",\"isOpposite\":false},\"d0d09a4d-131e-4875-a07f-b5d8d88f9625\":{\"linkedColumns\":[\"User\",\"Answer Book Name\"],\"axisType\":\"X\"}},\"version\":\"V3\",\"columnProperties\":{\"User\":{},\"User Action Group\":{},\"Answer Book Name\":{},\"Is Answer View\":{},\"Number of User Action\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotState\": {},\"isHeatmapOverlayed\": true,\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"User\",\"columnProperty\": {}},{\"columnId\": \"User Action Group\",\"columnProperty\": {}},{\"columnId\": \"Answer Book Name\",\"columnProperty\": {}},{\"columnId\": \"Is Answer View\",\"columnProperty\": {}},{\"columnId\": \"Number of User Action\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"524c6de4-8b35-4e85-bcd4-9038b6518e2f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of User Action\"],\"isOpposite\": false}},{\"id\": \"d0d09a4d-131e-4875-a07f-b5d8d88f9625\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"User\",\"Answer Book Name\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 9b2a2c22-c3e0-4d68-906d-7bd9b750bd2b
+  - id: Viz_17
+    answer:
+      name: Top 10 Pinboards Ratio by Views
+      description: Last 3 months
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      formulas:
+      - id: User Action Group
+        name: User Action Group
+        expr: "if ( [Is Search] ) then 'search' else if ( [Is Pinboard View] ) then 'pinboard view' else if ( [Is Pinboard Interaction] ) then 'pinboard interaction' else if ( [Is SpotIQ View] ) then 'spotiq view' else if ( [Is Show Data] ) then 'show data' else if ( [Is Data Export] ) then 'data export' else if ( [User Action] = 'invalid' ) then 'invalid' else 'other'"
+        was_auto_generated: false
+      - id: Is Pinboard View
+        name: Is Pinboard View
+        expr: "if ( [User Action] = 'pinboard_embed_view' or [User Action] = 'pinboard_tspublic_no_runtime_filter' or [User Action] = 'pinboard_tspublic_runtime_filter' or [User Action] = 'pinboard_view' ) then true else false"
+        was_auto_generated: false
+      - id: Is Data Export
+        name: Is Data Export
+        expr: "if ( [User Action] = 'data_export' ) then true else false"
+        was_auto_generated: false
+      - id: Is Pinboard Interaction
+        name: Is Pinboard Interaction
+        expr: "if ( [User Action] = 'pinboard_filter' or [User Action] = 'pinboard_ad_hoc' ) then true else false"
+        was_auto_generated: false
+      - id: Is Search
+        name: Is Search
+        expr: "if ( [User Action] = 'answer_pinboard_context' or [User Action] = 'answer_saved' or [User Action] = 'answer_unsaved' ) then true else false"
+        was_auto_generated: false
+      - id: Is Show Data
+        name: Is Show Data
+        expr: "if ( [User Action] = 'data_show_underlying_row' or [User Action] = 'data_show_underlying_viz' ) then true else false"
+        was_auto_generated: false
+      - id: Is SpotIQ View
+        name: Is SpotIQ View
+        expr: "if ( [User Action] = 'pinboard_insight_view' ) then true else false"
+        was_auto_generated: false
+      search_query: "[Is Pinboard View] = true top 10 count [User Action] for each [Timestamp] [Timestamp].weekly by [Answer Book Name] [Answer Book Name] != '{null}' [User] != [User].{null} [User].tsadmin [User].system [Timestamp] = 'last 3 months'"
+      answer_columns:
+      - name: Number of User Action
+      - name: Week(Timestamp)
+      - name: Answer Book Name
+      table:
+        table_columns:
+        - column_id: Week(Timestamp)
+          headline_aggregation: MIN-MAX
+        - column_id: Answer Book Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of User Action
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Week(Timestamp)
+        - Answer Book Name
+        - Number of User Action
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Week(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"Answer Book Name\",\"columnProperty\": {}},{\"columnId\": \"Number of User Action\",\"columnProperty\": {}}]}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Week(Timestamp)
+        - column_id: Answer Book Name
+        - column_id: Number of User Action
+        axis_configs:
+        - x:
+          - Week(Timestamp)
+          "y":
+          - Number of User Action
+          color:
+          - Answer Book Name
+        client_state: "{\"seriesColors\":{\"Number of User Action\":\"#FCC838\",\"(wip) thoughtspot - covid 19 survey dashboard\":\"#721F27\",\"6.3 \\u0026 tscloud release tracker\":\"#F47E89\",\"6.3 release \\u0026 epic tracker\":\"#B6313E\",\"[scal-54955] android date issue\":\"#F9B3B9\",\"[scal-56316] android bubble chart issue\":\"#F04152\",\"[scal-56686] data labels missing\":\"#2F3947\",\"abx saasathon\":\"#A2ACBA\",\"account data for top account selection\":\"#47515F\",\"ae leading indicators\":\"#BEC6D0\",\"all about mobile app\":\"#747E8C\",\"all current quarter opportunities\":\"#7A3D1F\",\"apj field requests\":\"#FFA97E\",\"arpit test2\":\"#C26232\",\"automated security check\":\"#FFCCB3\",\"aws resources master\":\"#FF8142\",\"axis scale issue\":\"#d1c0fb\",\"blink ci runs metrics\":\"#B094F8\",\"blink ops: official\":\"#6A4ABA\",\"caffeine-config-pb\":\"#422e75\",\"champagne - performance pinboard\":\"#8C62F5\",\"chhagan s copy of thoughtspot sales\":\"#025B3C\",\"claim central pm - retention\":\"#56D3A8\",\"covid-19 early indicator pinboard\":\"#049160\",\"cs - account 360\":\"#9BE5CB\",\"current quarter sales metrics\":\"#06BF7F\",\"customer high-level usage shift\":\"#785F1A\",\"customer use cases\":\"#FCD977\",\"data label issue\":\"#BF982A\",\"date filter example\":\"#FDE9AF\",\"different chart issue\":\"#FCC838\",\"dushyant - chart tests\":\"#22636B\",\"dushyant home pinboard\":\"#82DFE9\",\"elemental environment quarterly report (am)\":\"#369FAA\",\"embrace cfd analysis\":\"#B5ECF2\",\"embrace perf analysis\":\"#48D1E0\",\"embrace release tracker\":\"#163772\",\"emea - se team insight (activity \\u0026 in-flight pov s)\":\"#71A1F4\",\"emea leaderboard\":\"#2359B6\",\"emea sdr team\":\"#ABC7F9\",\"emea top target #s for reps\":\"#2E75F0\",\"engg quality\":\"#721F27\",\"falcon_360_overview\":\"#F47E89\",\"first day search behavior\":\"#B6313E\",\"fy 21 renewals pinboard\":\"#F9B3B9\",\"gerrituserstats\":\"#F04152\",\"hbr campaign 360\":\"#2F3947\",\"home page user clicks, last 30 days\":\"#A2ACBA\",\"idea analysis - 2020\":\"#47515F\",\"margie: charts from ws\":\"#BEC6D0\",\"margie: pinboard madness\":\"#747E8C\",\"marketing influence - top 20 deals (lq)\":\"#7A3D1F\",\"mlm - availability pinboard\":\"#FFA97E\",\"mobile app analytics\":\"#C26232\",\"monitor analytics\":\"#FFCCB3\",\"month bod update (finance)\":\"#FF8142\",\"movies - intro tour\":\"#d1c0fb\",\"next quarter sales metrics\":\"#B094F8\",\"nilanjan test\":\"#6A4ABA\",\"nilanjan-test\":\"#b094f8\",\"nps - all company\":\"#8C62F5\",\"nps - customer level\":\"#025B3C\",\"partner pipeline x\":\"#56D3A8\",\"patch releases\":\"#049160\",\"percentage issue\":\"#9BE5CB\",\"pg activity\":\"#06BF7F\",\"pinboard user click analysis\":\"#785F1A\",\"pipeline review call\":\"#FCD977\",\"pipeline x\":\"#BF982A\",\"pm - explore\":\"#FDE9AF\",\"pm - product stats\":\"#FCC838\",\"pm - retention\":\"#22636B\",\"pm retention\":\"#82DFE9\",\"pricing strategy - customer analysis\":\"#369FAA\",\"pricing strategy - user analysis\":\"#B5ECF2\",\"pulse - overall ts usage stats\":\"#48D1E0\",\"pulse - pinboard stats\":\"#163772\",\"qbr - ae leading indicators\":\"#71A1F4\",\"qbr - rd leading indicators\":\"#2359B6\",\"r pinboard\":\"#ABC7F9\",\"rd - account scoring\":\"#2E75F0\",\"rd leading indicator pinboard\":\"#721F27\",\"rd leading indicators\":\"#F47E89\",\"rd pipeline inspection\":\"#B6313E\",\"rd weekly pipeline inspection\":\"#F9B3B9\",\"rhel perf test results\":\"#F04152\",\"sdr : overall pinboard\":\"#2F3947\",\"se management\":\"#A2ACBA\",\"see more component\":\"#47515F\",\"service - tickets metrics\":\"#BEC6D0\",\"sessions \\u0026 usage - last 7 days\":\"#747E8C\",\"sfdc cleanup pinboard\":\"#7A3D1F\",\"technical certification status\":\"#FFA97E\",\"thoughtspot cloud free trial\":\"#C26232\",\"thoughtspot customer stats\":\"#FFCCB3\",\"thoughtspot sales\":\"#FF8142\",\"thoughtspot trial via snowflake partner connect\":\"#422E75\",\"tomoko - pipeline forecasting - historical data\":\"#B094F8\",\"ts stats: system information and usage\":\"#6A4ABA\",\"user growth retention analysis, engaged + power users\":\"#D1C0FB\",\"website traffic\":\"#8C62F5\",\"margie: charts\":\"#47515F\",\"sdr pinboard\":\"#A2ACBA\",\"tomoko - pipeline analytics\":\"#6A4ABA\",\"dushyant test\":\"#FF8142\",\"emea qbr\":\"#6A4ABA\",\"m1 marketing attribution\":\"#785F1A\"},\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"responsiveLayoutPreference\":1.0,\"chartSpecific\":{\"isStackedAsPercent\":true,\"stackedAsPercentFormat\":{\"category\":\"PERCENTAGE\",\"percentageFormatConfig\":{\"decimals\":2.0},\"isCategoryEditable\":false}}},\"axisProperties\":{\"71688872-0737-4db2-aab4-bed87cd0282e\":{\"linkedColumns\":[\"Number of User Action\"],\"axisType\":\"Y\",\"isOpposite\":false},\"b7738e64-150f-4757-b8a8-ef28b9e76f58\":{\"linkedColumns\":[\"Week(Timestamp)\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Number of User Action\":\"#FCC838\",\"(wip) thoughtspot - covid 19 survey dashboard\":\"#721F27\",\"6.3 \\u0026 tscloud release tracker\":\"#F47E89\",\"6.3 release \\u0026 epic tracker\":\"#B6313E\",\"[scal-54955] android date issue\":\"#F9B3B9\",\"[scal-56316] android bubble chart issue\":\"#F04152\",\"[scal-56686] data labels missing\":\"#2F3947\",\"abx saasathon\":\"#A2ACBA\",\"account data for top account selection\":\"#47515F\",\"ae leading indicators\":\"#BEC6D0\",\"all about mobile app\":\"#747E8C\",\"all current quarter opportunities\":\"#7A3D1F\",\"apj field requests\":\"#FFA97E\",\"arpit test2\":\"#C26232\",\"automated security check\":\"#FFCCB3\",\"aws resources master\":\"#FF8142\",\"axis scale issue\":\"#422E75\",\"blink ci runs metrics\":\"#B094F8\",\"blink ops: official\":\"#6A4ABA\",\"caffeine-config-pb\":\"#D1C0FB\",\"champagne - performance pinboard\":\"#8C62F5\",\"chhagan s copy of thoughtspot sales\":\"#025B3C\",\"claim central pm - retention\":\"#56D3A8\",\"covid-19 early indicator pinboard\":\"#049160\",\"cs - account 360\":\"#9BE5CB\",\"current quarter sales metrics\":\"#06BF7F\",\"customer high-level usage shift\":\"#785F1A\",\"customer use cases\":\"#FCD977\",\"data label issue\":\"#BF982A\",\"date filter example\":\"#FDE9AF\",\"different chart issue\":\"#FCC838\",\"dushyant - chart tests\":\"#22636B\",\"dushyant home pinboard\":\"#82DFE9\",\"elemental environment quarterly report (am)\":\"#369FAA\",\"embrace cfd analysis\":\"#B5ECF2\",\"embrace perf analysis\":\"#48D1E0\",\"embrace release tracker\":\"#163772\",\"emea - se team insight (activity \\u0026 in-flight pov s)\":\"#71A1F4\",\"emea leaderboard\":\"#2359B6\",\"emea sdr team\":\"#ABC7F9\",\"emea top target #s for reps\":\"#2E75F0\",\"engg quality\":\"#721F27\",\"falcon_360_overview\":\"#F47E89\",\"first day search behavior\":\"#B6313E\",\"fy 21 renewals pinboard\":\"#F9B3B9\",\"gerrituserstats\":\"#F04152\",\"hbr campaign 360\":\"#2F3947\",\"home page user clicks, last 30 days\":\"#A2ACBA\",\"idea analysis - 2020\":\"#47515F\",\"margie: charts from ws\":\"#BEC6D0\",\"margie: pinboard madness\":\"#747E8C\",\"marketing influence - top 20 deals (lq)\":\"#7A3D1F\",\"mlm - availability pinboard\":\"#FFA97E\",\"mobile app analytics\":\"#C26232\",\"monitor analytics\":\"#FFCCB3\",\"month bod update (finance)\":\"#FF8142\",\"movies - intro tour\":\"#422E75\",\"next quarter sales metrics\":\"#B094F8\",\"nilanjan test\":\"#6A4ABA\",\"nilanjan-test\":\"#D1C0FB\",\"nps - all company\":\"#8C62F5\",\"nps - customer level\":\"#025B3C\",\"partner pipeline x\":\"#56D3A8\",\"patch releases\":\"#049160\",\"percentage issue\":\"#9BE5CB\",\"pg activity\":\"#06BF7F\",\"pinboard user click analysis\":\"#785F1A\",\"pipeline review call\":\"#FCD977\",\"pipeline x\":\"#BF982A\",\"pm - explore\":\"#FDE9AF\",\"pm - product stats\":\"#FCC838\",\"pm - retention\":\"#22636B\",\"pm retention\":\"#82DFE9\",\"pricing strategy - customer analysis\":\"#369FAA\",\"pricing strategy - user analysis\":\"#B5ECF2\",\"pulse - overall ts usage stats\":\"#48D1E0\",\"pulse - pinboard stats\":\"#163772\",\"qbr - ae leading indicators\":\"#71A1F4\",\"qbr - rd leading indicators\":\"#2359B6\",\"r pinboard\":\"#ABC7F9\",\"rd - account scoring\":\"#2E75F0\",\"rd leading indicator pinboard\":\"#721F27\",\"rd leading indicators\":\"#F47E89\",\"rd pipeline inspection\":\"#B6313E\",\"rd weekly pipeline inspection\":\"#F9B3B9\",\"rhel perf test results\":\"#F04152\",\"sdr : overall pinboard\":\"#2F3947\",\"se management\":\"#A2ACBA\",\"see more component\":\"#47515F\",\"service - tickets metrics\":\"#BEC6D0\",\"sessions \\u0026 usage - last 7 days\":\"#747E8C\",\"sfdc cleanup pinboard\":\"#7A3D1F\",\"technical certification status\":\"#FFA97E\",\"thoughtspot cloud free trial\":\"#C26232\",\"thoughtspot customer stats\":\"#FFCCB3\",\"thoughtspot sales\":\"#FF8142\",\"thoughtspot trial via snowflake partner connect\":\"#422E75\",\"tomoko - pipeline forecasting - historical data\":\"#B094F8\",\"ts stats: system information and usage\":\"#6A4ABA\",\"user growth retention analysis, engaged + power users\":\"#D1C0FB\",\"website traffic\":\"#8C62F5\",\"margie: charts\":\"#47515F\",\"sdr pinboard\":\"#A2ACBA\",\"tomoko - pipeline analytics\":\"#6A4ABA\",\"dushyant test\":\"#FF8142\",\"emea qbr\":\"#6A4ABA\",\"m1 marketing attribution\":\"#785F1A\"},\"version\":\"V3\",\"columnProperties\":{\"Week(Timestamp)\":{},\"Answer Book Name\":{},\"Number of User Action\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"isStackedAsPercent\": true,\"stackedAsPercentFormat\": {\"category\": \"PERCENTAGE\",\"percentageFormatConfig\": {\"decimals\": 2.0},\"isCategoryEditable\": false},\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Week(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"Answer Book Name\",\"columnProperty\": {}},{\"columnId\": \"Number of User Action\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"71688872-0737-4db2-aab4-bed87cd0282e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of User Action\"],\"isOpposite\": false}},{\"id\": \"b7738e64-150f-4757-b8a8-ef28b9e76f58\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(Timestamp)\"]}}],\"seriesColors\": [{\"serieName\": \"number of User action\",\"color\": \"#FCC838\"},{\"serieName\": \"(wip) thoughtspot - covid 19 survey dashboard\",\"color\": \"#721F27\"},{\"serieName\": \"6.3 & tscloud release tracker\",\"color\": \"#F47E89\"},{\"serieName\": \"6.3 release & epic tracker\",\"color\": \"#B6313E\"},{\"serieName\": \"[scal-54955] android date issue\",\"color\": \"#F9B3B9\"},{\"serieName\": \"[scal-56316] android bubble chart issue\",\"color\": \"#F04152\"},{\"serieName\": \"[scal-56686] data labels missing\",\"color\": \"#2F3947\"},{\"serieName\": \"abx saasathon\",\"color\": \"#A2ACBA\"},{\"serieName\": \"account data for top account selection\",\"color\": \"#47515F\"},{\"serieName\": \"ae leading indicators\",\"color\": \"#BEC6D0\"},{\"serieName\": \"all about mobile app\",\"color\": \"#747E8C\"},{\"serieName\": \"all current quarter opportunities\",\"color\": \"#7A3D1F\"},{\"serieName\": \"apj field requests\",\"color\": \"#FFA97E\"},{\"serieName\": \"arpit test2\",\"color\": \"#C26232\"},{\"serieName\": \"automated security check\",\"color\": \"#FFCCB3\"},{\"serieName\": \"aws resources master\",\"color\": \"#FF8142\"},{\"serieName\": \"axis scale issue\",\"color\": \"#d1c0fb\"},{\"serieName\": \"blink ci runs metrics\",\"color\": \"#B094F8\"},{\"serieName\": \"blink ops: official\",\"color\": \"#6A4ABA\"},{\"serieName\": \"caffeine-config-pb\",\"color\": \"#422e75\"},{\"serieName\": \"champagne - performance pinboard\",\"color\": \"#8C62F5\"},{\"serieName\": \"chhagan s copy of thoughtspot sales\",\"color\": \"#025B3C\"},{\"serieName\": \"claim central pm - retention\",\"color\": \"#56D3A8\"},{\"serieName\": \"covid-19 early indicator pinboard\",\"color\": \"#049160\"},{\"serieName\": \"cs - account 360\",\"color\": \"#9BE5CB\"},{\"serieName\": \"current quarter sales metrics\",\"color\": \"#06BF7F\"},{\"serieName\": \"customer high-level usage shift\",\"color\": \"#785F1A\"},{\"serieName\": \"customer use cases\",\"color\": \"#FCD977\"},{\"serieName\": \"data label issue\",\"color\": \"#BF982A\"},{\"serieName\": \"date filter example\",\"color\": \"#FDE9AF\"},{\"serieName\": \"different chart issue\",\"color\": \"#FCC838\"},{\"serieName\": \"dushyant - chart tests\",\"color\": \"#22636B\"},{\"serieName\": \"dushyant home pinboard\",\"color\": \"#82DFE9\"},{\"serieName\": \"elemental environment quarterly report (am)\",\"color\": \"#369FAA\"},{\"serieName\": \"embrace cfd analysis\",\"color\": \"#B5ECF2\"},{\"serieName\": \"embrace perf analysis\",\"color\": \"#48D1E0\"},{\"serieName\": \"embrace release tracker\",\"color\": \"#163772\"},{\"serieName\": \"emea - se team insight (activity & in-flight pov s)\",\"color\": \"#71A1F4\"},{\"serieName\": \"emea leaderboard\",\"color\": \"#2359B6\"},{\"serieName\": \"emea sdr team\",\"color\": \"#ABC7F9\"},{\"serieName\": \"emea top target #s for reps\",\"color\": \"#2E75F0\"},{\"serieName\": \"engg quality\",\"color\": \"#721F27\"},{\"serieName\": \"falcon_360_overview\",\"color\": \"#F47E89\"},{\"serieName\": \"first day search behavior\",\"color\": \"#B6313E\"},{\"serieName\": \"fy 21 renewals pinboard\",\"color\": \"#F9B3B9\"},{\"serieName\": \"gerrituserstats\",\"color\": \"#F04152\"},{\"serieName\": \"hbr campaign 360\",\"color\": \"#2F3947\"},{\"serieName\": \"home page user clicks, last 30 days\",\"color\": \"#A2ACBA\"},{\"serieName\": \"idea analysis - 2020\",\"color\": \"#47515F\"},{\"serieName\": \"margie: charts from ws\",\"color\": \"#BEC6D0\"},{\"serieName\": \"margie: pinboard madness\",\"color\": \"#747E8C\"},{\"serieName\": \"marketing influence - top 20 deals (lq)\",\"color\": \"#7A3D1F\"},{\"serieName\": \"mlm - availability pinboard\",\"color\": \"#FFA97E\"},{\"serieName\": \"mobile app analytics\",\"color\": \"#C26232\"},{\"serieName\": \"monitor analytics\",\"color\": \"#FFCCB3\"},{\"serieName\": \"month bod update (finance)\",\"color\": \"#FF8142\"},{\"serieName\": \"movies - intro tour\",\"color\": \"#d1c0fb\"},{\"serieName\": \"next quarter sales metrics\",\"color\": \"#B094F8\"},{\"serieName\": \"nilanjan test\",\"color\": \"#6A4ABA\"},{\"serieName\": \"nilanjan-test\",\"color\": \"#b094f8\"},{\"serieName\": \"nps - all company\",\"color\": \"#8C62F5\"},{\"serieName\": \"nps - customer level\",\"color\": \"#025B3C\"},{\"serieName\": \"partner pipeline x\",\"color\": \"#56D3A8\"},{\"serieName\": \"patch releases\",\"color\": \"#049160\"},{\"serieName\": \"percentage issue\",\"color\": \"#9BE5CB\"},{\"serieName\": \"pg activity\",\"color\": \"#06BF7F\"},{\"serieName\": \"pinboard user click analysis\",\"color\": \"#785F1A\"},{\"serieName\": \"pipeline review call\",\"color\": \"#FCD977\"},{\"serieName\": \"pipeline x\",\"color\": \"#BF982A\"},{\"serieName\": \"pm - explore\",\"color\": \"#FDE9AF\"},{\"serieName\": \"pm - product stats\",\"color\": \"#FCC838\"},{\"serieName\": \"pm - retention\",\"color\": \"#22636B\"},{\"serieName\": \"pm retention\",\"color\": \"#82DFE9\"},{\"serieName\": \"pricing strategy - customer analysis\",\"color\": \"#369FAA\"},{\"serieName\": \"pricing strategy - user analysis\",\"color\": \"#B5ECF2\"},{\"serieName\": \"pulse - overall ts usage stats\",\"color\": \"#48D1E0\"},{\"serieName\": \"pulse - pinboard stats\",\"color\": \"#163772\"},{\"serieName\": \"qbr - ae leading indicators\",\"color\": \"#71A1F4\"},{\"serieName\": \"qbr - rd leading indicators\",\"color\": \"#2359B6\"},{\"serieName\": \"r pinboard\",\"color\": \"#ABC7F9\"},{\"serieName\": \"rd - account scoring\",\"color\": \"#2E75F0\"},{\"serieName\": \"rd leading indicator pinboard\",\"color\": \"#721F27\"},{\"serieName\": \"rd leading indicators\",\"color\": \"#F47E89\"},{\"serieName\": \"rd pipeline inspection\",\"color\": \"#B6313E\"},{\"serieName\": \"rd weekly pipeline inspection\",\"color\": \"#F9B3B9\"},{\"serieName\": \"rhel perf test results\",\"color\": \"#F04152\"},{\"serieName\": \"sdr : overall pinboard\",\"color\": \"#2F3947\"},{\"serieName\": \"se management\",\"color\": \"#A2ACBA\"},{\"serieName\": \"see more component\",\"color\": \"#47515F\"},{\"serieName\": \"service - tickets metrics\",\"color\": \"#BEC6D0\"},{\"serieName\": \"sessions & usage - last 7 days\",\"color\": \"#747E8C\"},{\"serieName\": \"sfdc cleanup pinboard\",\"color\": \"#7A3D1F\"},{\"serieName\": \"technical certification status\",\"color\": \"#FFA97E\"},{\"serieName\": \"thoughtspot cloud free trial\",\"color\": \"#C26232\"},{\"serieName\": \"thoughtspot customer stats\",\"color\": \"#FFCCB3\"},{\"serieName\": \"thoughtspot sales\",\"color\": \"#FF8142\"},{\"serieName\": \"thoughtspot trial via snowflake partner connect\",\"color\": \"#422E75\"},{\"serieName\": \"tomoko - pipeline forecasting - historical data\",\"color\": \"#B094F8\"},{\"serieName\": \"ts stats: system information and usage\",\"color\": \"#6A4ABA\"},{\"serieName\": \"user growth retention analysis, engaged + power users\",\"color\": \"#D1C0FB\"},{\"serieName\": \"website traffic\",\"color\": \"#8C62F5\"},{\"serieName\": \"margie: charts\",\"color\": \"#47515F\"},{\"serieName\": \"sdr pinboard\",\"color\": \"#A2ACBA\"},{\"serieName\": \"tomoko - pipeline analytics\",\"color\": \"#6A4ABA\"},{\"serieName\": \"dushyant test\",\"color\": \"#FF8142\"},{\"serieName\": \"emea qbr\",\"color\": \"#6A4ABA\"},{\"serieName\": \"m1 marketing attribution\",\"color\": \"#785F1A\"}],\"systemSeriesColors\": [{\"serieName\": \"number of User action\",\"color\": \"#FCC838\"},{\"serieName\": \"(wip) thoughtspot - covid 19 survey dashboard\",\"color\": \"#721F27\"},{\"serieName\": \"6.3 & tscloud release tracker\",\"color\": \"#F47E89\"},{\"serieName\": \"6.3 release & epic tracker\",\"color\": \"#B6313E\"},{\"serieName\": \"[scal-54955] android date issue\",\"color\": \"#F9B3B9\"},{\"serieName\": \"[scal-56316] android bubble chart issue\",\"color\": \"#F04152\"},{\"serieName\": \"[scal-56686] data labels missing\",\"color\": \"#2F3947\"},{\"serieName\": \"abx saasathon\",\"color\": \"#A2ACBA\"},{\"serieName\": \"account data for top account selection\",\"color\": \"#47515F\"},{\"serieName\": \"ae leading indicators\",\"color\": \"#BEC6D0\"},{\"serieName\": \"all about mobile app\",\"color\": \"#747E8C\"},{\"serieName\": \"all current quarter opportunities\",\"color\": \"#7A3D1F\"},{\"serieName\": \"apj field requests\",\"color\": \"#FFA97E\"},{\"serieName\": \"arpit test2\",\"color\": \"#C26232\"},{\"serieName\": \"automated security check\",\"color\": \"#FFCCB3\"},{\"serieName\": \"aws resources master\",\"color\": \"#FF8142\"},{\"serieName\": \"axis scale issue\",\"color\": \"#422E75\"},{\"serieName\": \"blink ci runs metrics\",\"color\": \"#B094F8\"},{\"serieName\": \"blink ops: official\",\"color\": \"#6A4ABA\"},{\"serieName\": \"caffeine-config-pb\",\"color\": \"#D1C0FB\"},{\"serieName\": \"champagne - performance pinboard\",\"color\": \"#8C62F5\"},{\"serieName\": \"chhagan s copy of thoughtspot sales\",\"color\": \"#025B3C\"},{\"serieName\": \"claim central pm - retention\",\"color\": \"#56D3A8\"},{\"serieName\": \"covid-19 early indicator pinboard\",\"color\": \"#049160\"},{\"serieName\": \"cs - account 360\",\"color\": \"#9BE5CB\"},{\"serieName\": \"current quarter sales metrics\",\"color\": \"#06BF7F\"},{\"serieName\": \"customer high-level usage shift\",\"color\": \"#785F1A\"},{\"serieName\": \"customer use cases\",\"color\": \"#FCD977\"},{\"serieName\": \"data label issue\",\"color\": \"#BF982A\"},{\"serieName\": \"date filter example\",\"color\": \"#FDE9AF\"},{\"serieName\": \"different chart issue\",\"color\": \"#FCC838\"},{\"serieName\": \"dushyant - chart tests\",\"color\": \"#22636B\"},{\"serieName\": \"dushyant home pinboard\",\"color\": \"#82DFE9\"},{\"serieName\": \"elemental environment quarterly report (am)\",\"color\": \"#369FAA\"},{\"serieName\": \"embrace cfd analysis\",\"color\": \"#B5ECF2\"},{\"serieName\": \"embrace perf analysis\",\"color\": \"#48D1E0\"},{\"serieName\": \"embrace release tracker\",\"color\": \"#163772\"},{\"serieName\": \"emea - se team insight (activity & in-flight pov s)\",\"color\": \"#71A1F4\"},{\"serieName\": \"emea leaderboard\",\"color\": \"#2359B6\"},{\"serieName\": \"emea sdr team\",\"color\": \"#ABC7F9\"},{\"serieName\": \"emea top target #s for reps\",\"color\": \"#2E75F0\"},{\"serieName\": \"engg quality\",\"color\": \"#721F27\"},{\"serieName\": \"falcon_360_overview\",\"color\": \"#F47E89\"},{\"serieName\": \"first day search behavior\",\"color\": \"#B6313E\"},{\"serieName\": \"fy 21 renewals pinboard\",\"color\": \"#F9B3B9\"},{\"serieName\": \"gerrituserstats\",\"color\": \"#F04152\"},{\"serieName\": \"hbr campaign 360\",\"color\": \"#2F3947\"},{\"serieName\": \"home page user clicks, last 30 days\",\"color\": \"#A2ACBA\"},{\"serieName\": \"idea analysis - 2020\",\"color\": \"#47515F\"},{\"serieName\": \"margie: charts from ws\",\"color\": \"#BEC6D0\"},{\"serieName\": \"margie: pinboard madness\",\"color\": \"#747E8C\"},{\"serieName\": \"marketing influence - top 20 deals (lq)\",\"color\": \"#7A3D1F\"},{\"serieName\": \"mlm - availability pinboard\",\"color\": \"#FFA97E\"},{\"serieName\": \"mobile app analytics\",\"color\": \"#C26232\"},{\"serieName\": \"monitor analytics\",\"color\": \"#FFCCB3\"},{\"serieName\": \"month bod update (finance)\",\"color\": \"#FF8142\"},{\"serieName\": \"movies - intro tour\",\"color\": \"#422E75\"},{\"serieName\": \"next quarter sales metrics\",\"color\": \"#B094F8\"},{\"serieName\": \"nilanjan test\",\"color\": \"#6A4ABA\"},{\"serieName\": \"nilanjan-test\",\"color\": \"#D1C0FB\"},{\"serieName\": \"nps - all company\",\"color\": \"#8C62F5\"},{\"serieName\": \"nps - customer level\",\"color\": \"#025B3C\"},{\"serieName\": \"partner pipeline x\",\"color\": \"#56D3A8\"},{\"serieName\": \"patch releases\",\"color\": \"#049160\"},{\"serieName\": \"percentage issue\",\"color\": \"#9BE5CB\"},{\"serieName\": \"pg activity\",\"color\": \"#06BF7F\"},{\"serieName\": \"pinboard user click analysis\",\"color\": \"#785F1A\"},{\"serieName\": \"pipeline review call\",\"color\": \"#FCD977\"},{\"serieName\": \"pipeline x\",\"color\": \"#BF982A\"},{\"serieName\": \"pm - explore\",\"color\": \"#FDE9AF\"},{\"serieName\": \"pm - product stats\",\"color\": \"#FCC838\"},{\"serieName\": \"pm - retention\",\"color\": \"#22636B\"},{\"serieName\": \"pm retention\",\"color\": \"#82DFE9\"},{\"serieName\": \"pricing strategy - customer analysis\",\"color\": \"#369FAA\"},{\"serieName\": \"pricing strategy - user analysis\",\"color\": \"#B5ECF2\"},{\"serieName\": \"pulse - overall ts usage stats\",\"color\": \"#48D1E0\"},{\"serieName\": \"pulse - pinboard stats\",\"color\": \"#163772\"},{\"serieName\": \"qbr - ae leading indicators\",\"color\": \"#71A1F4\"},{\"serieName\": \"qbr - rd leading indicators\",\"color\": \"#2359B6\"},{\"serieName\": \"r pinboard\",\"color\": \"#ABC7F9\"},{\"serieName\": \"rd - account scoring\",\"color\": \"#2E75F0\"},{\"serieName\": \"rd leading indicator pinboard\",\"color\": \"#721F27\"},{\"serieName\": \"rd leading indicators\",\"color\": \"#F47E89\"},{\"serieName\": \"rd pipeline inspection\",\"color\": \"#B6313E\"},{\"serieName\": \"rd weekly pipeline inspection\",\"color\": \"#F9B3B9\"},{\"serieName\": \"rhel perf test results\",\"color\": \"#F04152\"},{\"serieName\": \"sdr : overall pinboard\",\"color\": \"#2F3947\"},{\"serieName\": \"se management\",\"color\": \"#A2ACBA\"},{\"serieName\": \"see more component\",\"color\": \"#47515F\"},{\"serieName\": \"service - tickets metrics\",\"color\": \"#BEC6D0\"},{\"serieName\": \"sessions & usage - last 7 days\",\"color\": \"#747E8C\"},{\"serieName\": \"sfdc cleanup pinboard\",\"color\": \"#7A3D1F\"},{\"serieName\": \"technical certification status\",\"color\": \"#FFA97E\"},{\"serieName\": \"thoughtspot cloud free trial\",\"color\": \"#C26232\"},{\"serieName\": \"thoughtspot customer stats\",\"color\": \"#FFCCB3\"},{\"serieName\": \"thoughtspot sales\",\"color\": \"#FF8142\"},{\"serieName\": \"thoughtspot trial via snowflake partner connect\",\"color\": \"#422E75\"},{\"serieName\": \"tomoko - pipeline forecasting - historical data\",\"color\": \"#B094F8\"},{\"serieName\": \"ts stats: system information and usage\",\"color\": \"#6A4ABA\"},{\"serieName\": \"user growth retention analysis, engaged + power users\",\"color\": \"#D1C0FB\"},{\"serieName\": \"website traffic\",\"color\": \"#8C62F5\"},{\"serieName\": \"margie: charts\",\"color\": \"#47515F\"},{\"serieName\": \"sdr pinboard\",\"color\": \"#A2ACBA\"},{\"serieName\": \"tomoko - pipeline analytics\",\"color\": \"#6A4ABA\"},{\"serieName\": \"dushyant test\",\"color\": \"#FF8142\"},{\"serieName\": \"emea qbr\",\"color\": \"#6A4ABA\"},{\"serieName\": \"m1 marketing attribution\",\"color\": \"#785F1A\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: c5b9dbe0-c6dd-4bc5-b1dd-1a5b3256d7e3
+  - id: Viz_18
+    answer:
+      name: Top 10 Pinboards Ratio by Users
+      description: Last 3 months
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      formulas:
+      - id: User Action Group
+        name: User Action Group
+        expr: "if ( [Is Search] ) then 'search' else if ( [Is Pinboard View] ) then 'pinboard view' else if ( [Is Pinboard Interaction] ) then 'pinboard interaction' else if ( [Is SpotIQ View] ) then 'spotiq view' else if ( [Is Show Data] ) then 'show data' else if ( [Is Data Export] ) then 'data export' else if ( [User Action] = 'invalid' ) then 'invalid' else 'other'"
+        was_auto_generated: false
+      - id: Is Pinboard View
+        name: Is Pinboard View
+        expr: "if ( [User Action] = 'pinboard_embed_view' or [User Action] = 'pinboard_tspublic_no_runtime_filter' or [User Action] = 'pinboard_tspublic_runtime_filter' or [User Action] = 'pinboard_view' ) then true else false"
+        was_auto_generated: false
+      - id: Is Data Export
+        name: Is Data Export
+        expr: "if ( [User Action] = 'data_export' ) then true else false"
+        was_auto_generated: false
+      - id: Is Pinboard Interaction
+        name: Is Pinboard Interaction
+        expr: "if ( [User Action] = 'pinboard_filter' or [User Action] = 'pinboard_ad_hoc' ) then true else false"
+        was_auto_generated: false
+      - id: Is Search
+        name: Is Search
+        expr: "if ( [User Action] = 'answer_pinboard_context' or [User Action] = 'answer_saved' or [User Action] = 'answer_unsaved' ) then true else false"
+        was_auto_generated: false
+      - id: Is Show Data
+        name: Is Show Data
+        expr: "if ( [User Action] = 'data_show_underlying_row' or [User Action] = 'data_show_underlying_viz' ) then true else false"
+        was_auto_generated: false
+      - id: Is SpotIQ View
+        name: Is SpotIQ View
+        expr: "if ( [User Action] = 'pinboard_insight_view' ) then true else false"
+        was_auto_generated: false
+      search_query: "[Is Pinboard View] = true top 10 unique count [User] for each [Timestamp] [Timestamp].weekly by [Answer Book Name] [Answer Book Name] != '{null}' [User] != [User].{null} [User].tsadmin [User].system [Timestamp] = 'last 3 months'"
+      answer_columns:
+      - name: Unique Number of User
+      - name: Week(Timestamp)
+      - name: Answer Book Name
+      table:
+        table_columns:
+        - column_id: Week(Timestamp)
+          headline_aggregation: MIN-MAX
+        - column_id: Answer Book Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Unique Number of User
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Week(Timestamp)
+        - Answer Book Name
+        - Unique Number of User
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Week(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"Answer Book Name\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of User\",\"columnProperty\": {}}]}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Week(Timestamp)
+        - column_id: Answer Book Name
+        - column_id: Unique Number of User
+        axis_configs:
+        - x:
+          - Week(Timestamp)
+          "y":
+          - Unique Number of User
+          color:
+          - Answer Book Name
+        client_state: "{\"seriesColors\":{\"Unique Number of User\":\"#06BF7F\",\"6.2 commits pb\":\"#721F27\",\"6.3 \\u0026 tscloud release tracker\":\"#F47E89\",\"6.3 release \\u0026 epic tracker\":\"#B6313E\",\"6.3 release tracker\":\"#F9B3B9\",\"6sense account stages\":\"#F04152\",\"abx saasathon\":\"#2F3947\",\"account ticket health (lamprea)\":\"#a2acba\",\"ae leading indicators\":\"#bec6d0\",\"app ci stats\":\"#BEC6D0\",\"blink ci runs metrics\":\"#747E8C\",\"blink ops: official\":\"#7A3D1F\",\"caffeine-config-pb\":\"#FFA97E\",\"champagne - performance pinboard\":\"#C26232\",\"champagne adoption pinboard\":\"#FFCCB3\",\"champagne bug analysis\":\"#FF8142\",\"ci triage status\":\"#422E75\",\"cloudscalabilitystats\":\"#B094F8\",\"covid charts\":\"#6A4ABA\",\"covid-19 early indicator pinboard\":\"#D1C0FB\",\"cs - account 360\":\"#8C62F5\",\"cs: account status\":\"#025B3C\",\"embrace \\u0026 cloud pipeline\":\"#56D3A8\",\"embrace cfd analysis\":\"#049160\",\"embrace code stats\":\"#9BE5CB\",\"embrace perf analysis\":\"#06BF7F\",\"embrace release tracker\":\"#785F1A\",\"embrace sales overview\":\"#FCD977\",\"emea leaderboard\":\"#BF982A\",\"eng ops - official\":\"#FDE9AF\",\"engg quality\":\"#FCC838\",\"eureka data analysis\":\"#22636B\",\"eureka proto - analysis\":\"#82DFE9\",\"falcon_dataload_360_overview\":\"#369FAA\",\"fy 21 renewals pinboard\":\"#B5ECF2\",\"gerrituserstats\":\"#48D1E0\",\"home page user clicks, last 30 days\":\"#163772\",\"idea analysis - 2020\":\"#71A1F4\",\"install.sh stats\":\"#2359B6\",\"m1 marketing attribution\":\"#ABC7F9\",\"marketing influence - top 20 deals (lq)\":\"#2E75F0\",\"marketing monthly all-hands\":\"#721F27\",\"marketing targets cq\":\"#F47E89\",\"marketing targets june 2020\":\"#B6313E\",\"mobile app analytics\":\"#F9B3B9\",\"mobile user journey postmortem\":\"#F04152\",\"na southwest mqls\":\"#2F3947\",\"new pinboard\":\"#A2ACBA\",\"next 3 quarters renewals pinboard\":\"#47515F\",\"next quarter sales metrics\":\"#BEC6D0\",\"nps - all company\":\"#747E8C\",\"operations - product installs\":\"#7A3D1F\",\"partner pipeline x\":\"#FFA97E\",\"patch releases\":\"#C26232\",\"pg activity\":\"#FFCCB3\",\"pinboard user click analysis\":\"#FF8142\",\"pipeline x\":\"#d1c0fb\",\"pipeline x regional\":\"#B094F8\",\"pm - explore\":\"#6A4ABA\",\"pm - product stats\":\"#D1C0FB\",\"pm - retention\":\"#8C62F5\",\"pm - search\":\"#025B3C\",\"pm retention\":\"#56D3A8\",\"pricing strategy - customer analysis\":\"#049160\",\"pulse - overall ts usage stats\":\"#9BE5CB\",\"pulse - pinboard stats\":\"#06BF7F\",\"qbr - ae leading indicators\":\"#785F1A\",\"qbr - rd leading indicators\":\"#FCD977\",\"rd leading indicators\":\"#BF982A\",\"rd pipeline inspection\":\"#FDE9AF\",\"rd weekly pipeline inspection\":\"#FCC838\",\"saas531 velocity\":\"#22636B\",\"sage code coverage\":\"#82DFE9\",\"sdr pinboard\":\"#369FAA\",\"se management\":\"#B5ECF2\",\"service - tickets metrics\":\"#48D1E0\",\"sessions \\u0026 usage - last 7 days\":\"#163772\",\"sfdc cleanup pinboard\":\"#71A1F4\",\"snigdha - saas user adoption pinboard\":\"#2359B6\",\"technical certification status\":\"#ABC7F9\",\"thoughtspot customer stats\":\"#2E75F0\",\"thoughtspot sales\":\"#721F27\",\"thoughtspot trial via snowflake partner connect\":\"#F47E89\",\"ts stats: system information and usage\":\"#B6313E\",\"apj - sfdc cleanup pinboard\":\"#F04152\",\"monitor headlines experiment\":\"#785F1A\",\"onboarding first day analytics\":\"#FCC838\",\"showpad content\":\"#A2ACBA\"},\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"responsiveLayoutPreference\":1.0,\"chartSpecific\":{\"isStackedAsPercent\":true,\"stackedAsPercentFormat\":{\"category\":\"PERCENTAGE\",\"percentageFormatConfig\":{\"decimals\":2.0},\"isCategoryEditable\":false}}},\"axisProperties\":{\"4b5f2bc0-6a57-4b5a-b787-c0be665e3aeb\":{\"linkedColumns\":[\"Unique Number of User\"],\"axisType\":\"Y\",\"isOpposite\":false},\"131cf535-2b2a-493d-b080-6026b2a3fb73\":{\"linkedColumns\":[\"Week(Timestamp)\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Unique Number of User\":\"#06BF7F\",\"6.2 commits pb\":\"#721F27\",\"6.3 \\u0026 tscloud release tracker\":\"#F47E89\",\"6.3 release \\u0026 epic tracker\":\"#B6313E\",\"6.3 release tracker\":\"#F9B3B9\",\"6sense account stages\":\"#F04152\",\"abx saasathon\":\"#2F3947\",\"account ticket health (lamprea)\":\"#A2ACBA\",\"ae leading indicators\":\"#47515F\",\"app ci stats\":\"#BEC6D0\",\"blink ci runs metrics\":\"#747E8C\",\"blink ops: official\":\"#7A3D1F\",\"caffeine-config-pb\":\"#FFA97E\",\"champagne - performance pinboard\":\"#C26232\",\"champagne adoption pinboard\":\"#FFCCB3\",\"champagne bug analysis\":\"#FF8142\",\"ci triage status\":\"#422E75\",\"cloudscalabilitystats\":\"#B094F8\",\"covid charts\":\"#6A4ABA\",\"covid-19 early indicator pinboard\":\"#D1C0FB\",\"cs - account 360\":\"#8C62F5\",\"cs: account status\":\"#025B3C\",\"embrace \\u0026 cloud pipeline\":\"#56D3A8\",\"embrace cfd analysis\":\"#049160\",\"embrace code stats\":\"#9BE5CB\",\"embrace perf analysis\":\"#06BF7F\",\"embrace release tracker\":\"#785F1A\",\"embrace sales overview\":\"#FCD977\",\"emea leaderboard\":\"#BF982A\",\"eng ops - official\":\"#FDE9AF\",\"engg quality\":\"#FCC838\",\"eureka data analysis\":\"#22636B\",\"eureka proto - analysis\":\"#82DFE9\",\"falcon_dataload_360_overview\":\"#369FAA\",\"fy 21 renewals pinboard\":\"#B5ECF2\",\"gerrituserstats\":\"#48D1E0\",\"home page user clicks, last 30 days\":\"#163772\",\"idea analysis - 2020\":\"#71A1F4\",\"install.sh stats\":\"#2359B6\",\"m1 marketing attribution\":\"#ABC7F9\",\"marketing influence - top 20 deals (lq)\":\"#2E75F0\",\"marketing monthly all-hands\":\"#721F27\",\"marketing targets cq\":\"#F47E89\",\"marketing targets june 2020\":\"#B6313E\",\"mobile app analytics\":\"#F9B3B9\",\"mobile user journey postmortem\":\"#F04152\",\"na southwest mqls\":\"#2F3947\",\"new pinboard\":\"#A2ACBA\",\"next 3 quarters renewals pinboard\":\"#47515F\",\"next quarter sales metrics\":\"#BEC6D0\",\"nps - all company\":\"#747E8C\",\"operations - product installs\":\"#7A3D1F\",\"partner pipeline x\":\"#FFA97E\",\"patch releases\":\"#C26232\",\"pg activity\":\"#FFCCB3\",\"pinboard user click analysis\":\"#FF8142\",\"pipeline x\":\"#422E75\",\"pipeline x regional\":\"#B094F8\",\"pm - explore\":\"#6A4ABA\",\"pm - product stats\":\"#D1C0FB\",\"pm - retention\":\"#8C62F5\",\"pm - search\":\"#025B3C\",\"pm retention\":\"#56D3A8\",\"pricing strategy - customer analysis\":\"#049160\",\"pulse - overall ts usage stats\":\"#9BE5CB\",\"pulse - pinboard stats\":\"#06BF7F\",\"qbr - ae leading indicators\":\"#785F1A\",\"qbr - rd leading indicators\":\"#FCD977\",\"rd leading indicators\":\"#BF982A\",\"rd pipeline inspection\":\"#FDE9AF\",\"rd weekly pipeline inspection\":\"#FCC838\",\"saas531 velocity\":\"#22636B\",\"sage code coverage\":\"#82DFE9\",\"sdr pinboard\":\"#369FAA\",\"se management\":\"#B5ECF2\",\"service - tickets metrics\":\"#48D1E0\",\"sessions \\u0026 usage - last 7 days\":\"#163772\",\"sfdc cleanup pinboard\":\"#71A1F4\",\"snigdha - saas user adoption pinboard\":\"#2359B6\",\"technical certification status\":\"#ABC7F9\",\"thoughtspot customer stats\":\"#2E75F0\",\"thoughtspot sales\":\"#721F27\",\"thoughtspot trial via snowflake partner connect\":\"#F47E89\",\"ts stats: system information and usage\":\"#B6313E\",\"apj - sfdc cleanup pinboard\":\"#F04152\",\"monitor headlines experiment\":\"#785F1A\",\"onboarding first day analytics\":\"#FCC838\",\"showpad content\":\"#A2ACBA\"},\"version\":\"V3\",\"columnProperties\":{\"Week(Timestamp)\":{},\"Answer Book Name\":{},\"Unique Number of User\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"isStackedAsPercent\": true,\"stackedAsPercentFormat\": {\"category\": \"PERCENTAGE\",\"percentageFormatConfig\": {\"decimals\": 2.0},\"isCategoryEditable\": false},\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Week(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"Answer Book Name\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of User\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"4b5f2bc0-6a57-4b5a-b787-c0be665e3aeb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Unique Number of User\"],\"isOpposite\": false}},{\"id\": \"131cf535-2b2a-493d-b080-6026b2a3fb73\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(Timestamp)\"]}}],\"seriesColors\": [{\"serieName\": \"unique number of User\",\"color\": \"#06BF7F\"},{\"serieName\": \"6.2 commits pb\",\"color\": \"#721F27\"},{\"serieName\": \"6.3 & tscloud release tracker\",\"color\": \"#F47E89\"},{\"serieName\": \"6.3 release & epic tracker\",\"color\": \"#B6313E\"},{\"serieName\": \"6.3 release tracker\",\"color\": \"#F9B3B9\"},{\"serieName\": \"6sense account stages\",\"color\": \"#F04152\"},{\"serieName\": \"abx saasathon\",\"color\": \"#2F3947\"},{\"serieName\": \"account ticket health (lamprea)\",\"color\": \"#a2acba\"},{\"serieName\": \"ae leading indicators\",\"color\": \"#bec6d0\"},{\"serieName\": \"app ci stats\",\"color\": \"#BEC6D0\"},{\"serieName\": \"blink ci runs metrics\",\"color\": \"#747E8C\"},{\"serieName\": \"blink ops: official\",\"color\": \"#7A3D1F\"},{\"serieName\": \"caffeine-config-pb\",\"color\": \"#FFA97E\"},{\"serieName\": \"champagne - performance pinboard\",\"color\": \"#C26232\"},{\"serieName\": \"champagne adoption pinboard\",\"color\": \"#FFCCB3\"},{\"serieName\": \"champagne bug analysis\",\"color\": \"#FF8142\"},{\"serieName\": \"ci triage status\",\"color\": \"#422E75\"},{\"serieName\": \"cloudscalabilitystats\",\"color\": \"#B094F8\"},{\"serieName\": \"covid charts\",\"color\": \"#6A4ABA\"},{\"serieName\": \"covid-19 early indicator pinboard\",\"color\": \"#D1C0FB\"},{\"serieName\": \"cs - account 360\",\"color\": \"#8C62F5\"},{\"serieName\": \"cs: account status\",\"color\": \"#025B3C\"},{\"serieName\": \"embrace & cloud pipeline\",\"color\": \"#56D3A8\"},{\"serieName\": \"embrace cfd analysis\",\"color\": \"#049160\"},{\"serieName\": \"embrace code stats\",\"color\": \"#9BE5CB\"},{\"serieName\": \"embrace perf analysis\",\"color\": \"#06BF7F\"},{\"serieName\": \"embrace release tracker\",\"color\": \"#785F1A\"},{\"serieName\": \"embrace sales overview\",\"color\": \"#FCD977\"},{\"serieName\": \"emea leaderboard\",\"color\": \"#BF982A\"},{\"serieName\": \"eng ops - official\",\"color\": \"#FDE9AF\"},{\"serieName\": \"engg quality\",\"color\": \"#FCC838\"},{\"serieName\": \"eureka data analysis\",\"color\": \"#22636B\"},{\"serieName\": \"eureka proto - analysis\",\"color\": \"#82DFE9\"},{\"serieName\": \"falcon_dataload_360_overview\",\"color\": \"#369FAA\"},{\"serieName\": \"fy 21 renewals pinboard\",\"color\": \"#B5ECF2\"},{\"serieName\": \"gerrituserstats\",\"color\": \"#48D1E0\"},{\"serieName\": \"home page user clicks, last 30 days\",\"color\": \"#163772\"},{\"serieName\": \"idea analysis - 2020\",\"color\": \"#71A1F4\"},{\"serieName\": \"install.sh stats\",\"color\": \"#2359B6\"},{\"serieName\": \"m1 marketing attribution\",\"color\": \"#ABC7F9\"},{\"serieName\": \"marketing influence - top 20 deals (lq)\",\"color\": \"#2E75F0\"},{\"serieName\": \"marketing monthly all-hands\",\"color\": \"#721F27\"},{\"serieName\": \"marketing targets cq\",\"color\": \"#F47E89\"},{\"serieName\": \"marketing targets june 2020\",\"color\": \"#B6313E\"},{\"serieName\": \"mobile app analytics\",\"color\": \"#F9B3B9\"},{\"serieName\": \"mobile user journey postmortem\",\"color\": \"#F04152\"},{\"serieName\": \"na southwest mqls\",\"color\": \"#2F3947\"},{\"serieName\": \"new pinboard\",\"color\": \"#A2ACBA\"},{\"serieName\": \"next 3 quarters renewals pinboard\",\"color\": \"#47515F\"},{\"serieName\": \"next quarter sales metrics\",\"color\": \"#BEC6D0\"},{\"serieName\": \"nps - all company\",\"color\": \"#747E8C\"},{\"serieName\": \"operations - product installs\",\"color\": \"#7A3D1F\"},{\"serieName\": \"partner pipeline x\",\"color\": \"#FFA97E\"},{\"serieName\": \"patch releases\",\"color\": \"#C26232\"},{\"serieName\": \"pg activity\",\"color\": \"#FFCCB3\"},{\"serieName\": \"pinboard user click analysis\",\"color\": \"#FF8142\"},{\"serieName\": \"pipeline x\",\"color\": \"#d1c0fb\"},{\"serieName\": \"pipeline x regional\",\"color\": \"#B094F8\"},{\"serieName\": \"pm - explore\",\"color\": \"#6A4ABA\"},{\"serieName\": \"pm - product stats\",\"color\": \"#D1C0FB\"},{\"serieName\": \"pm - retention\",\"color\": \"#8C62F5\"},{\"serieName\": \"pm - search\",\"color\": \"#025B3C\"},{\"serieName\": \"pm retention\",\"color\": \"#56D3A8\"},{\"serieName\": \"pricing strategy - customer analysis\",\"color\": \"#049160\"},{\"serieName\": \"pulse - overall ts usage stats\",\"color\": \"#9BE5CB\"},{\"serieName\": \"pulse - pinboard stats\",\"color\": \"#06BF7F\"},{\"serieName\": \"qbr - ae leading indicators\",\"color\": \"#785F1A\"},{\"serieName\": \"qbr - rd leading indicators\",\"color\": \"#FCD977\"},{\"serieName\": \"rd leading indicators\",\"color\": \"#BF982A\"},{\"serieName\": \"rd pipeline inspection\",\"color\": \"#FDE9AF\"},{\"serieName\": \"rd weekly pipeline inspection\",\"color\": \"#FCC838\"},{\"serieName\": \"saas531 velocity\",\"color\": \"#22636B\"},{\"serieName\": \"sage code coverage\",\"color\": \"#82DFE9\"},{\"serieName\": \"sdr pinboard\",\"color\": \"#369FAA\"},{\"serieName\": \"se management\",\"color\": \"#B5ECF2\"},{\"serieName\": \"service - tickets metrics\",\"color\": \"#48D1E0\"},{\"serieName\": \"sessions & usage - last 7 days\",\"color\": \"#163772\"},{\"serieName\": \"sfdc cleanup pinboard\",\"color\": \"#71A1F4\"},{\"serieName\": \"snigdha - saas user adoption pinboard\",\"color\": \"#2359B6\"},{\"serieName\": \"technical certification status\",\"color\": \"#ABC7F9\"},{\"serieName\": \"thoughtspot customer stats\",\"color\": \"#2E75F0\"},{\"serieName\": \"thoughtspot sales\",\"color\": \"#721F27\"},{\"serieName\": \"thoughtspot trial via snowflake partner connect\",\"color\": \"#F47E89\"},{\"serieName\": \"ts stats: system information and usage\",\"color\": \"#B6313E\"},{\"serieName\": \"apj - sfdc cleanup pinboard\",\"color\": \"#F04152\"},{\"serieName\": \"monitor headlines experiment\",\"color\": \"#785F1A\"},{\"serieName\": \"onboarding first day analytics\",\"color\": \"#FCC838\"},{\"serieName\": \"showpad content\",\"color\": \"#A2ACBA\"}],\"systemSeriesColors\": [{\"serieName\": \"unique number of User\",\"color\": \"#06BF7F\"},{\"serieName\": \"6.2 commits pb\",\"color\": \"#721F27\"},{\"serieName\": \"6.3 & tscloud release tracker\",\"color\": \"#F47E89\"},{\"serieName\": \"6.3 release & epic tracker\",\"color\": \"#B6313E\"},{\"serieName\": \"6.3 release tracker\",\"color\": \"#F9B3B9\"},{\"serieName\": \"6sense account stages\",\"color\": \"#F04152\"},{\"serieName\": \"abx saasathon\",\"color\": \"#2F3947\"},{\"serieName\": \"account ticket health (lamprea)\",\"color\": \"#A2ACBA\"},{\"serieName\": \"ae leading indicators\",\"color\": \"#47515F\"},{\"serieName\": \"app ci stats\",\"color\": \"#BEC6D0\"},{\"serieName\": \"blink ci runs metrics\",\"color\": \"#747E8C\"},{\"serieName\": \"blink ops: official\",\"color\": \"#7A3D1F\"},{\"serieName\": \"caffeine-config-pb\",\"color\": \"#FFA97E\"},{\"serieName\": \"champagne - performance pinboard\",\"color\": \"#C26232\"},{\"serieName\": \"champagne adoption pinboard\",\"color\": \"#FFCCB3\"},{\"serieName\": \"champagne bug analysis\",\"color\": \"#FF8142\"},{\"serieName\": \"ci triage status\",\"color\": \"#422E75\"},{\"serieName\": \"cloudscalabilitystats\",\"color\": \"#B094F8\"},{\"serieName\": \"covid charts\",\"color\": \"#6A4ABA\"},{\"serieName\": \"covid-19 early indicator pinboard\",\"color\": \"#D1C0FB\"},{\"serieName\": \"cs - account 360\",\"color\": \"#8C62F5\"},{\"serieName\": \"cs: account status\",\"color\": \"#025B3C\"},{\"serieName\": \"embrace & cloud pipeline\",\"color\": \"#56D3A8\"},{\"serieName\": \"embrace cfd analysis\",\"color\": \"#049160\"},{\"serieName\": \"embrace code stats\",\"color\": \"#9BE5CB\"},{\"serieName\": \"embrace perf analysis\",\"color\": \"#06BF7F\"},{\"serieName\": \"embrace release tracker\",\"color\": \"#785F1A\"},{\"serieName\": \"embrace sales overview\",\"color\": \"#FCD977\"},{\"serieName\": \"emea leaderboard\",\"color\": \"#BF982A\"},{\"serieName\": \"eng ops - official\",\"color\": \"#FDE9AF\"},{\"serieName\": \"engg quality\",\"color\": \"#FCC838\"},{\"serieName\": \"eureka data analysis\",\"color\": \"#22636B\"},{\"serieName\": \"eureka proto - analysis\",\"color\": \"#82DFE9\"},{\"serieName\": \"falcon_dataload_360_overview\",\"color\": \"#369FAA\"},{\"serieName\": \"fy 21 renewals pinboard\",\"color\": \"#B5ECF2\"},{\"serieName\": \"gerrituserstats\",\"color\": \"#48D1E0\"},{\"serieName\": \"home page user clicks, last 30 days\",\"color\": \"#163772\"},{\"serieName\": \"idea analysis - 2020\",\"color\": \"#71A1F4\"},{\"serieName\": \"install.sh stats\",\"color\": \"#2359B6\"},{\"serieName\": \"m1 marketing attribution\",\"color\": \"#ABC7F9\"},{\"serieName\": \"marketing influence - top 20 deals (lq)\",\"color\": \"#2E75F0\"},{\"serieName\": \"marketing monthly all-hands\",\"color\": \"#721F27\"},{\"serieName\": \"marketing targets cq\",\"color\": \"#F47E89\"},{\"serieName\": \"marketing targets june 2020\",\"color\": \"#B6313E\"},{\"serieName\": \"mobile app analytics\",\"color\": \"#F9B3B9\"},{\"serieName\": \"mobile user journey postmortem\",\"color\": \"#F04152\"},{\"serieName\": \"na southwest mqls\",\"color\": \"#2F3947\"},{\"serieName\": \"new pinboard\",\"color\": \"#A2ACBA\"},{\"serieName\": \"next 3 quarters renewals pinboard\",\"color\": \"#47515F\"},{\"serieName\": \"next quarter sales metrics\",\"color\": \"#BEC6D0\"},{\"serieName\": \"nps - all company\",\"color\": \"#747E8C\"},{\"serieName\": \"operations - product installs\",\"color\": \"#7A3D1F\"},{\"serieName\": \"partner pipeline x\",\"color\": \"#FFA97E\"},{\"serieName\": \"patch releases\",\"color\": \"#C26232\"},{\"serieName\": \"pg activity\",\"color\": \"#FFCCB3\"},{\"serieName\": \"pinboard user click analysis\",\"color\": \"#FF8142\"},{\"serieName\": \"pipeline x\",\"color\": \"#422E75\"},{\"serieName\": \"pipeline x regional\",\"color\": \"#B094F8\"},{\"serieName\": \"pm - explore\",\"color\": \"#6A4ABA\"},{\"serieName\": \"pm - product stats\",\"color\": \"#D1C0FB\"},{\"serieName\": \"pm - retention\",\"color\": \"#8C62F5\"},{\"serieName\": \"pm - search\",\"color\": \"#025B3C\"},{\"serieName\": \"pm retention\",\"color\": \"#56D3A8\"},{\"serieName\": \"pricing strategy - customer analysis\",\"color\": \"#049160\"},{\"serieName\": \"pulse - overall ts usage stats\",\"color\": \"#9BE5CB\"},{\"serieName\": \"pulse - pinboard stats\",\"color\": \"#06BF7F\"},{\"serieName\": \"qbr - ae leading indicators\",\"color\": \"#785F1A\"},{\"serieName\": \"qbr - rd leading indicators\",\"color\": \"#FCD977\"},{\"serieName\": \"rd leading indicators\",\"color\": \"#BF982A\"},{\"serieName\": \"rd pipeline inspection\",\"color\": \"#FDE9AF\"},{\"serieName\": \"rd weekly pipeline inspection\",\"color\": \"#FCC838\"},{\"serieName\": \"saas531 velocity\",\"color\": \"#22636B\"},{\"serieName\": \"sage code coverage\",\"color\": \"#82DFE9\"},{\"serieName\": \"sdr pinboard\",\"color\": \"#369FAA\"},{\"serieName\": \"se management\",\"color\": \"#B5ECF2\"},{\"serieName\": \"service - tickets metrics\",\"color\": \"#48D1E0\"},{\"serieName\": \"sessions & usage - last 7 days\",\"color\": \"#163772\"},{\"serieName\": \"sfdc cleanup pinboard\",\"color\": \"#71A1F4\"},{\"serieName\": \"snigdha - saas user adoption pinboard\",\"color\": \"#2359B6\"},{\"serieName\": \"technical certification status\",\"color\": \"#ABC7F9\"},{\"serieName\": \"thoughtspot customer stats\",\"color\": \"#2E75F0\"},{\"serieName\": \"thoughtspot sales\",\"color\": \"#721F27\"},{\"serieName\": \"thoughtspot trial via snowflake partner connect\",\"color\": \"#F47E89\"},{\"serieName\": \"ts stats: system information and usage\",\"color\": \"#B6313E\"},{\"serieName\": \"apj - sfdc cleanup pinboard\",\"color\": \"#F04152\"},{\"serieName\": \"monitor headlines experiment\",\"color\": \"#785F1A\"},{\"serieName\": \"onboarding first day analytics\",\"color\": \"#FCC838\"},{\"serieName\": \"showpad content\",\"color\": \"#A2ACBA\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 954660db-4836-4cf5-9913-f6d6d029b783
+  - id: Viz_19
+    answer:
+      name: Abandoned Pinboards
+      description: Pinboards that should be reviewed for value on the platform
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      formulas:
+      - id: Days Since Use
+        name: Days Since Use
+        expr: "diff_days ( today ( ) , max ( date ( [Timestamp] ) ) )"
+        was_auto_generated: false
+      - id: Is Pinboard View
+        name: Is Pinboard View
+        expr: "if ( [User Action] = 'pinboard_embed_view' or [User Action] = 'pinboard_tspublic_no_runtime_filter' or [User Action] = 'pinboard_tspublic_runtime_filter' or [User Action] = 'pinboard_view' ) then true else false"
+        was_auto_generated: false
+      - id: Last Timestamp
+        name: Last Timestamp
+        expr: "max ( [Timestamp] )"
+        was_auto_generated: false
+      - id: Is Search
+        name: Is Search
+        expr: "if ( [User Action] = 'answer_pinboard_context' or [User Action] = 'answer_saved' or [User Action] = 'answer_unsaved' ) then true else false"
+        was_auto_generated: false
+      search_query: "[User Action] != [User Action].{null} [User Action].invalid count [User Action] [Answer Book Name] [Is Pinboard View] = true [Days Since Use] [Last Timestamp] [Last Timestamp].daily sort by [Days Since Use] descending"
+      answer_columns:
+      - name: Number of User Action
+      - name: Answer Book Name
+      - name: Days Since Use
+      - name: Day(Last Timestamp)
+      table:
+        table_columns:
+        - column_id: Answer Book Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Day(Last Timestamp)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of User Action
+          headline_aggregation: TABLE_AGGR
+        - column_id: Days Since Use
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Answer Book Name
+        - Day(Last Timestamp)
+        - Number of User Action
+        - Days Since Use
+        client_state: "{\"widthState\":{\"Answer Book Name\":166.0,\"Number of User Action\":167.0,\"Days Since Use\":134.0},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Answer Book Name\",\"width\": 166.0},{\"columnId\": \"Number of User Action\",\"width\": 167.0},{\"columnId\": \"Days Since Use\",\"width\": 134.0}],\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Answer Book Name\",\"columnProperty\": {}},{\"columnId\": \"Day(Last Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"Number of User Action\",\"columnProperty\": {}},{\"columnId\": \"Days Since Use\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Answer Book Name
+        - column_id: Day(Last Timestamp)
+        - column_id: Number of User Action
+        - column_id: Days Since Use
+        axis_configs:
+        - x:
+          - Day(Last Timestamp)
+          "y":
+          - Number of User Action
+          - Days Since Use
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"responsiveLayoutPreference\":3.0,\"chartSpecific\":{\"pivotState\":{\"columnExpandedPaths\":[],\"rowExpandedPaths\":[]},\"isHeatmapOverlayed\":true}},\"axisProperties\":{\"510ffa00-9df0-4ccd-ba3d-7fafdcc81d8b\":{\"linkedColumns\":[\"Number of User Action\"],\"axisType\":\"Y\",\"isOpposite\":false},\"1960c223-5249-4117-8b8a-3582cfba8673\":{\"linkedColumns\":[\"Days Since Use\"],\"axisType\":\"Y\",\"isOpposite\":true},\"cc7c3ead-6f74-4b98-af96-e0b8dcce83a1\":{\"linkedColumns\":[\"Day(Last Timestamp)\"],\"axisType\":\"X\"}},\"version\":\"V3\",\"columnProperties\":{\"Answer Book Name\":{},\"Day(Last Timestamp)\":{},\"Number of User Action\":{},\"Days Since Use\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotState\": {},\"isHeatmapOverlayed\": true,\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Answer Book Name\",\"columnProperty\": {}},{\"columnId\": \"Day(Last Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"Number of User Action\",\"columnProperty\": {}},{\"columnId\": \"Days Since Use\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"510ffa00-9df0-4ccd-ba3d-7fafdcc81d8b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of User Action\"],\"isOpposite\": false}},{\"id\": \"1960c223-5249-4117-8b8a-3582cfba8673\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Days Since Use\"],\"isOpposite\": true}},{\"id\": \"cc7c3ead-6f74-4b98-af96-e0b8dcce83a1\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Last Timestamp)\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: 2a56201c-a4c4-424f-846d-531e30fb3462
+  - id: Viz_20
+    answer:
+      name: Abandoned Answers
+      description: Answers that should be reviewed for value on the platform
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      formulas:
+      - id: Days Since Use
+        name: Days Since Use
+        expr: "diff_days ( today ( ) , max ( date ( [Timestamp] ) ) )"
+        was_auto_generated: false
+      - id: Is Answer View
+        name: Is Answer View
+        expr: "if ( [User Action] = 'answer_view' ) then true else false"
+        was_auto_generated: false
+      - id: Last Timestamp
+        name: Last Timestamp
+        expr: "max ( [Timestamp] )"
+        was_auto_generated: false
+      search_query: "[User Action] != [User Action].{null} [User Action].invalid count [User Action] [Answer Book Name] [Is Answer View] = true [Days Since Use] [Last Timestamp] [Last Timestamp].daily sort by [Days Since Use] descending"
+      answer_columns:
+      - name: Number of User Action
+      - name: Answer Book Name
+      - name: Days Since Use
+      - name: Day(Last Timestamp)
+      table:
+        table_columns:
+        - column_id: Answer Book Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Day(Last Timestamp)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of User Action
+          headline_aggregation: TABLE_AGGR
+        - column_id: Days Since Use
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Answer Book Name
+        - Day(Last Timestamp)
+        - Number of User Action
+        - Days Since Use
+        client_state: "{\"widthState\":{\"Answer Book Name\":160.0,\"Number of User Action\":167.0,\"Days Since Use\":134.0},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Answer Book Name\",\"width\": 160.0},{\"columnId\": \"Number of User Action\",\"width\": 167.0},{\"columnId\": \"Days Since Use\",\"width\": 134.0}],\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Answer Book Name\",\"columnProperty\": {}},{\"columnId\": \"Day(Last Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"Number of User Action\",\"columnProperty\": {}},{\"columnId\": \"Days Since Use\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Answer Book Name
+        - column_id: Day(Last Timestamp)
+        - column_id: Number of User Action
+        - column_id: Days Since Use
+        axis_configs:
+        - x:
+          - Day(Last Timestamp)
+          "y":
+          - Number of User Action
+          - Days Since Use
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"responsiveLayoutPreference\":3.0,\"chartSpecific\":{\"pivotState\":{\"columnExpandedPaths\":[],\"rowExpandedPaths\":[]},\"isHeatmapOverlayed\":true}},\"axisProperties\":{\"510ffa00-9df0-4ccd-ba3d-7fafdcc81d8b\":{\"linkedColumns\":[\"Number of User Action\"],\"axisType\":\"Y\",\"isOpposite\":false},\"1960c223-5249-4117-8b8a-3582cfba8673\":{\"linkedColumns\":[\"Days Since Use\"],\"axisType\":\"Y\",\"isOpposite\":true},\"cc7c3ead-6f74-4b98-af96-e0b8dcce83a1\":{\"linkedColumns\":[\"Day(Last Timestamp)\"],\"axisType\":\"X\"}},\"version\":\"V3\",\"columnProperties\":{\"Answer Book Name\":{},\"Day(Last Timestamp)\":{},\"Number of User Action\":{},\"Days Since Use\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotState\": {},\"isHeatmapOverlayed\": true,\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Answer Book Name\",\"columnProperty\": {}},{\"columnId\": \"Day(Last Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"Number of User Action\",\"columnProperty\": {}},{\"columnId\": \"Days Since Use\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"510ffa00-9df0-4ccd-ba3d-7fafdcc81d8b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of User Action\"],\"isOpposite\": false}},{\"id\": \"1960c223-5249-4117-8b8a-3582cfba8673\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Days Since Use\"],\"isOpposite\": true}},{\"id\": \"cc7c3ead-6f74-4b98-af96-e0b8dcce83a1\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Last Timestamp)\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: e8d2f742-bb23-4565-ad4e-19c4aa9b3c66
+  - id: Viz_21
+    answer:
+      name: Inactive Users
+      description: Users have not accessed ThougthSpot in last 30 days
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      formulas:
+      - id: Days Since Use
+        name: Days Since Use
+        expr: "diff_days ( today ( ) , max ( date ( [Timestamp] ) ) )"
+        was_auto_generated: false
+      - id: Last Timestamp
+        name: Last Timestamp
+        expr: "max ( [Timestamp] )"
+        was_auto_generated: false
+      search_query: "[User Action] != [User Action].{null} [User Action].invalid [Days Since Use] [Last Timestamp] [Last Timestamp].daily sort by [Days Since Use] descending [User] [Days Since Use] > 30 [User] != [User].{null} [User].tsadmin [User].system"
+      answer_columns:
+      - name: Days Since Use
+      - name: Day(Last Timestamp)
+      - name: User
+      table:
+        table_columns:
+        - column_id: User
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Day(Last Timestamp)
+          headline_aggregation: MIN-MAX
+        - column_id: Days Since Use
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Day(Last Timestamp)
+        - User
+        - Days Since Use
+        client_state: "{\"widthState\":{\"c02d641d-a019-4f27-a889-689335a2d22b\":178.0,\"d6fa8d09-44c3-4caa-ae55-f4cd14ebacd9\":167.0,\"Days Since Use\":134.0,\"User\":225.0,\"Day(Last Timestamp)\":167.0},\"wrapTableHeader\":true,\"ordered_column_ids\":[\"User\",\"Day(Last Timestamp)\",\"Days Since Use\"],\"widgetState\":{\"columns\":[{\"visibleIndex\":1.0,\"dataField\":\"Day(Last Timestamp)\",\"dataType\":\"number\",\"width\":116.16351318359375,\"visible\":true,\"sortOrder\":\"undefined\"},{\"visibleIndex\":0.0,\"dataField\":\"User\",\"dataType\":\"string\",\"width\":225.0,\"visible\":true,\"sortOrder\":\"undefined\"},{\"visibleIndex\":2.0,\"dataField\":\"Days Since Use\",\"dataType\":\"number\",\"width\":134.0,\"visible\":true,\"sortOrder\":\"undefined\"},{\"visibleIndex\":3.0,\"width\":\"auto\",\"visible\":true}],\"allowedPageSizes\":[500.0,1000.0,2000.0],\"filterPanel\":{\"filterEnabled\":true},\"searchText\":\"\",\"pageIndex\":0.0,\"pageSize\":1000.0}}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"c02d641d-a019-4f27-a889-689335a2d22b\",\"width\": 178.0},{\"columnId\": \"d6fa8d09-44c3-4caa-ae55-f4cd14ebacd9\",\"width\": 167.0},{\"columnId\": \"Days Since Use\",\"width\": 134.0},{\"columnId\": \"User\",\"width\": 225.0},{\"columnId\": \"Day(Last Timestamp)\",\"width\": 167.0}],\"wrapTableHeader\": true,\"orderedColumnIds\": [\"User\",\"Day(Last Timestamp)\",\"Days Since Use\"],\"columnProperties\": [{\"columnId\": \"User\",\"columnProperty\": {}},{\"columnId\": \"Day(Last Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"Days Since Use\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Day(Last Timestamp)
+        - column_id: User
+        - column_id: Days Since Use
+        axis_configs:
+        - x:
+          - Day(Last Timestamp)
+          "y":
+          - Days Since Use
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"responsiveLayoutPreference\":3.0,\"chartSpecific\":{\"pivotState\":{\"columnExpandedPaths\":[],\"rowExpandedPaths\":[]},\"isHeatmapOverlayed\":true}},\"axisProperties\":{\"2556fdf0-2758-450a-af0b-2ac804062c58\":{\"linkedColumns\":[\"Days Since Use\"],\"axisType\":\"Y\",\"isOpposite\":false},\"e15fe232-a003-4ed0-a38a-67842f1ef44a\":{\"linkedColumns\":[\"Day(Last Timestamp)\"],\"axisType\":\"X\"}},\"version\":\"V3\",\"columnProperties\":{\"Day(Last Timestamp)\":{},\"User\":{},\"Days Since Use\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotState\": {},\"isHeatmapOverlayed\": true,\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Day(Last Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"User\",\"columnProperty\": {}},{\"columnId\": \"Days Since Use\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2556fdf0-2758-450a-af0b-2ac804062c58\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Days Since Use\"],\"isOpposite\": false}},{\"id\": \"e15fe232-a003-4ed0-a38a-67842f1ef44a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Last Timestamp)\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: 8e2aaaba-d15a-46c6-afc5-fc11b77f5e07
+  - id: Viz_22
+    answer:
+      name: DAU Last 4 Weeks
+      description: Average daily active users
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      search_query: "[Timestamp] [Timestamp].daily unique count [User] [Timestamp].'last 4 weeks'"
+      answer_columns:
+      - name: Day(Timestamp)
+      - name: Unique Number of User
+      table:
+        table_columns:
+        - column_id: Day(Timestamp)
+          headline_aggregation: MIN-MAX
+        - column_id: Unique Number of User
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Day(Timestamp)
+        - Unique Number of User
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Day(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of User\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Day(Timestamp)
+        - column_id: Unique Number of User
+        axis_configs:
+        - x:
+          - Day(Timestamp)
+          "y":
+          - Unique Number of User
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{},\"responsiveLayoutPreference\":3.0},\"axisProperties\":{\"f75128a8-d499-47bf-a504-b425aa33934b\":{\"linkedColumns\":[\"Unique Number of User\"],\"axisType\":\"Y\",\"isOpposite\":false},\"5000fad1-23df-47ec-b634-254ae4a61375\":{\"linkedColumns\":[\"Day(Timestamp)\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Unique Number of User\":\"#48D1E0\"},\"version\":\"V3\",\"columnProperties\":{\"Day(Timestamp)\":{},\"Unique Number of User\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Day(Timestamp)\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of User\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f75128a8-d499-47bf-a504-b425aa33934b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Unique Number of User\"],\"isOpposite\": false}},{\"id\": \"5000fad1-23df-47ec-b634-254ae4a61375\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Timestamp)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Unique Number of User\",\"color\": \"#48D1E0\"}]}"
+      display_mode: TABLE_MODE
+    display_headline_column: Unique Number of User
+    viz_guid: 3e051081-7d17-489f-83dc-706d65713cdf
+  - id: Viz_23
+    answer:
+      name: User Profile
+      description: User Name along with number of Pinboard Vs Search Interactions in last 6 months (default retention period for TS:BI Server)
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      formulas:
+      - id: '# of days logged in (Last 6 Months)'
+        name: '# of days logged in (Last 6 Months)'
+        expr: "diff_days ( date ( [Last Login] ) , group_min ( [Timestamp] , [User] ) )"
+        was_auto_generated: false
+      - id: Last Login
+        name: Last Login
+        expr: "start_of_hour ( group_max ( [Timestamp] , [User] ) )"
+        was_auto_generated: false
+      - id: User Actions
+        name: User Actions
+        expr: "count ( [User Action] )"
+        was_auto_generated: false
+      search_query: "[User Actions] [User Action] != 'invalid' [User] [User Action] contains 'answer' vs [User Action] contains 'pinboard' [Last Login] [Last Login].hourly [# of days logged in (Last 6 Months)] sort by [Last Login] [Last Login].hourly descending"
+      answer_columns:
+      - name: User Actions(user action contains pinboard)
+      - name: Hour(Last Login)
+      - name: User
+      - name: User Actions(user action contains answer)
+      - name: '# of days logged in (Last 6 Months)'
+      table:
+        table_columns:
+        - column_id: Hour(Last Login)
+          headline_aggregation: MIN-MAX
+        - column_id: User
+          headline_aggregation: COUNT
+        - column_id: User Actions(user action contains pinboard)
+          headline_aggregation: AVERAGE
+        - column_id: User Actions(user action contains answer)
+          headline_aggregation: AVERAGE
+        - column_id: '# of days logged in (Last 6 Months)'
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Hour(Last Login)
+        - User
+        - User Actions(user action contains pinboard)
+        - User Actions(user action contains answer)
+        - '# of days logged in (Last 6 Months)'
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true,\"ordered_column_ids\":[\"User\",\"Hour(Last Login)\",\"User Actions(user action contains pinboard)\",\"User Actions(user action contains answer)\",\"# of days logged in (Last 6 Months)\"]}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"orderedColumnIds\": [\"User\",\"Hour(Last Login)\",\"User Actions(user action contains pinboard)\",\"User Actions(user action contains answer)\",\"# of days logged in (Last 6 Months)\"],\"columnProperties\": [{\"columnId\": \"Hour(Last Login)\",\"columnProperty\": {}},{\"columnId\": \"User\",\"columnProperty\": {}},{\"columnId\": \"User Actions(user action contains pinboard)\",\"columnProperty\": {}},{\"columnId\": \"User Actions(user action contains answer)\",\"columnProperty\": {}},{\"columnId\": \"# of days logged in (Last 6 Months)\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Hour(Last Login)
+        - column_id: User
+        - column_id: User Actions(user action contains pinboard)
+        - column_id: User Actions(user action contains answer)
+        - column_id: '# of days logged in (Last 6 Months)'
+        axis_configs:
+        - x:
+          - Hour(Last Login)
+          "y":
+          - User Actions(user action contains pinboard)
+          - User Actions(user action contains answer)
+          - '# of days logged in (Last 6 Months)'
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"responsiveLayoutPreference\":3.0,\"chartSpecific\":{}},\"axisProperties\":{\"65b27e4e-aa33-4e93-85da-d4a3f3d718ea\":{\"linkedColumns\":[\"User Actions(user action contains pinboard)\"],\"axisType\":\"Y\",\"isOpposite\":false},\"6bdfa3ab-00b2-491a-a505-99539f566bd6\":{\"linkedColumns\":[\"User Actions(user action contains answer)\"],\"axisType\":\"Y\",\"isOpposite\":true},\"f6b2c593-6b05-4b16-8c2f-4af855d24962\":{\"linkedColumns\":[\"# of days logged in (Last 6 Months)\"],\"axisType\":\"Y\",\"isOpposite\":true},\"4d4d5d7f-c85b-4f37-b0a2-2d85e127f06a\":{\"linkedColumns\":[\"Hour(Last Login)\"],\"axisType\":\"X\"}},\"version\":\"V3\",\"columnProperties\":{\"Hour(Last Login)\":{},\"User\":{},\"User Actions(user action contains pinboard)\":{},\"User Actions(user action contains answer)\":{},\"# of days logged in (Last 6 Months)\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Hour(Last Login)\",\"columnProperty\": {}},{\"columnId\": \"User\",\"columnProperty\": {}},{\"columnId\": \"User Actions(user action contains pinboard)\",\"columnProperty\": {}},{\"columnId\": \"User Actions(user action contains answer)\",\"columnProperty\": {}},{\"columnId\": \"# of days logged in (Last 6 Months)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"65b27e4e-aa33-4e93-85da-d4a3f3d718ea\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"User Actions(user action contains pinboard)\"],\"isOpposite\": false}},{\"id\": \"6bdfa3ab-00b2-491a-a505-99539f566bd6\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"User Actions(user action contains answer)\"],\"isOpposite\": true}},{\"id\": \"f6b2c593-6b05-4b16-8c2f-4af855d24962\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"# of days logged in (Last 6 Months)\"],\"isOpposite\": true}},{\"id\": \"4d4d5d7f-c85b-4f37-b0a2-2d85e127f06a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Hour(Last Login)\"]}}]}"
+      display_mode: TABLE_MODE
+      client_state: "{\"version\":\"V2\"}"
+    viz_guid: f56fc48b-18e5-4d52-89ba-0ed2df9e00c5
+  filters:
+  - column:
+    - User
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  layout:
+    tiles:
+    - visualization_id: Viz_19
+      x: 6
+      "y": 52
+      height: 8
+      width: 6
+    - visualization_id: Viz_22
+      x: 0
+      "y": 0
+      height: 2
+      width: 3
+    - visualization_id: Viz_18
+      x: 6
+      "y": 44
+      height: 8
+      width: 6
+    - visualization_id: Viz_15
+      x: 0
+      "y": 40
+      height: 4
+      width: 12
+    - visualization_id: Viz_4
+      x: 3
+      "y": 2
+      height: 2
+      width: 3
+    - visualization_id: Viz_13
+      x: 0
+      "y": 32
+      height: 8
+      width: 6
+    - visualization_id: Viz_3
+      x: 0
+      "y": 24
+      height: 8
+      width: 6
+    - visualization_id: Viz_6
+      x: 0
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_8
+      x: 3
+      "y": 0
+      height: 2
+      width: 3
+    - visualization_id: Viz_21
+      x: 0
+      "y": 60
+      height: 8
+      width: 6
+    - visualization_id: Viz_12
+      x: 0
+      "y": 20
+      height: 4
+      width: 12
+    - visualization_id: Viz_11
+      x: 0
+      "y": 12
+      height: 4
+      width: 12
+    - visualization_id: Viz_9
+      x: 6
+      "y": 2
+      height: 2
+      width: 6
+    - visualization_id: Viz_17
+      x: 0
+      "y": 44
+      height: 8
+      width: 6
+    - visualization_id: Viz_1
+      x: 6
+      "y": 0
+      height: 2
+      width: 6
+    - visualization_id: Viz_20
+      x: 0
+      "y": 52
+      height: 8
+      width: 6
+    - visualization_id: Viz_23
+      x: 6
+      "y": 60
+      height: 8
+      width: 6
+    - visualization_id: Viz_7
+      x: 6
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_2
+      x: 0
+      "y": 4
+      height: 4
+      width: 12
+    - visualization_id: Viz_14
+      x: 6
+      "y": 32
+      height: 8
+      width: 6
+    - visualization_id: Viz_5
+      x: 0
+      "y": 2
+      height: 2
+      width: 3
+    - visualization_id: Viz_16
+      x: 6
+      "y": 24
+      height: 8
+      width: 6
+    - visualization_id: Viz_10
+      x: 0
+      "y": 16
+      height: 4
+      width: 12
