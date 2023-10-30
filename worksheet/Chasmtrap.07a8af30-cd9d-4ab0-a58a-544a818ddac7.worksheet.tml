@@ -41,7 +41,7 @@ worksheet:
     column_id: PRODUCTS_1::Product Id
     properties:
       column_type: ATTRIBUTE
-  - name: Product Name 1
+  - name: Product Name 3
     column_id: PRODUCTS_1::Product Name
     properties:
       column_type: ATTRIBUTE
@@ -59,7 +59,7 @@ worksheet:
     properties:
       column_type: MEASURE
       aggregation: SUM
-  - name: Sale Cost
+  - name: Sale Cost 5
     column_id: SALES_1::Sale Cost
     properties:
       column_type: MEASURE
