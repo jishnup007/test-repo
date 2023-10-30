@@ -1,6 +1,6 @@
 guid: 4fe91e73-6984-4a22-8196-f5c0f4892bcd
 liveboard:
-  name: tsadmin's first Liveboard
+  name: tsadmin's first Liveboard 2
   visualizations:
   - id: Viz_1
     answer:
@@ -38,3 +38,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"64a4a3ea-399c-405a-b7be-5ef1b7fae8a4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"2b20c974-7080-4377-8081-554f56e0dc3a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Extended Price\",\"color\": \"#2770ef\"}]}"
       display_mode: CHART_MODE
     viz_guid: 8eed0c3c-990f-4752-8aa5-f99262da4d0f
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: SMALL
