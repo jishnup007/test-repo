@@ -1,6 +1,6 @@
 guid: 4fe91e73-6984-4a22-8196-f5c0f4892bcd
 liveboard:
-  name: tsadmin's first Liveboard 2
+  name: tsadmin's first Liveboard 3
   visualizations:
   - id: Viz_1
     answer:
@@ -78,3 +78,5 @@ liveboard:
     tiles:
     - visualization_id: Viz_1
       size: SMALL
+    - visualization_id: Viz_2
+      size: MEDIUM
