@@ -29,3 +29,16 @@ liveboard:
         client_state: ""
       display_mode: CHART_MODE
     viz_guid: 8b696298-ccee-467b-872e-6bef34223b6e
+  filters:
+  - column:
+    - Brand1
+    oper: in
+    values:
+    - mfgr#111
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: EXTRA_SMALL
