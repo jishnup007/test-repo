@@ -1,0 +1,31 @@
+guid: 2bfaf43a-ad58-4be6-be82-1a5b5f439b44
+liveboard:
+  name: Test
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Tax
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Tax] [Order Date].today"
+      answer_columns:
+      - name: Total Tax
+      table:
+        table_columns:
+        - column_id: Total Tax
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Tax
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Tax
+        axis_configs:
+        - "y":
+          - Total Tax
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 8b696298-ccee-467b-872e-6bef34223b6e
