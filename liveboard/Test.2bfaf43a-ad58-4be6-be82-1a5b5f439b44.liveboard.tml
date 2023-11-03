@@ -46,6 +46,18 @@ liveboard:
       height: 2
       width: 3
   views:
+  - view_guid: a169e5e4-f70e-4184-a5ed-a592e45148b1
+    name: ccc
+    view_filters:
+    - column:
+      - Brand1
+      oper: in
+      values:
+      - mfgr#111
+      - mfgr#1110
+      - mfgr#1111
+      - mfgr#1112
+    is_public: false
   - view_guid: 2d8d2e7d-0ab3-4b5c-8c8f-bee3dc361357
     name: bbb
     view_filters:
