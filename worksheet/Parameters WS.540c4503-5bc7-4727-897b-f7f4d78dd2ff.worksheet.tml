@@ -1,0 +1,331 @@
+guid: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+worksheet:
+  name: Parameters WS
+  tables:
+  - name: LINEORDER
+    fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+  - name: PART
+    fqn: a7fc012e-bdb3-4e75-9ce4-b3f731d90136
+  joins:
+  - name: Lineorder PartKey - Part PartKey
+    source: LINEORDER
+    destination: PART
+    type: INNER
+    is_one_to_one: false
+  table_paths:
+  - id: LINEORDER_1
+    table: LINEORDER
+    join_path:
+    - {}
+  - id: PART_1
+    table: PART
+    join_path:
+    - join:
+      - Lineorder PartKey - Part PartKey
+  formulas:
+  - name: Email Domain Masked Color
+    expr: "if ( [Email Domain] = 'thoughtspot.com' ) then [PART_1::Color] else '****'"
+    was_auto_generated: false
+  - name: Email Domain
+    expr: ts_email_domain
+    was_auto_generated: false
+  - name: Org Masked Revenue
+    expr: "if ( [Org Name] = 'primary' ) then [LINEORDER_1::Revenue] else [LINEORDER_1::Revenue] / 1000"
+    was_auto_generated: false
+  - name: Org Name
+    expr: ts_orgname
+    was_auto_generated: false
+  - name: User-Masked Color
+    expr: "if ( [Username] = 'tsadmin' ) then [PART_1::Color] else '****'"
+    was_auto_generated: false
+  - name: Username
+    expr: ts_username
+    was_auto_generated: false
+  worksheet_columns:
+  - name: Orderkey
+    column_id: LINEORDER_1::OrderKey
+    properties:
+      column_type: ATTRIBUTE
+  - name: Line Number
+    column_id: LINEORDER_1::Line Number
+    properties:
+      column_type: ATTRIBUTE
+  - name: Lineorder Custkey
+    column_id: LINEORDER_1::Lineorder CustKey
+    properties:
+      column_type: ATTRIBUTE
+  - name: Lineorder Partkey
+    column_id: LINEORDER_1::Lineorder PartKey
+    properties:
+      column_type: ATTRIBUTE
+  - name: Lineorder Suppkey
+    column_id: LINEORDER_1::Lineorder Suppkey
+    properties:
+      column_type: ATTRIBUTE
+  - name: Order Date
+    column_id: LINEORDER_1::Order Date
+    properties:
+      column_type: ATTRIBUTE
+  - name: Order Priority
+    column_id: LINEORDER_1::Order Priority
+    properties:
+      column_type: ATTRIBUTE
+  - name: Ship Priority
+    column_id: LINEORDER_1::Ship Priority
+    properties:
+      column_type: ATTRIBUTE
+  - name: Quantity
+    column_id: LINEORDER_1::Quantity
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: Extended Price
+    column_id: LINEORDER_1::Extended Price
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: Order Total Price
+    column_id: LINEORDER_1::Order Total Price
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: Discount
+    column_id: LINEORDER_1::Discount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: Revenue
+    column_id: LINEORDER_1::Revenue
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: Supply Cost
+    column_id: LINEORDER_1::Supply Cost
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: Tax
+    column_id: LINEORDER_1::Tax
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  - name: Commit Date
+    column_id: LINEORDER_1::Commit Date
+    properties:
+      column_type: ATTRIBUTE
+  - name: Ship Mode
+    column_id: LINEORDER_1::Ship Mode
+    properties:
+      column_type: ATTRIBUTE
+  - name: Part Partkey
+    column_id: PART_1::Part PartKey
+    properties:
+      column_type: ATTRIBUTE
+  - name: Part Name
+    column_id: PART_1::Part Name
+    properties:
+      column_type: ATTRIBUTE
+  - name: Manufacturer
+    column_id: PART_1::Manufacturer
+    properties:
+      column_type: ATTRIBUTE
+  - name: Category
+    column_id: PART_1::Category
+    properties:
+      column_type: ATTRIBUTE
+  - name: Brand1
+    column_id: PART_1::Brand1
+    properties:
+      column_type: ATTRIBUTE
+  - name: Color
+    column_id: PART_1::Color
+    properties:
+      column_type: ATTRIBUTE
+  - name: Type
+    column_id: PART_1::Type
+    properties:
+      column_type: ATTRIBUTE
+  - name: Size
+    column_id: PART_1::Size
+    properties:
+      column_type: ATTRIBUTE
+  - name: Container
+    column_id: PART_1::Container
+    properties:
+      column_type: ATTRIBUTE
+  - name: Username
+    formula_id: Username
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Email Domain
+    formula_id: Email Domain
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Org Name
+    formula_id: Org Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: User-Masked Color
+    formula_id: User-Masked Color
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Email Domain Masked Color
+    formula_id: Email Domain Masked Color
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Org Masked Revenue
+    formula_id: Org Masked Revenue
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
+  parameters:
+  - id: 6afe392d-d188-4379-aef3-1a8632e147c8
+    name: Integer Range Param
+    data_type: INT64
+    default_value: "5"
+    range_config:
+      range_min: "0"
+      range_max: "10"
+      include_min: true
+      include_max: true
+    description: Integer parameter with range value selection.
+  - id: 3e2d9e2d-e4e6-4319-8814-61d31f9b5fc5
+    name: Integer List Param
+    data_type: INT64
+    default_value: "3"
+    list_config:
+      list_choice:
+      - value: "1"
+        display_name: One
+      - value: "2"
+        display_name: Two
+      - value: "3"
+        display_name: Three
+      - value: "4"
+        display_name: Four
+      - value: "5"
+        display_name: Five
+    description: Integer parameter with list value selection.
+  - id: 0f15384d-ce96-4153-90ef-04462bb91cfe
+    name: Double Range Param
+    data_type: DOUBLE
+    default_value: "0.5"
+    range_config:
+      range_min: "0.0"
+      range_max: "1.0"
+      include_min: true
+      include_max: true
+    description: Double parameter with range value selection.
+  - id: 44cc11a1-e6da-438a-97cb-b9dbee3c566c
+    name: Date Range Param
+    data_type: DATE
+    default_value: 10/16/2022
+    range_config:
+      range_min: 01/01/2022
+      range_max: 12/31/2022
+      include_min: true
+      include_max: true
+    description: Date parameter with range value selection.
+  - id: 491b359d-4282-4c66-8829-b24b05571098
+    name: Boolean Param
+    data_type: BOOL
+    default_value: "true"
+    list_config:
+      list_choice:
+      - value: "true"
+        display_name: "Yes"
+      - value: "false"
+        display_name: "No"
+    description: Boolean parameter with list value selection.
+  - id: 75bb2345-1997-4b00-b364-5fea0ec0c406
+    name: Date List Param
+    data_type: DATE
+    default_value: 01/01/2022
+    list_config:
+      list_choice:
+      - value: 01/01/2022
+        display_name: New Year’s Holiday
+      - value: 01/17/2022
+        display_name: Martin Luther King Day
+      - value: 02/21/2022
+        display_name: President’s Day
+      - value: 05/30/2022
+        display_name: Memorial Day
+      - value: 06/20/2022
+        display_name: Juneteenth Day
+      - value: 07/04/2022
+        display_name: Independence Day
+      - value: 09/05/2022
+        display_name: Labor Day
+      - value: 11/24/2022
+        display_name: Thanksgiving Day
+      - value: 11/25/2022
+        display_name: Thanksgiving Day Holiday
+      - value: 12/24/2022
+        display_name: Christmas Eve
+      - value: 12/25/2022
+        display_name: Christmas
+      - value: 12/31/2022
+        display_name: New Year’s Eve
+    description: Date parameter with list value selection.
+  - id: 7ae8a9ec-612c-4160-9896-1e3afd7f9d02
+    name: String List Param
+    data_type: CHAR
+    default_value: air
+    list_config:
+      list_choice:
+      - value: air
+        display_name: ""
+      - value: truck
+        display_name: ""
+      - value: car
+        display_name: ""
+      - value: ship
+        display_name: ""
+    description: String parameter with list value selection.
+  - id: 94af5fac-3afb-4781-aca1-a5ca97094661
+    name: Date Param
+    data_type: DATE
+    default_value: 10/16/2022
+    description: Date parameter with any value selection.
+  - id: 3d4cefd7-caab-401c-a9a8-3f452414b82a
+    name: Double Param
+    data_type: DOUBLE
+    default_value: "1.0"
+    description: Double parameter with any value selection.
+  - id: 29e9c1d8-9fcf-4b5b-a182-aca9c44d8051
+    name: Double List Param
+    data_type: DOUBLE
+    default_value: "0.5"
+    list_config:
+      list_choice:
+      - value: "0.0"
+        display_name: ""
+      - value: "0.25"
+        display_name: ""
+      - value: "0.5"
+        display_name: ""
+      - value: "0.75"
+        display_name: ""
+      - value: "1.0"
+        display_name: ""
+    description: Double parameter with list value selection.
+  - id: f59b9087-2eb3-4116-ab87-bcdba25ceb01
+    name: String Param
+    data_type: CHAR
+    default_value: default
+    description: String parameter with any value selection.
+  - id: db95c261-9e31-41fc-b9d9-4059062fc26f
+    name: Integer Param
+    data_type: INT64
+    default_value: "1"
+    description: Integer parameter with any value selection.
