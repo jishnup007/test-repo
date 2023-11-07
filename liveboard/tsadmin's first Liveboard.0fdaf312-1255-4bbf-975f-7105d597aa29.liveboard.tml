@@ -38,3 +38,16 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Username\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"916bc23e-fa82-44cc-bbc7-60e38a553dd4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": false}},{\"id\": \"52efddf6-85d1-43cf-a201-104dd4a6bdd4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Username\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Quantity\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 33a0bb22-4aed-4434-986f-3aa634057407
+  filters:
+  - column:
+    - Category
+    oper: in
+    values:
+    - mfgr#11
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
