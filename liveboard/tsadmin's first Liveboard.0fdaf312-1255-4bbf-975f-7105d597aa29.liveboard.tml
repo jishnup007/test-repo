@@ -1,0 +1,40 @@
+guid: 0fdaf312-1255-4bbf-975f-7105d597aa29
+liveboard:
+  name: tsadmin's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Quantity by Username
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Username] [Quantity]"
+      answer_columns:
+      - name: Username
+      - name: Total Quantity
+      table:
+        table_columns:
+        - column_id: Username
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Quantity
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Username
+        - Total Quantity
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Username
+        - column_id: Total Quantity
+        axis_configs:
+        - x:
+          - Username
+          "y":
+          - Total Quantity
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Username\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"916bc23e-fa82-44cc-bbc7-60e38a553dd4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": false}},{\"id\": \"52efddf6-85d1-43cf-a201-104dd4a6bdd4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Username\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Quantity\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 33a0bb22-4aed-4434-986f-3aa634057407
