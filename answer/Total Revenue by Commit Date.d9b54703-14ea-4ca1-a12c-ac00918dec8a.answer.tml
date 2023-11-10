@@ -21,15 +21,13 @@ answer:
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
-    type: LINE
+    type: KPI
     chart_columns:
     - column_id: Commit Date
     - column_id: Total Revenue
     axis_configs:
-    - x:
-      - Commit Date
-      "y":
+    - "y":
       - Total Revenue
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Commit Date\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f0f0d461-ad0e-4477-9320-78808c33abf2\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"382d2ad2-c5c1-4c15-ba79-721dbe3e08b8\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Commit Date\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#2770ef\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Commit Date\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"cf377848-0547-4656-8afc-26d0a4fde4b7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"306456a8-fb19-4bbc-aa68-7c85151e5086\",\"properties\": {\"axisType\": \"X\"}}]}"
   display_mode: CHART_MODE
