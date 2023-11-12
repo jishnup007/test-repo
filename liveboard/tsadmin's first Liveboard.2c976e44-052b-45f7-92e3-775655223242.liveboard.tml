@@ -38,6 +38,42 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"912c4f91-102d-48e0-9229-5e0abb0dbbc3\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"001e782e-0591-4da1-a293-4293733c2d22\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#8C62F5\"}]}"
       display_mode: CHART_MODE
     viz_guid: 18c2fbe0-c059-4901-bd2d-2fad6f14b3ad
+  - id: Viz_2
+    answer:
+      name: Total Revenue by Quarterly Commit Date
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Revenue] [Commit Date] [Commit Date].quarterly"
+      answer_columns:
+      - name: Total Revenue
+      - name: Quarter(Commit Date)
+      table:
+        table_columns:
+        - column_id: Quarter(Commit Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Quarter(Commit Date)
+        - Total Revenue
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Quarter(Commit Date)
+        - column_id: Total Revenue
+        axis_configs:
+        - x:
+          - Quarter(Commit Date)
+          "y":
+          - Total Revenue
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b4418b2e-e21b-4e63-b1b5-b7d01671170c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"e74018d0-db31-4a09-aa95-ac43b2890ff0\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: a97c437a-1109-4332-9ff8-93a41f763930
   filters:
   - column:
     - Category
@@ -54,6 +90,11 @@ liveboard:
       "y": 0
       height: 8
       width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 3
   views:
   - view_guid: a415ba42-ff8f-46af-b52f-dd4757a44987
     name: test pv 1
