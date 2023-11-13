@@ -1,0 +1,19 @@
+guid: 862d0126-7ffe-48c6-816f-8ef7b7c80248
+table:
+  name: PRODUCTS
+  db: TPCH5K
+  schema: falcon_default_schema
+  db_table: PRODUCTS
+  columns:
+  - name: Product Id
+    db_column_name: Product Id
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: INT64
+  - name: Product Name
+    db_column_name: Product Name
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
