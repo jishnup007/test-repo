@@ -9,32 +9,36 @@ liveboard:
       - id: Chasmtrap
         name: Chasmtrap
         fqn: 07a8af30-cd9d-4ab0-a58a-544a818ddac7
-      search_query: "[Product Name] [Product Cost]"
+      search_query: "[Product Name 1] [Product Cost 1]"
       answer_columns:
-      - name: Product Name
-      - name: Total Product Cost
+      - name: Product Name 1
+      - name: Total Product Cost 1
       table:
         table_columns:
-        - column_id: Product Name
+        - column_id: Product Name 1
           headline_aggregation: COUNT_DISTINCT
-        - column_id: Total Product Cost
+        - column_id: Total Product Cost 1
           headline_aggregation: SUM
         ordered_column_ids:
-        - Product Name
-        - Total Product Cost
+        - Product Name 1
+        - Total Product Cost 1
         client_state: ""
         client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
       chart:
         type: COLUMN
         chart_columns:
-        - column_id: Product Name
-        - column_id: Total Product Cost
+        - column_id: Product Name 1
+        - column_id: Total Product Cost 1
         axis_configs:
         - x:
-          - Product Name
+          - Product Name 1
           "y":
-          - Total Product Cost
+          - Total Product Cost 1
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Name\",\"columnProperty\": {}},{\"columnId\": \"Total Product Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"cba6abea-b14c-4242-9210-054fe9a89f40\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Product Cost\"],\"isOpposite\": false}},{\"id\": \"547426fc-9792-4fdb-832d-346ddee45c62\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Name\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Product Cost\",\"color\": \"#2E75F0\"}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Name 1\",\"columnProperty\": {}},{\"columnId\": \"Total Product Cost 1\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"cba6abea-b14c-4242-9210-054fe9a89f40\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Product Cost 1\"],\"isOpposite\": false}},{\"id\": \"547426fc-9792-4fdb-832d-346ddee45c62\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Name 1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Product Cost 1\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 5f6ccc0a-d0a9-4e15-9909-997162ce5c1b
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM

@@ -41,11 +41,11 @@ worksheet:
     column_id: PRODUCTS_1::Product Id
     properties:
       column_type: ATTRIBUTE
-  - name: Product Name
+  - name: Product Name 1
     column_id: PRODUCTS_1::Product Name
     properties:
       column_type: ATTRIBUTE
-  - name: Product Cost
+  - name: Product Cost 1
     column_id: PURCHASES_1::Product Cost
     properties:
       column_type: MEASURE
