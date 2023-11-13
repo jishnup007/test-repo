@@ -1,0 +1,109 @@
+guid: 1c97ce56-e803-41c5-9132-3075425c8b41
+table:
+  name: DATE
+  db: TPCH5K
+  schema: falcon_default_schema
+  db_table: DATE
+  columns:
+  - name: Datekey
+    db_column_name: D_DATEKEY
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: DATE
+  - name: Date
+    db_column_name: D_DATE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Day Of Week
+    db_column_name: D_DAYOFWEEK
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Month
+    db_column_name: D_MONTH
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Year
+    db_column_name: D_YEAR
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: INT64
+  - name: Year Month Number
+    db_column_name: D_YEARMONTHNUM
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: INT64
+  - name: Year Month
+    db_column_name: D_YEARMONTH
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Day Number In Week
+    db_column_name: D_DAYNUMINWEEK
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: INT64
+  - name: Day Number In Month
+    db_column_name: D_DAYNUMINMONTH
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: INT64
+  - name: Day Number In Year
+    db_column_name: D_DAYNUMINYEAR
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: INT64
+  - name: Month Number In Year
+    db_column_name: D_MONTHNUMINYEAR
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: INT64
+  - name: Week Number In Year
+    db_column_name: D_WEEKNUMINYEAR
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: INT64
+  - name: Selling Season
+    db_column_name: D_SELLINGSEASON
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Last Day In Week Fl
+    db_column_name: D_LASTDAYINWEEKFL
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: INT64
+  - name: Last Day In Month Fl
+    db_column_name: D_LASTDAYINMONTHFL
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: INT64
+  - name: Holiday Fl
+    db_column_name: D_HOLIDAYFL
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: INT64
+  - name: Weekday Fl
+    db_column_name: D_WEEKDAYFL
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: INT64

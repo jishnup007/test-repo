@@ -103,7 +103,7 @@ worksheet:
     column_id: PART_1::Color
     properties:
       column_type: ATTRIBUTE
-  - name: Supplier Nation 2
+  - name: Supplier Nation
     column_id: SUPPLIER_1::Supplier Nation
     properties:
       column_type: ATTRIBUTE
