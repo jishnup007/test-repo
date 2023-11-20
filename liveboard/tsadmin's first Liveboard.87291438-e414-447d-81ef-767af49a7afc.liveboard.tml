@@ -1,0 +1,40 @@
+guid: 87291438-e414-447d-81ef-767af49a7afc
+liveboard:
+  name: tsadmin's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Sale Cost by Product Id 1
+      tables:
+      - id: Chasmtrap
+        name: Chasmtrap
+        fqn: 07a8af30-cd9d-4ab0-a58a-544a818ddac7
+      search_query: "[Product Id] [Sale Cost]"
+      answer_columns:
+      - name: Product Id
+      - name: Total Sale Cost
+      table:
+        table_columns:
+        - column_id: Product Id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sale Cost
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Product Id
+        - Total Sale Cost
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Product Id
+        - column_id: Total Sale Cost
+        axis_configs:
+        - x:
+          - Product Id
+          "y":
+          - Total Sale Cost
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Id\",\"columnProperty\": {}},{\"columnId\": \"Total Sale Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"59aa58f7-b307-4d33-b950-f14b48007bc1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sale Cost\"],\"isOpposite\": false}},{\"id\": \"2d30dc05-01bb-4e72-8156-7bbcf8f3b360\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Id\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Sale Cost\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: bc17b560-ae09-474c-acdd-71efc4c1ddc1
