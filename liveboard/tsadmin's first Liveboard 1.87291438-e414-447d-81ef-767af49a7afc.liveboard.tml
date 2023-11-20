@@ -4,7 +4,7 @@ liveboard:
   visualizations:
   - id: Viz_1
     answer:
-      name: Total Sale Cost by Product Id 1
+      name: Total Sale Cost by Product Id 2
       tables:
       - id: Chasmtrap
         name: Chasmtrap
