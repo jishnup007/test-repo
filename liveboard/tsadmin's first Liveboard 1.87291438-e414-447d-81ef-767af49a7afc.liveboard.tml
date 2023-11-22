@@ -50,4 +50,18 @@ liveboard:
   layout:
     tiles:
     - visualization_id: Viz_1
-      size: MEDIUM
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+  views:
+  - view_guid: d632bc0b-f949-49cc-b86d-273935394dec
+    name: new view
+    view_filters:
+    - column:
+      - Product Id
+      oper: in
+      values:
+      - "1"
+      - "2"
+    is_public: false
