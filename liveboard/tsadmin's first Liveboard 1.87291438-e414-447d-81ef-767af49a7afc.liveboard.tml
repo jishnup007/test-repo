@@ -38,45 +38,9 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Id\",\"columnProperty\": {}},{\"columnId\": \"Total Sale Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"59aa58f7-b307-4d33-b950-f14b48007bc1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sale Cost\"],\"isOpposite\": false}},{\"id\": \"2d30dc05-01bb-4e72-8156-7bbcf8f3b360\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Id\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Sale Cost\",\"color\": \"#48D1E0\"}]}"
       display_mode: CHART_MODE
     viz_guid: bc17b560-ae09-474c-acdd-71efc4c1ddc1
-  - id: Viz_2
-    answer:
-      name: Total Tax by Quarterly Commit Date
-      tables:
-      - id: Parameters WS
-        name: Parameters WS
-        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-      search_query: "[Tax] [Commit Date] [Commit Date].quarterly"
-      answer_columns:
-      - name: Total Tax
-      - name: Quarter(Commit Date)
-      table:
-        table_columns:
-        - column_id: Quarter(Commit Date)
-          headline_aggregation: MIN-MAX
-        - column_id: Total Tax
-          headline_aggregation: SUM
-        ordered_column_ids:
-        - Quarter(Commit Date)
-        - Total Tax
-        client_state: ""
-        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
-      chart:
-        type: KPI
-        chart_columns:
-        - column_id: Quarter(Commit Date)
-        - column_id: Total Tax
-        axis_configs:
-        - x:
-          - Quarter(Commit Date)
-          "y":
-          - Total Tax
-        client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"dd1524fe-5a2a-4749-8c1d-939a2105c4b4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"8b2f1dc4-a16a-400f-9355-9e78f2979c9d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#2770ef\"}]}"
-      display_mode: CHART_MODE
-    viz_guid: 0e633be9-4c15-4c46-a8bf-29987b3ac0fe
   filters:
   - column:
-    - Chasmtrap::Product Id
+    - Product Id
     oper: in
     values:
     - "1"
@@ -90,17 +54,12 @@ liveboard:
       "y": 0
       height: 8
       width: 6
-    - visualization_id: Viz_2
-      x: 6
-      "y": 0
-      height: 4
-      width: 3
   views:
   - view_guid: d632bc0b-f949-49cc-b86d-273935394dec
     name: new view
     view_filters:
     - column:
-      - Chasmtrap::Product Id
+      - Product Id
       oper: in
       values:
       - "1"
@@ -110,7 +69,7 @@ liveboard:
     name: pv2
     view_filters:
     - column:
-      - Chasmtrap::Product Id
+      - Product Id
       oper: in
       values:
       - "1"
