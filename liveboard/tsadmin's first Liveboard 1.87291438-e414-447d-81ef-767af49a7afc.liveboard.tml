@@ -38,6 +38,15 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Id\",\"columnProperty\": {}},{\"columnId\": \"Total Sale Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"59aa58f7-b307-4d33-b950-f14b48007bc1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sale Cost\"],\"isOpposite\": false}},{\"id\": \"2d30dc05-01bb-4e72-8156-7bbcf8f3b360\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Id\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Sale Cost\",\"color\": \"#48D1E0\"}]}"
       display_mode: CHART_MODE
     viz_guid: bc17b560-ae09-474c-acdd-71efc4c1ddc1
+  filters:
+  - column:
+    - Product Id
+    oper: in
+    values:
+    - "1"
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
   layout:
     tiles:
     - visualization_id: Viz_1
