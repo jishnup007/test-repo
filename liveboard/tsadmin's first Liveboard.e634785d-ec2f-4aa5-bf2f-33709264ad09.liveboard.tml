@@ -86,6 +86,23 @@ liveboard:
   layout:
     tiles:
     - visualization_id: Viz_1
-      size: SMALL
+      x: 0
+      "y": 0
+      height: 4
+      width: 3
     - visualization_id: Viz_2
-      size: MEDIUM
+      x: 3
+      "y": 0
+      height: 8
+      width: 6
+  views:
+  - view_guid: f862d348-afc8-4348-9bed-70e327ed9704
+    name: pv1
+    view_filters:
+    - column:
+      - Parameters WS::Category
+      oper: in
+      values:
+      - mfgr#11
+      - mfgr#12
+    is_public: false
