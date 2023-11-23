@@ -65,17 +65,6 @@ liveboard:
       - "1"
       - "2"
     is_public: false
-  - view_guid: a068ead7-2d5b-4765-80bf-10ba05f1392f
-    name: pv3
-    view_filters:
-    - column:
-      - Product Id
-      oper: in
-      values:
-      - "1"
-      - "2"
-      - "3"
-    is_public: false
   - view_guid: 691b6649-ff94-4eb8-9705-4ef41b16e384
     name: pv2
     view_filters:
