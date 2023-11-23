@@ -106,3 +106,14 @@ liveboard:
       - mfgr#11
       - mfgr#12
     is_public: false
+  - view_guid: 1faf2cfa-c700-4855-ba29-cca12ca0d317
+    name: pv2
+    view_filters:
+    - column:
+      - Parameters WS::Category
+      oper: in
+      values:
+      - mfgr#11
+      - mfgr#12
+      - mfgr#13
+    is_public: false
