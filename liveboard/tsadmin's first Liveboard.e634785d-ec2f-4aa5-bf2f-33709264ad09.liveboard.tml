@@ -74,3 +74,18 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Name\",\"columnProperty\": {}},{\"columnId\": \"Total Product Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"57e19a55-6686-4b1b-bf12-a61870c8fe4f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Product Cost\"],\"isOpposite\": false}},{\"id\": \"747365e9-d001-46dc-9175-1289ab6677ab\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Name\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Product Cost\",\"color\": \"#8C62F5\"}]}"
       display_mode: CHART_MODE
     viz_guid: addea6a4-2a54-4406-87f8-6cc9a3f24031
+  filters:
+  - column:
+    - Parameters WS::Category
+    oper: in
+    values:
+    - mfgr#11
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: SMALL
+    - visualization_id: Viz_2
+      size: MEDIUM
