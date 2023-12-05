@@ -9,11 +9,12 @@ liveboard:
       - id: UNIQUE-jishnu.pavithran_LINEORDER
         name: UNIQUE-jishnu.pavithran_LINEORDER
         fqn: 02c586ea-ebfa-4ed6-a379-45c43ac31150
-      search_query: "[LO_DISCOUNT] [LO_SHIPMODE] [LO_REVENUE]"
+      search_query: "[LO_DISCOUNT] [LO_SHIPMODE] [LO_REVENUE] [LO_ORDERKEY]"
       answer_columns:
       - name: Total LO_DISCOUNT
       - name: LO_SHIPMODE
       - name: Total LO_REVENUE
+      - name: Total LO_ORDERKEY
       table:
         table_columns:
         - column_id: LO_SHIPMODE
@@ -22,10 +23,13 @@ liveboard:
           headline_aggregation: SUM
         - column_id: Total LO_REVENUE
           headline_aggregation: SUM
+        - column_id: Total LO_ORDERKEY
+          headline_aggregation: SUM
         ordered_column_ids:
         - LO_SHIPMODE
         - Total LO_DISCOUNT
         - Total LO_REVENUE
+        - Total LO_ORDERKEY
         client_state: ""
         client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
       chart:
@@ -34,13 +38,15 @@ liveboard:
         - column_id: LO_SHIPMODE
         - column_id: Total LO_DISCOUNT
         - column_id: Total LO_REVENUE
+        - column_id: Total LO_ORDERKEY
         axis_configs:
         - x:
           - LO_SHIPMODE
           "y":
           - Total LO_DISCOUNT
           - Total LO_REVENUE
+          - Total LO_ORDERKEY
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"LO_SHIPMODE\",\"columnProperty\": {}},{\"columnId\": \"Total LO_DISCOUNT\",\"columnProperty\": {}},{\"columnId\": \"Total LO_REVENUE\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1806343b-88f9-4c1e-84a3-5445cfdd7104\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_DISCOUNT\"],\"isOpposite\": false}},{\"id\": \"609ee748-60d2-451e-875d-40ac02e3c3d3\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_REVENUE\"],\"isOpposite\": true}},{\"id\": \"235b16fd-c78e-445f-89a9-2e510706ac0d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"LO_SHIPMODE\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total LO_DISCOUNT\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total LO_REVENUE\",\"color\": \"#2E75F0\"}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"LO_SHIPMODE\",\"columnProperty\": {}},{\"columnId\": \"Total LO_DISCOUNT\",\"columnProperty\": {}},{\"columnId\": \"Total LO_REVENUE\",\"columnProperty\": {}},{\"columnId\": \"Total LO_ORDERKEY\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"854838de-15b7-4a88-989e-0a359b7fad46\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_DISCOUNT\"],\"isOpposite\": false}},{\"id\": \"0c547d55-5a49-470f-ac55-aad3be20619a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_REVENUE\"],\"isOpposite\": true}},{\"id\": \"9c9e85c8-7e1d-4a2e-8c81-2d0c7c0787b3\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_ORDERKEY\"],\"isOpposite\": true}},{\"id\": \"29a8bde1-b04c-43b2-825a-73172c7309cb\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"LO_SHIPMODE\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total LO_DISCOUNT\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total LO_REVENUE\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total LO_ORDERKEY\",\"color\": \"#FCC838\"}]}"
       display_mode: CHART_MODE
     viz_guid: b0ff0dd8-ac69-4089-9369-4bdc6245c5e7
