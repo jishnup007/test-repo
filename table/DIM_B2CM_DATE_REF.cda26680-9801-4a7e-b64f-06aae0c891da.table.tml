@@ -1,0 +1,25 @@
+guid: cda26680-9801-4a7e-b64f-06aae0c891da
+table:
+  name: DIM_B2CM_DATE_REF
+  db: PMMDB
+  schema: B2CMARKETING
+  db_table: DIM_B2CM_DATE_REF
+  connection:
+    name: B2C Marketing
+    fqn: f32735c0-5e62-4543-adb1-fc76e70f434f
+  columns:
+  - name: DATEID
+    db_column_name: DATEID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: RECORDDATE
+    db_column_name: RECORDDATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE

@@ -1,0 +1,144 @@
+guid: da51563b-05d5-4965-80cb-54e5df1c2b7d
+table:
+  name: FACT_B2CM_CAMPAIGN_CONVERSIONS
+  db: PMMDB
+  schema: B2CMARKETING
+  db_table: FACT_B2CM_CAMPAIGN_CONVERSIONS
+  connection:
+    name: B2C Marketing
+    fqn: f32735c0-5e62-4543-adb1-fc76e70f434f
+  columns:
+  - name: RECORDID
+    db_column_name: RECORDID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: USERID
+    db_column_name: USERID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: CAMPAIGNID
+    db_column_name: CAMPAIGNID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: SITEID
+    db_column_name: SITEID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: NAME
+    db_column_name: NAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: AGE
+    db_column_name: AGE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: ADDRESS
+    db_column_name: ADDRESS
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CITY
+    db_column_name: CITY
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: COUNTY
+    db_column_name: COUNTY
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ZIPCODE
+    db_column_name: ZIPCODE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: STATE
+    db_column_name: STATE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: GENDER
+    db_column_name: GENDER
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: RECORDDATE
+    db_column_name: RECORDDATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: AGEGROUP
+    db_column_name: AGEGROUP
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: COVIDLOCATIONID
+    db_column_name: COVIDLOCATIONID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: FIPS
+    db_column_name: FIPS
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: REGION
+    db_column_name: REGION
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: SYS_CONSTRAINT_f72070c7-cba5-4505-a516-2797fd1f2ffc
+    destination:
+      name: DIM_B2CM_DATE_REF
+      fqn: cda26680-9801-4a7e-b64f-06aae0c891da
+    "on": "[FACT_B2CM_CAMPAIGN_CONVERSIONS::RECORDDATE] = [DIM_B2CM_DATE_REF::RECORDDATE]"
+    type: INNER
+  - name: SYS_CONSTRAINT_20c79b8a-5390-461b-ba3d-05dc932024e9
+    destination:
+      name: DIM_B2CM_DATE_REF
+      fqn: cda26680-9801-4a7e-b64f-06aae0c891da
+    "on": "[FACT_B2CM_CAMPAIGN_CONVERSIONS::RECORDDATE] = [DIM_B2CM_DATE_REF::RECORDDATE]"
+    type: INNER
+  - name: SYS_CONSTRAINT_82fe71d4-7666-429c-917f-2aa7e947d34c
+    destination:
+      name: DIM_B2CM_CAMPAIGNS
+      fqn: 28044386-83b2-47c8-87fd-d37b290d98f0
+    "on": "[FACT_B2CM_CAMPAIGN_CONVERSIONS::CAMPAIGNID] = [DIM_B2CM_CAMPAIGNS::CAMPAIGNID]"
+    type: INNER

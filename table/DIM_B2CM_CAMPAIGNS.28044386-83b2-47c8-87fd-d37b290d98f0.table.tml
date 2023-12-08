@@ -1,0 +1,50 @@
+guid: 28044386-83b2-47c8-87fd-d37b290d98f0
+table:
+  name: DIM_B2CM_CAMPAIGNS
+  db: PMMDB
+  schema: B2CMARKETING
+  db_table: DIM_B2CM_CAMPAIGNS
+  connection:
+    name: B2C Marketing
+    fqn: f32735c0-5e62-4543-adb1-fc76e70f434f
+  columns:
+  - name: CAMPAIGNID
+    db_column_name: CAMPAIGNID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: CAMPAIGNNAME
+    db_column_name: CAMPAIGNNAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CAMPAIGNCONTENT
+    db_column_name: CAMPAIGNCONTENT
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CAMPAIGNOFFER
+    db_column_name: CAMPAIGNOFFER
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CAMPAIGNSTART
+    db_column_name: CAMPAIGNSTART
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: CAMPAIGNEND
+    db_column_name: CAMPAIGNEND
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
