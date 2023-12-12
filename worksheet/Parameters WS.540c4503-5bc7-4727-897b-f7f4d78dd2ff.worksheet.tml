@@ -113,7 +113,6 @@ worksheet:
     column_id: LINEORDER_1::Commit Date
     properties:
       column_type: ATTRIBUTE
-      calendar: french
   - name: Ship Mode
     column_id: LINEORDER_1::Ship Mode
     properties:
