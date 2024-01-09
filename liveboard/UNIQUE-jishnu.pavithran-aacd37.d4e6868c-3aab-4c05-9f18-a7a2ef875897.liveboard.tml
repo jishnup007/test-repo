@@ -45,6 +45,54 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Lo Commitdate)\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Lo Orderdate)\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"26d729b0-5511-4dc5-b3a4-255c268603d1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Revenue\"],\"isOpposite\": false}},{\"id\": \"725e6c60-7e91-4cbf-8dd0-fadb0b0748c5\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Lo Commitdate)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"q1 1992\",\"color\": \"#2E75F0\"},{\"serieName\": \"q2 1992\",\"color\": \"#48D1E0\"},{\"serieName\": \"q3 1992\",\"color\": \"#FCC838\"},{\"serieName\": \"q4 1992\",\"color\": \"#06BF7F\"},{\"serieName\": \"q1 1993\",\"color\": \"#8C62F5\"},{\"serieName\": \"q2 1993\",\"color\": \"#FF8142\"},{\"serieName\": \"q3 1993\",\"color\": \"#ABC7F9\"},{\"serieName\": \"q4 1993\",\"color\": \"#B5ECF2\"},{\"serieName\": \"q1 1994\",\"color\": \"#FDE9AF\"},{\"serieName\": \"q2 1994\",\"color\": \"#9BE5CB\"},{\"serieName\": \"q3 1994\",\"color\": \"#D1C0FB\"},{\"serieName\": \"q4 1994\",\"color\": \"#FFCCB3\"},{\"serieName\": \"q1 1995\",\"color\": \"#2359B6\"},{\"serieName\": \"q2 1995\",\"color\": \"#369FAA\"},{\"serieName\": \"q3 1995\",\"color\": \"#BF982A\"},{\"serieName\": \"q4 1995\",\"color\": \"#049160\"},{\"serieName\": \"q1 1996\",\"color\": \"#6A4ABA\"},{\"serieName\": \"q2 1996\",\"color\": \"#C26232\"},{\"serieName\": \"q3 1996\",\"color\": \"#71A1F4\"},{\"serieName\": \"q4 1996\",\"color\": \"#82DFE9\"},{\"serieName\": \"q1 1997\",\"color\": \"#FCD977\"},{\"serieName\": \"q2 1997\",\"color\": \"#56D3A8\"},{\"serieName\": \"q3 1997\",\"color\": \"#B094F8\"},{\"serieName\": \"q4 1997\",\"color\": \"#FFA97E\"},{\"serieName\": \"q1 1998\",\"color\": \"#163772\"},{\"serieName\": \"q2 1998\",\"color\": \"#22636B\"},{\"serieName\": \"q3 1998\",\"color\": \"#785F1A\"}]}"
       display_mode: CHART_MODE
     viz_guid: a07d4dfe-6bc7-45b3-a6c8-35b8c75cc977
+  - id: Viz_2
+    answer:
+      name: Total Tax by Total Revenue and Category -test
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Revenue] [Category] [Color] [Tax]"
+      answer_columns:
+      - name: Total Revenue
+      - name: Category
+      - name: Color
+      - name: Total Tax
+      table:
+        table_columns:
+        - column_id: Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Color
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        - column_id: Total Tax
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Category
+        - Color
+        - Total Revenue
+        - Total Tax
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Category
+        - column_id: Color
+        - column_id: Total Revenue
+        - column_id: Total Tax
+        axis_configs:
+        - x:
+          - Total Revenue
+          "y":
+          - Total Tax
+          color:
+          - Category
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"ed545ae2-6ab9-45d7-8b99-3fbdd0f32b8d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"9342e705-bbf6-470b-81de-4c1c46f0f8cb\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total Revenue\"]}}],\"systemSeriesColors\": [{\"serieName\": \"mfgr#11\",\"color\": \"#47515F\"},{\"serieName\": \"mfgr#12\",\"color\": \"#BEC6D0\"},{\"serieName\": \"mfgr#13\",\"color\": \"#747E8C\"},{\"serieName\": \"mfgr#14\",\"color\": \"#C26232\"},{\"serieName\": \"mfgr#15\",\"color\": \"#FFCCB3\"},{\"serieName\": \"mfgr#21\",\"color\": \"#FF8142\"},{\"serieName\": \"mfgr#22\",\"color\": \"#6A4ABA\"},{\"serieName\": \"mfgr#23\",\"color\": \"#D1C0FB\"},{\"serieName\": \"mfgr#24\",\"color\": \"#8C62F5\"},{\"serieName\": \"mfgr#25\",\"color\": \"#56D3A8\"},{\"serieName\": \"mfgr#31\",\"color\": \"#049160\"},{\"serieName\": \"mfgr#32\",\"color\": \"#9BE5CB\"},{\"serieName\": \"mfgr#33\",\"color\": \"#06BF7F\"},{\"serieName\": \"mfgr#34\",\"color\": \"#FCD977\"},{\"serieName\": \"mfgr#35\",\"color\": \"#BF982A\"},{\"serieName\": \"mfgr#41\",\"color\": \"#FDE9AF\"},{\"serieName\": \"mfgr#42\",\"color\": \"#FCC838\"},{\"serieName\": \"mfgr#43\",\"color\": \"#82DFE9\"},{\"serieName\": \"mfgr#44\",\"color\": \"#369FAA\"},{\"serieName\": \"mfgr#45\",\"color\": \"#B5ECF2\"},{\"serieName\": \"mfgr#51\",\"color\": \"#48D1E0\"},{\"serieName\": \"mfgr#52\",\"color\": \"#71A1F4\"},{\"serieName\": \"mfgr#53\",\"color\": \"#2359B6\"},{\"serieName\": \"mfgr#54\",\"color\": \"#ABC7F9\"},{\"serieName\": \"mfgr#55\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 9f0e9d63-fcba-4247-aa41-d5e1e252106d
   layout:
     tiles:
     - visualization_id: Viz_1
