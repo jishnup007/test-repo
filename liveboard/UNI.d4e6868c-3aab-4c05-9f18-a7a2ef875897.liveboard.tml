@@ -5,7 +5,7 @@ liveboard:
   visualizations:
   - id: Viz_1
     answer:
-      name: test title
+      name: test title 1
       tables:
       - id: UNIQUE-jishnu.pavithran-UI-WS
         name: UNIQUE-jishnu.pavithran-UI-WS
