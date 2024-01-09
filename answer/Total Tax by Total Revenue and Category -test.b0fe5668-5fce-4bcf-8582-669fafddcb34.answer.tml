@@ -1,0 +1,47 @@
+guid: b0fe5668-5fce-4bcf-8582-669fafddcb34
+answer:
+  name: Total Tax by Total Revenue and Category -test
+  tables:
+  - id: Parameters WS
+    name: Parameters WS
+    fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+  search_query: "[Revenue] [Category] [Color] [Tax]"
+  answer_columns:
+  - name: Total Revenue
+  - name: Category
+  - name: Color
+  - name: Total Tax
+  table:
+    table_columns:
+    - column_id: Category
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Color
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Revenue
+      headline_aggregation: SUM
+    - column_id: Total Tax
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Category
+    - Color
+    - Total Revenue
+    - Total Tax
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: SCATTER
+    chart_columns:
+    - column_id: Category
+    - column_id: Color
+    - column_id: Total Revenue
+    - column_id: Total Tax
+    axis_configs:
+    - x:
+      - Total Revenue
+      "y":
+      - Total Tax
+      color:
+      - Category
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"ed545ae2-6ab9-45d7-8b99-3fbdd0f32b8d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"9342e705-bbf6-470b-81de-4c1c46f0f8cb\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total Revenue\"]}}]}"
+  display_mode: CHART_MODE
