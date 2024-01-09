@@ -1,6 +1,7 @@
 guid: d4e6868c-3aab-4c05-9f18-a7a2ef875897
 liveboard:
   name: UNIQUE-jishnu.pavithran-aacd37
+  description: test description
   visualizations:
   - id: Viz_1
     answer:
@@ -96,4 +97,6 @@ liveboard:
   layout:
     tiles:
     - visualization_id: Viz_1
+      size: MEDIUM
+    - visualization_id: Viz_2
       size: MEDIUM
