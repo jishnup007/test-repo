@@ -1,0 +1,33 @@
+guid: 52b66361-4193-406e-b465-7ae138cc582a
+answer:
+  name: Total Discount
+  tables:
+  - id: Parameters WS
+    name: Parameters WS
+    fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+  search_query: "[Discount] [Order Total Price]"
+  answer_columns:
+  - name: Total Discount
+  - name: Total Order Total Price
+  table:
+    table_columns:
+    - column_id: Total Discount
+      headline_aggregation: SUM
+    - column_id: Total Order Total Price
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Total Discount
+    - Total Order Total Price
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: KPI
+    chart_columns:
+    - column_id: Total Discount
+    - column_id: Total Order Total Price
+    axis_configs:
+    - "y":
+      - Total Discount
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Discount\",\"columnProperty\": {}},{\"columnId\": \"Total Order Total Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"317d4240-75df-4171-a4fc-5e62a3347bed\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"6147d3ed-11b4-4528-b028-3e630218b1e9\",\"properties\": {\"axisType\": \"X\"}}]}"
+  display_mode: CHART_MODE
