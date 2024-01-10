@@ -1,0 +1,45 @@
+guid: ab08fa72-4b58-4a1e-b2b6-afaf0754d4a1
+liveboard:
+  name: Test LB
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Quantity by Brand1
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Quantity] [Type] [Brand1]"
+      answer_columns:
+      - name: Total Quantity
+      - name: Type
+      - name: Brand1
+      table:
+        table_columns:
+        - column_id: Type
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Brand1
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Quantity
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Type
+        - Brand1
+        - Total Quantity
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Type
+        - column_id: Brand1
+        - column_id: Total Quantity
+        axis_configs:
+        - x:
+          - Brand1
+          "y":
+          - Total Quantity
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Brand1\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1c1696f2-e133-480b-9281-56fee7673cea\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": false}},{\"id\": \"cd48107a-8a46-4baf-8242-49a3e45bfb3b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Quantity\",\"color\": \"#06BF7F\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 90b89437-0c70-494e-ab1f-8718b33b6be6
