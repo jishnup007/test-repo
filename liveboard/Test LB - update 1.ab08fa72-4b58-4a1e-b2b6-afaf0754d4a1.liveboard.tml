@@ -1,6 +1,7 @@
 guid: ab08fa72-4b58-4a1e-b2b6-afaf0754d4a1
 liveboard:
-  name: Test LB
+  name: Test LB - update 1
+  description: update 1
   visualizations:
   - id: Viz_1
     answer:
@@ -43,3 +44,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Brand1\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1c1696f2-e133-480b-9281-56fee7673cea\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": false}},{\"id\": \"cd48107a-8a46-4baf-8242-49a3e45bfb3b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Quantity\",\"color\": \"#06BF7F\"}]}"
       display_mode: CHART_MODE
     viz_guid: 90b89437-0c70-494e-ab1f-8718b33b6be6
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
