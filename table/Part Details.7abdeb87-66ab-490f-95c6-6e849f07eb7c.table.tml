@@ -1,0 +1,20 @@
+guid: 7abdeb87-66ab-490f-95c6-6e849f07eb7c
+table:
+  name: Part Details
+  db: TPCH5K
+  schema: falcon_default_schema
+  db_table: Part Details
+  columns:
+  - name: Part PartKey
+    db_column_name: Part PartKey
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+    db_column_properties:
+      data_type: INT64
+  - name: Industry
+    db_column_name: Industry
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
