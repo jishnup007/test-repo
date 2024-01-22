@@ -9,33 +9,33 @@ liveboard:
       - id: Container Worksheet
         name: Container Worksheet
         fqn: 286933b5-fc30-46b8-9216-31f669f46a15
-      search_query: "[Revenue] [Category]"
+      search_query: "[Revenue 2] [Category]"
       answer_columns:
-      - name: Total Revenue
+      - name: Total Revenue 2
       - name: Category
       table:
         table_columns:
         - column_id: Category
           headline_aggregation: COUNT_DISTINCT
-        - column_id: Total Revenue
+        - column_id: Total Revenue 2
           headline_aggregation: SUM
         ordered_column_ids:
         - Category
-        - Total Revenue
+        - Total Revenue 2
         client_state: ""
         client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
       chart:
         type: COLUMN
         chart_columns:
         - column_id: Category
-        - column_id: Total Revenue
+        - column_id: Total Revenue 2
         axis_configs:
         - x:
           - Category
           "y":
-          - Total Revenue
+          - Total Revenue 2
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"0dcb008d-2eb4-4483-8e96-9aaeb5fe5cdb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"fb952249-b808-46e7-a5bd-a4105e7bcbdc\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#48D1E0\"}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue 2\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"0dcb008d-2eb4-4483-8e96-9aaeb5fe5cdb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue 2\"],\"isOpposite\": false}},{\"id\": \"fb952249-b808-46e7-a5bd-a4105e7bcbdc\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue 2\",\"color\": \"#48D1E0\"}]}"
       display_mode: CHART_MODE
     viz_guid: fa6047c4-b76b-44a7-a83c-0cefe7d959d5
   - id: Viz_2
