@@ -69,11 +69,11 @@ worksheet:
     - join:
       - Lineorder Suppkey - Supplier SuppKey
   worksheet_columns:
-  - name: Customer City
+  - name: Customer City 1
     column_id: CUSTOMER_1::Customer City
     properties:
       column_type: ATTRIBUTE
-  - name: Month Commit Date
+  - name: Month Commit Date 1
     column_id: DATE_1::Month
     properties:
       column_type: ATTRIBUTE
@@ -81,7 +81,7 @@ worksheet:
     column_id: DATE_2::Month
     properties:
       column_type: ATTRIBUTE
-  - name: Extended Price
+  - name: Extended Price 2
     column_id: LINEORDER_1::Extended Price
     properties:
       column_type: MEASURE
