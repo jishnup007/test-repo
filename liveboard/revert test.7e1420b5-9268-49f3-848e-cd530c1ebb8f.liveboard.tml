@@ -38,3 +38,30 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"0dcb008d-2eb4-4483-8e96-9aaeb5fe5cdb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"fb952249-b808-46e7-a5bd-a4105e7bcbdc\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#48D1E0\"}]}"
       display_mode: CHART_MODE
     viz_guid: fa6047c4-b76b-44a7-a83c-0cefe7d959d5
+  - id: Viz_2
+    answer:
+      name: Total Extended Price
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Extended Price]"
+      answer_columns:
+      - name: Total Extended Price
+      table:
+        table_columns:
+        - column_id: Total Extended Price
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Extended Price
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Extended Price
+        axis_configs:
+        - "y":
+          - Total Extended Price
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: dd8ee403-42e6-4553-aab7-5c3ac9849472
