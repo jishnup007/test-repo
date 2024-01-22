@@ -177,3 +177,46 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Org Masked Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"348ddd57-90a0-4351-bee3-21c33684446b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"6ea091bd-f684-4719-b5b7-add13d4abca5\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total Org Masked Revenue\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#8C62F5\"}]}"
       display_mode: CHART_MODE
     viz_guid: b2af38ae-87f0-4b30-824a-9ef4fa73a210
+  - id: Viz_5
+    answer:
+      name: Total Revenue by Total Org Masked Revenue
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Org Masked Revenue] [Revenue] [Color]"
+      answer_columns:
+      - name: Total Org Masked Revenue
+      - name: Total Revenue
+      - name: Color
+      table:
+        table_columns:
+        - column_id: Color
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Org Masked Revenue
+          headline_aggregation: TABLE_AGGR
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Color
+        - Total Org Masked Revenue
+        - Total Revenue
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Color
+        - column_id: Total Org Masked Revenue
+        - column_id: Total Revenue
+        axis_configs:
+        - x:
+          - Total Org Masked Revenue
+          "y":
+          - Total Revenue
+          category:
+          - Color
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Org Masked Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"348ddd57-90a0-4351-bee3-21c33684446b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"6ea091bd-f684-4719-b5b7-add13d4abca5\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total Org Masked Revenue\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#8C62F5\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 1872884b-4ff9-4710-8d57-56954e62c064
