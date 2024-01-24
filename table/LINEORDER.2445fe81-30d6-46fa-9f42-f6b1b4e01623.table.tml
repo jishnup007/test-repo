@@ -133,15 +133,15 @@ table:
       fqn: 95158c5f-7805-48f0-8802-c727d1785a04
     "on": "[LINEORDER::Lineorder Suppkey] = [SUPPLIER::Supplier SuppKey]"
     type: INNER
-  - name: Order Date - Datekey
-    destination:
-      name: DATE
-      fqn: 1c97ce56-e803-41c5-9132-3075425c8b41
-    "on": "[LINEORDER::Order Date] = [DATE::Datekey]"
-    type: INNER
   - name: Lineorder CustKey - Customer CustKey
     destination:
       name: CUSTOMER
       fqn: 5de19354-710f-448e-8ed2-4315d926a264
     "on": "[LINEORDER::Lineorder CustKey] = [CUSTOMER::Customer CustKey]"
+    type: INNER
+  - name: Order Date - Datekey
+    destination:
+      name: DATE
+      fqn: 1c97ce56-e803-41c5-9132-3075425c8b41
+    "on": "[LINEORDER::Order Date] = [DATE::Datekey]"
     type: INNER
