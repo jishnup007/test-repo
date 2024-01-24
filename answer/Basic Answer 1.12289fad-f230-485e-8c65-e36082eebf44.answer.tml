@@ -3,34 +3,50 @@ answer:
   name: Basic Answer 1
   description: This is basic answer with table and headline visualizations.
   tables:
-  - id: Chasmtrap
-    name: Chasmtrap
-    fqn: 07a8af30-cd9d-4ab0-a58a-544a818ddac7
-  search_query: "[Product Cost] [Product Name 1]"
+  - id: LINEORDER
+    name: LINEORDER
+    fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+  - id: PART
+    name: PART
+    fqn: a7fc012e-bdb3-4e75-9ce4-b3f731d90136
+  joins:
+  - id: Lineorder PartKey - Part PartKey
+    name: Lineorder PartKey - Part PartKey
+    source: LINEORDER
+    destination: PART
+  table_paths:
+  - id: LINEORDER_1
+    table: LINEORDER
+    join_path:
+    - {}
+  - id: PART_1
+    table: PART
+    join_path:
+    - join:
+      - Lineorder PartKey - Part PartKey
+  search_query: "[LINEORDER_1::Revenue] [PART_1::Color]"
   answer_columns:
-  - name: Total Product Cost
-  - name: Product Name 1
+  - name: Total Revenue
+  - name: Color
   table:
     table_columns:
-    - column_id: Product Name 1
+    - column_id: Color
       headline_aggregation: COUNT_DISTINCT
-    - column_id: Total Product Cost
+    - column_id: Total Revenue
       headline_aggregation: SUM
     ordered_column_ids:
-    - Product Name 1
-    - Total Product Cost
-    client_state: ""
-    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+    - Color
+    - Total Revenue
+    client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
   chart:
     type: COLUMN
     chart_columns:
-    - column_id: Product Name 1
-    - column_id: Total Product Cost
+    - column_id: Color
+    - column_id: Total Revenue
     axis_configs:
     - x:
-      - Product Name 1
+      - Color
       "y":
-      - Total Product Cost
-    client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Name 1\",\"columnProperty\": {}},{\"columnId\": \"Total Product Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"597f667c-4d13-4cac-bb48-0f6b4678639f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Product Cost\"],\"isOpposite\": false}},{\"id\": \"a4af53d1-1b58-4bb7-8117-736843328313\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Name 1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Product Cost\",\"color\": \"#48D1E0\"}]}"
-  display_mode: CHART_MODE
+      - Total Revenue
+    client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"32286644-696b-417a-ada7-11a9a350df17\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"d3525ac6-c098-479a-a086-dfbde7919d6d\":{\"linkedColumns\":[\"Color\"],\"axisType\":\"X\"}},\"version\":\"V2.1\",\"columnProperties\":{\"Color\":{},\"Total Revenue\":{}}}"
+  display_mode: TABLE_MODE
