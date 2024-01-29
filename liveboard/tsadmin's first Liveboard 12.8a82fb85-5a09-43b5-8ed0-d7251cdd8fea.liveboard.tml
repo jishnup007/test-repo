@@ -1,6 +1,6 @@
 guid: 8a82fb85-5a09-43b5-8ed0-d7251cdd8fea
 liveboard:
-  name: tsadmin's first Liveboard
+  name: tsadmin's first Liveboard 12
   visualizations:
   - id: Viz_1
     answer:
@@ -44,3 +44,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}},{\"columnId\": \"Total Order Total Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1cf9615f-51d9-4172-8db5-8875554aa7ef\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"990f21eb-9ad1-4848-b425-1f3ffb5ba428\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Order Total Price\"],\"isOpposite\": true}},{\"id\": \"62149d22-19fc-44cc-9707-17bac7e467de\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Extended Price\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Order Total Price\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 28541117-ea20-41f4-92c8-e7e56c27117d
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
