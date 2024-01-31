@@ -115,29 +115,29 @@ table:
     db_column_properties:
       data_type: VARCHAR
   joins_with:
-  - name: Lineorder PartKey - Part PartKey
-    destination:
-      name: PART
-      fqn: a7fc012e-bdb3-4e75-9ce4-b3f731d90136
-    "on": "[LINEORDER::Lineorder PartKey] = [PART::Part PartKey]"
-    type: INNER
   - name: Commit Date - Datekey
     destination:
       name: DATE
       fqn: 1c97ce56-e803-41c5-9132-3075425c8b41
     "on": "[LINEORDER::Commit Date] = [DATE::Datekey]"
     type: INNER
-  - name: Lineorder Suppkey - Supplier SuppKey
-    destination:
-      name: SUPPLIER
-      fqn: 95158c5f-7805-48f0-8802-c727d1785a04
-    "on": "[LINEORDER::Lineorder Suppkey] = [SUPPLIER::Supplier SuppKey]"
-    type: INNER
   - name: Lineorder CustKey - Customer CustKey
     destination:
       name: CUSTOMER
       fqn: 5de19354-710f-448e-8ed2-4315d926a264
     "on": "[LINEORDER::Lineorder CustKey] = [CUSTOMER::Customer CustKey]"
+    type: INNER
+  - name: Lineorder PartKey - Part PartKey
+    destination:
+      name: PART
+      fqn: a7fc012e-bdb3-4e75-9ce4-b3f731d90136
+    "on": "[LINEORDER::Lineorder PartKey] = [PART::Part PartKey]"
+    type: INNER
+  - name: Lineorder Suppkey - Supplier SuppKey
+    destination:
+      name: SUPPLIER
+      fqn: 95158c5f-7805-48f0-8802-c727d1785a04
+    "on": "[LINEORDER::Lineorder Suppkey] = [SUPPLIER::Supplier SuppKey]"
     type: INNER
   - name: Order Date - Datekey
     destination:
