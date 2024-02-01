@@ -1,0 +1,220 @@
+guid: 9aa22b87-e7d5-4bb6-9159-45cd9da1ede4
+liveboard:
+  name: tsadmin's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Tax by Monthly Commit Date
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Tax] [Commit Date] [Commit Date].monthly"
+      answer_columns:
+      - name: Total Tax
+      - name: Month(Commit Date)
+      table:
+        table_columns:
+        - column_id: Month(Commit Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Tax
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Month(Commit Date)
+        - Total Tax
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Commit Date)
+        - column_id: Total Tax
+        axis_configs:
+        - x:
+          - Month(Commit Date)
+          "y":
+          - Total Tax
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Month(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"5f1eb2b7-d34b-48ca-97bc-5e7b55972ccb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"06e48c19-4902-4d18-9a33-7aac44d6feed\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 2b5e19f1-2dc1-4f14-b8eb-0bddb710b821
+  - id: Viz_2
+    answer:
+      name: Total LINEAMOUNT by Quarterly CREATEDDATETIME
+      tables:
+      - id: PURCHASETRANSACTIONS149M
+        name: PURCHASETRANSACTIONS149M
+        fqn: a86662b3-84aa-41a5-8392-d04ee1a584a8
+      search_query: "[CREATEDDATETIME] [CREATEDDATETIME].quarterly [LINEAMOUNT]"
+      answer_columns:
+      - name: Quarter(CREATEDDATETIME)
+      - name: Total LINEAMOUNT
+      table:
+        table_columns:
+        - column_id: Quarter(CREATEDDATETIME)
+          headline_aggregation: MIN-MAX
+        - column_id: Total LINEAMOUNT
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Quarter(CREATEDDATETIME)
+        - Total LINEAMOUNT
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Quarter(CREATEDDATETIME)
+        - column_id: Total LINEAMOUNT
+        axis_configs:
+        - x:
+          - Quarter(CREATEDDATETIME)
+          "y":
+          - Total LINEAMOUNT
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(CREATEDDATETIME)\",\"columnProperty\": {}},{\"columnId\": \"Total LINEAMOUNT\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"3a56db04-460a-4fc0-8815-2ae54ab11635\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LINEAMOUNT\"],\"isOpposite\": false}},{\"id\": \"d3fbb6b4-981c-412c-b81f-955ea6ca3bbc\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(CREATEDDATETIME)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total LINEAMOUNT\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: cadf38c7-85e6-497e-a218-95bae4999ccd
+  - id: Viz_3
+    answer:
+      name: Total LINENUM by Quarterly CREATEDDATETIME
+      tables:
+      - id: PURCHASETRANSACTIONS149M
+        name: PURCHASETRANSACTIONS149M
+        fqn: a86662b3-84aa-41a5-8392-d04ee1a584a8
+      search_query: "[CREATEDDATETIME] [CREATEDDATETIME].quarterly [LINENUM]"
+      answer_columns:
+      - name: Quarter(CREATEDDATETIME)
+      - name: Total LINENUM
+      table:
+        table_columns:
+        - column_id: Quarter(CREATEDDATETIME)
+          headline_aggregation: MIN-MAX
+        - column_id: Total LINENUM
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Quarter(CREATEDDATETIME)
+        - Total LINENUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Quarter(CREATEDDATETIME)
+        - column_id: Total LINENUM
+        axis_configs:
+        - x:
+          - Quarter(CREATEDDATETIME)
+          "y":
+          - Total LINENUM
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(CREATEDDATETIME)\",\"columnProperty\": {}},{\"columnId\": \"Total LINENUM\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"cc4c4fb5-9f0b-49e3-9fa0-61f63801965a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LINENUM\"],\"isOpposite\": false}},{\"id\": \"1510c122-4e8d-4ef8-a4ca-8fceea97b3ee\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(CREATEDDATETIME)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"e7bca770-ee10-4fc4-aff7-5b6f3a3618d6\",\"color\": \"#2770ef\"},{\"serieName\": \"Total LINENUM\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 1a57c551-95f8-4268-9852-5979c8c4c69f
+  - id: Viz_4
+    answer:
+      name: Total LEADTIME by Quarterly CREATEDDATETIME
+      tables:
+      - id: PURCHASETRANSACTIONS149M
+        name: PURCHASETRANSACTIONS149M
+        fqn: a86662b3-84aa-41a5-8392-d04ee1a584a8
+      search_query: "[CREATEDDATETIME] [CREATEDDATETIME].quarterly [LEADTIME]"
+      answer_columns:
+      - name: Quarter(CREATEDDATETIME)
+      - name: Total LEADTIME
+      table:
+        table_columns:
+        - column_id: Quarter(CREATEDDATETIME)
+          headline_aggregation: MIN-MAX
+        - column_id: Total LEADTIME
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Quarter(CREATEDDATETIME)
+        - Total LEADTIME
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Quarter(CREATEDDATETIME)
+        - column_id: Total LEADTIME
+        axis_configs:
+        - x:
+          - Quarter(CREATEDDATETIME)
+          "y":
+          - Total LEADTIME
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(CREATEDDATETIME)\",\"columnProperty\": {}},{\"columnId\": \"Total LEADTIME\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"ac1948a1-7200-4e1c-99e6-2df0f64e7d11\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LEADTIME\"],\"isOpposite\": false}},{\"id\": \"7bead0b1-4439-495c-8f98-3e39c95c61d0\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(CREATEDDATETIME)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"e7bca770-ee10-4fc4-aff7-5b6f3a3618d6\",\"color\": \"#2770ef\"},{\"serieName\": \"5ea0c803-7f79-4263-9486-4b1ef00189f3\",\"color\": \"#2770ef\"},{\"serieName\": \"Total LEADTIME\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 39bb8da3-e715-47c3-89bb-35a78719c06b
+  - id: Viz_5
+    answer:
+      name: Total Revenue by Quarterly Commit Date
+      tables:
+      - id: TPCH WS
+        name: TPCH WS
+        fqn: eed411a1-2cdc-4c3e-8f2e-c1a54f636a64
+      search_query: "[Commit Date] [Commit Date].quarterly [Revenue]"
+      answer_columns:
+      - name: Quarter(Commit Date)
+      - name: Total Revenue
+      table:
+        table_columns:
+        - column_id: Quarter(Commit Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Quarter(Commit Date)
+        - Total Revenue
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Quarter(Commit Date)
+        - column_id: Total Revenue
+        axis_configs:
+        - x:
+          - Quarter(Commit Date)
+          "y":
+          - Total Revenue
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f55ca668-5c4d-4b4a-b2de-c75ea7f9c9a9\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"d215a524-7a2d-4005-bdcc-7e144f152837\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 11af5d2c-1f07-4710-83be-63267302a8e7
+  - id: Viz_6
+    answer:
+      name: Total Discount by Quarterly Commit Date
+      tables:
+      - id: TPCH WS
+        name: TPCH WS
+        fqn: eed411a1-2cdc-4c3e-8f2e-c1a54f636a64
+      search_query: "[Commit Date] [Commit Date].quarterly [Discount]"
+      answer_columns:
+      - name: Quarter(Commit Date)
+      - name: Total Discount
+      table:
+        table_columns:
+        - column_id: Quarter(Commit Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Discount
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Quarter(Commit Date)
+        - Total Discount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Quarter(Commit Date)
+        - column_id: Total Discount
+        axis_configs:
+        - x:
+          - Quarter(Commit Date)
+          "y":
+          - Total Discount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"154ecced-0980-4043-984f-29523ecda0e7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"f8a799a9-2618-47d9-9320-b0c36c2b6b62\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"5f070baa-f482-47d1-bd22-80366afbae64\",\"color\": \"#2770ef\"},{\"serieName\": \"Total Discount\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 3414f2e0-4b10-4f6b-9ca0-0fd689b0e13e
