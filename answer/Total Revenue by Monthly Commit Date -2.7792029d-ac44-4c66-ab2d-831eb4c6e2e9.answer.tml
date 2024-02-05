@@ -1,6 +1,6 @@
 guid: 7792029d-ac44-4c66-ab2d-831eb4c6e2e9
 answer:
-  name: Total Revenue by Monthly Commit Date -1
+  name: Total Revenue by Monthly Commit Date -2
   tables:
   - id: Parameters WS
     name: Parameters WS
