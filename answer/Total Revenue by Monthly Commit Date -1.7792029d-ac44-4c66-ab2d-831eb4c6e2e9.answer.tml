@@ -1,14 +1,14 @@
 guid: 7792029d-ac44-4c66-ab2d-831eb4c6e2e9
 answer:
-  name: Total Revenue by Monthly Commit Date -2
+  name: Total Revenue by Monthly Commit Date -1
   tables:
   - id: Parameters WS
     name: Parameters WS
     fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
   search_query: "[Revenue] [Commit Date] [Commit Date].monthly"
   answer_columns:
-  - name: Total Revenue
   - name: Month(Commit Date)
+  - name: Total Revenue
   table:
     table_columns:
     - column_id: Month(Commit Date)
@@ -23,8 +23,8 @@ answer:
   chart:
     type: KPI
     chart_columns:
-    - column_id: Month(Commit Date)
     - column_id: Total Revenue
+    - column_id: Month(Commit Date)
     axis_configs:
     - x:
       - Month(Commit Date)
