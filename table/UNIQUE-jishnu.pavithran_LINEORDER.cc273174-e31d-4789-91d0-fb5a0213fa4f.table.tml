@@ -1,0 +1,145 @@
+guid: cc273174-e31d-4789-91d0-fb5a0213fa4f
+table:
+  name: UNIQUE-jishnu.pavithran_LINEORDER
+  db: NEBULADEV
+  schema: TPCH5K_falcon_default_schema
+  db_table: LINEORDER
+  connection:
+    name: UNIQUE-jishnu.pavithran_CONNECTION
+    fqn: 8283777b-83cd-48ca-9124-2d9dbcb7d821
+  columns:
+  - name: LO_ORDERKEY
+    db_column_name: LO_ORDERKEY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: LO_LINENUMBER
+    db_column_name: LO_LINENUMBER
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: LO_CUSTKEY
+    db_column_name: LO_CUSTKEY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: LO_PARTKEY
+    db_column_name: LO_PARTKEY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: LO_SUPPKEY
+    db_column_name: LO_SUPPKEY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: LO_ORDERDATE
+    db_column_name: LO_ORDERDATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: LO_ORDERPRIORITY
+    db_column_name: LO_ORDERPRIORITY
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: LO_SHIPPRIORITY
+    db_column_name: LO_SHIPPRIORITY
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: LO_QUANTITY
+    db_column_name: LO_QUANTITY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: LO_EXTENDEDPRICE
+    db_column_name: LO_EXTENDEDPRICE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: LO_ORDTOTALPRICE
+    db_column_name: LO_ORDTOTALPRICE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: LO_DISCOUNT
+    db_column_name: LO_DISCOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: LO_REVENUE
+    db_column_name: LO_REVENUE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: LO_SUPPLYCOST
+    db_column_name: LO_SUPPLYCOST
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: LO_TAX
+    db_column_name: LO_TAX
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: LO_COMMITDATE
+    db_column_name: LO_COMMITDATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: LO_SHIPMODE
+    db_column_name: LO_SHIPMODE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: LINEORDER_CUSTOMER
+    destination:
+      name: UNIQUE-jishnu.pavithran_CUSTOMER
+      fqn: 583b58ef-0435-4c5c-83e1-aa20f071aa49
+    "on": "[UNIQUE-jishnu.pavithran_LINEORDER::LO_CUSTKEY] = [UNIQUE-jishnu.pavithran_CUSTOMER::C_CUSTKEY]"
+    type: INNER
