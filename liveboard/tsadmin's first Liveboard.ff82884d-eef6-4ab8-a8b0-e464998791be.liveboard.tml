@@ -4,7 +4,7 @@ liveboard:
   visualizations:
   - id: Viz_1
     answer:
-      name: test title 1
+      name: test title 2
       tables:
       - id: UNIQUE-jishnu.pavithran-UI-WS
         name: UNIQUE-jishnu.pavithran-UI-WS
@@ -12,8 +12,8 @@ liveboard:
       search_query: "[Lo Revenue] [Lo Commitdate] [Lo Commitdate].quarterly [Lo Orderdate] [Lo Orderdate].quarterly"
       answer_columns:
       - name: Total Lo Revenue
-      - name: Quarter(Lo Commitdate)
       - name: Quarter(Lo Orderdate)
+      - name: Quarter(Lo Commitdate)
       table:
         table_columns:
         - column_id: Quarter(Lo Commitdate)
@@ -31,9 +31,9 @@ liveboard:
       chart:
         type: LINE
         chart_columns:
-        - column_id: Quarter(Lo Commitdate)
         - column_id: Total Lo Revenue
         - column_id: Quarter(Lo Orderdate)
+        - column_id: Quarter(Lo Commitdate)
         axis_configs:
         - x:
           - Quarter(Lo Commitdate)
