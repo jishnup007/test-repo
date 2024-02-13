@@ -1,0 +1,104 @@
+guid: ad6efa03-a659-4f56-9db7-c6bc07248f2d
+table:
+  name: employee
+  db: complex_schema
+  schema: falcon_default_schema
+  db_table: employee
+  columns:
+  - name: Employee_ID
+    db_column_name: Employee_ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Employee_First Name
+    db_column_name: Employee_First Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Employee_Last Name
+    db_column_name: Employee_Last Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Employee_Agency ID
+    db_column_name: Employee_Agency ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Employee_Experience
+    db_column_name: Employee_Experience
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Employee_Rating
+    db_column_name: Employee_Rating
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Employee_Gender
+    db_column_name: Employee_Gender
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Employee_Age
+    db_column_name: Employee_Age
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+    db_column_properties:
+      data_type: INT32
+  - name: Employee_Address
+    db_column_name: Employee_Address
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Employee_State
+    db_column_name: Employee_State
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Employee_City
+    db_column_name: Employee_City
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Employee_Salary
+    db_column_name: Employee_Salary
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+    db_column_properties:
+      data_type: INT64
+  - name: Employee_Educational Qualification
+    db_column_name: Employee_Educational Qualification
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Employee_Date of Joining
+    db_column_name: Employee_Date of Joining
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: DATE
+  joins_with:
+  - name: Employee_Agency ID - Agency_ID
+    destination:
+      name: agency
+      fqn: 7466f3c5-95a5-44b9-a17d-9cc5fad495ee
+    "on": "[employee::Employee_Agency ID] = [agency::Agency_ID]"
+    type: INNER

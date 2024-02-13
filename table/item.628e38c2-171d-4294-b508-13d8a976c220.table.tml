@@ -1,0 +1,48 @@
+guid: 628e38c2-171d-4294-b508-13d8a976c220
+table:
+  name: item
+  db: complex_schema
+  schema: falcon_default_schema
+  db_table: item
+  columns:
+  - name: Item_ID
+    db_column_name: Item_ID
+    properties:
+      column_type: ATTRIBUTE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: Item_Number Of Nodes
+    db_column_name: Item_Number Of Nodes
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+    db_column_properties:
+      data_type: INT32
+  - name: Item_Category
+    db_column_name: Item_Category
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Item_Support Provided
+    db_column_name: Item_Support Provided
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: BOOL
+  - name: Item_Support Years
+    db_column_name: Item_Support Years
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+    db_column_properties:
+      data_type: INT32
+  - name: Item_CTC
+    db_column_name: Item_CTC
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+    db_column_properties:
+      data_type: INT64

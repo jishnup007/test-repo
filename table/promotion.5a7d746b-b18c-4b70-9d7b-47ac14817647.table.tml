@@ -1,0 +1,105 @@
+guid: 5a7d746b-b18c-4b70-9d7b-47ac14817647
+table:
+  name: promotion
+  db: complex_schema
+  schema: falcon_default_schema
+  db_table: promotion
+  columns:
+  - name: Promotion_ID
+    db_column_name: Promotion_ID
+    properties:
+      column_type: ATTRIBUTE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: Promotion_Customer ID
+    db_column_name: Promotion_Customer ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Promotion_First Name
+    db_column_name: Promotion_First Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Promotion_Last Name
+    db_column_name: Promotion_Last Name
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Promotion_State
+    db_column_name: Promotion_State
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Promotion_Cost
+    db_column_name: Promotion_Cost
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+    db_column_properties:
+      data_type: INT64
+  - name: Promotion_Budget
+    db_column_name: Promotion_Budget
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+    db_column_properties:
+      data_type: INT64
+  - name: Promotion_Type
+    db_column_name: Promotion_Type
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Promotion_Date
+    db_column_name: Promotion_Date
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Promotion_Salesman ID
+    db_column_name: Promotion_Salesman ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Promotion_DateOnly
+    db_column_name: Promotion_DateOnly
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  joins_with:
+  - name: Promotion_Customer ID - Customer_ID
+    destination:
+      name: customer
+      fqn: 3b7ca126-7eea-4575-bb72-4bd4bc1e39ba
+    "on": "[promotion::Promotion_Customer ID] = [customer::Customer_ID]"
+    type: INNER
+  - name: Promotion_DateOnly - Datekey
+    destination:
+      name: date
+      fqn: f287dd65-2834-4aa6-9af0-b931f54be61e
+    "on": "[promotion::Promotion_DateOnly] = [date::Datekey]"
+    type: INNER
+  - name: "Promotion_First Name,Promotion_Last Name - Employee_First Name,Employee_Last Name"
+    destination:
+      name: employee
+      fqn: ad6efa03-a659-4f56-9db7-c6bc07248f2d
+    "on": "[promotion::Promotion_First Name] = [employee::Employee_First Name] AND [promotion::Promotion_Last Name] = [employee::Employee_Last Name]"
+    type: INNER
+  - name: promotion - employee
+    destination:
+      name: employee
+      fqn: ad6efa03-a659-4f56-9db7-c6bc07248f2d
+    "on": "([promotion::Promotion_Salesman ID] = [employee::Employee_ID])"
+    type: INNER

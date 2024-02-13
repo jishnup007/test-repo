@@ -1,0 +1,70 @@
+guid: 3b7ca126-7eea-4575-bb72-4bd4bc1e39ba
+table:
+  name: customer
+  db: complex_schema
+  schema: falcon_default_schema
+  db_table: customer
+  columns:
+  - name: Customer_ID
+    db_column_name: Customer_ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Customer_Name
+    db_column_name: Customer_Name
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Customer_City
+    db_column_name: Customer_City
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Customer_State
+    db_column_name: Customer_State
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Customer_Zip
+    db_column_name: Customer_Zip
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+    db_column_properties:
+      data_type: INT32
+  - name: Customer_Rating
+    db_column_name: Customer_Rating
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Customer_Sector
+    db_column_name: Customer_Sector
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Customer_Country
+    db_column_name: Customer_Country
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Customer_Market Valuation
+    db_column_name: Customer_Market Valuation
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+    db_column_properties:
+      data_type: INT64
+  - name: Customer_Date of Contact
+    db_column_name: Customer_Date of Contact
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: DATE

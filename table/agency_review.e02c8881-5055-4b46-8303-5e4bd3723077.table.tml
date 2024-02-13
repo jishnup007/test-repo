@@ -1,0 +1,54 @@
+guid: e02c8881-5055-4b46-8303-5e4bd3723077
+table:
+  name: agency_review
+  db: complex_schema
+  schema: falcon_default_schema
+  db_table: agency_review
+  columns:
+  - name: Agency Review_Rating ID
+    db_column_name: Agency Review_Rating ID
+    properties:
+      column_type: ATTRIBUTE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: Agency Review_Reporting Company
+    db_column_name: Agency Review_Reporting Company
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Agency Review_Agency ID
+    db_column_name: Agency Review_Agency ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Agency Review_Rating
+    db_column_name: Agency Review_Rating
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Agency Review_Date Rating Issued
+    db_column_name: Agency Review_Date Rating Issued
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Agency Review_Date Rating Expiration
+    db_column_name: Agency Review_Date Rating Expiration
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: DATE_TIME
+  joins_with:
+  - name: Agency Review_Agency ID - Agency_ID
+    destination:
+      name: agency
+      fqn: 7466f3c5-95a5-44b9-a17d-9cc5fad495ee
+    "on": "[agency_review::Agency Review_Agency ID] = [agency::Agency_ID]"
+    type: INNER

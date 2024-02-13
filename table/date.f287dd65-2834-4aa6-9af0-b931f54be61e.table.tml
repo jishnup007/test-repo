@@ -1,0 +1,20 @@
+guid: f287dd65-2834-4aa6-9af0-b931f54be61e
+table:
+  name: date
+  db: complex_schema
+  schema: falcon_default_schema
+  db_table: date
+  columns:
+  - name: Datekey
+    db_column_name: Datekey
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: Date
+    db_column_name: Date
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
