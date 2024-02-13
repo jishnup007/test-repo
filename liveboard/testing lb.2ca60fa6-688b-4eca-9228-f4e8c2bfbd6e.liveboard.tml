@@ -185,6 +185,48 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"7f6668cc-339f-4b26-9a0f-79b43307645d\",\"columnProperty\": {}},{\"columnId\": \"Total Agency Review_Rating\",\"columnProperty\": {}},{\"columnId\": \"Total Customer_Market Valuation\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2b91e58d-c4ed-44d5-a55c-bf142502d6e0\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Agency Review_Rating\"],\"isOpposite\": false}},{\"id\": \"35cf691b-ef0c-42d3-8e29-8a0d415bdcf7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Customer_Market Valuation\"],\"isOpposite\": true}},{\"id\": \"14db0361-0227-44e1-b10a-b6f3796ef948\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"7f6668cc-339f-4b26-9a0f-79b43307645d\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Agency Review_Rating\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Customer_Market Valuation\",\"color\": \"#48D1E0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 58290097-1ee2-4f63-9761-bb059159b2ea
+  - id: Viz_5
+    answer:
+      name: "Total Sale Cost, Total Product Cost by Product Name"
+      tables:
+      - id: Chasmtrap
+        name: Chasmtrap
+        fqn: 07a8af30-cd9d-4ab0-a58a-544a818ddac7
+      search_query: "[Sale Cost] [Product Cost] [Product Name]"
+      answer_columns:
+      - name: Total Sale Cost
+      - name: Total Product Cost
+      - name: Product Name
+      table:
+        table_columns:
+        - column_id: Product Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sale Cost
+          headline_aggregation: SUM
+        - column_id: Total Product Cost
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Product Name
+        - Total Sale Cost
+        - Total Product Cost
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Product Name
+        - column_id: Total Sale Cost
+        - column_id: Total Product Cost
+        axis_configs:
+        - x:
+          - Product Name
+          "y":
+          - Total Sale Cost
+          - Total Product Cost
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Name\",\"columnProperty\": {}},{\"columnId\": \"Total Sale Cost\",\"columnProperty\": {}},{\"columnId\": \"Total Product Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d1afcf6f-e02d-4c06-abde-28024050c88e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sale Cost\"],\"isOpposite\": false}},{\"id\": \"aa5189e9-66eb-45c8-9e68-9da3cc0c5047\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Product Cost\"],\"isOpposite\": true}},{\"id\": \"83ebb157-1780-47f3-8910-84ee8e891dda\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Name\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Sale Cost\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Product Cost\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 8f7433e4-b9fa-44a8-b293-29ddedfca955
   layout:
     tiles:
     - visualization_id: Viz_1
