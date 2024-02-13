@@ -1,0 +1,51 @@
+guid: 2ca60fa6-688b-4eca-9228-f4e8c2bfbd6e
+liveboard:
+  name: tsadmin's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Total Order Total Price, Total Extended Price by Quarterly Commit Date"
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Order Total Price] [Extended Price] [Commit Date] [Commit Date].quarterly [Manufacturer]"
+      answer_columns:
+      - name: Total Order Total Price
+      - name: Total Extended Price
+      - name: Quarter(Commit Date)
+      - name: Manufacturer
+      table:
+        table_columns:
+        - column_id: Quarter(Commit Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Manufacturer
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Order Total Price
+          headline_aggregation: SUM
+        - column_id: Total Extended Price
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Quarter(Commit Date)
+        - Manufacturer
+        - Total Order Total Price
+        - Total Extended Price
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Quarter(Commit Date)
+        - column_id: Manufacturer
+        - column_id: Total Order Total Price
+        - column_id: Total Extended Price
+        axis_configs:
+        - x:
+          - Quarter(Commit Date)
+          "y":
+          - Total Order Total Price
+          - Total Extended Price
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Manufacturer\",\"columnProperty\": {}},{\"columnId\": \"Total Order Total Price\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2ef5a34e-426c-4a92-acde-707089769dba\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Order Total Price\"],\"isOpposite\": false}},{\"id\": \"4acdc390-42cd-437e-b0d2-f0087adf427e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": true}},{\"id\": \"b3ef77d2-a293-4f58-b47e-83f7f7ce2180\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Order Total Price\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Extended Price\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 60101241-e931-44dd-8aee-cb0380d10349
