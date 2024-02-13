@@ -1,0 +1,54 @@
+guid: d03499fb-14bd-4f07-9907-d5444b8ce905
+table:
+  name: geo_france_population_data
+  db: geo
+  schema: falcon_default_schema
+  db_table: geo_france_population_data
+  columns:
+  - name: department
+    db_column_name: department
+    properties:
+      column_type: ATTRIBUTE
+      geo_config:
+        region_name:
+          country: FRANCE
+          region_name: department
+    db_column_properties:
+      data_type: VARCHAR
+  - name: department INSEE code
+    db_column_name: department INSEE code
+    properties:
+      column_type: ATTRIBUTE
+      geo_config:
+        region_name:
+          country: FRANCE
+          region_name: department
+    db_column_properties:
+      data_type: VARCHAR
+  - name: population
+    db_column_name: population
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+    db_column_properties:
+      data_type: INT64
+  - name: region
+    db_column_name: region
+    properties:
+      column_type: ATTRIBUTE
+      geo_config:
+        region_name:
+          country: FRANCE
+          region_name: region
+    db_column_properties:
+      data_type: VARCHAR
+  - name: region INSEE code
+    db_column_name: region INSEE code
+    properties:
+      column_type: ATTRIBUTE
+      geo_config:
+        region_name:
+          country: FRANCE
+          region_name: region
+    db_column_properties:
+      data_type: VARCHAR
