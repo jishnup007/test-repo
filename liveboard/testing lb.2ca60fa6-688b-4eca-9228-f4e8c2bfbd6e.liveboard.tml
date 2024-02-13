@@ -50,6 +50,52 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Manufacturer\",\"columnProperty\": {}},{\"columnId\": \"Total Order Total Price\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2ef5a34e-426c-4a92-acde-707089769dba\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Order Total Price\"],\"isOpposite\": false}},{\"id\": \"4acdc390-42cd-437e-b0d2-f0087adf427e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": true}},{\"id\": \"b3ef77d2-a293-4f58-b47e-83f7f7ce2180\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Order Total Price\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Extended Price\",\"color\": \"#48D1E0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 60101241-e931-44dd-8aee-cb0380d10349
+  - id: Viz_2
+    answer:
+      name: "Total Discount by Category, Color, Customer City"
+      tables:
+      - id: Broken WS
+        name: Broken WS
+        fqn: 1ac1a13a-0eea-479c-9bd6-25f16cf3ce70
+      search_query: "[Discount] [Category] [Color] [Customer City]"
+      answer_columns:
+      - name: Total Discount
+      - name: Category
+      - name: Color
+      - name: Customer City
+      table:
+        table_columns:
+        - column_id: Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Color
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Customer City
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Discount
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Category
+        - Color
+        - Customer City
+        - Total Discount
+        client_state: ""
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Category
+        - column_id: Color
+        - column_id: Customer City
+        - column_id: Total Discount
+        axis_configs:
+        - x:
+          - Customer City
+          "y":
+          - Total Discount
+          color:
+          - Category
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: c8f1be70-40d8-4ea3-a3f4-b115b780fcbe
   layout:
     tiles:
     - visualization_id: Viz_1
