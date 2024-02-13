@@ -1,6 +1,7 @@
 guid: 2ca60fa6-688b-4eca-9228-f4e8c2bfbd6e
 liveboard:
-  name: tsadmin's first Liveboard
+  name: testing lb
+  description: test desc
   visualizations:
   - id: Viz_1
     answer:
@@ -49,3 +50,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Manufacturer\",\"columnProperty\": {}},{\"columnId\": \"Total Order Total Price\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2ef5a34e-426c-4a92-acde-707089769dba\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Order Total Price\"],\"isOpposite\": false}},{\"id\": \"4acdc390-42cd-437e-b0d2-f0087adf427e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": true}},{\"id\": \"b3ef77d2-a293-4f58-b47e-83f7f7ce2180\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Order Total Price\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Extended Price\",\"color\": \"#48D1E0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 60101241-e931-44dd-8aee-cb0380d10349
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
