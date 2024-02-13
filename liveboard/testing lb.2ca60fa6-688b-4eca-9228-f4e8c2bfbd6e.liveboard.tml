@@ -138,6 +138,53 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Week(Datekey)\",\"columnProperty\": {}},{\"columnId\": \"Total Agency Review_Rating\",\"columnProperty\": {}},{\"columnId\": \"Total Customer_Market Valuation\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2b91e58d-c4ed-44d5-a55c-bf142502d6e0\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Agency Review_Rating\"],\"isOpposite\": false}},{\"id\": \"35cf691b-ef0c-42d3-8e29-8a0d415bdcf7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Customer_Market Valuation\"],\"isOpposite\": true}},{\"id\": \"14db0361-0227-44e1-b10a-b6f3796ef948\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(Datekey)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Agency Review_Rating\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Customer_Market Valuation\",\"color\": \"#48D1E0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 1fa16bc2-8a01-4570-ad93-b9fb1ae663ea
+  - id: Viz_4
+    answer:
+      name: "Total Agency Review_Rating, Total Customer_Market Valuation by Weekly Agency Review_Date Rating Issued"
+      tables:
+      - id: Complex_Schema_Full_Outer_Join
+        name: Complex_Schema_Full_Outer_Join
+        fqn: e4c2d89d-f8fe-4e51-90b5-c6b8358bd6ea
+      search_query: "[Agency Review_Rating] [Customer_Market Valuation] [Agency Review_Date Rating Issued] [Agency Review_Date Rating Issued].weekly [Sale_Item ID]"
+      answer_columns:
+      - name: Total Agency Review_Rating
+      - name: Total Customer_Market Valuation
+      - name: Week(Agency Review_Date Rating Issued)
+      - name: Sale_Item ID
+      table:
+        table_columns:
+        - column_id: Week(Agency Review_Date Rating Issued)
+          headline_aggregation: MIN-MAX
+        - column_id: Sale_Item ID
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Agency Review_Rating
+          headline_aggregation: SUM
+        - column_id: Total Customer_Market Valuation
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Week(Agency Review_Date Rating Issued)
+        - Sale_Item ID
+        - Total Agency Review_Rating
+        - Total Customer_Market Valuation
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Week(Agency Review_Date Rating Issued)
+        - column_id: Sale_Item ID
+        - column_id: Total Agency Review_Rating
+        - column_id: Total Customer_Market Valuation
+        axis_configs:
+        - x:
+          - Week(Agency Review_Date Rating Issued)
+          "y":
+          - Total Agency Review_Rating
+          - Total Customer_Market Valuation
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"7f6668cc-339f-4b26-9a0f-79b43307645d\",\"columnProperty\": {}},{\"columnId\": \"Total Agency Review_Rating\",\"columnProperty\": {}},{\"columnId\": \"Total Customer_Market Valuation\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2b91e58d-c4ed-44d5-a55c-bf142502d6e0\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Agency Review_Rating\"],\"isOpposite\": false}},{\"id\": \"35cf691b-ef0c-42d3-8e29-8a0d415bdcf7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Customer_Market Valuation\"],\"isOpposite\": true}},{\"id\": \"14db0361-0227-44e1-b10a-b6f3796ef948\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"7f6668cc-339f-4b26-9a0f-79b43307645d\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Agency Review_Rating\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Customer_Market Valuation\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 58290097-1ee2-4f63-9761-bb059159b2ea
   layout:
     tiles:
     - visualization_id: Viz_1
