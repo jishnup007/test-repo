@@ -1,6 +1,6 @@
 guid: 10ca4c2f-90b3-409b-8bc2-22943d1908c4
 liveboard:
-  name: tsadmin's first Liveboard
+  name: tsadmin's first Liveboard 12
   visualizations:
   - id: Viz_1
     answer:
@@ -38,3 +38,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Month(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"93358c85-cc71-49dd-bc8f-fc513207884b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"f94a7ff5-a57f-48a4-8e1d-5721c2491b79\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#2770ef\"}]}"
       display_mode: CHART_MODE
     viz_guid: f25e5faf-0f99-40b1-bb46-7e22f390fa0e
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: SMALL
