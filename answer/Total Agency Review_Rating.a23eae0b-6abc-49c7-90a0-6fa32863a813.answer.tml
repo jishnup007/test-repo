@@ -5,29 +5,29 @@ answer:
   - id: Complex_Schema_Full_Outer_Join
     name: Complex_Schema_Full_Outer_Join
     fqn: e4c2d89d-f8fe-4e51-90b5-c6b8358bd6ea
-  search_query: "[Agency Review_Rating] [Agency_Commission]"
+  search_query: "[Agency Review_Rating 2] [Agency_Commission]"
   answer_columns:
-  - name: Total Agency Review_Rating
+  - name: Total Agency Review_Rating 2
   - name: Total Agency_Commission
   table:
     table_columns:
-    - column_id: Total Agency Review_Rating
+    - column_id: Total Agency Review_Rating 2
       headline_aggregation: SUM
     - column_id: Total Agency_Commission
       headline_aggregation: SUM
     ordered_column_ids:
-    - Total Agency Review_Rating
+    - Total Agency Review_Rating 2
     - Total Agency_Commission
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
     type: KPI
     chart_columns:
-    - column_id: Total Agency Review_Rating
+    - column_id: Total Agency Review_Rating 2
     - column_id: Total Agency_Commission
     axis_configs:
     - "y":
-      - Total Agency Review_Rating
+      - Total Agency Review_Rating 2
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Agency Review_Rating\",\"columnProperty\": {}},{\"columnId\": \"Total Agency_Commission\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"bbbc1db9-d06a-411d-a813-e68ba225d946\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Agency Review_Rating\"],\"isOpposite\": false}},{\"id\": \"b1ab4310-68c7-4150-9595-fa029f39d2f0\",\"properties\": {\"axisType\": \"X\"}}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Agency Review_Rating 2\",\"columnProperty\": {}},{\"columnId\": \"Total Agency_Commission\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"bbbc1db9-d06a-411d-a813-e68ba225d946\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Agency Review_Rating 2\"],\"isOpposite\": false}},{\"id\": \"b1ab4310-68c7-4150-9595-fa029f39d2f0\",\"properties\": {\"axisType\": \"X\"}}]}"
   display_mode: CHART_MODE
