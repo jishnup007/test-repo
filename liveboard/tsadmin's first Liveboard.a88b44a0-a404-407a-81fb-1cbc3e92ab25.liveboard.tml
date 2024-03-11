@@ -1,6 +1,7 @@
 guid: a88b44a0-a404-407a-81fb-1cbc3e92ab25
 liveboard:
   name: tsadmin's first Liveboard
+  description: trerdd
   visualizations:
   - id: Viz_1
     answer:
