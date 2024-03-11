@@ -41,7 +41,7 @@ worksheet:
     column_id: PRODUCTS_1::Product Id
     properties:
       column_type: ATTRIBUTE
-  - name: Product Name
+  - name: Product Name2
     column_id: PRODUCTS_1::Product Name
     properties:
       column_type: ATTRIBUTE
