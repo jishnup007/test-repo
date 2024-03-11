@@ -43,14 +43,21 @@ liveboard:
     note_tile:
       html_parsed_string: "<h1 dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Test Head</span></h1><p class=\"theme-module__editor-paragraph\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 255, 255);\"></div>"
   layout:
-    tiles:
-    - visualization_id: Viz_1
-      x: 0
-      "y": 4
-      height: 8
-      width: 6
-    - visualization_id: Viz_2
-      x: 0
-      "y": 0
-      height: 4
-      width: 3
+    tabs:
+    - name: Tab 1
+      description: ""
+      tiles:
+      - visualization_id: Viz_1
+        x: 0
+        "y": 4
+        height: 8
+        width: 6
+      - visualization_id: Viz_2
+        x: 0
+        "y": 0
+        height: 4
+        width: 3
+    - name: Tab 2
+      description: ""
+    - name: Tab 3
+      description: ""
