@@ -1,0 +1,41 @@
+guid: 7b4368d3-2b87-4dc4-a8d4-d51d32815801
+liveboard:
+  name: Suresh's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Year Month, Brand1"
+      tables:
+      - id: TPCH WS
+        name: TPCH WS
+        fqn: eed411a1-2cdc-4c3e-8f2e-c1a54f636a64
+      search_query: "[Year Month] [Brand1]"
+      answer_columns:
+      - name: Brand1
+      - name: Year Month
+      table:
+        table_columns:
+        - column_id: Brand1
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Year Month
+          headline_aggregation: COUNT_DISTINCT
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Year Month\",\"columnProperty\": {}},{\"columnId\": \"Brand1\",\"columnProperty\": {}}]}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Brand1
+        - column_id: Year Month
+        axis_configs:
+        - x:
+          - Year Month
+          "y":
+          - Brand1
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Year Month\",\"columnProperty\": {}},{\"columnId\": \"Brand1\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"9edfcab9-da1a-4020-a339-1305ad2c90e5\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Brand1\"],\"isOpposite\": false}},{\"id\": \"d7e8cd35-fc37-46a1-bb46-511df441154e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year Month\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: e0cd600b-2334-4941-b556-5ecc5469475c
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: LARGE
