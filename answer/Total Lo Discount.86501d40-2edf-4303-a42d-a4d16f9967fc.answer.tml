@@ -1,0 +1,30 @@
+guid: 86501d40-2edf-4303-a42d-a4d16f9967fc
+answer:
+  name: Total Lo Discount
+  tables:
+  - id: UNIQUE-jishnu.pavithran-UI-WS
+    name: UNIQUE-jishnu.pavithran-UI-WS
+    fqn: 43d72330-9353-4246-b77d-00e772141200
+  search_query: "[Lo Discount] [Lo Quantity]"
+  answer_columns:
+  - name: Total Lo Discount
+  - name: Total Lo Quantity
+  table:
+    table_columns:
+    - column_id: Total Lo Discount
+      headline_aggregation: SUM
+    - column_id: Total Lo Quantity
+      headline_aggregation: SUM
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: KPI
+    chart_columns:
+    - column_id: Total Lo Discount
+    - column_id: Total Lo Quantity
+    axis_configs:
+    - "y":
+      - Total Lo Discount
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Lo Discount\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2544a7ac-1bf6-4f8e-824f-78745e3a5c22\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Discount\"],\"isOpposite\": false}},{\"id\": \"3322ddae-28f0-4b68-8fad-941a3749cb1d\",\"properties\": {\"axisType\": \"X\"}}]}"
+  display_mode: CHART_MODE
