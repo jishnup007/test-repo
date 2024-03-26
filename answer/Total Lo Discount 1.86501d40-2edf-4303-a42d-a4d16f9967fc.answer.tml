@@ -1,6 +1,7 @@
 guid: 86501d40-2edf-4303-a42d-a4d16f9967fc
 answer:
-  name: Total Lo Discount
+  name: Total Lo Discount 1
+  description: abcd
   tables:
   - id: UNIQUE-jishnu.pavithran-UI-WS
     name: UNIQUE-jishnu.pavithran-UI-WS
