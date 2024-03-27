@@ -114,7 +114,7 @@ liveboard:
           - Total Lo Discount
         client_state: ""
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Lo Orderdate)\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Quantity\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"6bf9a06b-e6e7-4b59-86e4-e762b4482a17\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Quantity\"],\"isOpposite\": false}},{\"id\": \"699c192c-7c75-44c2-9bc7-5ec417e54084\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Discount\"],\"isOpposite\": true}},{\"id\": \"49213dff-918f-4558-8d2e-f1a8cec1165e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Lo Orderdate)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"084843d4-e377-48c4-a061-6df60fd78f50\",\"color\": \"#2E75F0\"},{\"serieName\": \"5041a062-0030-435e-a210-6b202ffc3856\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Lo Quantity\",\"color\": \"#FCC838\"},{\"serieName\": \"Total Lo Discount\",\"color\": \"#48D1E0\"}]}"
-      display_mode: CHART_MODE
+      display_mode: TABLE_MODE
     viz_guid: f3255ead-c2a9-4fed-a5d6-d1f7b850c7b3
   layout:
     tabs:
