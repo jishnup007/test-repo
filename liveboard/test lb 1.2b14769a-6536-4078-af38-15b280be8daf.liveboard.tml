@@ -1,0 +1,84 @@
+guid: 2b14769a-6536-4078-af38-15b280be8daf
+liveboard:
+  name: test lb 1
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Total Lo Extendedprice, Total Lo Linenumber by Monthly Lo Commitdate"
+      tables:
+      - id: UNIQUE-jishnu.pavithran-UI-WS
+        name: UNIQUE-jishnu.pavithran-UI-WS
+        fqn: 43d72330-9353-4246-b77d-00e772141200
+      search_query: "[Lo Extendedprice] [Lo Linenumber] [Lo Shipmode] [Lo Commitdate] [Lo Commitdate].monthly"
+      answer_columns:
+      - name: Lo Shipmode
+      - name: Month(Lo Commitdate)
+      - name: Total Lo Extendedprice
+      - name: Total Lo Linenumber
+      table:
+        table_columns:
+        - column_id: Lo Shipmode
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Month(Lo Commitdate)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Lo Extendedprice
+          headline_aggregation: SUM
+        - column_id: Total Lo Linenumber
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Lo Shipmode
+        - column_id: Month(Lo Commitdate)
+        - column_id: Total Lo Extendedprice
+        - column_id: Total Lo Linenumber
+        axis_configs:
+        - x:
+          - Month(Lo Commitdate)
+          "y":
+          - Total Lo Extendedprice
+          - Total Lo Linenumber
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Lo Shipmode\",\"columnProperty\": {}},{\"columnId\": \"Month(Lo Commitdate)\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Extendedprice\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Linenumber\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"c79866bc-5607-4070-a631-4868040c6e03\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Extendedprice\"],\"isOpposite\": false}},{\"id\": \"1a1ada73-7ed9-4acb-b903-d5301e7e0944\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Linenumber\"],\"isOpposite\": true}},{\"id\": \"1bbd1b3b-822a-428b-86e7-91e1ecfcde1a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Lo Commitdate)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Lo Extendedprice\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Lo Linenumber\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 447c075e-4b38-487a-9b62-6733b0acc271
+  - id: Viz_2
+    answer:
+      name: "Total Lo Linenumber, Total Lo Supplycost by Quarterly Lo Orderdate"
+      tables:
+      - id: UNIQUE-jishnu.pavithran-UI-WS
+        name: UNIQUE-jishnu.pavithran-UI-WS
+        fqn: 43d72330-9353-4246-b77d-00e772141200
+      search_query: "[Lo Linenumber] [Lo Orderdate] [Lo Orderdate].quarterly [Lo Supplycost]"
+      answer_columns:
+      - name: Quarter(Lo Orderdate)
+      - name: Total Lo Linenumber
+      - name: Total Lo Supplycost
+      table:
+        table_columns:
+        - column_id: Quarter(Lo Orderdate)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Lo Linenumber
+          headline_aggregation: SUM
+        - column_id: Total Lo Supplycost
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Quarter(Lo Orderdate)
+        - column_id: Total Lo Linenumber
+        - column_id: Total Lo Supplycost
+        axis_configs:
+        - x:
+          - Quarter(Lo Orderdate)
+          "y":
+          - Total Lo Linenumber
+          - Total Lo Supplycost
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Lo Linenumber\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Lo Orderdate)\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Supplycost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"25a4ecfa-97c5-4309-8b92-b752ae0bf8be\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Linenumber\"],\"isOpposite\": false}},{\"id\": \"04e603f1-ef8f-4c9d-91d9-21ffb0ab8acc\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Supplycost\"],\"isOpposite\": true}},{\"id\": \"c6dd36df-a91b-4124-a2b7-c132471aacaf\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Lo Orderdate)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"28737d60-30bf-46ef-986f-de3c22427ad2\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Lo Linenumber\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Lo Supplycost\",\"color\": \"#FCC838\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 54799ffa-519a-4ca6-89ff-84e2f6ad4460
