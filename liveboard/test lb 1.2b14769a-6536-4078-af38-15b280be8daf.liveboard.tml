@@ -135,10 +135,11 @@ liveboard:
         "y": 0
         height: 8
         width: 6
-      - visualization_id: Viz_3
-        x: 0
-        "y": 8
-        height: 4
-        width: 6
     - name: desc tab
       description: ""
+      tiles:
+      - visualization_id: Viz_3
+        x: 0
+        "y": 0
+        height: 8
+        width: 12
