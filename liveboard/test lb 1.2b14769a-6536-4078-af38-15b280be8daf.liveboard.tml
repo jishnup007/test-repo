@@ -82,3 +82,20 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Lo Linenumber\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Lo Orderdate)\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Supplycost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"25a4ecfa-97c5-4309-8b92-b752ae0bf8be\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Linenumber\"],\"isOpposite\": false}},{\"id\": \"04e603f1-ef8f-4c9d-91d9-21ffb0ab8acc\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Supplycost\"],\"isOpposite\": true}},{\"id\": \"c6dd36df-a91b-4124-a2b7-c132471aacaf\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Lo Orderdate)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"28737d60-30bf-46ef-986f-de3c22427ad2\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Lo Linenumber\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Lo Supplycost\",\"color\": \"#FCC838\"}]}"
       display_mode: CHART_MODE
     viz_guid: 54799ffa-519a-4ca6-89ff-84e2f6ad4460
+  layout:
+    tabs:
+    - name: pic tab
+      description: ""
+      tiles:
+      - visualization_id: Viz_1
+        x: 0
+        "y": 0
+        height: 8
+        width: 6
+      - visualization_id: Viz_2
+        x: 6
+        "y": 0
+        height: 8
+        width: 6
+    - name: desc tab
+      description: ""
