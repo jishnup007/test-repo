@@ -1,0 +1,118 @@
+guid: 30353411-b4ba-4470-9fba-8a62307ab00e
+liveboard:
+  name: test2
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Total Lo Extendedprice, Total Lo Revenue by Quarterly Lo Orderdate"
+      tables:
+      - id: UNIQUE-jishnu.pavithran-UI-WS
+        name: UNIQUE-jishnu.pavithran-UI-WS
+        fqn: 43d72330-9353-4246-b77d-00e772141200
+      search_query: "[Lo Extendedprice] [Lo Revenue] [Lo Orderdate] [Lo Orderdate].quarterly"
+      answer_columns:
+      - name: Quarter(Lo Orderdate)
+      - name: Total Lo Extendedprice
+      - name: Total Lo Revenue
+      table:
+        table_columns:
+        - column_id: Quarter(Lo Orderdate)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Lo Extendedprice
+          headline_aggregation: SUM
+        - column_id: Total Lo Revenue
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Quarter(Lo Orderdate)
+        - column_id: Total Lo Extendedprice
+        - column_id: Total Lo Revenue
+        axis_configs:
+        - x:
+          - Quarter(Lo Orderdate)
+          "y":
+          - Total Lo Extendedprice
+          - Total Lo Revenue
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Lo Extendedprice\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Revenue\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Lo Orderdate)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b17f11da-ac0d-4d16-9d7a-99bc4cf702ac\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Extendedprice\"],\"isOpposite\": false}},{\"id\": \"93ae301e-34fc-4f3b-a6d8-20cdcabc3525\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Revenue\"],\"isOpposite\": true}},{\"id\": \"9b1f21d6-c585-43a2-9656-a047a9c66413\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Lo Orderdate)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Lo Extendedprice\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Lo Revenue\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 75f3762d-c3c5-40ed-8414-b192a6a2b511
+  - id: Viz_2
+    answer:
+      name: "Total Lo Extendedprice, Total Lo Quantity by Quarterly Lo Orderdate"
+      tables:
+      - id: UNIQUE-jishnu.pavithran-UI-WS
+        name: UNIQUE-jishnu.pavithran-UI-WS
+        fqn: 43d72330-9353-4246-b77d-00e772141200
+      search_query: "[Lo Extendedprice] [Lo Orderdate] [Lo Orderdate].quarterly [Lo Quantity]"
+      answer_columns:
+      - name: Quarter(Lo Orderdate)
+      - name: Total Lo Extendedprice
+      - name: Total Lo Quantity
+      table:
+        table_columns:
+        - column_id: Quarter(Lo Orderdate)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Lo Extendedprice
+          headline_aggregation: SUM
+        - column_id: Total Lo Quantity
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Quarter(Lo Orderdate)
+        - column_id: Total Lo Extendedprice
+        - column_id: Total Lo Quantity
+        axis_configs:
+        - x:
+          - Quarter(Lo Orderdate)
+          "y":
+          - Total Lo Extendedprice
+          - Total Lo Quantity
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Lo Extendedprice\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Lo Orderdate)\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2e32553d-c8e4-491e-a1fe-73ddc2281370\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Extendedprice\"],\"isOpposite\": false}},{\"id\": \"b69d1f1c-bcb1-46d2-8cdb-cc2e26f7a605\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Quantity\"],\"isOpposite\": true}},{\"id\": \"f2bd6a79-02eb-434d-9763-4df18046985d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Lo Orderdate)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Lo Extendedprice\",\"color\": \"#2E75F0\"},{\"serieName\": \"5041a062-0030-435e-a210-6b202ffc3856\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Lo Quantity\",\"color\": \"#FCC838\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 0e69cb34-fa8a-4d81-88e2-d42d727362e4
+  - id: Viz_3
+    answer:
+      name: "Total Lo Quantity, Total Lo Discount by Quarterly Lo Orderdate"
+      tables:
+      - id: UNIQUE-jishnu.pavithran-UI-WS
+        name: UNIQUE-jishnu.pavithran-UI-WS
+        fqn: 43d72330-9353-4246-b77d-00e772141200
+      search_query: "[Lo Orderdate] [Lo Orderdate].quarterly [Lo Quantity] [Lo Discount]"
+      answer_columns:
+      - name: Quarter(Lo Orderdate)
+      - name: Total Lo Discount
+      - name: Total Lo Quantity
+      table:
+        table_columns:
+        - column_id: Quarter(Lo Orderdate)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Lo Discount
+          headline_aggregation: SUM
+        - column_id: Total Lo Quantity
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Quarter(Lo Orderdate)
+        - column_id: Total Lo Discount
+        - column_id: Total Lo Quantity
+        axis_configs:
+        - x:
+          - Quarter(Lo Orderdate)
+          "y":
+          - Total Lo Quantity
+          - Total Lo Discount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Lo Orderdate)\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Quantity\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"6bf9a06b-e6e7-4b59-86e4-e762b4482a17\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Quantity\"],\"isOpposite\": false}},{\"id\": \"699c192c-7c75-44c2-9bc7-5ec417e54084\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Discount\"],\"isOpposite\": true}},{\"id\": \"49213dff-918f-4558-8d2e-f1a8cec1165e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Lo Orderdate)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"084843d4-e377-48c4-a061-6df60fd78f50\",\"color\": \"#2E75F0\"},{\"serieName\": \"5041a062-0030-435e-a210-6b202ffc3856\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Lo Quantity\",\"color\": \"#FCC838\"},{\"serieName\": \"Total Lo Discount\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: f3255ead-c2a9-4fed-a5d6-d1f7b850c7b3
