@@ -79,7 +79,7 @@ worksheet:
     properties:
       column_type: MEASURE
       aggregation: SUM
-  - name: Extended Price 2
+  - name: Extended Price
     column_id: LINEORDER_1::Extended Price
     properties:
       column_type: MEASURE
@@ -188,53 +188,6 @@ worksheet:
     is_bypass_rls: false
     join_progressive: true
   parameters:
-  - id: 6afe392d-d188-4379-aef3-1a8632e147c8
-    name: Integer Range Param
-    data_type: INT64
-    default_value: "5"
-    range_config:
-      range_min: "0"
-      range_max: "10"
-      include_min: true
-      include_max: true
-    description: Integer parameter with range value selection.
-  - id: 3e2d9e2d-e4e6-4319-8814-61d31f9b5fc5
-    name: Integer List Param
-    data_type: INT64
-    default_value: "3"
-    list_config:
-      list_choice:
-      - value: "1"
-        display_name: One
-      - value: "2"
-        display_name: Two
-      - value: "3"
-        display_name: Three
-      - value: "4"
-        display_name: Four
-      - value: "5"
-        display_name: Five
-    description: Integer parameter with list value selection.
-  - id: 0f15384d-ce96-4153-90ef-04462bb91cfe
-    name: Double Range Param
-    data_type: DOUBLE
-    default_value: "0.5"
-    range_config:
-      range_min: "0.0"
-      range_max: "1.0"
-      include_min: true
-      include_max: true
-    description: Double parameter with range value selection.
-  - id: 44cc11a1-e6da-438a-97cb-b9dbee3c566c
-    name: Date Range Param
-    data_type: DATE
-    default_value: 10/16/2022
-    range_config:
-      range_min: 01/01/2022
-      range_max: 12/31/2022
-      include_min: true
-      include_max: true
-    description: Date parameter with range value selection.
   - id: 491b359d-4282-4c66-8829-b24b05571098
     name: Boolean Param
     data_type: BOOL
@@ -277,31 +230,21 @@ worksheet:
       - value: 12/31/2022
         display_name: New Year’s Eve
     description: Date parameter with list value selection.
-  - id: 7ae8a9ec-612c-4160-9896-1e3afd7f9d02
-    name: String List Param
-    data_type: CHAR
-    default_value: air
-    list_config:
-      list_choice:
-      - value: air
-        display_name: ""
-      - value: truck
-        display_name: ""
-      - value: car
-        display_name: ""
-      - value: ship
-        display_name: ""
-    description: String parameter with list value selection.
   - id: 94af5fac-3afb-4781-aca1-a5ca97094661
     name: Date Param
     data_type: DATE
     default_value: 10/16/2022
     description: Date parameter with any value selection.
-  - id: 3d4cefd7-caab-401c-a9a8-3f452414b82a
-    name: Double Param
-    data_type: DOUBLE
-    default_value: "1.0"
-    description: Double parameter with any value selection.
+  - id: 44cc11a1-e6da-438a-97cb-b9dbee3c566c
+    name: Date Range Param
+    data_type: DATE
+    default_value: 10/16/2022
+    range_config:
+      range_min: 01/01/2022
+      range_max: 12/31/2022
+      include_min: true
+      include_max: true
+    description: Date parameter with range value selection.
   - id: 29e9c1d8-9fcf-4b5b-a182-aca9c44d8051
     name: Double List Param
     data_type: DOUBLE
@@ -319,13 +262,70 @@ worksheet:
       - value: "1.0"
         display_name: ""
     description: Double parameter with list value selection.
-  - id: f59b9087-2eb3-4116-ab87-bcdba25ceb01
-    name: String Param
-    data_type: CHAR
-    default_value: default
-    description: String parameter with any value selection.
+  - id: 3d4cefd7-caab-401c-a9a8-3f452414b82a
+    name: Double Param
+    data_type: DOUBLE
+    default_value: "1.0"
+    description: Double parameter with any value selection.
+  - id: 0f15384d-ce96-4153-90ef-04462bb91cfe
+    name: Double Range Param
+    data_type: DOUBLE
+    default_value: "0.5"
+    range_config:
+      range_min: "0.0"
+      range_max: "1.0"
+      include_min: true
+      include_max: true
+    description: Double parameter with range value selection.
+  - id: 3e2d9e2d-e4e6-4319-8814-61d31f9b5fc5
+    name: Integer List Param
+    data_type: INT64
+    default_value: "3"
+    list_config:
+      list_choice:
+      - value: "1"
+        display_name: One
+      - value: "2"
+        display_name: Two
+      - value: "3"
+        display_name: Three
+      - value: "4"
+        display_name: Four
+      - value: "5"
+        display_name: Five
+    description: Integer parameter with list value selection.
   - id: db95c261-9e31-41fc-b9d9-4059062fc26f
     name: Integer Param
     data_type: INT64
     default_value: "1"
     description: Integer parameter with any value selection.
+  - id: 6afe392d-d188-4379-aef3-1a8632e147c8
+    name: Integer Range Param
+    data_type: INT64
+    default_value: "5"
+    range_config:
+      range_min: "0"
+      range_max: "10"
+      include_min: true
+      include_max: true
+    description: Integer parameter with range value selection.
+  - id: 7ae8a9ec-612c-4160-9896-1e3afd7f9d02
+    name: String List Param
+    data_type: CHAR
+    default_value: air
+    list_config:
+      list_choice:
+      - value: air
+        display_name: ""
+      - value: truck
+        display_name: ""
+      - value: car
+        display_name: ""
+      - value: ship
+        display_name: ""
+    description: String parameter with list value selection.
+  - id: f59b9087-2eb3-4116-ab87-bcdba25ceb01
+    name: String Param
+    data_type: CHAR
+    default_value: default
+    description: String parameter with any value selection.
