@@ -5,34 +5,38 @@ answer:
   - id: Parameters WS
     name: Parameters WS
     fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-  search_query: "[Order Total Price] [Supply Cost] [Container]"
+  search_query: "[Extended Price] [Category] [Quantity] [Color]"
   answer_columns:
-  - name: Container
-  - name: Total Order Total Price
-  - name: Total Supply Cost
+  - name: Category
+  - name: Color
+  - name: Total Extended Price
+  - name: Total Quantity
   table:
     table_columns:
-    - column_id: Container
+    - column_id: Category
       headline_aggregation: COUNT_DISTINCT
-    - column_id: Total Order Total Price
+    - column_id: Color
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Extended Price
       headline_aggregation: SUM
-    - column_id: Total Supply Cost
+    - column_id: Total Quantity
       headline_aggregation: SUM
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
     type: SCATTER
     chart_columns:
-    - column_id: Container
-    - column_id: Total Order Total Price
-    - column_id: Total Supply Cost
+    - column_id: Category
+    - column_id: Color
+    - column_id: Total Extended Price
+    - column_id: Total Quantity
     axis_configs:
     - x:
-      - Total Order Total Price
+      - Total Extended Price
       "y":
-      - Total Supply Cost
+      - Total Quantity
       color:
-      - Container
+      - Category
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Order Total Price\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}},{\"columnId\": \"Container\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1dab690d-35ce-49ed-947e-d2e4274e1da4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Supply Cost\"],\"isOpposite\": false}},{\"id\": \"bae3c0f1-8a9a-4675-bb76-28d633f88414\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total Order Total Price\"]}}],\"systemSeriesColors\": [{\"serieName\": \"a46d12c0-dc28-4c29-9a6f-bbd44e66ed9b\",\"color\": \"#2E75F0\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d3a98379-de57-4eea-822d-b7224889b791\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": false}},{\"id\": \"3921f1cd-ca08-45c6-be45-cb7785dda706\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total Extended Price\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Extended Price\",\"color\": \"#2E75F0\"}]}"
   display_mode: CHART_MODE
