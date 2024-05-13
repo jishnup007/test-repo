@@ -1,6 +1,6 @@
 guid: e8f690c0-93fe-4dbe-bb5c-cd6d9691dff4
 answer:
-  name: Total Extended Price by Category and Line Number
+  name: Total Extended Price by Category and Line Number 1
   tables:
   - id: Parameters WS
     name: Parameters WS
