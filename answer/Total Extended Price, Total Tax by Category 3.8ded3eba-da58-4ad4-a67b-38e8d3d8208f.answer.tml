@@ -5,14 +5,17 @@ answer:
   - id: Parameters WS
     name: Parameters WS
     fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-  search_query: "[Extended Price] [Tax] [Category]"
+  search_query: "[Extended Price] [Tax] [Category] [Email Domain]"
   answer_columns:
   - name: Category
+  - name: Email Domain
   - name: Total Extended Price
   - name: Total Tax
   table:
     table_columns:
     - column_id: Category
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Email Domain
       headline_aggregation: COUNT_DISTINCT
     - column_id: Total Extended Price
       headline_aggregation: SUM
@@ -24,14 +27,15 @@ answer:
     type: COLUMN
     chart_columns:
     - column_id: Category
+    - column_id: Email Domain
     - column_id: Total Extended Price
     - column_id: Total Tax
     axis_configs:
     - x:
-      - Category
+      - Email Domain
       "y":
       - Total Extended Price
       - Total Tax
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2ab76559-5095-4170-af39-2089bb7fdf4b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"07da4d1d-24c9-41ba-8925-91b763f75636\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": true}},{\"id\": \"7ff68adb-955c-4319-b6be-c0efe221042f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Extended Price\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Tax\",\"color\": \"#2E75F0\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}},{\"columnId\": \"Email Domain\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"baf2ccd0-4175-4454-ad9b-e929dc7a8637\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"19318334-9be6-4f69-8e93-568c4c9362ea\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": true}},{\"id\": \"75a58c90-d29d-4a4c-a2b2-bc0278cc1ece\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Email Domain\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Extended Price\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Tax\",\"color\": \"#2E75F0\"}]}"
   display_mode: CHART_MODE
