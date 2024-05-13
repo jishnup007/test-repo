@@ -5,28 +5,34 @@ answer:
   - id: Parameters WS
     name: Parameters WS
     fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-  search_query: "[Extended Price] [Commit Date] [Commit Date].monthly"
+  search_query: "[Extended Price] [Commit Date] [Commit Date].quarterly [Manufacturer]"
   answer_columns:
-  - name: Month(Commit Date)
+  - name: Manufacturer
+  - name: Quarter(Commit Date)
   - name: Total Extended Price
   table:
     table_columns:
-    - column_id: Month(Commit Date)
+    - column_id: Manufacturer
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Quarter(Commit Date)
       headline_aggregation: MIN-MAX
     - column_id: Total Extended Price
       headline_aggregation: SUM
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
-    type: KPI
+    type: LINE
     chart_columns:
-    - column_id: Month(Commit Date)
+    - column_id: Manufacturer
+    - column_id: Quarter(Commit Date)
     - column_id: Total Extended Price
     axis_configs:
     - x:
-      - Month(Commit Date)
+      - Quarter(Commit Date)
       "y":
       - Total Extended Price
+      color:
+      - Manufacturer
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}},{\"columnId\": \"Month(Commit Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"858f9dd7-02ce-4a5e-bbcd-599c6d20a838\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"048bffad-29cd-47e2-b250-aab20f5620ac\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"1\",\"color\": \"#06BF7F\"},{\"serieName\": \"2\",\"color\": \"#FCD977\"},{\"serieName\": \"3\",\"color\": \"#FCC838\"},{\"serieName\": \"4\",\"color\": \"#82DFE9\"},{\"serieName\": \"5\",\"color\": \"#48D1E0\"},{\"serieName\": \"6\",\"color\": \"#71A1F4\"},{\"serieName\": \"7\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Extended Price\",\"color\": \"#8C62F5\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Manufacturer\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"858f9dd7-02ce-4a5e-bbcd-599c6d20a838\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"048bffad-29cd-47e2-b250-aab20f5620ac\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"1\",\"color\": \"#06BF7F\"},{\"serieName\": \"2\",\"color\": \"#FCD977\"},{\"serieName\": \"3\",\"color\": \"#FCC838\"},{\"serieName\": \"4\",\"color\": \"#82DFE9\"},{\"serieName\": \"5\",\"color\": \"#48D1E0\"},{\"serieName\": \"6\",\"color\": \"#71A1F4\"},{\"serieName\": \"7\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Extended Price\",\"color\": \"#8C62F5\"},{\"serieName\": \"mfgr#1\",\"color\": \"#2E75F0\"},{\"serieName\": \"mfgr#2\",\"color\": \"#48D1E0\"},{\"serieName\": \"mfgr#3\",\"color\": \"#FCC838\"},{\"serieName\": \"mfgr#4\",\"color\": \"#06BF7F\"},{\"serieName\": \"mfgr#5\",\"color\": \"#8C62F5\"}]}"
   display_mode: CHART_MODE
