@@ -1,0 +1,37 @@
+guid: 8ded3eba-da58-4ad4-a67b-38e8d3d8208f
+answer:
+  name: "Total Extended Price, Total Tax by Category 3"
+  tables:
+  - id: Parameters WS
+    name: Parameters WS
+    fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+  search_query: "[Extended Price] [Tax] [Category]"
+  answer_columns:
+  - name: Category
+  - name: Total Extended Price
+  - name: Total Tax
+  table:
+    table_columns:
+    - column_id: Category
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Extended Price
+      headline_aggregation: SUM
+    - column_id: Total Tax
+      headline_aggregation: SUM
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Category
+    - column_id: Total Extended Price
+    - column_id: Total Tax
+    axis_configs:
+    - x:
+      - Category
+      "y":
+      - Total Extended Price
+      - Total Tax
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2ab76559-5095-4170-af39-2089bb7fdf4b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"07da4d1d-24c9-41ba-8925-91b763f75636\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": true}},{\"id\": \"7ff68adb-955c-4319-b6be-c0efe221042f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Extended Price\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Tax\",\"color\": \"#2E75F0\"}]}"
+  display_mode: CHART_MODE
