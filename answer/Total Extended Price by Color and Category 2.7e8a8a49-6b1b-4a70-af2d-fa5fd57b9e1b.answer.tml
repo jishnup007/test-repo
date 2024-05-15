@@ -5,12 +5,11 @@ answer:
   - id: Parameters WS
     name: Parameters WS
     fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-  search_query: "[Extended Price] [Color] [Category] [Supply Cost]"
+  search_query: "[Extended Price] [Color] [Category]"
   answer_columns:
   - name: Category
   - name: Color
   - name: Total Extended Price
-  - name: Total Supply Cost
   table:
     table_columns:
     - column_id: Category
@@ -19,24 +18,21 @@ answer:
       headline_aggregation: COUNT_DISTINCT
     - column_id: Total Extended Price
       headline_aggregation: SUM
-    - column_id: Total Supply Cost
-      headline_aggregation: SUM
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
-    type: SCATTER
+    type: STACKED_COLUMN
     chart_columns:
     - column_id: Category
     - column_id: Color
     - column_id: Total Extended Price
-    - column_id: Total Supply Cost
     axis_configs:
     - x:
-      - Total Extended Price
+      - Color
       "y":
-      - Total Supply Cost
+      - Total Extended Price
       color:
       - Category
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"0d78b78f-eb79-492c-a038-1d478d88b532\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Supply Cost\"],\"isOpposite\": false}},{\"id\": \"a9adf0b3-0acf-4ea9-9c6c-c43fac82c326\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total Extended Price\"]}}],\"systemSeriesColors\": [{\"serieName\": \"mfgr#11\",\"color\": \"#47515F\"},{\"serieName\": \"mfgr#12\",\"color\": \"#BEC6D0\"},{\"serieName\": \"mfgr#13\",\"color\": \"#747E8C\"},{\"serieName\": \"mfgr#14\",\"color\": \"#C26232\"},{\"serieName\": \"mfgr#15\",\"color\": \"#FFCCB3\"},{\"serieName\": \"mfgr#21\",\"color\": \"#FF8142\"},{\"serieName\": \"mfgr#22\",\"color\": \"#6A4ABA\"},{\"serieName\": \"mfgr#23\",\"color\": \"#D1C0FB\"},{\"serieName\": \"mfgr#24\",\"color\": \"#8C62F5\"},{\"serieName\": \"mfgr#25\",\"color\": \"#56D3A8\"},{\"serieName\": \"mfgr#31\",\"color\": \"#049160\"},{\"serieName\": \"mfgr#32\",\"color\": \"#9BE5CB\"},{\"serieName\": \"mfgr#33\",\"color\": \"#06BF7F\"},{\"serieName\": \"mfgr#34\",\"color\": \"#FCD977\"},{\"serieName\": \"mfgr#35\",\"color\": \"#BF982A\"},{\"serieName\": \"mfgr#41\",\"color\": \"#FDE9AF\"},{\"serieName\": \"mfgr#42\",\"color\": \"#FCC838\"},{\"serieName\": \"mfgr#43\",\"color\": \"#82DFE9\"},{\"serieName\": \"mfgr#44\",\"color\": \"#369FAA\"},{\"serieName\": \"mfgr#45\",\"color\": \"#B5ECF2\"},{\"serieName\": \"mfgr#51\",\"color\": \"#48D1E0\"},{\"serieName\": \"mfgr#52\",\"color\": \"#71A1F4\"},{\"serieName\": \"mfgr#53\",\"color\": \"#2359B6\"},{\"serieName\": \"mfgr#54\",\"color\": \"#ABC7F9\"},{\"serieName\": \"mfgr#55\",\"color\": \"#2E75F0\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"05e88cdd-0468-4ad4-8a91-2b7c37aebc67\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"eb404995-5837-44a9-840d-5941d6f7b8d0\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\"]}}],\"systemSeriesColors\": [{\"serieName\": \"mfgr#11\",\"color\": \"#47515F\"},{\"serieName\": \"mfgr#12\",\"color\": \"#BEC6D0\"},{\"serieName\": \"mfgr#13\",\"color\": \"#747E8C\"},{\"serieName\": \"mfgr#14\",\"color\": \"#C26232\"},{\"serieName\": \"mfgr#15\",\"color\": \"#FFCCB3\"},{\"serieName\": \"mfgr#21\",\"color\": \"#FF8142\"},{\"serieName\": \"mfgr#22\",\"color\": \"#6A4ABA\"},{\"serieName\": \"mfgr#23\",\"color\": \"#D1C0FB\"},{\"serieName\": \"mfgr#24\",\"color\": \"#8C62F5\"},{\"serieName\": \"mfgr#25\",\"color\": \"#56D3A8\"},{\"serieName\": \"mfgr#31\",\"color\": \"#049160\"},{\"serieName\": \"mfgr#32\",\"color\": \"#9BE5CB\"},{\"serieName\": \"mfgr#33\",\"color\": \"#06BF7F\"},{\"serieName\": \"mfgr#34\",\"color\": \"#FCD977\"},{\"serieName\": \"mfgr#35\",\"color\": \"#BF982A\"},{\"serieName\": \"mfgr#41\",\"color\": \"#FDE9AF\"},{\"serieName\": \"mfgr#42\",\"color\": \"#FCC838\"},{\"serieName\": \"mfgr#43\",\"color\": \"#82DFE9\"},{\"serieName\": \"mfgr#44\",\"color\": \"#369FAA\"},{\"serieName\": \"mfgr#45\",\"color\": \"#B5ECF2\"},{\"serieName\": \"mfgr#51\",\"color\": \"#48D1E0\"},{\"serieName\": \"mfgr#52\",\"color\": \"#71A1F4\"},{\"serieName\": \"mfgr#53\",\"color\": \"#2359B6\"},{\"serieName\": \"mfgr#54\",\"color\": \"#ABC7F9\"},{\"serieName\": \"mfgr#55\",\"color\": \"#2E75F0\"}]}"
   display_mode: CHART_MODE
