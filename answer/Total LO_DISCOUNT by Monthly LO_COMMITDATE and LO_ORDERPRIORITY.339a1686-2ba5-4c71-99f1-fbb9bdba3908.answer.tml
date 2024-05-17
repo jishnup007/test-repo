@@ -1,0 +1,38 @@
+guid: 339a1686-2ba5-4c71-99f1-fbb9bdba3908
+answer:
+  name: Total LO_DISCOUNT by Monthly LO_COMMITDATE and LO_ORDERPRIORITY
+  tables:
+  - id: UNIQUE-jishnu.pavithran_LINEORDER
+    name: UNIQUE-jishnu.pavithran_LINEORDER
+    fqn: 614c58d7-400f-44fd-89fb-c83549a617ac
+  search_query: "[LO_DISCOUNT] [LO_ORDERPRIORITY] [LO_COMMITDATE] [LO_COMMITDATE].monthly"
+  answer_columns:
+  - name: LO_ORDERPRIORITY
+  - name: Month(LO_COMMITDATE)
+  - name: Total LO_DISCOUNT
+  table:
+    table_columns:
+    - column_id: LO_ORDERPRIORITY
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Month(LO_COMMITDATE)
+      headline_aggregation: MIN-MAX
+    - column_id: Total LO_DISCOUNT
+      headline_aggregation: SUM
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: LINE
+    chart_columns:
+    - column_id: LO_ORDERPRIORITY
+    - column_id: Month(LO_COMMITDATE)
+    - column_id: Total LO_DISCOUNT
+    axis_configs:
+    - x:
+      - Month(LO_COMMITDATE)
+      "y":
+      - Total LO_DISCOUNT
+      color:
+      - LO_ORDERPRIORITY
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"LO_ORDERPRIORITY\",\"columnProperty\": {}},{\"columnId\": \"Month(LO_COMMITDATE)\",\"columnProperty\": {}},{\"columnId\": \"Total LO_DISCOUNT\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e69cff64-e47a-44d1-a5a8-ed1088d43a0b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_DISCOUNT\"],\"isOpposite\": false}},{\"id\": \"fd1bdf53-f5b2-4de9-9cfe-e154124fcc0f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(LO_COMMITDATE)\"]}}]}"
+  display_mode: CHART_MODE
