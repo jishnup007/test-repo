@@ -5,28 +5,34 @@ answer:
   - id: Parameters WS
     name: Parameters WS
     fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-  search_query: "[Extended Price] [Container]"
+  search_query: "[Extended Price] [Container] [Quantity]"
   answer_columns:
   - name: Container
   - name: Total Extended Price
+  - name: Total Quantity
   table:
     table_columns:
     - column_id: Container
       headline_aggregation: COUNT_DISTINCT
     - column_id: Total Extended Price
       headline_aggregation: SUM
+    - column_id: Total Quantity
+      headline_aggregation: SUM
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
-    type: COLUMN
+    type: SCATTER
     chart_columns:
     - column_id: Container
     - column_id: Total Extended Price
+    - column_id: Total Quantity
     axis_configs:
     - x:
-      - Container
-      "y":
       - Total Extended Price
+      "y":
+      - Total Quantity
+      color:
+      - Container
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Container\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1367e3c1-fcc9-4925-8842-241be12152c6\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"ce2b8fcf-917b-41a8-93a4-9f40e9383318\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Container\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Extended Price\",\"color\": \"#48D1E0\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Container\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"19d0caea-9e9a-4567-bf4e-b286aa08b7ac\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": false}},{\"id\": \"0b7ceac8-9ab8-41a9-8dbb-440cc2aabd36\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total Extended Price\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Extended Price\",\"color\": \"#48D1E0\"},{\"serieName\": \"jumbo bag\",\"color\": \"#721F27\"},{\"serieName\": \"jumbo box\",\"color\": \"#F47E89\"},{\"serieName\": \"jumbo can\",\"color\": \"#B6313E\"},{\"serieName\": \"jumbo case\",\"color\": \"#F9B3B9\"},{\"serieName\": \"jumbo drum\",\"color\": \"#F04152\"},{\"serieName\": \"jumbo jar\",\"color\": \"#2F3947\"},{\"serieName\": \"jumbo pack\",\"color\": \"#A2ACBA\"},{\"serieName\": \"jumbo pkg\",\"color\": \"#47515F\"},{\"serieName\": \"lg bag\",\"color\": \"#BEC6D0\"},{\"serieName\": \"lg box\",\"color\": \"#747E8C\"},{\"serieName\": \"lg can\",\"color\": \"#7A3D1F\"},{\"serieName\": \"lg case\",\"color\": \"#FFA97E\"},{\"serieName\": \"lg drum\",\"color\": \"#C26232\"},{\"serieName\": \"lg jar\",\"color\": \"#FFCCB3\"},{\"serieName\": \"lg pack\",\"color\": \"#FF8142\"},{\"serieName\": \"lg pkg\",\"color\": \"#422E75\"},{\"serieName\": \"med bag\",\"color\": \"#B094F8\"},{\"serieName\": \"med box\",\"color\": \"#6A4ABA\"},{\"serieName\": \"med can\",\"color\": \"#D1C0FB\"},{\"serieName\": \"med case\",\"color\": \"#8C62F5\"},{\"serieName\": \"med drum\",\"color\": \"#025B3C\"},{\"serieName\": \"med jar\",\"color\": \"#56D3A8\"},{\"serieName\": \"med pack\",\"color\": \"#049160\"},{\"serieName\": \"med pkg\",\"color\": \"#9BE5CB\"},{\"serieName\": \"sm bag\",\"color\": \"#06BF7F\"},{\"serieName\": \"sm box\",\"color\": \"#785F1A\"},{\"serieName\": \"sm can\",\"color\": \"#FCD977\"},{\"serieName\": \"sm case\",\"color\": \"#BF982A\"},{\"serieName\": \"sm drum\",\"color\": \"#FDE9AF\"},{\"serieName\": \"sm jar\",\"color\": \"#FCC838\"},{\"serieName\": \"sm pack\",\"color\": \"#22636B\"},{\"serieName\": \"sm pkg\",\"color\": \"#82DFE9\"},{\"serieName\": \"wrap bag\",\"color\": \"#369FAA\"},{\"serieName\": \"wrap box\",\"color\": \"#B5ECF2\"},{\"serieName\": \"wrap can\",\"color\": \"#48D1E0\"},{\"serieName\": \"wrap case\",\"color\": \"#163772\"},{\"serieName\": \"wrap drum\",\"color\": \"#71A1F4\"},{\"serieName\": \"wrap jar\",\"color\": \"#2359B6\"},{\"serieName\": \"wrap pack\",\"color\": \"#ABC7F9\"},{\"serieName\": \"wrap pkg\",\"color\": \"#2E75F0\"}]}"
   display_mode: CHART_MODE
