@@ -5,18 +5,21 @@ answer:
   - id: UNIQUE-jishnu.pavithran_LINEORDER
     name: UNIQUE-jishnu.pavithran_LINEORDER
     fqn: 614c58d7-400f-44fd-89fb-c83549a617ac
-  search_query: "[LO_DISCOUNT] [LO_ORDERPRIORITY] [LO_COMMITDATE] [LO_COMMITDATE].monthly"
+  search_query: "[LO_DISCOUNT] [LO_ORDERPRIORITY] [LO_COMMITDATE] [LO_COMMITDATE].quarterly [LO_QUANTITY]"
   answer_columns:
   - name: LO_ORDERPRIORITY
-  - name: Month(LO_COMMITDATE)
+  - name: Quarter(LO_COMMITDATE)
   - name: Total LO_DISCOUNT
+  - name: Total LO_QUANTITY
   table:
     table_columns:
     - column_id: LO_ORDERPRIORITY
       headline_aggregation: COUNT_DISTINCT
-    - column_id: Month(LO_COMMITDATE)
+    - column_id: Quarter(LO_COMMITDATE)
       headline_aggregation: MIN-MAX
     - column_id: Total LO_DISCOUNT
+      headline_aggregation: SUM
+    - column_id: Total LO_QUANTITY
       headline_aggregation: SUM
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
@@ -24,15 +27,15 @@ answer:
     type: LINE
     chart_columns:
     - column_id: LO_ORDERPRIORITY
-    - column_id: Month(LO_COMMITDATE)
+    - column_id: Quarter(LO_COMMITDATE)
     - column_id: Total LO_DISCOUNT
+    - column_id: Total LO_QUANTITY
     axis_configs:
     - x:
-      - Month(LO_COMMITDATE)
+      - Quarter(LO_COMMITDATE)
       "y":
       - Total LO_DISCOUNT
-      color:
-      - LO_ORDERPRIORITY
+      - Total LO_QUANTITY
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"LO_ORDERPRIORITY\",\"columnProperty\": {}},{\"columnId\": \"Month(LO_COMMITDATE)\",\"columnProperty\": {}},{\"columnId\": \"Total LO_DISCOUNT\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e69cff64-e47a-44d1-a5a8-ed1088d43a0b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_DISCOUNT\"],\"isOpposite\": false}},{\"id\": \"fd1bdf53-f5b2-4de9-9cfe-e154124fcc0f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(LO_COMMITDATE)\"]}}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(LO_COMMITDATE)\",\"columnProperty\": {}},{\"columnId\": \"Total LO_DISCOUNT\",\"columnProperty\": {}},{\"columnId\": \"Total LO_QUANTITY\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"05f8e2cb-88fd-458f-9621-36e809e3be7e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_DISCOUNT\"],\"isOpposite\": false}},{\"id\": \"eb19449c-01d6-4f56-a6d4-97003a4c21fb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_QUANTITY\"],\"isOpposite\": true}},{\"id\": \"858330cc-c6bb-40ab-b2b8-fe694f6745e4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(LO_COMMITDATE)\"]}}]}"
   display_mode: CHART_MODE
