@@ -5,12 +5,11 @@ answer:
   - id: Parameters WS
     name: Parameters WS
     fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-  search_query: "[Extended Price] [Category] [Quantity] [Revenue]"
+  search_query: "[Extended Price] [Category] [Quantity]"
   answer_columns:
   - name: Category
   - name: Total Extended Price
   - name: Total Quantity
-  - name: Total Revenue
   table:
     table_columns:
     - column_id: Category
@@ -19,25 +18,20 @@ answer:
       headline_aggregation: SUM
     - column_id: Total Quantity
       headline_aggregation: SUM
-    - column_id: Total Revenue
-      headline_aggregation: SUM
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
-    type: BUBBLE
+    type: COLUMN
     chart_columns:
     - column_id: Category
     - column_id: Total Extended Price
     - column_id: Total Quantity
-    - column_id: Total Revenue
     axis_configs:
     - x:
-      - Total Extended Price
-      "y":
-      - Total Quantity
-      color:
       - Category
-      size: Total Revenue
+      "y":
+      - Total Extended Price
+      - Total Quantity
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"fe178e11-95b8-46f9-85c0-c357e6c66781\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": false}},{\"id\": \"1f3c0fa6-1345-46cb-83ce-eb5354345b4b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total Extended Price\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Extended Price\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Quantity\",\"color\": \"#2E75F0\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b37ea8fa-749d-4379-afb8-0084cc1fed60\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"aa033527-1afd-4eac-9bab-fa36419c1c09\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": true}},{\"id\": \"9110da9a-64f2-4003-9bad-0969a983d950\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Extended Price\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Quantity\",\"color\": \"#2E75F0\"}]}"
   display_mode: CHART_MODE
