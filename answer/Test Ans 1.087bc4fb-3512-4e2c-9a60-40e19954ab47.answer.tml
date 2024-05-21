@@ -5,15 +5,18 @@ answer:
   - id: Parameters WS
     name: Parameters WS
     fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-  search_query: "[Extended Price] [Category]"
+  search_query: "[Extended Price] [Category] [Quantity]"
   answer_columns:
   - name: Category
   - name: Total Extended Price
+  - name: Total Quantity
   table:
     table_columns:
     - column_id: Category
       headline_aggregation: COUNT_DISTINCT
     - column_id: Total Extended Price
+      headline_aggregation: SUM
+    - column_id: Total Quantity
       headline_aggregation: SUM
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
@@ -22,11 +25,13 @@ answer:
     chart_columns:
     - column_id: Category
     - column_id: Total Extended Price
+    - column_id: Total Quantity
     axis_configs:
     - x:
       - Category
       "y":
       - Total Extended Price
+      - Total Quantity
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a6736934-8afd-425c-8f0b-1c1112b2b12d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"2da8fe17-4d85-4e06-ab33-67d6aaa1da41\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Extended Price\",\"color\": \"#48D1E0\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b37ea8fa-749d-4379-afb8-0084cc1fed60\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"aa033527-1afd-4eac-9bab-fa36419c1c09\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": true}},{\"id\": \"9110da9a-64f2-4003-9bad-0969a983d950\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Extended Price\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Quantity\",\"color\": \"#2E75F0\"}]}"
   display_mode: CHART_MODE
