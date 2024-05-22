@@ -1,0 +1,47 @@
+guid: 90095ee9-34da-4537-845b-f4bbd79535fd
+liveboard:
+  name: UNIQUE-jishnu.pavithran-2j64
+  description: This is a test description
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Total LO_TAX, Total LO_EXTENDEDPRICE by LO_ORDERPRIORITY"
+      tables:
+      - id: UNIQUE-jishnu.pavithran_LINEORDER
+        name: UNIQUE-jishnu.pavithran_LINEORDER
+        fqn: 3d3c83b9-5c3f-4555-b28c-f7884ff955d5
+      search_query: "[LO_TAX] [LO_ORDERPRIORITY] [LO_EXTENDEDPRICE]"
+      answer_columns:
+      - name: LO_ORDERPRIORITY
+      - name: Total LO_EXTENDEDPRICE
+      - name: Total LO_TAX
+      table:
+        table_columns:
+        - column_id: LO_ORDERPRIORITY
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total LO_EXTENDEDPRICE
+          headline_aggregation: SUM
+        - column_id: Total LO_TAX
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: LO_ORDERPRIORITY
+        - column_id: Total LO_EXTENDEDPRICE
+        - column_id: Total LO_TAX
+        axis_configs:
+        - x:
+          - LO_ORDERPRIORITY
+          "y":
+          - Total LO_TAX
+          - Total LO_EXTENDEDPRICE
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"LO_ORDERPRIORITY\",\"columnProperty\": {}},{\"columnId\": \"Total LO_TAX\",\"columnProperty\": {}},{\"columnId\": \"Total LO_EXTENDEDPRICE\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2639b97a-f901-4b14-b8ed-461017cbdb7b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_TAX\"],\"isOpposite\": false}},{\"id\": \"1eb7935e-571e-47fd-92bb-39eddd2f17cc\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_EXTENDEDPRICE\"],\"isOpposite\": true}},{\"id\": \"dc0d21f0-9bfa-441a-b553-36be79de9ce9\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"LO_ORDERPRIORITY\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total LO_TAX\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total LO_EXTENDEDPRICE\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 1a571703-1e4d-4af6-8dda-2dc6187688f3
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM

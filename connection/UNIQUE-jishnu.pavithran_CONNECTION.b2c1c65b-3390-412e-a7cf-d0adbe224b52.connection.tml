@@ -1,0 +1,19 @@
+guid: b2c1c65b-3390-412e-a7cf-d0adbe224b52
+connection:
+  name: UNIQUE-jishnu.pavithran_CONNECTION
+  type: RDBMS_SNOWFLAKE
+  authentication_type: SERVICE_ACCOUNT
+  properties:
+  - key: accountName
+    value: thoughtspot_partner
+  - key: user
+    value: TEST_USER
+  - key: password
+    value: ""
+  - key: role
+    value: TEST
+  - key: warehouse
+    value: CX_AUTO_WH
+  - key: database
+    value: NEBULADEV
+  description: This connection is created during automation runs. Please do not modify or delete it.
