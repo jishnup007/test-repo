@@ -1,0 +1,43 @@
+guid: 087bc4fb-3512-4e2c-9a60-40e19954ab47
+answer:
+  name: Test Ans 3
+  tables:
+  - id: Parameters WS
+    name: Parameters WS
+    fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+  search_query: "[Extended Price] [Category] [Quantity] [Revenue]"
+  answer_columns:
+  - name: Category
+  - name: Total Extended Price
+  - name: Total Quantity
+  - name: Total Revenue
+  table:
+    table_columns:
+    - column_id: Category
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Extended Price
+      headline_aggregation: SUM
+    - column_id: Total Quantity
+      headline_aggregation: SUM
+    - column_id: Total Revenue
+      headline_aggregation: SUM
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: BUBBLE
+    chart_columns:
+    - column_id: Category
+    - column_id: Total Extended Price
+    - column_id: Total Quantity
+    - column_id: Total Revenue
+    axis_configs:
+    - x:
+      - Total Extended Price
+      "y":
+      - Total Quantity
+      color:
+      - Category
+      size: Total Revenue
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"fe178e11-95b8-46f9-85c0-c357e6c66781\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": false}},{\"id\": \"1f3c0fa6-1345-46cb-83ce-eb5354345b4b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total Extended Price\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Extended Price\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Quantity\",\"color\": \"#2E75F0\"},{\"serieName\": \"mfgr#11\",\"color\": \"rgba(46,117,240,0.5)\"},{\"serieName\": \"mfgr#12\",\"color\": \"rgba(72,209,224,0.5)\"},{\"serieName\": \"mfgr#13\",\"color\": \"rgba(252,200,56,0.5)\"},{\"serieName\": \"mfgr#14\",\"color\": \"rgba(6,191,127,0.5)\"},{\"serieName\": \"mfgr#15\",\"color\": \"rgba(140,98,245,0.5)\"},{\"serieName\": \"mfgr#21\",\"color\": \"rgba(255,129,66,0.5)\"},{\"serieName\": \"mfgr#22\",\"color\": \"rgba(171,199,249,0.5)\"},{\"serieName\": \"mfgr#23\",\"color\": \"rgba(181,236,242,0.5)\"},{\"serieName\": \"mfgr#24\",\"color\": \"rgba(253,233,175,0.5)\"},{\"serieName\": \"mfgr#25\",\"color\": \"rgba(155,229,203,0.5)\"},{\"serieName\": \"mfgr#31\",\"color\": \"rgba(209,192,251,0.5)\"},{\"serieName\": \"mfgr#32\",\"color\": \"rgba(255,204,179,0.5)\"},{\"serieName\": \"mfgr#33\",\"color\": \"rgba(35,89,182,0.5)\"},{\"serieName\": \"mfgr#34\",\"color\": \"rgba(54,159,170,0.5)\"},{\"serieName\": \"mfgr#35\",\"color\": \"rgba(191,152,42,0.5)\"},{\"serieName\": \"mfgr#41\",\"color\": \"rgba(4,145,96,0.5)\"},{\"serieName\": \"mfgr#42\",\"color\": \"rgba(106,74,186,0.5)\"},{\"serieName\": \"mfgr#43\",\"color\": \"rgba(194,98,50,0.5)\"},{\"serieName\": \"mfgr#44\",\"color\": \"rgba(113,161,244,0.5)\"},{\"serieName\": \"mfgr#45\",\"color\": \"rgba(130,223,233,0.5)\"},{\"serieName\": \"mfgr#51\",\"color\": \"rgba(252,217,119,0.5)\"},{\"serieName\": \"mfgr#52\",\"color\": \"rgba(86,211,168,0.5)\"},{\"serieName\": \"mfgr#53\",\"color\": \"rgba(176,148,248,0.5)\"},{\"serieName\": \"mfgr#54\",\"color\": \"rgba(255,169,126,0.5)\"},{\"serieName\": \"mfgr#55\",\"color\": \"rgba(22,55,114,0.5)\"}]}"
+  display_mode: CHART_MODE
