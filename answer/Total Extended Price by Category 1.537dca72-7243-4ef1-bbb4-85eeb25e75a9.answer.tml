@@ -5,15 +5,18 @@ answer:
   - id: Parameters WS
     name: Parameters WS
     fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-  search_query: "[Extended Price] [Category]"
+  search_query: "[Extended Price] [Category] [Supply Cost]"
   answer_columns:
   - name: Category
   - name: Total Extended Price
+  - name: Total Supply Cost
   table:
     table_columns:
     - column_id: Category
       headline_aggregation: COUNT_DISTINCT
     - column_id: Total Extended Price
+      headline_aggregation: SUM
+    - column_id: Total Supply Cost
       headline_aggregation: SUM
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
@@ -22,11 +25,13 @@ answer:
     chart_columns:
     - column_id: Category
     - column_id: Total Extended Price
+    - column_id: Total Supply Cost
     axis_configs:
     - x:
       - Category
       "y":
       - Total Extended Price
+      - Total Supply Cost
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"9a63c6ed-1e44-44d9-bdae-9a1ce725bfac\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"6f4f2886-83c4-420d-bc79-5987e6085eeb\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"93a3ba58-3216-4ebc-af2f-25437a37d7cc\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"7baaadd4-6c53-43b7-8648-715d4f0ef023\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Supply Cost\"],\"isOpposite\": true}},{\"id\": \"a7dd0414-9aa9-49e2-9fd3-59b64b64ec80\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Extended Price\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Supply Cost\",\"color\": \"#2E75F0\"}]}"
   display_mode: CHART_MODE
