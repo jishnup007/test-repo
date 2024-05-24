@@ -5,14 +5,17 @@ answer:
   - id: Parameters WS
     name: Parameters WS
     fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-  search_query: "[Revenue] [Category]"
+  search_query: "[Revenue] [Category] [Extended Price]"
   answer_columns:
   - name: Category
+  - name: Total Extended Price
   - name: Total Revenue
   table:
     table_columns:
     - column_id: Category
       headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Extended Price
+      headline_aggregation: SUM
     - column_id: Total Revenue
       headline_aggregation: SUM
     client_state: ""
@@ -21,12 +24,14 @@ answer:
     type: COLUMN
     chart_columns:
     - column_id: Category
+    - column_id: Total Extended Price
     - column_id: Total Revenue
     axis_configs:
     - x:
       - Category
       "y":
       - Total Revenue
+      - Total Extended Price
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"0ff04f5e-af6e-4be3-b136-f13875c7b8c9\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"2683e2d3-e2a5-4dad-abc1-b2b62d0c2676\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#06BF7F\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d5ffc319-89ed-4534-ae86-18bd20f7c3f9\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"64f8b579-3761-498f-a5ca-8674505c1cd2\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": true}},{\"id\": \"027912e0-3dd8-4f36-9804-893119c1268e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#06BF7F\"},{\"serieName\": \"Total Extended Price\",\"color\": \"#2E75F0\"}]}"
   display_mode: CHART_MODE
