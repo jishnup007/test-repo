@@ -5,15 +5,18 @@ answer:
   - id: Parameters WS
     name: Parameters WS
     fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-  search_query: "[Revenue] [Category] [Extended Price]"
+  search_query: "[Revenue] [Category] [Extended Price] [Order Date] [Order Date].quarterly"
   answer_columns:
   - name: Category
+  - name: Quarter(Order Date)
   - name: Total Extended Price
   - name: Total Revenue
   table:
     table_columns:
     - column_id: Category
       headline_aggregation: COUNT_DISTINCT
+    - column_id: Quarter(Order Date)
+      headline_aggregation: MIN-MAX
     - column_id: Total Extended Price
       headline_aggregation: SUM
     - column_id: Total Revenue
@@ -21,17 +24,18 @@ answer:
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
-    type: COLUMN
+    type: LINE
     chart_columns:
     - column_id: Category
+    - column_id: Quarter(Order Date)
     - column_id: Total Extended Price
     - column_id: Total Revenue
     axis_configs:
     - x:
-      - Category
+      - Quarter(Order Date)
       "y":
       - Total Revenue
       - Total Extended Price
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d5ffc319-89ed-4534-ae86-18bd20f7c3f9\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"64f8b579-3761-498f-a5ca-8674505c1cd2\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": true}},{\"id\": \"027912e0-3dd8-4f36-9804-893119c1268e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#06BF7F\"},{\"serieName\": \"Total Extended Price\",\"color\": \"#2E75F0\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Order Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e985666f-909a-46c9-831f-18d709000441\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"f322c2b7-3e81-4bd3-aec3-76de7933e92f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": true}},{\"id\": \"03d60174-cd81-4b09-8c91-5c1f25d3daee\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#06BF7F\"},{\"serieName\": \"Total Extended Price\",\"color\": \"#2E75F0\"}]}"
   display_mode: CHART_MODE
