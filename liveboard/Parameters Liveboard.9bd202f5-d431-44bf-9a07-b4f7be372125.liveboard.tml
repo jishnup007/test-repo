@@ -25,8 +25,6 @@ liveboard:
         table_columns:
         - column_id: Total Partial Revenue
           show_headline: false
-        ordered_column_ids:
-        - Total Partial Revenue
         client_state: ""
       chart:
         type: KPI
@@ -65,8 +63,6 @@ liveboard:
         table_columns:
         - column_id: Total Partial Quantity
           show_headline: false
-        ordered_column_ids:
-        - Total Partial Quantity
         client_state: ""
       chart:
         type: KPI
@@ -92,29 +88,25 @@ liveboard:
         was_auto_generated: false
       search_query: "[Holiday YTD] = true [Revenue] [Quantity] [Color]"
       answer_columns:
-      - name: Total Revenue
-      - name: Total Quantity
       - name: Color
+      - name: Total Quantity
+      - name: Total Revenue
       table:
         table_columns:
         - column_id: Color
           show_headline: false
-        - column_id: Total Revenue
-          show_headline: false
         - column_id: Total Quantity
           show_headline: false
-        ordered_column_ids:
-        - Color
-        - Total Revenue
-        - Total Quantity
+        - column_id: Total Revenue
+          show_headline: false
         client_state: ""
         client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
       chart:
         type: LINE
         chart_columns:
         - column_id: Color
-        - column_id: Total Revenue
         - column_id: Total Quantity
+        - column_id: Total Revenue
         axis_configs:
         - x:
           - Color
@@ -139,29 +131,25 @@ liveboard:
         was_auto_generated: false
       search_query: "[Holiday YTD] = true [Revenue] [Quantity] [Color]"
       answer_columns:
-      - name: Total Revenue
-      - name: Total Quantity
       - name: Color
+      - name: Total Quantity
+      - name: Total Revenue
       table:
         table_columns:
         - column_id: Color
           show_headline: false
-        - column_id: Total Revenue
-          show_headline: false
         - column_id: Total Quantity
           show_headline: false
-        ordered_column_ids:
-        - Color
-        - Total Revenue
-        - Total Quantity
+        - column_id: Total Revenue
+          show_headline: false
         client_state: ""
         client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
       chart:
         type: LINE
         chart_columns:
         - column_id: Color
-        - column_id: Total Revenue
         - column_id: Total Quantity
+        - column_id: Total Revenue
         axis_configs:
         - x:
           - Color
