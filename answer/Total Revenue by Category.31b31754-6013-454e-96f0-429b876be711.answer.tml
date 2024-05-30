@@ -1,0 +1,32 @@
+guid: 31b31754-6013-454e-96f0-429b876be711
+answer:
+  name: Total Revenue by Category
+  tables:
+  - id: Parameters WS
+    name: Parameters WS
+    fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+  search_query: "[Revenue] [Category]"
+  answer_columns:
+  - name: Category
+  - name: Total Revenue
+  table:
+    table_columns:
+    - column_id: Category
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Revenue
+      headline_aggregation: SUM
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Category
+    - column_id: Total Revenue
+    axis_configs:
+    - x:
+      - Category
+      "y":
+      - Total Revenue
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8ed85a49-ebde-492a-ac14-26506410bb62\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"b9a63cb4-8044-4fc7-900c-a6c296df673a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}]}"
+  display_mode: CHART_MODE
