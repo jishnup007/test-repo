@@ -79,7 +79,7 @@ worksheet:
     properties:
       column_type: MEASURE
       aggregation: SUM
-  - name: Extended Price 1
+  - name: Extended Price
     column_id: LINEORDER_1::Extended Price
     properties:
       column_type: MEASURE
