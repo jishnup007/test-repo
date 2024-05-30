@@ -1,6 +1,6 @@
 guid: 32f1a29c-b12e-4861-86e7-3c60d098b582
 liveboard:
-  name: test lb loading
+  name: test lb loading 3
   visualizations:
   - id: Viz_1
     answer:
@@ -73,3 +73,9 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Email Domain\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"44b20baf-7555-45bb-8f3c-0435be41613c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Supply Cost\"],\"isOpposite\": false}},{\"id\": \"4433f74a-596b-453c-8421-841e111e118f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": true}},{\"id\": \"265681c2-6ac6-4550-bbc2-e823fbd90188\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Email Domain\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Supply Cost\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Tax\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 50f0474a-8678-4a11-b645-b3dc7f890895
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
+    - visualization_id: Viz_2
+      size: MEDIUM
