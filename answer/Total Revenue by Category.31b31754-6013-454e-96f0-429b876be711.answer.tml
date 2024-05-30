@@ -5,28 +5,28 @@ answer:
   - id: Parameters WS
     name: Parameters WS
     fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-  search_query: "[Revenue] [Category]"
+  search_query: "[Supply Cost] [Color]"
   answer_columns:
-  - name: Category
-  - name: Total Revenue
+  - name: Color
+  - name: Total Supply Cost
   table:
     table_columns:
-    - column_id: Category
+    - column_id: Color
       headline_aggregation: COUNT_DISTINCT
-    - column_id: Total Revenue
+    - column_id: Total Supply Cost
       headline_aggregation: SUM
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
     type: COLUMN
     chart_columns:
-    - column_id: Category
-    - column_id: Total Revenue
+    - column_id: Color
+    - column_id: Total Supply Cost
     axis_configs:
     - x:
-      - Category
+      - Color
       "y":
-      - Total Revenue
+      - Total Supply Cost
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8ed85a49-ebde-492a-ac14-26506410bb62\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"b9a63cb4-8044-4fc7-900c-a6c296df673a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2dcbc696-702c-43d3-9a78-c144b2e9c22b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Supply Cost\"],\"isOpposite\": false}},{\"id\": \"bce9bae3-1ece-4275-b140-6ab18fe3e48f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\"]}}]}"
   display_mode: CHART_MODE
