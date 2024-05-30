@@ -1,41 +1,8 @@
 guid: 9c7649de-2768-4a5e-81e0-6077b366ee47
 liveboard:
-  name: test lb 5
+  name: test lb 4
   visualizations:
   - id: Viz_1
-    answer:
-      name: Total Extended Price 1 by Brand1
-      tables:
-      - id: Parameters WS
-        name: Parameters WS
-        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-      search_query: "[Extended Price 1] [Brand3]"
-      answer_columns:
-      - name: Brand3
-      - name: Total Extended Price 1
-      table:
-        table_columns:
-        - column_id: Brand3
-          headline_aggregation: COUNT_DISTINCT
-        - column_id: Total Extended Price 1
-          headline_aggregation: SUM
-        client_state: ""
-        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
-      chart:
-        type: COLUMN
-        chart_columns:
-        - column_id: Brand3
-        - column_id: Total Extended Price 1
-        axis_configs:
-        - x:
-          - Brand3
-          "y":
-          - Total Extended Price 1
-        client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Brand3\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price 1\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"c8922040-02d7-4d48-b018-4c586265d295\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price 1\"],\"isOpposite\": false}},{\"id\": \"63b9bd58-7982-4f3a-9003-231197041aaf\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand3\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Extended Price 1\",\"color\": \"#8C62F5\"}]}"
-      display_mode: CHART_MODE
-    viz_guid: c3c4765b-ff17-4fa3-8d22-204410b15b2a
-  - id: Viz_2
     answer:
       name: Total Order Total Price by Category
       tables:
@@ -71,6 +38,4 @@ liveboard:
   layout:
     tiles:
     - visualization_id: Viz_1
-      size: MEDIUM
-    - visualization_id: Viz_2
       size: MEDIUM
