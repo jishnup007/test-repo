@@ -1,3 +1,37 @@
 guid: 32f1a29c-b12e-4861-86e7-3c60d098b582
 liveboard:
   name: test lb loading
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Revenue by Category
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Supply Cost] [Color]"
+      answer_columns:
+      - name: Color
+      - name: Total Supply Cost
+      table:
+        table_columns:
+        - column_id: Color
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Supply Cost
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Color
+        - column_id: Total Supply Cost
+        axis_configs:
+        - x:
+          - Color
+          "y":
+          - Total Supply Cost
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2dcbc696-702c-43d3-9a78-c144b2e9c22b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Supply Cost\"],\"isOpposite\": false}},{\"id\": \"bce9bae3-1ece-4275-b140-6ab18fe3e48f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 7a121c8e-457a-460e-aff7-50aa8490b3d2
