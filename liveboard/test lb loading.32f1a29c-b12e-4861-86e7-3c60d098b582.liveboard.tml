@@ -35,3 +35,41 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2dcbc696-702c-43d3-9a78-c144b2e9c22b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Supply Cost\"],\"isOpposite\": false}},{\"id\": \"bce9bae3-1ece-4275-b140-6ab18fe3e48f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\"]}}]}"
       display_mode: CHART_MODE
     viz_guid: 7a121c8e-457a-460e-aff7-50aa8490b3d2
+  - id: Viz_2
+    answer:
+      name: "Total Supply Cost, Total Tax by Email Domain"
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Email Domain] [Supply Cost] [Tax]"
+      answer_columns:
+      - name: Email Domain
+      - name: Total Supply Cost
+      - name: Total Tax
+      table:
+        table_columns:
+        - column_id: Email Domain
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Supply Cost
+          headline_aggregation: SUM
+        - column_id: Total Tax
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Email Domain
+        - column_id: Total Supply Cost
+        - column_id: Total Tax
+        axis_configs:
+        - x:
+          - Email Domain
+          "y":
+          - Total Supply Cost
+          - Total Tax
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Email Domain\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"44b20baf-7555-45bb-8f3c-0435be41613c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Supply Cost\"],\"isOpposite\": false}},{\"id\": \"4433f74a-596b-453c-8421-841e111e118f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": true}},{\"id\": \"265681c2-6ac6-4550-bbc2-e823fbd90188\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Email Domain\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Supply Cost\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Tax\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 50f0474a-8678-4a11-b645-b3dc7f890895
