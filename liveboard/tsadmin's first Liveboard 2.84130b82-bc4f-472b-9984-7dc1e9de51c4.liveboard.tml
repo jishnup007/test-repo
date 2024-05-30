@@ -1,6 +1,6 @@
 guid: 84130b82-bc4f-472b-9984-7dc1e9de51c4
 liveboard:
-  name: tsadmin's first Liveboard
+  name: tsadmin's first Liveboard 2
   visualizations:
   - id: Viz_1
     answer:
@@ -35,3 +35,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"91dfaf66-69ff-45ff-b900-152c33bc452e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"dbc78750-ca0e-4988-bebe-858ad9e1da71\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#FF8142\"}]}"
       display_mode: CHART_MODE
     viz_guid: d700c031-3606-4e35-aefe-ad293a5fe59a
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
