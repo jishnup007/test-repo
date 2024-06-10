@@ -1,3 +1,62 @@
 guid: 6d2c330d-ec8c-4d5a-a33f-b406a88a79db
 liveboard:
   name: test lb 1
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Parameters Answer
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      formulas:
+      - id: Adjusted Tax
+        name: Adjusted Tax
+        expr: "[Tax] - [Discount] * [Double List Param]"
+        was_auto_generated: false
+      - id: Parameterized Commit Date Filter
+        name: Parameterized Commit Date Filter
+        expr: "[Commit Date] = [Date Param]"
+        was_auto_generated: false
+      search_query: "[Tax] [Ship Mode] [Adjusted Tax] [Parameterized Commit Date Filter] = true"
+      answer_columns:
+      - name: Ship Mode
+      - name: Total Adjusted Tax
+      - name: Total Tax
+      table:
+        table_columns:
+        - column_id: Ship Mode
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Adjusted Tax
+          headline_aggregation: TABLE_AGGR
+        - column_id: Total Tax
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Ship Mode
+        - column_id: Total Adjusted Tax
+        - column_id: Total Tax
+        axis_configs:
+        - x:
+          - Ship Mode
+          "y":
+          - Total Tax
+          - Total Adjusted Tax
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"e44c68e2-8a83-494e-b833-6818607dbbba\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"eadebb50-9412-4e16-91ad-c02a7b415d49\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Adjusted Tax\"],\"isOpposite\": true}},{\"id\": \"22fcac66-95d3-47c1-bd32-321adec41a49\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Ship Mode\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Adjusted Tax\",\"color\": \"#2E75F0\"}]}"
+      display_mode: TABLE_MODE
+      parameter_values:
+      - key: Date Param
+        value: 10/16/1994
+    viz_guid: eaffb376-4941-4e93-bd03-c22f3bf8c875
+  parameter_overrides:
+  - key: 29e9c1d8-9fcf-4b5b-a182-aca9c44d8051
+    value:
+      name: Parameters WS::Double List Param
+  - key: 94af5fac-3afb-4781-aca1-a5ca97094661
+    value:
+      name: Parameters WS::Date Param
+      override_value: 10/16/1994
