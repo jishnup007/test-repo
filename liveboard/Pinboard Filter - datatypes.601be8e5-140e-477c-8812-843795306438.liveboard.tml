@@ -1,0 +1,265 @@
+guid: 601be8e5-140e-477c-8812-843795306438
+liveboard:
+  name: Pinboard Filter - datatypes
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Total Tax by Category, Customer Address, Ship Priority, Supplier City, Color"
+      tables:
+      - id: TPCH WS
+        name: TPCH WS
+        fqn: eed411a1-2cdc-4c3e-8f2e-c1a54f636a64
+      search_query: "[Category] [Customer Address] [Ship Priority] [Supplier City] [Tax] [Color]"
+      answer_columns:
+      - name: Category
+      - name: Color
+      - name: Customer Address
+      - name: Ship Priority
+      - name: Supplier City
+      - name: Total Tax
+      table:
+        table_columns:
+        - column_id: Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Color
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Customer Address
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Ship Priority
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Supplier City
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Tax
+          headline_aggregation: SUM
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Category
+        - column_id: Customer Address
+        - column_id: Total Tax
+        axis_configs:
+        - x:
+          - Customer Address
+          "y":
+          - Total Tax
+          color:
+          - Category
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"993e953e-91f7-4751-ab64-b8f1a5c9ab70\":{\"linkedColumns\":[],\"axisType\":\"X\"}},\"version\":\"V2.1\",\"columnProperties\":{\"Category\":{},\"Customer Address\":{},\"Ship Priority\":{},\"Supplier City\":{},\"Color\":{},\"Total Tax\":{}}}"
+      display_mode: TABLE_MODE
+    viz_guid: d547ec54-2a37-4516-a222-2b06719af726
+  - id: Viz_2
+    answer:
+      name: "Total Discount by Quarterly (Commit Date), Customer Nation, Type, Color"
+      tables:
+      - id: TPCH WS
+        name: TPCH WS
+        fqn: eed411a1-2cdc-4c3e-8f2e-c1a54f636a64
+      search_query: "[Commit Date] [Commit Date].quarterly [Customer Nation] [Type] [Discount] [Color]"
+      answer_columns:
+      - name: Color
+      - name: Customer Nation
+      - name: Quarter(Commit Date)
+      - name: Total Discount
+      - name: Type
+      table:
+        table_columns:
+        - column_id: Color
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Customer Nation
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Quarter(Commit Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Discount
+          headline_aggregation: SUM
+        - column_id: Type
+          headline_aggregation: COUNT_DISTINCT
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Customer Nation
+        - column_id: Quarter(Commit Date)
+        - column_id: Total Discount
+        axis_configs:
+        - x:
+          - Quarter(Commit Date)
+          "y":
+          - Total Discount
+          color:
+          - Customer Nation
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"2ee1dde5-ec4a-4b3a-ac0c-6c9c4c1351cc\":{\"linkedColumns\":[],\"axisType\":\"X\"}},\"version\":\"V2.1\",\"columnProperties\":{\"Quarter(Commit Date)\":{},\"Customer Nation\":{},\"Type\":{},\"Color\":{},\"Total Discount\":{}}}"
+      display_mode: TABLE_MODE
+    viz_guid: 6c6416b3-9816-401a-aad5-c863b019284c
+  - id: Viz_3
+    answer:
+      name: Total Quantity by Quarterly (Commit Date) and Ship Mode
+      tables:
+      - id: TPCH WS
+        name: TPCH WS
+        fqn: eed411a1-2cdc-4c3e-8f2e-c1a54f636a64
+      search_query: "[Commit Date] [Commit Date].quarterly [Quantity] [Ship Mode]"
+      answer_columns:
+      - name: Quarter(Commit Date)
+      - name: Ship Mode
+      - name: Total Quantity
+      table:
+        table_columns:
+        - column_id: Quarter(Commit Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Ship Mode
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Quantity
+          headline_aggregation: SUM
+        client_state: "{\"dataOffset\":0.0,\"wrapTableHeader\":true}"
+      chart:
+        type: WATERFALL
+        chart_columns:
+        - column_id: Quarter(Commit Date)
+        - column_id: Ship Mode
+        - column_id: Total Quantity
+        axis_configs:
+        - x:
+          - Quarter(Commit Date)
+          "y":
+          - Total Quantity
+          color:
+          - Ship Mode
+        client_state: "{\"chartProperties\":{\"visibleSeriesNames\":[\"{Null}\",\"air\",\"fob\",\"mail\",\"rail\",\"reg air\",\"ship\",\"truck\"],\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"3aabb102-580f-40a4-8b53-a60a9063b772\":{\"linkedColumns\":[\"Total Quantity\"],\"axisType\":\"Y\",\"isOpposite\":false},\"7ec9b2fe-ff90-4ffe-b839-d70dc85298c2\":{\"linkedColumns\":[\"Quarter(Commit Date)\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"{null}\":\"rgba(227,57,74,0.3)\",\"air\":\"rgba(104,184,227,0.3)\",\"fob\":\"rgba(245,203,78,0.3)\",\"mail\":\"rgba(64,116,179,0.3)\",\"rail\":\"rgba(53,176,110,0.3)\",\"reg air\":\"rgba(150,103,184,0.3)\",\"ship\":\"rgba(252,169,176,0.3)\",\"truck\":\"rgba(199,235,255,0.3)\"},\"yAxisShared\":false,\"visibleSeriesNames\":[\"{Null}\",\"air\",\"fob\",\"mail\",\"rail\",\"reg air\",\"ship\",\"truck\"],\"version\":\"V2.1\",\"columnProperties\":{\"Quarter(Commit Date)\":{},\"Ship Mode\":{},\"Total Quantity\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 4676087a-a7c1-4c02-abc7-7845731dbb3d
+  - id: Viz_4
+    answer:
+      name: "Total Tax by Customer Nation, Customer Region, Quarterly (Commit Date)"
+      tables:
+      - id: CUSTOMER
+        name: CUSTOMER
+        fqn: 5de19354-710f-448e-8ed2-4315d926a264
+      - id: LINEORDER
+        name: LINEORDER
+        fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+      joins:
+      - id: Lineorder CustKey - Customer CustKey
+        name: Lineorder CustKey - Customer CustKey
+        source: LINEORDER
+        destination: CUSTOMER
+      table_paths:
+      - id: CUSTOMER_1
+        table: CUSTOMER
+        join_path:
+        - join:
+          - Lineorder CustKey - Customer CustKey
+      - id: LINEORDER_1
+        table: LINEORDER
+        join_path:
+        - {}
+      search_query: "[CUSTOMER_1::Customer Nation] [CUSTOMER_1::Customer Region] [LINEORDER_1::Commit Date] [LINEORDER_1::Commit Date].quarterly [LINEORDER_1::Tax]"
+      answer_columns:
+      - name: Customer Nation
+      - name: Customer Region
+      - name: Quarter(Commit Date)
+      - name: Total Tax
+      table:
+        table_columns:
+        - column_id: Customer Nation
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Customer Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Quarter(Commit Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Tax
+          headline_aggregation: SUM
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Customer Region
+        - column_id: Quarter(Commit Date)
+        - column_id: Total Tax
+        axis_configs:
+        - x:
+          - Quarter(Commit Date)
+          "y":
+          - Total Tax
+          color:
+          - Customer Region
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"f357b530-0f96-4244-a7bf-2db8a83572c5\":{\"linkedColumns\":[\"Total Tax\"],\"axisType\":\"Y\",\"isOpposite\":false},\"30ff5ebf-347f-4ffb-a5ad-8258723845a8\":{\"linkedColumns\":[\"Quarter(Commit Date)\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"africa\":\"#e3394a\",\"america\":\"#68b8e3\",\"asia\":\"#f5cb4e\",\"europe\":\"#4074b3\",\"middle east\":\"#35b06e\"},\"version\":\"V2.1\",\"columnProperties\":{\"Customer Nation\":{},\"Customer Region\":{},\"Quarter(Commit Date)\":{},\"Total Tax\":{}}}"
+      display_mode: TABLE_MODE
+    viz_guid: 16f9166b-d6da-40a2-818f-fb8aa0308361
+  filters:
+  - column:
+    - TPCH WS::Category
+    oper: in
+    values:
+    - mfgr#12
+    - mfgr#14
+    - mfgr#22
+    - mfgr#24
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  - column:
+    - TPCH WS::Commit Date
+    is_mandatory: false
+    date_filter:
+      type: EXACT_DATE_RANGE
+      oper: between
+      date_range:
+        start_date: 07/18/1996
+        end_date: 10/29/1998
+    display_name: ""
+  - column:
+    - TPCH WS::Tax
+    oper: '>='
+    values:
+    - "5"
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  - column:
+    - TPCH WS::Ship Mode
+    oper: in
+    values:
+    - air
+    - fob
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  - column:
+    - TPCH WS::Brand1
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  - column:
+    - TPCH WS::Customer Region
+    oper: in
+    values:
+    - asia
+    - europe
+    - middle east
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  - column:
+    - TPCH WS::the month formula
+    oper: in
+    values:
+    - january
+    - february
+    - march
+    - july
+    - may
+    - october
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
+    - visualization_id: Viz_2
+      size: MEDIUM
+    - visualization_id: Viz_3
+      size: MEDIUM
+    - visualization_id: Viz_4
+      size: MEDIUM
