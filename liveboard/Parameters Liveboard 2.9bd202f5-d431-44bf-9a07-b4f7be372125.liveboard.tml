@@ -1,6 +1,6 @@
 guid: 9bd202f5-d431-44bf-9a07-b4f7be372125
 liveboard:
-  name: Parameters Liveboard
+  name: Parameters Liveboard 2
   visualizations:
   - id: Viz_1
     answer:
@@ -38,7 +38,7 @@ liveboard:
     viz_guid: db0badd5-47c6-400a-842d-133a7b44d435
   - id: Viz_2
     answer:
-      name: Total Partial Quantity
+      name: Total Partial Quantity 2
       tables:
       - id: Parameters WS
         name: Parameters WS
