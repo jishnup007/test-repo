@@ -1,0 +1,38 @@
+guid: d61ce56d-f2a2-4138-abea-9797bb62d0b0
+answer:
+  name: Total Lo Custkey by Quarterly Lo Commitdate and Quarterly Lo Orderdate
+  tables:
+  - id: UNIQUE-jishnu.pavithran-UI-WS
+    name: UNIQUE-jishnu.pavithran-UI-WS
+    fqn: 5ffe4a5b-2631-4062-8bbe-84a588d1c83e
+  search_query: "[Lo Commitdate] [Lo Commitdate].quarterly [Lo Orderdate] [Lo Orderdate].quarterly [Lo Custkey]"
+  answer_columns:
+  - name: Quarter(Lo Commitdate)
+  - name: Quarter(Lo Orderdate)
+  - name: Total Lo Custkey
+  table:
+    table_columns:
+    - column_id: Quarter(Lo Commitdate)
+      headline_aggregation: MIN-MAX
+    - column_id: Quarter(Lo Orderdate)
+      headline_aggregation: MIN-MAX
+    - column_id: Total Lo Custkey
+      headline_aggregation: SUM
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: LINE
+    chart_columns:
+    - column_id: Quarter(Lo Commitdate)
+    - column_id: Quarter(Lo Orderdate)
+    - column_id: Total Lo Custkey
+    axis_configs:
+    - x:
+      - Quarter(Lo Commitdate)
+      "y":
+      - Total Lo Custkey
+      color:
+      - Quarter(Lo Orderdate)
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Lo Commitdate)\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Lo Orderdate)\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Custkey\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"fb520568-d1e4-47c8-9191-979fb62c82b5\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Custkey\"],\"isOpposite\": false}},{\"id\": \"d9754951-35c3-4be4-8d9d-a8b5437bb9cd\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Lo Commitdate)\"]}}]}"
+  display_mode: CHART_MODE
