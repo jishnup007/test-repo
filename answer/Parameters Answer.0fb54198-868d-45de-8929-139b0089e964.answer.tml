@@ -16,29 +16,25 @@ answer:
     was_auto_generated: false
   search_query: "[Tax] [Ship Mode] [Adjusted Tax] [Parameterized Commit Date Filter] = true"
   answer_columns:
-  - name: Total Tax
   - name: Ship Mode
   - name: Total Adjusted Tax
+  - name: Total Tax
   table:
     table_columns:
     - column_id: Ship Mode
       headline_aggregation: COUNT_DISTINCT
-    - column_id: Total Tax
-      headline_aggregation: SUM
     - column_id: Total Adjusted Tax
       headline_aggregation: TABLE_AGGR
-    ordered_column_ids:
-    - Ship Mode
-    - Total Tax
-    - Total Adjusted Tax
+    - column_id: Total Tax
+      headline_aggregation: SUM
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
     type: COLUMN
     chart_columns:
     - column_id: Ship Mode
-    - column_id: Total Tax
     - column_id: Total Adjusted Tax
+    - column_id: Total Tax
     axis_configs:
     - x:
       - Ship Mode
