@@ -1,0 +1,107 @@
+guid: 0c8f6397-c1f9-4009-9b49-61b21eea3f31
+liveboard:
+  name: tsadmin's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Tax by Monthly Commit Date
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Tax] [Commit Date].monthly"
+      answer_columns:
+      - name: Month(Commit Date)
+      - name: Total Tax
+      table:
+        table_columns:
+        - column_id: Month(Commit Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Tax
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Commit Date)
+        - column_id: Total Tax
+        axis_configs:
+        - x:
+          - Month(Commit Date)
+          "y":
+          - Total Tax
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Month(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"445ae431-e025-4f54-af79-19c8437316d7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"1a3d4753-a79a-4d5f-9776-e26769498ed6\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#8C62F5\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: a3c8a165-b015-486d-b625-4166b57b7c39
+  - id: Viz_2
+    answer:
+      name: Total Tax by Monthly Commit Date
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Tax] [Commit Date].monthly"
+      answer_columns:
+      - name: Month(Commit Date)
+      - name: Total Tax
+      table:
+        table_columns:
+        - column_id: Month(Commit Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Tax
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Commit Date)
+        - column_id: Total Tax
+        axis_configs:
+        - x:
+          - Month(Commit Date)
+          "y":
+          - Total Tax
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Month(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a62b502f-f057-41a1-a008-abc70bd98118\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"b6f2a963-4061-4018-b95d-33921fa35f3c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#06BF7F\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 4423609c-0d4b-43cb-a4a9-a9190b975943
+  - id: Viz_3
+    answer:
+      name: Total Tax by Monthly Commit Date
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Tax] [Commit Date].monthly"
+      answer_columns:
+      - name: Month(Commit Date)
+      - name: Total Tax
+      table:
+        table_columns:
+        - column_id: Month(Commit Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Tax
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Commit Date)
+        - column_id: Total Tax
+        axis_configs:
+        - x:
+          - Month(Commit Date)
+          "y":
+          - Total Tax
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Month(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a62b502f-f057-41a1-a008-abc70bd98118\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"b6f2a963-4061-4018-b95d-33921fa35f3c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#06BF7F\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 4dc17d8c-451c-43ca-b533-0aa310e61256
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: SMALL
