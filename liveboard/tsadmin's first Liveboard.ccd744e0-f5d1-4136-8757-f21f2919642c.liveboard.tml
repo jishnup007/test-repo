@@ -1,0 +1,44 @@
+guid: ccd744e0-f5d1-4136-8757-f21f2919642c
+liveboard:
+  name: tsadmin's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Total Extended Price, Total Discount by Category"
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Extended Price] [Discount] [Category]"
+      answer_columns:
+      - name: Category
+      - name: Total Discount
+      - name: Total Extended Price
+      table:
+        table_columns:
+        - column_id: Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Discount
+          headline_aggregation: SUM
+        - column_id: Total Extended Price
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Category
+        - Total Extended Price
+        - Total Discount
+        client_state: ""
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Category
+        - column_id: Total Discount
+        - column_id: Total Extended Price
+        axis_configs:
+        - x:
+          - Category
+          "y":
+          - Total Extended Price
+          - Total Discount
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 4035c8ba-f5f4-4609-a140-4a4bbc16569a
