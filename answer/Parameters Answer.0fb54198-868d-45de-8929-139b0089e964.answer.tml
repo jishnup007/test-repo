@@ -27,6 +27,10 @@ answer:
       headline_aggregation: TABLE_AGGR
     - column_id: Total Tax
       headline_aggregation: SUM
+    ordered_column_ids:
+    - Ship Mode
+    - Total Tax
+    - Total Adjusted Tax
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
