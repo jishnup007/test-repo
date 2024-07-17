@@ -1,0 +1,28 @@
+guid: e96565e1-9214-47b9-86ac-4f7bc69d816a
+answer:
+  name: Total Tax
+  tables:
+  - id: Parameters WS
+    name: Parameters WS
+    fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+  search_query: "[Tax] [Commit Date].today"
+  answer_columns:
+  - name: Total Tax
+  table:
+    table_columns:
+    - column_id: Total Tax
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Total Tax
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: KPI
+    chart_columns:
+    - column_id: Total Tax
+    axis_configs:
+    - "y":
+      - Total Tax
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Tax\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"ac8aceb3-24a5-432e-9f5a-e7ac46682ec8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"f2ef75fb-dff7-4624-9dfc-e210f29be50b\",\"properties\": {\"axisType\": \"X\"}}]}"
+  display_mode: CHART_MODE
