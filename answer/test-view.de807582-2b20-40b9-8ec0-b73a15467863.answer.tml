@@ -1,0 +1,40 @@
+guid: de807582-2b20-40b9-8ec0-b73a15467863
+answer:
+  name: test-view
+  tables:
+  - id: (Sample) Retail - Apparel
+    name: (Sample) Retail - Apparel
+    fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+  search_query: "[quantity purchased] [sales] [date] [date].monthly"
+  answer_columns:
+  - name: Month(date)
+  - name: Total quantity purchased
+  - name: Total sales
+  table:
+    table_columns:
+    - column_id: Month(date)
+      show_headline: false
+    - column_id: Total quantity purchased
+      show_headline: false
+    - column_id: Total sales
+      show_headline: false
+    ordered_column_ids:
+    - Month(date)
+    - Total quantity purchased
+    - Total sales
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total quantity purchased\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}]}"
+  chart:
+    type: KPI
+    chart_columns:
+    - column_id: Month(date)
+    - column_id: Total quantity purchased
+    - column_id: Total sales
+    axis_configs:
+    - x:
+      - Month(date)
+      "y":
+      - Total quantity purchased
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total quantity purchased\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"Month(date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"19dacc9d-1867-42ba-9d89-ca18ac5270fc\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total quantity purchased\"],\"isOpposite\": false}},{\"id\": \"1ce43a91-0cac-4950-97a8-dd97976bb71a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total quantity purchased\",\"color\": \"#48D1E0\"}]}"
+  display_mode: CHART_MODE
