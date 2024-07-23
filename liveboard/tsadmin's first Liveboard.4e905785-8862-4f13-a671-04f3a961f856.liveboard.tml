@@ -1,0 +1,38 @@
+guid: 4e905785-8862-4f13-a671-04f3a961f856
+liveboard:
+  name: tsadmin's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Tax by Category
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Tax] [Category]"
+      answer_columns:
+      - name: Category
+      - name: Total Tax
+      table:
+        table_columns:
+        - column_id: Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Tax
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Category
+        - Total Tax
+        client_state: ""
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Category
+        - column_id: Total Tax
+        axis_configs:
+        - x:
+          - Category
+          "y":
+          - Total Tax
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 64216c5b-f1c2-4577-8af0-a3a07cd20fde
