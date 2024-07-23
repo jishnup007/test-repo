@@ -25,6 +25,8 @@ liveboard:
         table_columns:
         - column_id: Total Partial Revenue
           show_headline: false
+        ordered_column_ids:
+        - Total Partial Revenue
         client_state: ""
       chart:
         type: KPI
@@ -63,6 +65,8 @@ liveboard:
         table_columns:
         - column_id: Total Partial Quantity
           show_headline: false
+        ordered_column_ids:
+        - Total Partial Quantity
         client_state: ""
       chart:
         type: KPI
@@ -99,6 +103,10 @@ liveboard:
           show_headline: false
         - column_id: Total Revenue
           show_headline: false
+        ordered_column_ids:
+        - Color
+        - Total Revenue
+        - Total Quantity
         client_state: ""
         client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
       chart:
@@ -142,6 +150,10 @@ liveboard:
           show_headline: false
         - column_id: Total Revenue
           show_headline: false
+        ordered_column_ids:
+        - Color
+        - Total Revenue
+        - Total Quantity
         client_state: ""
         client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
       chart:
