@@ -1,0 +1,45 @@
+guid: 24dee7f9-6a95-4901-b25e-c88f3fa7a95b
+liveboard:
+  name: test lb
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Tax by Color and Category
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Tax] [Category] [Color]"
+      answer_columns:
+      - name: Category
+      - name: Color
+      - name: Total Tax
+      table:
+        table_columns:
+        - column_id: Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Color
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Tax
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Category
+        - Color
+        - Total Tax
+        client_state: ""
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Category
+        - column_id: Color
+        - column_id: Total Tax
+        axis_configs:
+        - x:
+          - Color
+          "y":
+          - Total Tax
+          color:
+          - Category
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 2d6ae0f0-903e-4299-adeb-d1431d5f8da7
