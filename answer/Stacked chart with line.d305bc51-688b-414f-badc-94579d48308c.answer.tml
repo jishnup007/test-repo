@@ -1,0 +1,69 @@
+guid: d305bc51-688b-414f-badc-94579d48308c
+answer:
+  name: Stacked chart with line
+  tables:
+  - id: CUSTOMER
+    name: CUSTOMER
+    fqn: 5de19354-710f-448e-8ed2-4315d926a264
+  - id: LINEORDER
+    name: LINEORDER
+    fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+  joins:
+  - id: Lineorder CustKey - Customer CustKey
+    name: Lineorder CustKey - Customer CustKey
+    source: LINEORDER
+    destination: CUSTOMER
+  table_paths:
+  - id: CUSTOMER_1
+    table: CUSTOMER
+    join_path:
+    - join:
+      - Lineorder CustKey - Customer CustKey
+  - id: LINEORDER_1
+    table: LINEORDER
+  search_query: "[LINEORDER_1::Quantity] [LINEORDER_1::Tax] [LINEORDER_1::Discount] [CUSTOMER_1::Market Segment] [CUSTOMER_1::Customer Region]"
+  answer_columns:
+  - name: Customer Region
+  - name: Market Segment
+  - name: Total Discount
+  - name: Total Quantity
+  - name: Total Tax
+  table:
+    table_columns:
+    - column_id: Customer Region
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Market Segment
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Discount
+      headline_aggregation: SUM
+    - column_id: Total Quantity
+      headline_aggregation: SUM
+    - column_id: Total Tax
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Market Segment
+    - Customer Region
+    - Total Quantity
+    - Total Tax
+    - Total Discount
+    client_state: "{\"dataOffset\":0.0,\"wrapTableHeader\":true}"
+  chart:
+    type: LINE_STACKED_COLUMN
+    chart_columns:
+    - column_id: Customer Region
+    - column_id: Market Segment
+    - column_id: Total Quantity
+    - column_id: Total Tax
+    axis_configs:
+    - x:
+      - Customer Region
+      "y":
+      - Total Quantity
+      color:
+      - Market Segment
+    - x:
+      - Customer Region
+      "y":
+      - Total Tax
+    client_state: "{\"seriesColors\":{\"total tax\":\"#940713\"},\"chartProperties\":{\"gridLines\":{\"xGridlineEnabled\":true,\"yGridlineEnabled\":true},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"3ef813bd-2405-416c-8f1e-8ef8ef0d7588\":{\"linkedColumns\":[\"Total Quantity\"],\"axisType\":\"Y\",\"isOpposite\":false},\"4f7d774c-318d-4e3e-ad99-317ea2a61425\":{\"linkedColumns\":[\"Total Tax\"],\"axisType\":\"Y\",\"isOpposite\":true},\"267015f9-db3e-4b79-ba18-3a8b0e16f09b\":{\"linkedColumns\":[\"Customer Region\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"automobile\":\"#4074b3\",\"building\":\"#f5cb4e\",\"furniture\":\"#68b8e3\",\"household\":\"#f06c77\",\"machinery\":\"#e3394a\",\"total tax\":\"#940713\"},\"yAxisShared\":false,\"gridLineConfig\":{\"xGridlineEnabled\":true,\"yGridlineEnabled\":true},\"version\":\"V2.1\",\"columnProperties\":{\"Market Segment\":{},\"Customer Region\":{},\"Total Quantity\":{},\"Total Tax\":{},\"Total Discount\":{}}}"
+  display_mode: CHART_MODE
