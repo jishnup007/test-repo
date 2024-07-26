@@ -1,0 +1,75 @@
+guid: 84d7f8b6-d121-4c8e-a22f-306c9daed651
+answer:
+  name: Pivot table with multiple measures
+  description: "Total Revenue, Total Discount by Quarterly (Order Date), Order Priority and Market Segment, Customer Region"
+  tables:
+  - id: CUSTOMER
+    name: CUSTOMER
+    fqn: 5de19354-710f-448e-8ed2-4315d926a264
+  - id: LINEORDER
+    name: LINEORDER
+    fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+  joins:
+  - id: Lineorder CustKey - Customer CustKey
+    name: Lineorder CustKey - Customer CustKey
+    source: LINEORDER
+    destination: CUSTOMER
+  table_paths:
+  - id: CUSTOMER_1
+    table: CUSTOMER
+    join_path:
+    - join:
+      - Lineorder CustKey - Customer CustKey
+  - id: LINEORDER_1
+    table: LINEORDER
+  search_query: "[LINEORDER_1::Revenue] by [LINEORDER_1::Order Date] [LINEORDER_1::Order Date].quarterly [CUSTOMER_1::Market Segment] [CUSTOMER_1::Customer Region] [LINEORDER_1::Discount] [LINEORDER_1::Order Priority]"
+  answer_columns:
+  - name: Customer Region
+  - name: Market Segment
+  - name: Order Priority
+  - name: Quarter(Order Date)
+  - name: Total Discount
+  - name: Total Revenue
+  table:
+    table_columns:
+    - column_id: Customer Region
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Market Segment
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Order Priority
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Quarter(Order Date)
+      headline_aggregation: MIN-MAX
+    - column_id: Total Discount
+      headline_aggregation: SUM
+    - column_id: Total Revenue
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Quarter(Order Date)
+    - Market Segment
+    - Customer Region
+    - Order Priority
+    - Total Revenue
+    - Total Discount
+    client_state: "{\"dataOffset\":0.0,\"wrapTableHeader\":true}"
+  chart:
+    type: PIVOT_TABLE
+    chart_columns:
+    - column_id: Customer Region
+    - column_id: Market Segment
+    - column_id: Order Priority
+    - column_id: Quarter(Order Date)
+    - column_id: Total Discount
+    - column_id: Total Revenue
+    axis_configs:
+    - x:
+      - Quarter(Order Date)
+      - Order Priority
+      "y":
+      - Total Revenue
+      - Total Discount
+      color:
+      - Market Segment
+      - Customer Region
+    client_state: "{\"pivotState\":{\"columnExpandedPaths\":[],\"rowExpandedPaths\":[]},\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{\"pivotState\":{\"columnExpandedPaths\":[],\"rowExpandedPaths\":[]},\"summaryMode\":\"None\",\"useFlatLayout\":true,\"isHeatmapOverlayed\":true}},\"useFlatLayout\":true,\"axisProperties\":{\"069aaa0e-fac3-44c6-9320-02764183a4d4\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"e8ca6c95-d1c1-4bdb-b85d-9b61d23124bb\":{\"linkedColumns\":[\"Total Discount\"],\"axisType\":\"Y\",\"isOpposite\":true},\"6948ffd5-2f91-461e-a1af-4256665f399c\":{\"linkedColumns\":[\"Quarter(Order Date)\",\"Order Priority\"],\"axisType\":\"X\"}},\"isHeatmapOverlayed\":true,\"summaryMode\":\"None\",\"yAxisShared\":false,\"version\":\"V2.1\",\"columnProperties\":{\"Quarter(Order Date)\":{},\"Market Segment\":{},\"Customer Region\":{},\"Order Priority\":{},\"Total Revenue\":{},\"Total Discount\":{}}}"
+  display_mode: CHART_MODE
