@@ -1,6 +1,7 @@
 guid: 0fb54198-868d-45de-8929-139b0089e964
 answer:
-  name: Parameters Answer
+  name: Parameters Answer 3
+  description: check
   tables:
   - id: Parameters WS
     name: Parameters WS
@@ -14,13 +15,16 @@ answer:
     name: Parameterized Commit Date Filter
     expr: "[Commit Date] = [Date Param]"
     was_auto_generated: false
-  search_query: "[Tax] [Ship Mode] [Adjusted Tax] [Parameterized Commit Date Filter] = true"
+  search_query: "[Tax] [Ship Mode] [Adjusted Tax] [Parameterized Commit Date Filter] = true [Order Date] [Order Date].monthly"
   answer_columns:
+  - name: Month(Order Date)
   - name: Ship Mode
   - name: Total Adjusted Tax
   - name: Total Tax
   table:
     table_columns:
+    - column_id: Month(Order Date)
+      headline_aggregation: MIN-MAX
     - column_id: Ship Mode
       headline_aggregation: COUNT_DISTINCT
     - column_id: Total Adjusted Tax
@@ -29,24 +33,26 @@ answer:
       headline_aggregation: SUM
     ordered_column_ids:
     - Ship Mode
+    - Month(Order Date)
     - Total Tax
     - Total Adjusted Tax
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
-    type: COLUMN
+    type: LINE
     chart_columns:
+    - column_id: Month(Order Date)
     - column_id: Ship Mode
     - column_id: Total Adjusted Tax
     - column_id: Total Tax
     axis_configs:
     - x:
-      - Ship Mode
+      - Month(Order Date)
       "y":
       - Total Tax
       - Total Adjusted Tax
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"e44c68e2-8a83-494e-b833-6818607dbbba\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"eadebb50-9412-4e16-91ad-c02a7b415d49\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Adjusted Tax\"],\"isOpposite\": true}},{\"id\": \"22fcac66-95d3-47c1-bd32-321adec41a49\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Ship Mode\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Adjusted Tax\",\"color\": \"#2E75F0\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"4024b98a-5a77-48ee-936b-7a274d870568\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"754979b7-d96b-4398-a734-f9a811f218ea\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Adjusted Tax\"],\"isOpposite\": true}},{\"id\": \"796d60d5-29de-4f07-b6f8-5762af259837\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Adjusted Tax\",\"color\": \"#2E75F0\"}]}"
   display_mode: TABLE_MODE
   parameter_values:
   - key: Date Param
