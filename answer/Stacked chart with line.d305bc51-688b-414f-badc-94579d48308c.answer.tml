@@ -47,11 +47,13 @@ answer:
     - Total Tax
     - Total Discount
     client_state: "{\"dataOffset\":0.0,\"wrapTableHeader\":true}"
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Market Segment\",\"columnProperty\": {}},{\"columnId\": \"Customer Region\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}}]}"
   chart:
-    type: LINE_STACKED_COLUMN
+    type: STACKED_AREA
     chart_columns:
     - column_id: Customer Region
     - column_id: Market Segment
+    - column_id: Total Discount
     - column_id: Total Quantity
     - column_id: Total Tax
     axis_configs:
@@ -59,11 +61,8 @@ answer:
       - Customer Region
       "y":
       - Total Quantity
-      color:
-      - Market Segment
-    - x:
-      - Customer Region
-      "y":
       - Total Tax
+      - Total Discount
     client_state: "{\"seriesColors\":{\"total tax\":\"#940713\"},\"chartProperties\":{\"gridLines\":{\"xGridlineEnabled\":true,\"yGridlineEnabled\":true},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"3ef813bd-2405-416c-8f1e-8ef8ef0d7588\":{\"linkedColumns\":[\"Total Quantity\"],\"axisType\":\"Y\",\"isOpposite\":false},\"4f7d774c-318d-4e3e-ad99-317ea2a61425\":{\"linkedColumns\":[\"Total Tax\"],\"axisType\":\"Y\",\"isOpposite\":true},\"267015f9-db3e-4b79-ba18-3a8b0e16f09b\":{\"linkedColumns\":[\"Customer Region\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"automobile\":\"#4074b3\",\"building\":\"#f5cb4e\",\"furniture\":\"#68b8e3\",\"household\":\"#f06c77\",\"machinery\":\"#e3394a\",\"total tax\":\"#940713\"},\"yAxisShared\":false,\"gridLineConfig\":{\"xGridlineEnabled\":true,\"yGridlineEnabled\":true},\"version\":\"V2.1\",\"columnProperties\":{\"Market Segment\":{},\"Customer Region\":{},\"Total Quantity\":{},\"Total Tax\":{},\"Total Discount\":{}}}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {\"xGridlineEnabled\": true,\"yGridlineEnabled\": true},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Market Segment\",\"columnProperty\": {}},{\"columnId\": \"Customer Region\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"82b2ffa6-b55b-4d52-a978-0e81fc5e545a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\",\"Total Tax\",\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"caee5338-5681-4af7-b1ff-912ba5ae9ab9\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Customer Region\"]}}],\"seriesColors\": [{\"serieName\": \"total tax\",\"color\": \"#940713\"}],\"systemSeriesColors\": [{\"serieName\": \"total tax\",\"color\": \"#940713\"},{\"serieName\": \"automobile\",\"color\": \"#4074b3\"},{\"serieName\": \"building\",\"color\": \"#f5cb4e\"},{\"serieName\": \"furniture\",\"color\": \"#68b8e3\"},{\"serieName\": \"household\",\"color\": \"#f06c77\"},{\"serieName\": \"machinery\",\"color\": \"#e3394a\"},{\"serieName\": \"Total Tax\",\"color\": \"#940713\"},{\"serieName\": \"Total Quantity\",\"color\": \"#FCC838\"},{\"serieName\": \"Total Discount\",\"color\": \"#2E75F0\"}]}"
   display_mode: CHART_MODE
