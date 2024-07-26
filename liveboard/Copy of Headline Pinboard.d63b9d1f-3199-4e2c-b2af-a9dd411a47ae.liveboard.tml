@@ -1,0 +1,325 @@
+guid: d63b9d1f-3199-4e2c-b2af-a9dd411a47ae
+liveboard:
+  name: Copy of Headline Pinboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Headline Currency - All datatype
+      tables:
+      - id: Tea Sales
+        name: Tea Sales
+        fqn: 84815b7f-f884-4d89-bd7b-6420927cf547
+      search_query: "[Revenue] [Sales] [Tea] [Date] [Date].hourly [Type]"
+      answer_columns:
+      - name: Currency Code
+      - name: Hour(Date)
+      - name: Tea
+      - name: Total Revenue
+      - name: Total Sales
+      - name: Type
+      table:
+        table_columns:
+        - column_id: Currency Code
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Hour(Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Tea
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Revenue
+          headline_aggregation: AVERAGE
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        - column_id: Type
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Tea
+        - Hour(Date)
+        - Type
+        - Currency Code
+        - Total Revenue
+        - Total Sales
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Tea\",\"columnProperty\": {}},{\"columnId\": \"Hour(Date)\",\"columnProperty\": {}},{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Currency Code\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Currency Code
+        - column_id: Hour(Date)
+        - column_id: Total Revenue
+          conditional_formatting:
+            rule:
+            - range:
+                max: 500.0
+              color: '#0500ff'
+              plotAsBand: false
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Hour(Date)
+          "y":
+          - Total Revenue
+          - Total Sales
+        client_state: "{\"multiColorSeriesColors\":{},\"seriesColors\":{\"Total Revenue\":\"#a174c1\"},\"chartProperties\":{\"visibleSeriesNames\":[\"Total Revenue\",\"Total Sales\"],\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"837ffc1e-2c19-4aff-963d-beb2cb6142b7\":{\"linkedColumns\":[],\"axisType\":\"X\"}},\"yAxisShared\":false,\"visibleSeriesNames\":[\"Total Revenue\",\"Total Sales\"],\"version\":\"V2.1\",\"columnProperties\":{\"Tea\":{},\"Hour(Date)\":{},\"Type\":{},\"Currency Code\":{},\"Total Revenue\":{},\"Total Sales\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"visibleSeriesNames\": [\"Total Revenue\",\"Total Sales\"],\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Hour(Date)\",\"columnProperty\": {}},{\"columnId\": \"Currency Code\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"500\",\"plotAsBand\": false,\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {\"color\": \"#0500ff\"},\"comparisonType\": \"VALUE_BASED\",\"isHighlightRow\": false}]}}}],\"axisProperties\": [{\"id\": \"837ffc1e-2c19-4aff-963d-beb2cb6142b7\",\"properties\": {\"axisType\": \"X\"}}],\"seriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#a174c1\"}]}"
+      display_mode: TABLE_MODE
+    viz_guid: 1256a968-706e-4115-b123-ed2b02c7dea4
+  - id: Viz_2
+    answer:
+      name: Tea
+      tables:
+      - id: Tea Sales
+        name: Tea Sales
+        fqn: 84815b7f-f884-4d89-bd7b-6420927cf547
+      search_query: "[Revenue] [Sales] [Tea] [Date] [Date].hourly [Type]"
+      answer_columns:
+      - name: Currency Code
+      - name: Hour(Date)
+      - name: Tea
+      - name: Total Revenue
+      - name: Total Sales
+      - name: Type
+      table:
+        table_columns:
+        - column_id: Currency Code
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Hour(Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Tea
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Revenue
+          headline_aggregation: AVERAGE
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        - column_id: Type
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Tea
+        - Hour(Date)
+        - Type
+        - Currency Code
+        - Total Revenue
+        - Total Sales
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Tea\",\"columnProperty\": {}},{\"columnId\": \"Hour(Date)\",\"columnProperty\": {}},{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Currency Code\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Currency Code
+        - column_id: Hour(Date)
+        - column_id: Total Revenue
+          conditional_formatting:
+            rule:
+            - range:
+                max: 500.0
+              color: '#0500ff'
+              plotAsBand: false
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Hour(Date)
+          "y":
+          - Total Revenue
+          - Total Sales
+        client_state: "{\"multiColorSeriesColors\":{},\"seriesColors\":{\"Total Revenue\":\"#a174c1\"},\"chartProperties\":{\"visibleSeriesNames\":[\"Total Revenue\",\"Total Sales\"],\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"f012d8d7-6c32-4a85-bd3b-e5edcfd79917\":{\"linkedColumns\":[],\"axisType\":\"X\"}},\"yAxisShared\":false,\"visibleSeriesNames\":[\"Total Revenue\",\"Total Sales\"],\"version\":\"V2.1\",\"columnProperties\":{\"Tea\":{},\"Hour(Date)\":{},\"Type\":{},\"Currency Code\":{},\"Total Revenue\":{},\"Total Sales\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"visibleSeriesNames\": [\"Total Revenue\",\"Total Sales\"],\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Hour(Date)\",\"columnProperty\": {}},{\"columnId\": \"Currency Code\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"500\",\"plotAsBand\": false,\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {\"color\": \"#0500ff\"},\"comparisonType\": \"VALUE_BASED\",\"isHighlightRow\": false}]}}}],\"axisProperties\": [{\"id\": \"f012d8d7-6c32-4a85-bd3b-e5edcfd79917\",\"properties\": {\"axisType\": \"X\"}}],\"seriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#a174c1\"}]}"
+      display_mode: TABLE_MODE
+    display_headline_column: Tea
+    viz_guid: 8b463601-3dcd-4581-b249-b89fa8a9b5cc
+  - id: Viz_3
+    answer:
+      name: Hour(Date)
+      tables:
+      - id: Tea Sales
+        name: Tea Sales
+        fqn: 84815b7f-f884-4d89-bd7b-6420927cf547
+      search_query: "[Revenue] [Sales] [Tea] [Date] [Date].hourly [Type]"
+      answer_columns:
+      - name: Currency Code
+      - name: Hour(Date)
+      - name: Tea
+      - name: Total Revenue
+      - name: Total Sales
+      - name: Type
+      table:
+        table_columns:
+        - column_id: Currency Code
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Hour(Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Tea
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Revenue
+          headline_aggregation: AVERAGE
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        - column_id: Type
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Tea
+        - Hour(Date)
+        - Type
+        - Currency Code
+        - Total Revenue
+        - Total Sales
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Tea\",\"columnProperty\": {}},{\"columnId\": \"Hour(Date)\",\"columnProperty\": {}},{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Currency Code\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Currency Code
+        - column_id: Hour(Date)
+        - column_id: Total Revenue
+          conditional_formatting:
+            rule:
+            - range:
+                max: 500.0
+              color: '#0500ff'
+              plotAsBand: false
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Hour(Date)
+          "y":
+          - Total Revenue
+          - Total Sales
+        client_state: "{\"multiColorSeriesColors\":{},\"seriesColors\":{\"Total Revenue\":\"#a174c1\"},\"chartProperties\":{\"visibleSeriesNames\":[\"Total Revenue\",\"Total Sales\"],\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"368c9d8d-bf7d-4e34-ad80-a06184ca6af3\":{\"linkedColumns\":[],\"axisType\":\"X\"}},\"yAxisShared\":false,\"visibleSeriesNames\":[\"Total Revenue\",\"Total Sales\"],\"version\":\"V2.1\",\"columnProperties\":{\"Tea\":{},\"Hour(Date)\":{},\"Type\":{},\"Currency Code\":{},\"Total Revenue\":{},\"Total Sales\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"visibleSeriesNames\": [\"Total Revenue\",\"Total Sales\"],\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"500\",\"plotAsBand\": false,\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {\"color\": \"#0500ff\"},\"comparisonType\": \"VALUE_BASED\",\"isHighlightRow\": false}]}}},{\"columnId\": \"Currency Code\",\"columnProperty\": {}},{\"columnId\": \"Hour(Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"368c9d8d-bf7d-4e34-ad80-a06184ca6af3\",\"properties\": {\"axisType\": \"X\"}}],\"seriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#a174c1\"}]}"
+      display_mode: TABLE_MODE
+    display_headline_column: Hour(Date)
+    viz_guid: 44ba13d5-c163-4e95-8ea4-7509402a602f
+  - id: Viz_4
+    answer:
+      name: Total Sales
+      tables:
+      - id: Tea Sales
+        name: Tea Sales
+        fqn: 84815b7f-f884-4d89-bd7b-6420927cf547
+      search_query: "[Revenue] [Sales] [Tea] [Date] [Date].hourly [Type]"
+      answer_columns:
+      - name: Currency Code
+      - name: Hour(Date)
+      - name: Tea
+      - name: Total Revenue
+      - name: Total Sales
+      - name: Type
+      table:
+        table_columns:
+        - column_id: Currency Code
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Hour(Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Tea
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Revenue
+          headline_aggregation: AVERAGE
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        - column_id: Type
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Tea
+        - Hour(Date)
+        - Type
+        - Currency Code
+        - Total Revenue
+        - Total Sales
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Tea\",\"columnProperty\": {}},{\"columnId\": \"Hour(Date)\",\"columnProperty\": {}},{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Currency Code\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Currency Code
+        - column_id: Hour(Date)
+        - column_id: Total Revenue
+          conditional_formatting:
+            rule:
+            - range:
+                max: 500.0
+              color: '#0500ff'
+              plotAsBand: false
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Hour(Date)
+          "y":
+          - Total Revenue
+          - Total Sales
+        client_state: "{\"multiColorSeriesColors\":{},\"seriesColors\":{\"Total Revenue\":\"#a174c1\"},\"chartProperties\":{\"visibleSeriesNames\":[\"Total Revenue\",\"Total Sales\"],\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"a2323387-dc8b-48c6-85ff-172b604b58d2\":{\"linkedColumns\":[],\"axisType\":\"X\"}},\"yAxisShared\":false,\"visibleSeriesNames\":[\"Total Revenue\",\"Total Sales\"],\"version\":\"V2.1\",\"columnProperties\":{\"Tea\":{},\"Hour(Date)\":{},\"Type\":{},\"Currency Code\":{},\"Total Revenue\":{},\"Total Sales\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"visibleSeriesNames\": [\"Total Revenue\",\"Total Sales\"],\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Revenue\",\"columnProperty\": {\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"500\",\"plotAsBand\": false,\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {\"color\": \"#0500ff\"},\"comparisonType\": \"VALUE_BASED\",\"isHighlightRow\": false}]}}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Hour(Date)\",\"columnProperty\": {}},{\"columnId\": \"Currency Code\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a2323387-dc8b-48c6-85ff-172b604b58d2\",\"properties\": {\"axisType\": \"X\"}}],\"seriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#a174c1\"}]}"
+      display_mode: TABLE_MODE
+    display_headline_column: Total Sales
+    viz_guid: f0852d6a-f53c-4f87-9fec-8c06b0d3563c
+  - id: Viz_5
+    answer:
+      name: Total Revenue
+      tables:
+      - id: Tea Sales
+        name: Tea Sales
+        fqn: 84815b7f-f884-4d89-bd7b-6420927cf547
+      search_query: "[Revenue] [Sales] [Tea] [Date] [Date].hourly [Type]"
+      answer_columns:
+      - name: Currency Code
+      - name: Hour(Date)
+      - name: Tea
+      - name: Total Revenue
+      - name: Total Sales
+      - name: Type
+      table:
+        table_columns:
+        - column_id: Currency Code
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Hour(Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Tea
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Revenue
+          headline_aggregation: AVERAGE
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        - column_id: Type
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Tea
+        - Hour(Date)
+        - Type
+        - Currency Code
+        - Total Revenue
+        - Total Sales
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Tea\",\"columnProperty\": {}},{\"columnId\": \"Hour(Date)\",\"columnProperty\": {}},{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Currency Code\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Currency Code
+        - column_id: Hour(Date)
+        - column_id: Total Revenue
+          conditional_formatting:
+            rule:
+            - range:
+                max: 500.0
+              color: '#0500ff'
+              plotAsBand: false
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Hour(Date)
+          "y":
+          - Total Revenue
+          - Total Sales
+        client_state: "{\"multiColorSeriesColors\":{},\"seriesColors\":{\"Total Revenue\":\"#a174c1\"},\"chartProperties\":{\"visibleSeriesNames\":[\"Total Revenue\",\"Total Sales\"],\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"1897ae34-ae05-41a9-ae1b-a0aca788494e\":{\"linkedColumns\":[],\"axisType\":\"X\"}},\"yAxisShared\":false,\"visibleSeriesNames\":[\"Total Revenue\",\"Total Sales\"],\"version\":\"V2.1\",\"columnProperties\":{\"Tea\":{},\"Hour(Date)\":{},\"Type\":{},\"Currency Code\":{},\"Total Revenue\":{},\"Total Sales\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"visibleSeriesNames\": [\"Total Revenue\",\"Total Sales\"],\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Currency Code\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"500\",\"plotAsBand\": false,\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {\"color\": \"#0500ff\"},\"comparisonType\": \"VALUE_BASED\",\"isHighlightRow\": false}]}}},{\"columnId\": \"Hour(Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1897ae34-ae05-41a9-ae1b-a0aca788494e\",\"properties\": {\"axisType\": \"X\"}}],\"seriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#a174c1\"}]}"
+      display_mode: TABLE_MODE
+    display_headline_column: Total Revenue
+    viz_guid: cb041830-0c2a-4ca3-867d-a90299dd3370
+  layout:
+    tiles:
+    - visualization_id: Viz_2
+      size: EXTRA_SMALL
+    - visualization_id: Viz_3
+      size: EXTRA_SMALL
+    - visualization_id: Viz_5
+      size: EXTRA_SMALL
+    - visualization_id: Viz_4
+      size: EXTRA_SMALL
+    - visualization_id: Viz_1
+      size: MEDIUM
