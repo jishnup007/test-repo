@@ -1,0 +1,44 @@
+guid: 2432cc48-5e40-406b-917d-67e04c0a2154
+liveboard:
+  name: Test rename
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Total Discount, Total Extended Price by Category"
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Discount] [Extended Price] [Category]"
+      answer_columns:
+      - name: Category
+      - name: Total Discount
+      - name: Total Extended Price
+      table:
+        table_columns:
+        - column_id: Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Discount
+          headline_aggregation: SUM
+        - column_id: Total Extended Price
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Category
+        - Total Discount
+        - Total Extended Price
+        client_state: ""
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Category
+        - column_id: Total Discount
+        - column_id: Total Extended Price
+        axis_configs:
+        - x:
+          - Category
+          "y":
+          - Total Discount
+          - Total Extended Price
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 397d5e63-e71a-47da-8047-065a5fbd4d86
