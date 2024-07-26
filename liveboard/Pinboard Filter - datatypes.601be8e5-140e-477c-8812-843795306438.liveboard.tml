@@ -31,6 +31,13 @@ liveboard:
           headline_aggregation: COUNT_DISTINCT
         - column_id: Total Tax
           headline_aggregation: SUM
+        ordered_column_ids:
+        - Category
+        - Customer Address
+        - Ship Priority
+        - Supplier City
+        - Color
+        - Total Tax
         client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
       chart:
         type: STACKED_COLUMN
@@ -74,6 +81,12 @@ liveboard:
           headline_aggregation: SUM
         - column_id: Type
           headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Quarter(Commit Date)
+        - Customer Nation
+        - Type
+        - Color
+        - Total Discount
         client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
       chart:
         type: LINE
@@ -111,6 +124,10 @@ liveboard:
           headline_aggregation: COUNT_DISTINCT
         - column_id: Total Quantity
           headline_aggregation: SUM
+        ordered_column_ids:
+        - Quarter(Commit Date)
+        - Ship Mode
+        - Total Quantity
         client_state: "{\"dataOffset\":0.0,\"wrapTableHeader\":true}"
       chart:
         type: WATERFALL
@@ -151,8 +168,6 @@ liveboard:
           - Lineorder CustKey - Customer CustKey
       - id: LINEORDER_1
         table: LINEORDER
-        join_path:
-        - {}
       search_query: "[CUSTOMER_1::Customer Nation] [CUSTOMER_1::Customer Region] [LINEORDER_1::Commit Date] [LINEORDER_1::Commit Date].quarterly [LINEORDER_1::Tax]"
       answer_columns:
       - name: Customer Nation
@@ -169,6 +184,11 @@ liveboard:
           headline_aggregation: MIN-MAX
         - column_id: Total Tax
           headline_aggregation: SUM
+        ordered_column_ids:
+        - Customer Nation
+        - Customer Region
+        - Quarter(Commit Date)
+        - Total Tax
         client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
       chart:
         type: LINE

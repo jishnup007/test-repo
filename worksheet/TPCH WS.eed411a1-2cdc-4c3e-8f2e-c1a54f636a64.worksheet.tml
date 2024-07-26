@@ -46,8 +46,6 @@ worksheet:
       - Commit Date - Datekey
   - id: LINEORDER_1
     table: LINEORDER
-    join_path:
-    - {}
   - id: PART_1
     table: PART
     join_path:
