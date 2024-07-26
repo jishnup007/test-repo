@@ -1,0 +1,65 @@
+guid: 1e930169-e47e-4af0-b0b6-83baa7198826
+answer:
+  name: 2Lines-1Bar Chart
+  tables:
+  - id: CUSTOMER
+    name: CUSTOMER
+    fqn: 5de19354-710f-448e-8ed2-4315d926a264
+  - id: LINEORDER
+    name: LINEORDER
+    fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+  joins:
+  - id: Lineorder CustKey - Customer CustKey
+    name: Lineorder CustKey - Customer CustKey
+    source: LINEORDER
+    destination: CUSTOMER
+  table_paths:
+  - id: CUSTOMER_1
+    table: CUSTOMER
+    join_path:
+    - join:
+      - Lineorder CustKey - Customer CustKey
+  - id: LINEORDER_1
+    table: LINEORDER
+  search_query: "[LINEORDER_1::Revenue] [LINEORDER_1::Tax] [CUSTOMER_1::Customer Region] [CUSTOMER_1::Customer Phone] [LINEORDER_1::Discount]"
+  answer_columns:
+  - name: Customer Phone
+  - name: Customer Region
+  - name: Total Discount
+  - name: Total Revenue
+  - name: Total Tax
+  table:
+    table_columns:
+    - column_id: Customer Phone
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Customer Region
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Discount
+      headline_aggregation: SUM
+    - column_id: Total Revenue
+      headline_aggregation: SUM
+    - column_id: Total Tax
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Customer Region
+    - Customer Phone
+    - Total Revenue
+    - Total Tax
+    - Total Discount
+    client_state: "{\"wrapTableHeader\":true}"
+  chart:
+    type: LINE_COLUMN
+    chart_columns:
+    - column_id: Customer Region
+    - column_id: Total Discount
+    - column_id: Total Revenue
+    - column_id: Total Tax
+    axis_configs:
+    - x:
+      - Customer Region
+      "y":
+      - Total Revenue
+      - Total Tax
+      - Total Discount
+    client_state: "{\"chartProperties\":{\"gridLines\":{\"xGridlineEnabled\":true,\"yGridlineEnabled\":true},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"d31a3cae-a157-49b3-a657-f0b1409d51e3\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"97b8b422-1fc3-4547-aeef-b10e41828ddd\":{\"linkedColumns\":[\"Total Tax\"],\"axisType\":\"Y\",\"isOpposite\":true},\"1b001fc1-a54f-46b0-b743-03127e14dfdd\":{\"linkedColumns\":[\"Total Discount\"],\"axisType\":\"Y\",\"isOpposite\":true},\"28e25b57-9a3b-4beb-a992-33c6765c9f6e\":{\"linkedColumns\":[\"Customer Region\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Total Revenue\":\"#68b8e3\",\"Total Tax\":\"#e3394a\",\"Total Discount\":\"#f5cb4e\"},\"yAxisShared\":false,\"gridLineConfig\":{\"xGridlineEnabled\":true,\"yGridlineEnabled\":true},\"version\":\"V2.1\",\"columnProperties\":{\"Customer Region\":{},\"Customer Phone\":{},\"Total Revenue\":{},\"Total Tax\":{},\"Total Discount\":{}}}"
+  display_mode: CHART_MODE
