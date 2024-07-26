@@ -1,0 +1,58 @@
+guid: b2d68a4f-cf67-4723-966f-8a592fdbf8b9
+liveboard:
+  name: KPI Currency Pinboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: KPI Currency
+      tables:
+      - id: Tea Sales
+        name: Tea Sales
+        fqn: 84815b7f-f884-4d89-bd7b-6420927cf547
+      search_query: "[Revenue] [Sales] [Tea]"
+      answer_columns:
+      - name: Currency Code
+      - name: Tea
+      - name: Total Revenue
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Currency Code
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Tea
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Tea
+        - Currency Code
+        - Total Revenue
+        - Total Sales
+        client_state: "{\"dataOffset\":0.0,\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Currency Code
+        - column_id: Total Revenue
+          conditional_formatting:
+            rule:
+            - range:
+                max: 500.0
+              color: '#0500ff'
+              plotAsBand: false
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Currency Code
+          "y":
+          - Total Revenue
+          - Total Sales
+        client_state: "{\"systemMultiColorSeriesColors\":{},\"multiColorSeriesColors\":{},\"seriesColors\":{\"Total Revenue\":\"#a174c1\"},\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"85e60979-5d8c-442c-8c8f-c9ebe35d3014\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"d9008ca8-b3da-481f-9589-56f1a3972fc4\":{\"linkedColumns\":[\"Total Sales\"],\"axisType\":\"Y\",\"isOpposite\":true},\"a74dbfd6-dc7c-4f37-a836-4df095302d91\":{\"linkedColumns\":[\"Currency Code\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Total Revenue\":\"#a174c1\",\"Total Sales\":\"#e3394a\"},\"yAxisShared\":false,\"visibleSeriesNames\":[\"Total Revenue\",\"Total Sales\"],\"version\":\"V2.1\",\"columnProperties\":{\"Tea\":{},\"Currency Code\":{},\"Total Revenue\":{},\"Total Sales\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 247574e4-3577-4dd9-9994-8479eb0291f6
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: LARGE
