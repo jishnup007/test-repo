@@ -26,31 +26,40 @@ liveboard:
         join_path:
         - join:
           - Lineorder PartKey - Part PartKey
-      search_query: "[LINEORDER_1::Revenue] [PART_1::Color]"
+      search_query: "[LINEORDER_1::Revenue] [PART_1::Color] [LINEORDER_1::Ship Mode]"
       answer_columns:
       - name: Color
+      - name: Ship Mode
       - name: Total Revenue
       table:
         table_columns:
         - column_id: Color
           headline_aggregation: COUNT_DISTINCT
+        - column_id: Ship Mode
+          headline_aggregation: COUNT_DISTINCT
         - column_id: Total Revenue
           headline_aggregation: SUM
         ordered_column_ids:
         - Color
+        - Ship Mode
         - Total Revenue
         client_state: "{\"dataOffset\":0.0,\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}]}"
       chart:
         type: COLUMN
         chart_columns:
         - column_id: Color
+        - column_id: Ship Mode
         - column_id: Total Revenue
         axis_configs:
         - x:
           - Color
           "y":
           - Total Revenue
+          color:
+          - Ship Mode
         client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"328ec9db-b11b-46e1-8796-3e0fe11abe2b\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"0489741c-2062-41c2-9e02-d02155200d28\":{\"linkedColumns\":[\"Color\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Total Revenue\":\"#06BF7F\"},\"version\":\"V2.1\",\"columnProperties\":{\"Color\":{},\"Total Revenue\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}},{\"columnId\": \"Ship Mode\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"328ec9db-b11b-46e1-8796-3e0fe11abe2b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"0489741c-2062-41c2-9e02-d02155200d28\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#06BF7F\"},{\"serieName\": \"{null}\",\"color\": \"#56D3A8\"},{\"serieName\": \"air\",\"color\": \"#06BF7F\"},{\"serieName\": \"fob\",\"color\": \"#FCD977\"},{\"serieName\": \"mail\",\"color\": \"#FCC838\"},{\"serieName\": \"rail\",\"color\": \"#82DFE9\"},{\"serieName\": \"reg air\",\"color\": \"#48D1E0\"},{\"serieName\": \"ship\",\"color\": \"#71A1F4\"},{\"serieName\": \"truck\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 1e99d70f-c1dc-4a52-9980-cfd4d14ba6d6
   layout:
