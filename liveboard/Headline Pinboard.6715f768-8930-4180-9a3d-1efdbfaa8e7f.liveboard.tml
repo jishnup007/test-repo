@@ -1,6 +1,6 @@
 guid: 6715f768-8930-4180-9a3d-1efdbfaa8e7f
 liveboard:
-  name: Headline Pinboard test
+  name: Headline Pinboard
   visualizations:
   - id: Viz_1
     answer:
@@ -26,7 +26,6 @@ liveboard:
         - column_id: Tea
           headline_aggregation: COUNT_DISTINCT
         - column_id: Total Revenue
-          conditional_formatting: {}
           headline_aggregation: AVERAGE
         - column_id: Total Sales
           headline_aggregation: SUM
@@ -40,6 +39,7 @@ liveboard:
         - Total Revenue
         - Total Sales
         client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Tea\",\"columnProperty\": {}},{\"columnId\": \"Hour(Date)\",\"columnProperty\": {}},{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Currency Code\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
       chart:
         type: LINE
         chart_columns:
@@ -60,6 +60,7 @@ liveboard:
           - Total Revenue
           - Total Sales
         client_state: "{\"multiColorSeriesColors\":{},\"seriesColors\":{\"Total Revenue\":\"#a174c1\"},\"chartProperties\":{\"visibleSeriesNames\":[\"Total Revenue\",\"Total Sales\"],\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"837ffc1e-2c19-4aff-963d-beb2cb6142b7\":{\"linkedColumns\":[],\"axisType\":\"X\"}},\"yAxisShared\":false,\"visibleSeriesNames\":[\"Total Revenue\",\"Total Sales\"],\"version\":\"V2.1\",\"columnProperties\":{\"Tea\":{},\"Hour(Date)\":{},\"Type\":{},\"Currency Code\":{},\"Total Revenue\":{},\"Total Sales\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"visibleSeriesNames\": [\"Total Revenue\",\"Total Sales\"],\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Hour(Date)\",\"columnProperty\": {}},{\"columnId\": \"Currency Code\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"500\",\"plotAsBand\": false,\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {\"color\": \"#0500ff\"},\"comparisonType\": \"VALUE_BASED\",\"isHighlightRow\": false}]}}}],\"axisProperties\": [{\"id\": \"837ffc1e-2c19-4aff-963d-beb2cb6142b7\",\"properties\": {\"axisType\": \"X\"}}],\"seriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#a174c1\"}]}"
       display_mode: TABLE_MODE
     viz_guid: 121726ab-6f6e-4fdf-8536-4e844bde11af
   - id: Viz_2
@@ -86,7 +87,6 @@ liveboard:
         - column_id: Tea
           headline_aggregation: COUNT_DISTINCT
         - column_id: Total Revenue
-          conditional_formatting: {}
           headline_aggregation: AVERAGE
         - column_id: Total Sales
           headline_aggregation: SUM
@@ -100,6 +100,7 @@ liveboard:
         - Total Revenue
         - Total Sales
         client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Tea\",\"columnProperty\": {}},{\"columnId\": \"Hour(Date)\",\"columnProperty\": {}},{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Currency Code\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
       chart:
         type: LINE
         chart_columns:
@@ -120,6 +121,7 @@ liveboard:
           - Total Revenue
           - Total Sales
         client_state: "{\"multiColorSeriesColors\":{},\"seriesColors\":{\"Total Revenue\":\"#a174c1\"},\"chartProperties\":{\"visibleSeriesNames\":[\"Total Revenue\",\"Total Sales\"],\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"f012d8d7-6c32-4a85-bd3b-e5edcfd79917\":{\"linkedColumns\":[],\"axisType\":\"X\"}},\"yAxisShared\":false,\"visibleSeriesNames\":[\"Total Revenue\",\"Total Sales\"],\"version\":\"V2.1\",\"columnProperties\":{\"Tea\":{},\"Hour(Date)\":{},\"Type\":{},\"Currency Code\":{},\"Total Revenue\":{},\"Total Sales\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"visibleSeriesNames\": [\"Total Revenue\",\"Total Sales\"],\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Hour(Date)\",\"columnProperty\": {}},{\"columnId\": \"Currency Code\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"500\",\"plotAsBand\": false,\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {\"color\": \"#0500ff\"},\"comparisonType\": \"VALUE_BASED\",\"isHighlightRow\": false}]}}}],\"axisProperties\": [{\"id\": \"f012d8d7-6c32-4a85-bd3b-e5edcfd79917\",\"properties\": {\"axisType\": \"X\"}}],\"seriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#a174c1\"}]}"
       display_mode: TABLE_MODE
     display_headline_column: Tea
     viz_guid: bcd0ca7b-b1ac-4c52-af04-0249b1b56a23
@@ -147,7 +149,6 @@ liveboard:
         - column_id: Tea
           headline_aggregation: COUNT_DISTINCT
         - column_id: Total Revenue
-          conditional_formatting: {}
           headline_aggregation: AVERAGE
         - column_id: Total Sales
           headline_aggregation: SUM
@@ -161,6 +162,7 @@ liveboard:
         - Total Revenue
         - Total Sales
         client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Tea\",\"columnProperty\": {}},{\"columnId\": \"Hour(Date)\",\"columnProperty\": {}},{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Currency Code\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
       chart:
         type: LINE
         chart_columns:
@@ -181,6 +183,7 @@ liveboard:
           - Total Revenue
           - Total Sales
         client_state: "{\"multiColorSeriesColors\":{},\"seriesColors\":{\"Total Revenue\":\"#a174c1\"},\"chartProperties\":{\"visibleSeriesNames\":[\"Total Revenue\",\"Total Sales\"],\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"368c9d8d-bf7d-4e34-ad80-a06184ca6af3\":{\"linkedColumns\":[],\"axisType\":\"X\"}},\"yAxisShared\":false,\"visibleSeriesNames\":[\"Total Revenue\",\"Total Sales\"],\"version\":\"V2.1\",\"columnProperties\":{\"Tea\":{},\"Hour(Date)\":{},\"Type\":{},\"Currency Code\":{},\"Total Revenue\":{},\"Total Sales\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"visibleSeriesNames\": [\"Total Revenue\",\"Total Sales\"],\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"500\",\"plotAsBand\": false,\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {\"color\": \"#0500ff\"},\"comparisonType\": \"VALUE_BASED\",\"isHighlightRow\": false}]}}},{\"columnId\": \"Currency Code\",\"columnProperty\": {}},{\"columnId\": \"Hour(Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"368c9d8d-bf7d-4e34-ad80-a06184ca6af3\",\"properties\": {\"axisType\": \"X\"}}],\"seriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#a174c1\"}]}"
       display_mode: TABLE_MODE
     display_headline_column: Hour(Date)
     viz_guid: e0bbdbbb-dd63-4f3e-8515-d66793c1d731
@@ -208,7 +211,6 @@ liveboard:
         - column_id: Tea
           headline_aggregation: COUNT_DISTINCT
         - column_id: Total Revenue
-          conditional_formatting: {}
           headline_aggregation: AVERAGE
         - column_id: Total Sales
           headline_aggregation: SUM
@@ -222,6 +224,7 @@ liveboard:
         - Total Revenue
         - Total Sales
         client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Tea\",\"columnProperty\": {}},{\"columnId\": \"Hour(Date)\",\"columnProperty\": {}},{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Currency Code\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
       chart:
         type: LINE
         chart_columns:
@@ -242,6 +245,7 @@ liveboard:
           - Total Revenue
           - Total Sales
         client_state: "{\"multiColorSeriesColors\":{},\"seriesColors\":{\"Total Revenue\":\"#a174c1\"},\"chartProperties\":{\"visibleSeriesNames\":[\"Total Revenue\",\"Total Sales\"],\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"a2323387-dc8b-48c6-85ff-172b604b58d2\":{\"linkedColumns\":[],\"axisType\":\"X\"}},\"yAxisShared\":false,\"visibleSeriesNames\":[\"Total Revenue\",\"Total Sales\"],\"version\":\"V2.1\",\"columnProperties\":{\"Tea\":{},\"Hour(Date)\":{},\"Type\":{},\"Currency Code\":{},\"Total Revenue\":{},\"Total Sales\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"visibleSeriesNames\": [\"Total Revenue\",\"Total Sales\"],\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Revenue\",\"columnProperty\": {\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"500\",\"plotAsBand\": false,\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {\"color\": \"#0500ff\"},\"comparisonType\": \"VALUE_BASED\",\"isHighlightRow\": false}]}}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Hour(Date)\",\"columnProperty\": {}},{\"columnId\": \"Currency Code\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a2323387-dc8b-48c6-85ff-172b604b58d2\",\"properties\": {\"axisType\": \"X\"}}],\"seriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#a174c1\"}]}"
       display_mode: TABLE_MODE
     display_headline_column: Total Sales
     viz_guid: 70b6a359-e93b-4ada-a276-f8a33c949e1f
@@ -269,7 +273,6 @@ liveboard:
         - column_id: Tea
           headline_aggregation: COUNT_DISTINCT
         - column_id: Total Revenue
-          conditional_formatting: {}
           headline_aggregation: AVERAGE
         - column_id: Total Sales
           headline_aggregation: SUM
@@ -283,6 +286,7 @@ liveboard:
         - Total Revenue
         - Total Sales
         client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Tea\",\"columnProperty\": {}},{\"columnId\": \"Hour(Date)\",\"columnProperty\": {}},{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Currency Code\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
       chart:
         type: LINE
         chart_columns:
@@ -303,6 +307,7 @@ liveboard:
           - Total Revenue
           - Total Sales
         client_state: "{\"multiColorSeriesColors\":{},\"seriesColors\":{\"Total Revenue\":\"#a174c1\"},\"chartProperties\":{\"visibleSeriesNames\":[\"Total Revenue\",\"Total Sales\"],\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"1897ae34-ae05-41a9-ae1b-a0aca788494e\":{\"linkedColumns\":[],\"axisType\":\"X\"}},\"yAxisShared\":false,\"visibleSeriesNames\":[\"Total Revenue\",\"Total Sales\"],\"version\":\"V2.1\",\"columnProperties\":{\"Tea\":{},\"Hour(Date)\":{},\"Type\":{},\"Currency Code\":{},\"Total Revenue\":{},\"Total Sales\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"visibleSeriesNames\": [\"Total Revenue\",\"Total Sales\"],\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Currency Code\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"500\",\"plotAsBand\": false,\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {\"color\": \"#0500ff\"},\"comparisonType\": \"VALUE_BASED\",\"isHighlightRow\": false}]}}},{\"columnId\": \"Hour(Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1897ae34-ae05-41a9-ae1b-a0aca788494e\",\"properties\": {\"axisType\": \"X\"}}],\"seriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#a174c1\"}]}"
       display_mode: TABLE_MODE
     display_headline_column: Total Revenue
     viz_guid: 6df94eda-64f4-4c51-a72b-5ce6284dc184
@@ -314,7 +319,7 @@ liveboard:
       size: EXTRA_SMALL
     - visualization_id: Viz_5
       size: EXTRA_SMALL
-    - visualization_id: Viz_1
-      size: MEDIUM
     - visualization_id: Viz_4
       size: EXTRA_SMALL
+    - visualization_id: Viz_1
+      size: MEDIUM
