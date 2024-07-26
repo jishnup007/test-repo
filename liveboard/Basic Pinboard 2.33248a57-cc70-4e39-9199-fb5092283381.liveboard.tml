@@ -1,0 +1,166 @@
+guid: 33248a57-cc70-4e39-9199-fb5092283381
+liveboard:
+  name: Basic Pinboard 2
+  description: "This pinboard contains a chart, a table and a headline visualization based on TPCH."
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Visualization 1
+      tables:
+      - id: LINEORDER
+        name: LINEORDER
+        fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+      - id: PART
+        name: PART
+        fqn: a7fc012e-bdb3-4e75-9ce4-b3f731d90136
+      joins:
+      - id: Lineorder PartKey - Part PartKey
+        name: Lineorder PartKey - Part PartKey
+        source: LINEORDER
+        destination: PART
+      table_paths:
+      - id: LINEORDER_1
+        table: LINEORDER
+      - id: PART_1
+        table: PART
+        join_path:
+        - join:
+          - Lineorder PartKey - Part PartKey
+      search_query: "[LINEORDER_1::Revenue] [PART_1::Color]"
+      answer_columns:
+      - name: Color
+      - name: Total Revenue
+      table:
+        table_columns:
+        - column_id: Color
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Color
+        - Total Revenue
+        client_state: "{\"dataOffset\":0.0,\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Color
+        - column_id: Total Revenue
+        axis_configs:
+        - x:
+          - Color
+          "y":
+          - Total Revenue
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"a9154db9-b7f5-4482-b97d-af415ecb3e68\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"37c51130-8786-4c2e-ab80-e2abc783ed0e\":{\"linkedColumns\":[\"Color\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Total Revenue\":\"#8C62F5\"},\"version\":\"V2.1\",\"columnProperties\":{\"Color\":{},\"Total Revenue\":{}}}"
+      display_mode: CHART_MODE
+    viz_guid: 730496d6-6903-4601-937e-2c691821af3c
+  - id: Viz_2
+    answer:
+      name: Basic Answer 1
+      description: This is basic answer with table and headline visualizations.
+      tables:
+      - id: LINEORDER
+        name: LINEORDER
+        fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+      - id: PART
+        name: PART
+        fqn: a7fc012e-bdb3-4e75-9ce4-b3f731d90136
+      joins:
+      - id: Lineorder PartKey - Part PartKey
+        name: Lineorder PartKey - Part PartKey
+        source: LINEORDER
+        destination: PART
+      table_paths:
+      - id: LINEORDER_1
+        table: LINEORDER
+      - id: PART_1
+        table: PART
+        join_path:
+        - join:
+          - Lineorder PartKey - Part PartKey
+      search_query: "[LINEORDER_1::Revenue] [PART_1::Color]"
+      answer_columns:
+      - name: Color
+      - name: Total Revenue
+      table:
+        table_columns:
+        - column_id: Color
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Color
+        - Total Revenue
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Color
+        - column_id: Total Revenue
+        axis_configs:
+        - x:
+          - Color
+          "y":
+          - Total Revenue
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"ac3af31a-2b0c-40e1-99ff-ccae22364e29\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"531a375b-6c61-4414-80b7-7ac740ca49b8\":{\"linkedColumns\":[\"Color\"],\"axisType\":\"X\"}},\"version\":\"V2.1\",\"columnProperties\":{\"Color\":{},\"Total Revenue\":{}}}"
+      display_mode: TABLE_MODE
+    viz_guid: 20d65652-a25e-4238-a934-7cb2cc97e75b
+  - id: Viz_3
+    answer:
+      name: Color
+      description: This is basic answer with table and headline visualizations.
+      tables:
+      - id: LINEORDER
+        name: LINEORDER
+        fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+      - id: PART
+        name: PART
+        fqn: a7fc012e-bdb3-4e75-9ce4-b3f731d90136
+      joins:
+      - id: Lineorder PartKey - Part PartKey
+        name: Lineorder PartKey - Part PartKey
+        source: LINEORDER
+        destination: PART
+      table_paths:
+      - id: LINEORDER_1
+        table: LINEORDER
+      - id: PART_1
+        table: PART
+        join_path:
+        - join:
+          - Lineorder PartKey - Part PartKey
+      search_query: "[LINEORDER_1::Revenue] [PART_1::Color]"
+      answer_columns:
+      - name: Color
+      - name: Total Revenue
+      table:
+        table_columns:
+        - column_id: Color
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Color
+        - Total Revenue
+        client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Color
+        - column_id: Total Revenue
+        axis_configs:
+        - x:
+          - Color
+          "y":
+          - Total Revenue
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"8e088ee2-88c0-457f-ac66-1aefc258cae6\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"340f988a-7768-4976-9bd0-e2c281cd1ea0\":{\"linkedColumns\":[\"Color\"],\"axisType\":\"X\"}},\"version\":\"V2.1\",\"columnProperties\":{\"Color\":{},\"Total Revenue\":{}}}"
+      display_mode: TABLE_MODE
+    display_headline_column: Color
+    viz_guid: c89fda22-329f-492c-a027-2256cc3e6933
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: LARGE
+    - visualization_id: Viz_2
+      size: MEDIUM
+    - visualization_id: Viz_3
+      size: EXTRA_SMALL
