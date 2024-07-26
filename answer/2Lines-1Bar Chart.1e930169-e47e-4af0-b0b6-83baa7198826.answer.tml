@@ -47,9 +47,11 @@ answer:
     - Total Tax
     - Total Discount
     client_state: "{\"wrapTableHeader\":true}"
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Customer Region\",\"columnProperty\": {}},{\"columnId\": \"Customer Phone\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}}]}"
   chart:
-    type: LINE_COLUMN
+    type: STACKED_BAR
     chart_columns:
+    - column_id: Customer Phone
     - column_id: Customer Region
     - column_id: Total Discount
     - column_id: Total Revenue
@@ -62,4 +64,5 @@ answer:
       - Total Tax
       - Total Discount
     client_state: "{\"chartProperties\":{\"gridLines\":{\"xGridlineEnabled\":true,\"yGridlineEnabled\":true},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"d31a3cae-a157-49b3-a657-f0b1409d51e3\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"97b8b422-1fc3-4547-aeef-b10e41828ddd\":{\"linkedColumns\":[\"Total Tax\"],\"axisType\":\"Y\",\"isOpposite\":true},\"1b001fc1-a54f-46b0-b743-03127e14dfdd\":{\"linkedColumns\":[\"Total Discount\"],\"axisType\":\"Y\",\"isOpposite\":true},\"28e25b57-9a3b-4beb-a992-33c6765c9f6e\":{\"linkedColumns\":[\"Customer Region\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Total Revenue\":\"#68b8e3\",\"Total Tax\":\"#e3394a\",\"Total Discount\":\"#f5cb4e\"},\"yAxisShared\":false,\"gridLineConfig\":{\"xGridlineEnabled\":true,\"yGridlineEnabled\":true},\"version\":\"V2.1\",\"columnProperties\":{\"Customer Region\":{},\"Customer Phone\":{},\"Total Revenue\":{},\"Total Tax\":{},\"Total Discount\":{}}}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {\"xGridlineEnabled\": true,\"yGridlineEnabled\": true},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Customer Region\",\"columnProperty\": {}},{\"columnId\": \"Customer Phone\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"354c957e-fac9-4a52-ae48-a3b9d183d7a5\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\",\"Total Tax\",\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"d1b545fa-9bf0-44fc-8d40-cc0673f7814d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Customer Region\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#68b8e3\"},{\"serieName\": \"Total Tax\",\"color\": \"#e3394a\"},{\"serieName\": \"Total Discount\",\"color\": \"#f5cb4e\"}]}"
   display_mode: CHART_MODE
