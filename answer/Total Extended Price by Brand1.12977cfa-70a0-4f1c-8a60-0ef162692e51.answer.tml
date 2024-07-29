@@ -1,0 +1,35 @@
+guid: 12977cfa-70a0-4f1c-8a60-0ef162692e51
+answer:
+  name: Total Extended Price by Brand1
+  tables:
+  - id: Parameters WS
+    name: Parameters WS
+    fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+  search_query: "[Extended Price] [Brand1]"
+  answer_columns:
+  - name: Brand1
+  - name: Total Extended Price
+  table:
+    table_columns:
+    - column_id: Brand1
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Extended Price
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Brand1
+    - Total Extended Price
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Brand1
+    - column_id: Total Extended Price
+    axis_configs:
+    - x:
+      - Brand1
+      "y":
+      - Total Extended Price
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {}},{\"columnId\": \"Total Extended Price\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8b58cfb3-8d56-4f05-8e7e-4fcf19c9a29b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Extended Price\"],\"isOpposite\": false}},{\"id\": \"9db65e9f-5d9f-4718-a040-c180ea84ef6b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand1\"]}}]}"
+  display_mode: CHART_MODE
