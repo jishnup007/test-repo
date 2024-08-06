@@ -2,31 +2,3 @@ guid: 9bd202f5-d431-44bf-9a07-b4f7be372125
 liveboard:
   name: new lb 1
   description: kjjhbjh jhbkhjbkjh
-  visualizations:
-  - id: Viz_1
-    answer:
-      name: Total num_deletes
-      tables:
-      - id: Falcon_Monitor_Data_Load_360
-        name: Falcon_Monitor_Data_Load_360
-        fqn: 180211d5-884f-459c-9823-69fb9ce98e79
-      search_query: "[num_deletes]"
-      answer_columns:
-      - name: Total num_deletes
-      table:
-        table_columns:
-        - column_id: Total num_deletes
-          headline_aggregation: SUM
-        ordered_column_ids:
-        - Total num_deletes
-        client_state: ""
-      chart:
-        type: KPI
-        chart_columns:
-        - column_id: Total num_deletes
-        axis_configs:
-        - "y":
-          - Total num_deletes
-        client_state: ""
-      display_mode: CHART_MODE
-    viz_guid: 947f4039-7395-4db9-9861-ab6a2ebacafa
