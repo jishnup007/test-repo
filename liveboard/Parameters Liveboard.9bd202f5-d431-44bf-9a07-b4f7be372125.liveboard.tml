@@ -173,32 +173,58 @@ liveboard:
       display_mode: CHART_MODE
     viz_guid: 754977f5-177a-492b-b79a-b703e33db9ef
   - id: Viz_5
-    viz_guid: 24e6f42e-8713-43c6-ad43-ef764f63fb83
+    viz_guid: b7b18c90-12da-4a76-b411-fbebd651a4bc
     note_tile:
       html_parsed_string: ""
   - id: Viz_6
-    viz_guid: 09dd55e0-0ec3-46d0-8ef1-a02965545269
-    note_tile:
-      html_parsed_string: ""
-  - id: Viz_7
-    viz_guid: 140f9f4e-2e4a-4038-9301-79be3d06ebb4
-    note_tile:
-      html_parsed_string: ""
-  - id: Viz_8
-    viz_guid: f12ec024-5f83-4055-b09e-c6800ea7ac27
+    viz_guid: 623778da-3e2d-4a90-ab7b-dcbd5eed1f36
     note_tile:
       html_parsed_string: ""
   filters:
+  - column:
+    - Container
+    is_mandatory: false
+    is_single_value: false
+    display_name: Container
+  - column:
+    - Commit Date
+    is_mandatory: false
+    date_filter:
+      type: YESTERDAY
+      oper: =
+    display_name: Commit Date
+  - column:
+    - Color
+    is_mandatory: false
+    is_single_value: false
+    display_name: Color
   - column:
     - Category
     is_mandatory: false
     is_single_value: false
     display_name: Category
   - column:
-    - Size
+    - Lineorder Suppkey
     is_mandatory: false
     is_single_value: false
-    display_name: Size
+    display_name: Lineorder Suppkey
+  - column:
+    - Order Date
+    is_mandatory: false
+    date_filter:
+      type: YESTERDAY
+      oper: =
+    display_name: Order Date
+  - column:
+    - Lineorder Partkey
+    is_mandatory: false
+    is_single_value: false
+    display_name: Lineorder Partkey
+  - column:
+    - Email Domain Masked Color
+    is_mandatory: false
+    is_single_value: false
+    display_name: Email Domain Masked Color
   layout:
     tabs:
     - name: Tab 1
@@ -206,54 +232,41 @@ liveboard:
       tiles:
       - visualization_id: Viz_1
         x: 0
-        "y": 16
+        "y": 8
         height: 2
         width: 3
       - visualization_id: Viz_2
         x: 3
-        "y": 16
+        "y": 0
         height: 2
         width: 3
       - visualization_id: Viz_3
         x: 0
-        "y": 18
+        "y": 10
         height: 8
         width: 6
       - visualization_id: Viz_4
         x: 6
-        "y": 16
+        "y": 0
         height: 8
         width: 6
       - visualization_id: Viz_5
         x: 0
-        "y": 12
+        "y": 4
         height: 4
         width: 3
       - visualization_id: Viz_6
         x: 0
-        "y": 8
-        height: 4
-        width: 3
-      - visualization_id: Viz_7
-        x: 0
-        "y": 4
-        height: 4
-        width: 3
-      - visualization_id: Viz_8
-        x: 0
         "y": 0
         height: 4
         width: 3
-      id: e5afa4a9-7593-435d-8710-6aecf3d095e1
+      id: 7c9d91a3-fe31-4f09-a0d4-8586a9184250
     - name: Tab 2
       description: ""
-      id: e025a5e3-e43f-490f-8f58-12d2054d5ead
-  parameter_overrides:
-  - key: 75bb2345-1997-4b00-b364-5fea0ec0c406
-    value:
-      name: Parameters WS::Date List Param
-      override_value: 07/04/2022
-  - key: 6afe392d-d188-4379-aef3-1a8632e147c8
-    value:
-      name: Parameters WS::Integer Range Param
-      override_value: "5"
+      id: 2588f6b6-a5f3-44c8-9c6a-dec5e3215b06
+    - name: Tab 3
+      description: ""
+      id: a1e992f3-4f29-408d-9792-f8c29ceadfa4
+    - name: Tab 4
+      description: ""
+      id: ecdfb677-4b9d-4c3b-a2b7-9763e528f191
