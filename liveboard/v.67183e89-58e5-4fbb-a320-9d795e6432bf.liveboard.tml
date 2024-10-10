@@ -29,3 +29,7 @@ liveboard:
         client_state: ""
       display_mode: CHART_MODE
     viz_guid: 2e0d52f7-0167-480e-876b-441e6aa8660f
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: EXTRA_SMALL
