@@ -1,0 +1,31 @@
+guid: 67183e89-58e5-4fbb-a320-9d795e6432bf
+liveboard:
+  name: v
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Current Rows
+      tables:
+      - id: "TS: Embrace Stats Worksheet v2"
+        name: "TS: Embrace Stats Worksheet v2"
+        fqn: 11272afa-bfb8-4ffe-bedf-bb88de8bcb9b
+      search_query: "[Current Rows]"
+      answer_columns:
+      - name: Current Rows
+      table:
+        table_columns:
+        - column_id: Current Rows
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Current Rows
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Current Rows
+        axis_configs:
+        - "y":
+          - Current Rows
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 2e0d52f7-0167-480e-876b-441e6aa8660f
