@@ -1,0 +1,68 @@
+guid: 5a8e73fa-2467-4909-aef5-09b35519a8e0
+worksheet:
+  name: Generic-NonGeneric WS
+  description: "Contains columns from customer and part details table. The path from root (lineorder) to part details involves pk-fk and generic relationships. Also, this worksheet doesn't include the columns from the root."
+  tables:
+  - name: CUSTOMER
+    fqn: 5de19354-710f-448e-8ed2-4315d926a264
+  - name: LINEORDER
+    fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+  - name: PART
+    fqn: a7fc012e-bdb3-4e75-9ce4-b3f731d90136
+  - name: Part Details
+    fqn: 7abdeb87-66ab-490f-95c6-6e849f07eb7c
+  joins:
+  - name: Lineorder PartKey - Part PartKey
+    source: LINEORDER
+    destination: PART
+    type: INNER
+    is_one_to_one: false
+  - name: Lineorder CustKey - Customer CustKey
+    source: LINEORDER
+    destination: CUSTOMER
+    type: INNER
+    is_one_to_one: false
+  - name: PART - Part Details
+    source: PART
+    destination: Part Details
+    type: INNER
+    is_one_to_one: false
+  table_paths:
+  - id: CUSTOMER_1
+    table: CUSTOMER
+    join_path:
+    - join:
+      - Lineorder CustKey - Customer CustKey
+  - id: Part Details_1
+    table: Part Details
+    join_path:
+    - join:
+      - Lineorder PartKey - Part PartKey
+      - PART - Part Details
+  worksheet_columns:
+  - name: Industry
+    column_id: Part Details_1::Industry
+    properties:
+      column_type: ATTRIBUTE
+  - name: Customer City
+    column_id: CUSTOMER_1::Customer City
+    properties:
+      column_type: ATTRIBUTE
+  - name: Market Segment
+    column_id: CUSTOMER_1::Market Segment
+    properties:
+      column_type: ATTRIBUTE
+  - name: Customer Region
+    column_id: CUSTOMER_1::Customer Region
+    properties:
+      column_type: ATTRIBUTE
+  - name: Part PartKey
+    column_id: Part Details_1::Part PartKey
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
+  sage_config:
+    is_sage_enabled: true

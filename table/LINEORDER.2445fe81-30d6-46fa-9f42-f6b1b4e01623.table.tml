@@ -145,3 +145,5 @@ table:
       fqn: 1c97ce56-e803-41c5-9132-3075425c8b41
     "on": "[LINEORDER::Order Date] = [DATE::Datekey]"
     type: INNER
+  sage_config:
+    is_sage_enabled: true

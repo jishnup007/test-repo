@@ -1,0 +1,58 @@
+guid: be9369ae-7d94-4d7a-8c36-5a02af81aa69
+liveboard:
+  name: n1
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Part PartKey
+      tables:
+      - id: Generic-NonGeneric WS
+        name: Generic-NonGeneric WS
+        fqn: 5a8e73fa-2467-4909-aef5-09b35519a8e0
+      search_query: "[Part PartKey]"
+      answer_columns:
+      - name: Total Part PartKey
+      table:
+        table_columns:
+        - column_id: Total Part PartKey
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Part PartKey
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Part PartKey
+        axis_configs:
+        - "y":
+          - Total Part PartKey
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: e266a10c-689a-42ea-8fee-c9aab3e84b3b
+  - id: Viz_2
+    answer:
+      name: Total Part PartKey
+      tables:
+      - id: Generic-NonGeneric WS
+        name: Generic-NonGeneric WS
+        fqn: 5a8e73fa-2467-4909-aef5-09b35519a8e0
+      search_query: "[Part PartKey]"
+      answer_columns:
+      - name: Total Part PartKey
+      table:
+        table_columns:
+        - column_id: Total Part PartKey
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Part PartKey
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Part PartKey
+        axis_configs:
+        - "y":
+          - Total Part PartKey
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 7e4004a3-d30c-4372-920c-e81f75265a8d

@@ -53,3 +53,5 @@ table:
       column_type: ATTRIBUTE
     db_column_properties:
       data_type: VARCHAR
+  sage_config:
+    is_sage_enabled: true
