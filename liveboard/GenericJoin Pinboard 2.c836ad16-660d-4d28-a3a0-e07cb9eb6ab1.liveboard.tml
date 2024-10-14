@@ -1,0 +1,89 @@
+guid: c836ad16-660d-4d28-a3a0-e07cb9eb6ab1
+liveboard:
+  name: GenericJoin Pinboard 2
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Table 1
+      tables:
+      - id: Generic-NonGeneric WS
+        name: Generic-NonGeneric WS
+        fqn: 5a8e73fa-2467-4909-aef5-09b35519a8e0
+      search_query: "[Part PartKey] [Customer Region]"
+      answer_columns:
+      - name: Customer Region
+      - name: Total Part PartKey
+      table:
+        table_columns:
+        - column_id: Customer Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Part PartKey
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Customer Region
+        - Total Part PartKey
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Customer Region
+        - column_id: Total Part PartKey
+        axis_configs:
+        - x:
+          - Customer Region
+          "y":
+          - Total Part PartKey
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"d7320728-2235-43ea-a778-4c68658f64fe\":{\"linkedColumns\":[\"Total Part PartKey\"],\"axisType\":\"Y\",\"isOpposite\":false},\"96f70194-5d8e-4e5f-8d18-be39d9972093\":{\"linkedColumns\":[\"Customer Region\"],\"axisType\":\"X\"}},\"version\":\"V2.1\",\"columnProperties\":{\"Customer Region\":{},\"Total Part PartKey\":{}}}"
+      display_mode: TABLE_MODE
+    viz_guid: 41ee759a-4ba9-4c4b-922f-8d4a84fac8e6
+  - id: Viz_2
+    answer:
+      name: Table 1
+      tables:
+      - id: Generic-NonGeneric WS
+        name: Generic-NonGeneric WS
+        fqn: 5a8e73fa-2467-4909-aef5-09b35519a8e0
+      formulas:
+      - id: ansinformula
+        name: ansinformula
+        expr: "[Part PartKey] + 2"
+        was_auto_generated: false
+      search_query: "[Market Segment] [Customer Region] [Part PartKey] [ansinformula]"
+      answer_columns:
+      - name: Customer Region
+      - name: Market Segment
+      - name: Total Part PartKey
+      - name: Total ansinformula
+      table:
+        table_columns:
+        - column_id: Customer Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Market Segment
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Part PartKey
+          headline_aggregation: SUM
+        - column_id: Total ansinformula
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Market Segment
+        - Customer Region
+        - Total Part PartKey
+        - Total ansinformula
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Customer Region
+        - column_id: Market Segment
+        - column_id: Total Part PartKey
+        - column_id: Total ansinformula
+        axis_configs:
+        - x:
+          - Market Segment
+          - Customer Region
+          "y":
+          - Total Part PartKey
+          - Total ansinformula
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"f17c3ade-79ff-4e8a-a9a4-b17dd2575d3c\":{\"linkedColumns\":[\"Total Part PartKey\"],\"axisType\":\"Y\",\"isOpposite\":false},\"2a879ebd-7290-4ac7-b554-78bc3b5bf43c\":{\"linkedColumns\":[\"Total ansinformula\"],\"axisType\":\"Y\",\"isOpposite\":true},\"34fb9dd3-77ea-45f5-91a2-9ddcb2a4993b\":{\"linkedColumns\":[\"Market Segment\",\"Customer Region\"],\"axisType\":\"X\"}},\"version\":\"V2.1\",\"columnProperties\":{\"Market Segment\":{},\"Customer Region\":{},\"Total Part PartKey\":{},\"Total ansinformula\":{}}}"
+      display_mode: TABLE_MODE
+    viz_guid: 9e30a3de-7074-40da-b8b1-c1ecfcac189d
