@@ -14,7 +14,7 @@ answer:
     name: Parameterized Commit Date Filter
     expr: "[Commit Date] = [Date Param]"
     was_auto_generated: false
-  search_query: "[Tax] [Ship Mode] [Adjusted Tax] [Parameterized Commit Date Filter] = true"
+  search_query: "[Tax] [Ship Mode] [Adjusted Tax] [Parameterized Commit Date Filter] = true [Discount] = 5"
   answer_columns:
   - name: Ship Mode
   - name: Total Adjusted Tax
