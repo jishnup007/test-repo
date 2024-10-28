@@ -184,18 +184,43 @@ liveboard:
     display_name: ""
   layout:
     tiles:
-    - visualization_id: Viz_1
-      size: EXTRA_SMALL
-    - visualization_id: Viz_2
-      size: EXTRA_SMALL
     - visualization_id: Viz_4
-      size: MEDIUM
+      x: 6
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 3
+      "y": 0
+      height: 2
+      width: 3
     - visualization_id: Viz_3
-      size: MEDIUM
+      x: 0
+      "y": 2
+      height: 8
+      width: 6
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 2
+      width: 3
   parameter_overrides:
   - key: 75bb2345-1997-4b00-b364-5fea0ec0c406
     value:
       name: Parameters WS::Date List Param
+  views:
+  - view_guid: 98d73788-f086-46da-967b-8cd954317c6e
+    name: test2
+    view_filters:
+    - column:
+      - Category
+      oper: in
+      values:
+      - mfgr#15
+    is_public: false
+    view_parameters:
+    - name: Parameters WS::Date List Param
+      id: 75bb2345-1997-4b00-b364-5fea0ec0c406
   ordered_chips:
   - name: Parameters WS::Date List Param
     type: PARAMETER
