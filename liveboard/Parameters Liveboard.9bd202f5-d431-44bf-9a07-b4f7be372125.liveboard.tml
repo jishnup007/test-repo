@@ -28,6 +28,7 @@ liveboard:
         ordered_column_ids:
         - Total Partial Revenue
         client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Partial Revenue\",\"columnProperty\": {}}]}"
       chart:
         type: KPI
         chart_columns:
@@ -36,6 +37,7 @@ liveboard:
         - "y":
           - Total Partial Revenue
         client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Partial Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e347085c-34e6-4389-8da7-7278859648ba\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Partial Revenue\"],\"isOpposite\": false}},{\"id\": \"5da52f84-66dd-487e-921f-ed6f5613b7c6\",\"properties\": {\"axisType\": \"X\"}}]}"
       display_mode: CHART_MODE
     viz_guid: db0badd5-47c6-400a-842d-133a7b44d435
   - id: Viz_2
@@ -68,6 +70,7 @@ liveboard:
         ordered_column_ids:
         - Total Partial Quantity
         client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Partial Quantity\",\"columnProperty\": {}}]}"
       chart:
         type: KPI
         chart_columns:
@@ -76,6 +79,7 @@ liveboard:
         - "y":
           - Total Partial Quantity
         client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Partial Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f0970ae4-63e5-458e-8f2e-abf686ddef7a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Partial Quantity\"],\"isOpposite\": false}},{\"id\": \"c9179a08-4d75-4d3d-aafa-e12cbf390d65\",\"properties\": {\"axisType\": \"X\"}}]}"
       display_mode: CHART_MODE
     viz_guid: 43c9f421-410f-4564-b624-2b3acc4ea8cd
   - id: Viz_3
@@ -172,104 +176,72 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"dc3314ee-89ea-4a23-846f-4d5eebe560ca\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"d2cb441e-a329-44e1-992e-a4b7f285e514\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": true}},{\"id\": \"f81a7c59-a158-4d9e-af59-2d7e203307db\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Quantity\",\"color\": \"#48D1E0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 754977f5-177a-492b-b79a-b703e33db9ef
-  - id: Viz_5
-    viz_guid: b7b18c90-12da-4a76-b411-fbebd651a4bc
-    note_tile:
-      html_parsed_string: ""
-  - id: Viz_6
-    viz_guid: 623778da-3e2d-4a90-ab7b-dcbd5eed1f36
-    note_tile:
-      html_parsed_string: ""
   filters:
-  - column:
-    - Container
-    is_mandatory: false
-    is_single_value: false
-    display_name: Container
   - column:
     - Commit Date
     is_mandatory: false
     date_filter:
       type: YESTERDAY
       oper: =
-    display_name: Commit Date
+    display_name: ""
+  - column:
+    - Tax
+    oper: in
+    values:
+    - "4"
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  - column:
+    - Tax
+    oper: in
+    values:
+    - "5"
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
   - column:
     - Color
     is_mandatory: false
     is_single_value: false
-    display_name: Color
-  - column:
-    - Category
-    is_mandatory: false
-    is_single_value: false
-    display_name: Category
-  - column:
-    - Lineorder Suppkey
-    is_mandatory: false
-    is_single_value: false
-    display_name: Lineorder Suppkey
-  - column:
-    - Order Date
-    is_mandatory: false
-    date_filter:
-      type: YESTERDAY
-      oper: =
-    display_name: Order Date
-  - column:
-    - Lineorder Partkey
-    is_mandatory: false
-    is_single_value: false
-    display_name: Lineorder Partkey
-  - column:
-    - Email Domain Masked Color
-    is_mandatory: false
-    is_single_value: false
-    display_name: Email Domain Masked Color
+    display_name: ""
   layout:
-    tabs:
-    - name: Tab 1
-      description: ""
-      tiles:
-      - visualization_id: Viz_1
-        x: 0
-        "y": 8
-        height: 2
-        width: 3
-      - visualization_id: Viz_2
-        x: 3
-        "y": 0
-        height: 2
-        width: 3
-      - visualization_id: Viz_3
-        x: 0
-        "y": 10
-        height: 8
-        width: 6
-      - visualization_id: Viz_4
-        x: 6
-        "y": 0
-        height: 8
-        width: 6
-      - visualization_id: Viz_5
-        x: 0
-        "y": 4
-        height: 4
-        width: 3
-      - visualization_id: Viz_6
-        x: 0
-        "y": 0
-        height: 4
-        width: 3
-      id: 7c9d91a3-fe31-4f09-a0d4-8586a9184250
-    - name: Tab 23
-      description: ""
-      id: 2588f6b6-a5f3-44c8-9c6a-dec5e3215b06
-    - name: Tab
-      description: ""
-      id: a1e992f3-4f29-408d-9792-f8c29ceadfa4
-    - name: Tab 4
-      description: ""
-      id: ecdfb677-4b9d-4c3b-a2b7-9763e528f191
-    - name: Tab 5
-      description: ""
-      id: 6be408ee-6f18-4edd-a3a3-a5129ac651f4
+    tiles:
+    - visualization_id: Viz_4
+      x: 6
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 3
+      "y": 0
+      height: 2
+      width: 3
+    - visualization_id: Viz_3
+      x: 0
+      "y": 2
+      height: 8
+      width: 6
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 2
+      width: 3
+  parameter_overrides:
+  - key: 75bb2345-1997-4b00-b364-5fea0ec0c406
+    value:
+      name: Parameters WS::Date List Param
+  - key: 6afe392d-d188-4379-aef3-1a8632e147c8
+    value:
+      name: Parameters WS::Integer Range Param
+  ordered_chips:
+  - name: Commit Date
+    type: FILTER
+  - name: Parameters WS::Date List Param
+    type: PARAMETER
+  - name: Tax
+    type: FILTER
+  - name: Color
+    type: FILTER
+  - name: Parameters WS::Integer Range Param
+    type: PARAMETER

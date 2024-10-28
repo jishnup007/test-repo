@@ -185,6 +185,8 @@ worksheet:
   properties:
     is_bypass_rls: false
     join_progressive: true
+    sage_config:
+      is_sage_enabled: true
   parameters:
   - id: 491b359d-4282-4c66-8829-b24b05571098
     name: Boolean Param

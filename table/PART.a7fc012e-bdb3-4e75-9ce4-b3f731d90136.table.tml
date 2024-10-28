@@ -66,5 +66,6 @@ table:
       fqn: 7abdeb87-66ab-490f-95c6-6e849f07eb7c
     "on": "([PART::Part PartKey] = [Part Details::Part PartKey])"
     type: INNER
-  sage_config:
-    is_sage_enabled: true
+  properties:
+    sage_config:
+      is_sage_enabled: true
