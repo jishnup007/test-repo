@@ -178,6 +178,11 @@ liveboard:
     viz_guid: 754977f5-177a-492b-b79a-b703e33db9ef
   filters:
   - column:
+    - Color
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  - column:
     - Commit Date
     is_mandatory: false
     date_filter:
@@ -197,11 +202,6 @@ liveboard:
     oper: in
     values:
     - "5"
-    is_mandatory: false
-    is_single_value: false
-    display_name: ""
-  - column:
-    - Color
     is_mandatory: false
     is_single_value: false
     display_name: ""
@@ -235,6 +235,8 @@ liveboard:
     value:
       name: Parameters WS::Integer Range Param
   ordered_chips:
+  - name: Color
+    type: FILTER
   - name: Commit Date
     type: FILTER
   - name: Parameters WS::Integer Range Param
@@ -242,6 +244,4 @@ liveboard:
   - name: Parameters WS::Date List Param
     type: PARAMETER
   - name: Tax
-    type: FILTER
-  - name: Color
     type: FILTER
