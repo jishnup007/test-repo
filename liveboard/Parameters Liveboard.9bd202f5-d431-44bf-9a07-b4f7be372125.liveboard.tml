@@ -224,6 +224,19 @@ liveboard:
     view_parameters:
     - name: Parameters WS::Date List Param
       id: 75bb2345-1997-4b00-b364-5fea0ec0c406
+  - view_guid: 64e528fc-0865-4259-8800-e07130d1f705
+    name: tes467
+    view_filters:
+    - column:
+      - Category
+      oper: in
+      values:
+      - mfgr#15
+    is_public: false
+    view_parameters:
+    - name: Parameters WS::Date List Param
+      id: 75bb2345-1997-4b00-b364-5fea0ec0c406
+      override_value: 07/04/2022
   ordered_chips:
   - name: Category
     type: FILTER
