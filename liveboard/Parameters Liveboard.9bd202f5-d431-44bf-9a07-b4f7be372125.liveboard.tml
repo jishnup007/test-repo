@@ -239,9 +239,9 @@ liveboard:
     type: FILTER
   - name: Commit Date
     type: FILTER
-  - name: Parameters WS::Integer Range Param
-    type: PARAMETER
-  - name: Parameters WS::Date List Param
-    type: PARAMETER
   - name: Tax
     type: FILTER
+  - name: Parameters WS::Date List Param
+    type: PARAMETER
+  - name: Parameters WS::Integer Range Param
+    type: PARAMETER
