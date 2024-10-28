@@ -176,6 +176,12 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"dc3314ee-89ea-4a23-846f-4d5eebe560ca\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"d2cb441e-a329-44e1-992e-a4b7f285e514\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": true}},{\"id\": \"f81a7c59-a158-4d9e-af59-2d7e203307db\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Quantity\",\"color\": \"#48D1E0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 754977f5-177a-492b-b79a-b703e33db9ef
+  filters:
+  - column:
+    - Category
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
   layout:
     tiles:
     - visualization_id: Viz_1
@@ -193,3 +199,5 @@ liveboard:
   ordered_chips:
   - name: Parameters WS::Date List Param
     type: PARAMETER
+  - name: Category
+    type: FILTER
