@@ -235,13 +235,13 @@ liveboard:
     value:
       name: Parameters WS::Integer Range Param
   ordered_chips:
+  - name: Parameters WS::Date List Param
+    type: PARAMETER
+  - name: Parameters WS::Integer Range Param
+    type: PARAMETER
   - name: Color
     type: FILTER
   - name: Commit Date
     type: FILTER
   - name: Tax
     type: FILTER
-  - name: Parameters WS::Date List Param
-    type: PARAMETER
-  - name: Parameters WS::Integer Range Param
-    type: PARAMETER
