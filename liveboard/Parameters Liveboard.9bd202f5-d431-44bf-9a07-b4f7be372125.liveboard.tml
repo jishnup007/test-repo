@@ -179,6 +179,9 @@ liveboard:
   filters:
   - column:
     - Category
+    oper: in
+    values:
+    - mfgr#15
     is_mandatory: false
     is_single_value: false
     display_name: ""
@@ -222,7 +225,7 @@ liveboard:
     - name: Parameters WS::Date List Param
       id: 75bb2345-1997-4b00-b364-5fea0ec0c406
   ordered_chips:
-  - name: Parameters WS::Date List Param
-    type: PARAMETER
   - name: Category
     type: FILTER
+  - name: Parameters WS::Date List Param
+    type: PARAMETER
