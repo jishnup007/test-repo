@@ -258,9 +258,9 @@ liveboard:
   ordered_chips:
   - name: Category
     type: FILTER
-  - name: Parameters WS::Date List Param
-    type: PARAMETER
   - name: Color
     type: FILTER
+  - name: Parameters WS::Date List Param
+    type: PARAMETER
   - name: Parameters WS::Integer Range Param
     type: PARAMETER
