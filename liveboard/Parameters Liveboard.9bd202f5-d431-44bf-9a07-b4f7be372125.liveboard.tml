@@ -216,6 +216,9 @@ liveboard:
   - key: 75bb2345-1997-4b00-b364-5fea0ec0c406
     value:
       name: Parameters WS::Date List Param
+  - key: 6afe392d-d188-4379-aef3-1a8632e147c8
+    value:
+      name: Parameters WS::Integer Range Param
   views:
   - view_guid: 98d73788-f086-46da-967b-8cd954317c6e
     name: test2
@@ -232,6 +235,8 @@ liveboard:
     view_parameters:
     - name: Parameters WS::Date List Param
       id: 75bb2345-1997-4b00-b364-5fea0ec0c406
+    - name: ""
+      id: 6afe392d-d188-4379-aef3-1a8632e147c8
   - view_guid: 64e528fc-0865-4259-8800-e07130d1f705
     name: tes467
     view_filters:
@@ -248,6 +253,8 @@ liveboard:
     - name: Parameters WS::Date List Param
       id: 75bb2345-1997-4b00-b364-5fea0ec0c406
       override_value: 07/04/2022
+    - name: ""
+      id: 6afe392d-d188-4379-aef3-1a8632e147c8
   ordered_chips:
   - name: Category
     type: FILTER
@@ -255,3 +262,5 @@ liveboard:
     type: PARAMETER
   - name: Color
     type: FILTER
+  - name: Parameters WS::Integer Range Param
+    type: PARAMETER
