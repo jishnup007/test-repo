@@ -178,15 +178,15 @@ liveboard:
     viz_guid: 754977f5-177a-492b-b79a-b703e33db9ef
   filters:
   - column:
-    - Category
-    oper: in
-    values:
-    - mfgr#15
+    - Color
     is_mandatory: false
     is_single_value: false
     display_name: ""
   - column:
-    - Color
+    - Category
+    oper: in
+    values:
+    - mfgr#15
     is_mandatory: false
     is_single_value: false
     display_name: ""
@@ -224,13 +224,13 @@ liveboard:
     name: test2
     view_filters:
     - column:
+      - Color
+      oper: =
+    - column:
       - Category
       oper: in
       values:
       - mfgr#15
-    - column:
-      - Color
-      oper: =
     is_public: false
     view_parameters:
     - name: Parameters WS::Date List Param
@@ -241,13 +241,13 @@ liveboard:
     name: tes467
     view_filters:
     - column:
+      - Color
+      oper: =
+    - column:
       - Category
       oper: in
       values:
       - mfgr#15
-    - column:
-      - Color
-      oper: =
     is_public: false
     view_parameters:
     - name: Parameters WS::Date List Param
@@ -256,11 +256,11 @@ liveboard:
     - name: ""
       id: 6afe392d-d188-4379-aef3-1a8632e147c8
   ordered_chips:
-  - name: Category
-    type: FILTER
+  - name: Parameters WS::Integer Range Param
+    type: PARAMETER
   - name: Color
     type: FILTER
   - name: Parameters WS::Date List Param
     type: PARAMETER
-  - name: Parameters WS::Integer Range Param
-    type: PARAMETER
+  - name: Category
+    type: FILTER
