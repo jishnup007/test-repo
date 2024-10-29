@@ -185,6 +185,11 @@ liveboard:
     is_mandatory: false
     is_single_value: false
     display_name: ""
+  - column:
+    - Color
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
   layout:
     tiles:
     - visualization_id: Viz_4
@@ -220,6 +225,9 @@ liveboard:
       oper: in
       values:
       - mfgr#15
+    - column:
+      - Color
+      oper: =
     is_public: false
     view_parameters:
     - name: Parameters WS::Date List Param
@@ -232,6 +240,9 @@ liveboard:
       oper: in
       values:
       - mfgr#15
+    - column:
+      - Color
+      oper: =
     is_public: false
     view_parameters:
     - name: Parameters WS::Date List Param
@@ -242,3 +253,5 @@ liveboard:
     type: FILTER
   - name: Parameters WS::Date List Param
     type: PARAMETER
+  - name: Color
+    type: FILTER
