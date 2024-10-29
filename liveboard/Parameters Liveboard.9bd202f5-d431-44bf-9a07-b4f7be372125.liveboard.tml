@@ -235,7 +235,7 @@ liveboard:
     view_parameters:
     - name: Parameters WS::Date List Param
       id: 75bb2345-1997-4b00-b364-5fea0ec0c406
-    - name: ""
+    - name: Parameters WS::Integer Range Param
       id: 6afe392d-d188-4379-aef3-1a8632e147c8
   - view_guid: 64e528fc-0865-4259-8800-e07130d1f705
     name: tes467
@@ -253,14 +253,14 @@ liveboard:
     - name: Parameters WS::Date List Param
       id: 75bb2345-1997-4b00-b364-5fea0ec0c406
       override_value: 07/04/2022
-    - name: ""
+    - name: Parameters WS::Integer Range Param
       id: 6afe392d-d188-4379-aef3-1a8632e147c8
   ordered_chips:
   - name: Parameters WS::Integer Range Param
     type: PARAMETER
   - name: Color
     type: FILTER
-  - name: Parameters WS::Date List Param
-    type: PARAMETER
   - name: Category
     type: FILTER
+  - name: Parameters WS::Date List Param
+    type: PARAMETER
