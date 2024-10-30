@@ -228,6 +228,40 @@ liveboard:
       - key: Integer Range Param
         value: "5"
     viz_guid: 0ac2aa53-b2e5-42cb-9184-2a540bb05e86
+  - id: Viz_6
+    answer:
+      name: "Quarterly Commit Date, Size"
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Commit Date] [Commit Date].quarterly [Size]"
+      answer_columns:
+      - name: Quarter(Commit Date)
+      - name: Size
+      table:
+        table_columns:
+        - column_id: Quarter(Commit Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Size
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Quarter(Commit Date)
+        - Size
+        client_state: ""
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Quarter(Commit Date)
+        - column_id: Size
+        axis_configs:
+        - x:
+          - Quarter(Commit Date)
+          "y":
+          - Size
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: 937ebbbd-8965-402b-8c8f-5cbea06b6df8
   filters:
   - column:
     - Color
@@ -269,6 +303,11 @@ liveboard:
       "y": 8
       height: 8
       width: 6
+    - visualization_id: Viz_6
+      x: 0
+      "y": 16
+      height: 8
+      width: 12
   parameter_overrides:
   - key: 75bb2345-1997-4b00-b364-5fea0ec0c406
     value:
