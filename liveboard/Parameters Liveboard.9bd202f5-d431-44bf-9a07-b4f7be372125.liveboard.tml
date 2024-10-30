@@ -289,20 +289,6 @@ liveboard:
         client_state: ""
       display_mode: TABLE_MODE
     viz_guid: a16bf260-9613-47cb-803b-548012df73e4
-  filters:
-  - column:
-    - Color
-    is_mandatory: false
-    is_single_value: false
-    display_name: ""
-  - column:
-    - Category
-    oper: in
-    values:
-    - mfgr#15
-    is_mandatory: false
-    is_single_value: false
-    display_name: ""
   layout:
     tiles:
     - visualization_id: Viz_4
@@ -340,33 +326,24 @@ liveboard:
       "y": 24
       height: 8
       width: 12
+  parameter_overrides:
+  - key: 75bb2345-1997-4b00-b364-5fea0ec0c406
+    value:
+      name: Parameters WS::Date List Param
   views:
   - view_guid: 98d73788-f086-46da-967b-8cd954317c6e
     name: test2
-    view_filters:
-    - column:
-      - Color
-      oper: =
-    - column:
-      - Category
-      oper: in
-      values:
-      - mfgr#15
     is_public: false
+    view_parameters:
+    - name: ""
+      id: 75bb2345-1997-4b00-b364-5fea0ec0c406
   - view_guid: 64e528fc-0865-4259-8800-e07130d1f705
     name: tes467
-    view_filters:
-    - column:
-      - Color
-      oper: =
-    - column:
-      - Category
-      oper: in
-      values:
-      - mfgr#15
     is_public: false
+    view_parameters:
+    - name: ""
+      id: 75bb2345-1997-4b00-b364-5fea0ec0c406
+      override_value: 07/04/2022
   ordered_chips:
-  - name: Color
-    type: FILTER
-  - name: Category
-    type: FILTER
+  - name: Parameters WS::Date List Param
+    type: PARAMETER
