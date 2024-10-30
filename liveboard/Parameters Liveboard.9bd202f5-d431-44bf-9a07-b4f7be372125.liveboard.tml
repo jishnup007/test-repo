@@ -289,6 +289,12 @@ liveboard:
         client_state: ""
       display_mode: TABLE_MODE
     viz_guid: a16bf260-9613-47cb-803b-548012df73e4
+  filters:
+  - column:
+    - Brand1
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
   layout:
     tiles:
     - visualization_id: Viz_4
@@ -333,12 +339,20 @@ liveboard:
   views:
   - view_guid: 98d73788-f086-46da-967b-8cd954317c6e
     name: test2
+    view_filters:
+    - column:
+      - Brand1
+      oper: =
     is_public: false
     view_parameters:
     - name: ""
       id: 75bb2345-1997-4b00-b364-5fea0ec0c406
   - view_guid: 64e528fc-0865-4259-8800-e07130d1f705
     name: tes467
+    view_filters:
+    - column:
+      - Brand1
+      oper: =
     is_public: false
     view_parameters:
     - name: ""
@@ -347,3 +361,5 @@ liveboard:
   ordered_chips:
   - name: Parameters WS::Date List Param
     type: PARAMETER
+  - name: Brand1
+    type: FILTER
