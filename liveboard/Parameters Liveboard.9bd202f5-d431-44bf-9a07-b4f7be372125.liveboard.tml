@@ -28,7 +28,6 @@ liveboard:
         ordered_column_ids:
         - Total Partial Revenue
         client_state: ""
-        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Partial Revenue\",\"columnProperty\": {}}]}"
       chart:
         type: KPI
         chart_columns:
@@ -37,7 +36,6 @@ liveboard:
         - "y":
           - Total Partial Revenue
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Partial Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e347085c-34e6-4389-8da7-7278859648ba\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Partial Revenue\"],\"isOpposite\": false}},{\"id\": \"5da52f84-66dd-487e-921f-ed6f5613b7c6\",\"properties\": {\"axisType\": \"X\"}}]}"
       display_mode: CHART_MODE
     viz_guid: db0badd5-47c6-400a-842d-133a7b44d435
   - id: Viz_2
@@ -70,7 +68,6 @@ liveboard:
         ordered_column_ids:
         - Total Partial Quantity
         client_state: ""
-        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Partial Quantity\",\"columnProperty\": {}}]}"
       chart:
         type: KPI
         chart_columns:
@@ -79,7 +76,6 @@ liveboard:
         - "y":
           - Total Partial Quantity
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Partial Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f0970ae4-63e5-458e-8f2e-abf686ddef7a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Partial Quantity\"],\"isOpposite\": false}},{\"id\": \"c9179a08-4d75-4d3d-aafa-e12cbf390d65\",\"properties\": {\"axisType\": \"X\"}}]}"
       display_mode: CHART_MODE
     viz_guid: 43c9f421-410f-4564-b624-2b3acc4ea8cd
   - id: Viz_3
@@ -176,190 +172,27 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"dc3314ee-89ea-4a23-846f-4d5eebe560ca\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"d2cb441e-a329-44e1-992e-a4b7f285e514\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": true}},{\"id\": \"f81a7c59-a158-4d9e-af59-2d7e203307db\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Quantity\",\"color\": \"#48D1E0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 754977f5-177a-492b-b79a-b703e33db9ef
-  - id: Viz_5
-    answer:
-      name: "Total Revenue, Total Quantity by Color"
-      tables:
-      - id: Parameters WS
-        name: Parameters WS
-        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-      formulas:
-      - id: Holiday YTD
-        name: Holiday YTD
-        expr: "month ( [Commit Date] ) <= month ( [Date List Param] ) and day ( [Commit Date] ) <= day ( [Date List Param] )"
-        was_auto_generated: false
-      search_query: "[Holiday YTD] = true [Revenue] [Quantity] [Color] [Category].mfgr#15"
-      answer_columns:
-      - name: Color
-      - name: Total Quantity
-      - name: Total Revenue
-      table:
-        table_columns:
-        - column_id: Color
-          show_headline: false
-        - column_id: Total Quantity
-          show_headline: false
-        - column_id: Total Revenue
-          show_headline: false
-        ordered_column_ids:
-        - Color
-        - Total Revenue
-        - Total Quantity
-        client_state: ""
-        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
-      chart:
-        type: LINE
-        chart_columns:
-        - column_id: Color
-        - column_id: Total Quantity
-        - column_id: Total Revenue
-        axis_configs:
-        - x:
-          - Color
-          "y":
-          - Total Revenue
-          - Total Quantity
-        client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"dc3314ee-89ea-4a23-846f-4d5eebe560ca\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"d2cb441e-a329-44e1-992e-a4b7f285e514\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": true}},{\"id\": \"f81a7c59-a158-4d9e-af59-2d7e203307db\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Quantity\",\"color\": \"#48D1E0\"}]}"
-      display_mode: CHART_MODE
-      parameter_values:
-      - key: Date List Param
-        value: 01/01/2022
-      - key: Integer Range Param
-        value: "5"
-    viz_guid: 0ac2aa53-b2e5-42cb-9184-2a540bb05e86
-  - id: Viz_6
-    answer:
-      name: "Quarterly Commit Date, Size"
-      tables:
-      - id: Parameters WS
-        name: Parameters WS
-        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-      search_query: "[Commit Date] [Commit Date].quarterly [Size]"
-      answer_columns:
-      - name: Quarter(Commit Date)
-      - name: Size
-      table:
-        table_columns:
-        - column_id: Quarter(Commit Date)
-          headline_aggregation: MIN-MAX
-        - column_id: Size
-          headline_aggregation: COUNT_DISTINCT
-        ordered_column_ids:
-        - Quarter(Commit Date)
-        - Size
-        client_state: ""
-      chart:
-        type: SCATTER
-        chart_columns:
-        - column_id: Quarter(Commit Date)
-        - column_id: Size
-        axis_configs:
-        - x:
-          - Quarter(Commit Date)
-          "y":
-          - Size
-        client_state: ""
-      display_mode: TABLE_MODE
-    viz_guid: 937ebbbd-8965-402b-8c8f-5cbea06b6df8
-  - id: Viz_7
-    answer:
-      name: Ship Mode
-      tables:
-      - id: Parameters WS
-        name: Parameters WS
-        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-      search_query: "[Ship Mode]"
-      answer_columns:
-      - name: Ship Mode
-      table:
-        table_columns:
-        - column_id: Ship Mode
-          headline_aggregation: COUNT_DISTINCT
-        ordered_column_ids:
-        - Ship Mode
-        client_state: ""
-      chart:
-        type: KPI
-        chart_columns:
-        - column_id: Ship Mode
-        axis_configs:
-        - "y":
-          - Ship Mode
-        client_state: ""
-      display_mode: TABLE_MODE
-    viz_guid: a16bf260-9613-47cb-803b-548012df73e4
-  filters:
-  - column:
-    - Brand1
-    is_mandatory: false
-    is_single_value: false
-    display_name: ""
   layout:
     tiles:
-    - visualization_id: Viz_4
-      x: 6
-      "y": 0
-      height: 8
-      width: 6
-    - visualization_id: Viz_2
-      x: 3
-      "y": 0
-      height: 2
-      width: 3
-    - visualization_id: Viz_3
-      x: 0
-      "y": 2
-      height: 8
-      width: 6
     - visualization_id: Viz_1
-      x: 0
-      "y": 0
-      height: 2
-      width: 3
-    - visualization_id: Viz_5
-      x: 6
-      "y": 8
-      height: 8
-      width: 6
-    - visualization_id: Viz_6
-      x: 0
-      "y": 16
-      height: 8
-      width: 12
-    - visualization_id: Viz_7
-      x: 0
-      "y": 24
-      height: 8
-      width: 12
+      size: EXTRA_SMALL
+    - visualization_id: Viz_2
+      size: EXTRA_SMALL
+    - visualization_id: Viz_4
+      size: MEDIUM
+    - visualization_id: Viz_3
+      size: MEDIUM
   parameter_overrides:
   - key: 75bb2345-1997-4b00-b364-5fea0ec0c406
     value:
       name: Parameters WS::Date List Param
-  views:
-  - view_guid: 98d73788-f086-46da-967b-8cd954317c6e
-    name: test2
-    view_filters:
-    - column:
-      - Brand1
-      oper: =
-    is_public: false
-    view_parameters:
-    - name: ""
-      id: 75bb2345-1997-4b00-b364-5fea0ec0c406
-  - view_guid: 64e528fc-0865-4259-8800-e07130d1f705
-    name: tes467
-    view_filters:
-    - column:
-      - Brand1
-      oper: =
-    is_public: false
-    view_parameters:
-    - name: ""
-      id: 75bb2345-1997-4b00-b364-5fea0ec0c406
       override_value: 07/04/2022
+  - key: 6afe392d-d188-4379-aef3-1a8632e147c8
+    value:
+      name: Parameters WS::Integer Range Param
+      override_value: "5"
   ordered_chips:
   - name: Parameters WS::Date List Param
     type: PARAMETER
-  - name: Brand1
-    type: FILTER
+  - name: Parameters WS::Integer Range Param
+    type: PARAMETER
